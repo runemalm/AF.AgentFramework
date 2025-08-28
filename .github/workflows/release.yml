@@ -1,0 +1,79 @@
+name: release
+
+on:
+  push:
+    branches: [ master ]
+
+permissions:
+  contents: write      # needed to push tags/commits & create GitHub Releases
+  issues: write
+  pull-requests: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # semantic-release needs full history & tags
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install semantic-release + plugins
+        run: |
+          npm i -D semantic-release \
+                 @semantic-release/commit-analyzer \
+                 @semantic-release/release-notes-generator \
+                 @semantic-release/changelog \
+                 @semantic-release/git \
+                 @semantic-release/github
+
+      - name: Build & Test
+        run: |
+          dotnet restore
+          dotnet build -c Release --no-restore
+          dotnet test  -c Release --no-build
+
+      - name: Run semantic-release (creates version, tag, GH release, updates CHANGELOG)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release
+
+      # After semantic-release created/updated tag like vX.Y.Z, pack with that version
+      - name: Determine version from latest tag
+        id: ver
+        run: |
+          TAG=$(git describe --tags --abbrev=0)
+          VER=${TAG#v}
+          echo "version=$VER" >> "$GITHUB_OUTPUT"
+
+      - name: Pack NuGet with computed version
+        run: |
+          dotnet pack src/AgentFramework.Agent/AgentFramework.Agent.csproj \
+            -c Release \
+            -o artifacts \
+            /p:PackageVersion=${{ steps.ver.outputs.version }}
+
+      - name: Publish to NuGet
+        env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+        run: dotnet nuget push "artifacts/*.nupkg" --api-key "$NUGET_API_KEY" --source https://api.nuget.org/v3/index.json --skip-duplicate
+
+      - name: Attach package to the existing GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.ver.outputs.version }}   # <-- point to the tag semantic-release just created
+          files: artifacts/*.nupkg
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
