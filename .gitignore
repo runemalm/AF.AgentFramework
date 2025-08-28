@@ -1,0 +1,45 @@
+# Build results
+bin/
+obj/
+out/
+artifacts/
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+
+# VS Code
+.vscode/
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# NuGet
+*.nupkg
+*.snupkg
+# local NuGet source cache
+*.nuget/
+.nuget/
+
+# dotnet tools
+.dotnet-tools/
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Other
+*.lock.json
