@@ -1,23 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
-
-        <!-- NuGet metadata -->
         <PackageId>AgentFramework.Agent</PackageId>
-        <Authors>David Runemalm</Authors>
+        <Description>An agent framework for .NET.</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <RepositoryUrl>https://github.com/runemalm/AgentFramework.Agent</RepositoryUrl>
-        <Description>An agent framework for .NET.</Description>
-
-        <!-- Nice-to-haves -->
-        <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <Deterministic>true</Deterministic>
-        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
         <IsTrimmable>true</IsTrimmable>
         <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
     </PropertyGroup>
-
 </Project>
