@@ -1,5 +1,9 @@
 # AgentFramework.Agent
 
+[![NuGet version](https://img.shields.io/nuget/v/AgentFramework.Agent.svg)](https://www.nuget.org/packages/AgentFramework.Agent/)  
+[![Build status](https://github.com/runemalm/AgentFramework.Agent/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/runemalm/AgentFramework.Agent/actions/workflows/release.yml)  
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 An agent framework for .NET.
 
 ## Install
@@ -35,11 +39,11 @@ Console.WriteLine(reply?.Content); // "Hello Agent"
 ## Philosophy
 
 - **Open for extension, closed for modification**  
-  Add new tools, policies, memory stores, or middlewares without touching the core.  
-- **Minimal kernel**  
-  Just the agent loop and a handful of stable abstractions.  
+  Add new tools, policies, memory stores, or middlewares without touching the core.
+- **Minimal agent**  
+  Just the agent loop and a handful of stable abstractions.
 - **Composable**  
-  Everything else is pluggable: swap in your own LLM policy, vector memory, or tracing middleware.  
+  Everything else is pluggable: swap in your own LLM policy, vector memory, or tracing middleware.
 
 ## Example: add a tool
 
@@ -52,7 +56,7 @@ public sealed class WeatherTool : ITool
     public Task<ToolResult> InvokeAsync(ToolContext context, string argsJson, CancellationToken ct = default)
     {
         var city = System.Text.Json.JsonDocument.Parse(argsJson).RootElement.GetProperty("city").GetString();
-        var result = new ToolResult(Name, $"{{"city":"{city}","tempC":21}}");
+        var result = new ToolResult(Name, $"{"city":"{city}","tempC":21}");
         return Task.FromResult(result);
     }
 }
