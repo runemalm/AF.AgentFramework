@@ -1,7 +1,17 @@
 {
     "branches": ["master"],
+    "tagFormat": "v${version}",
     "plugins": [
-        "@semantic-release/commit-analyzer",
+        ["@semantic-release/commit-analyzer", {
+            "preset": "conventionalcommits",
+            "releaseRules": [
+                { "type": "feat", "scope": "agent", "release": "minor" },
+                { "type": "fix",  "scope": "agent", "release": "patch" },
+                { "type": "perf", "scope": "agent", "release": "patch" },
+                { "type": "refactor", "scope": "agent", "release": "patch" },
+                { "type": "revert", "scope": "agent", "release": "patch" }
+            ]
+        }],
         "@semantic-release/release-notes-generator",
         ["@semantic-release/changelog", { "changelogFile": "CHANGELOG.md" }],
         ["@semantic-release/git", {

@@ -3,6 +3,12 @@ name: release
 on:
   push:
     branches: [ master ]
+    paths:
+      - 'src/AgentFramework.Agent/**'
+      - 'tests/AgentFramework.Agent.Tests/**'
+      - '.releaserc.json'
+      - '.github/workflows/release.yml'
+      - 'CHANGELOG.md'
 
 permissions:
   contents: write      # needed to push tags/commits & create GitHub Releases
