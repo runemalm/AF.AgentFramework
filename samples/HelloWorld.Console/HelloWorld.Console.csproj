@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\AgentFramework.Agent\AgentFramework.Agent.csproj" />
+    </ItemGroup>
+</Project>
