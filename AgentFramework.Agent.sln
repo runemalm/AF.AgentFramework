@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgentFramework.Extras.Adapt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld.Console", "samples\HelloWorld.Console\HelloWorld.Console.csproj", "{9C1EEF8C-437A-4D9A-8143-152CBC88B98C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgentFramework.Extras.Policies", "src\AgentFramework.Extras\AgentFramework.Extras.Policies\AgentFramework.Extras.Policies.csproj", "{9AE6D125-9597-410E-B95B-3D3DB9D6DC88}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,5 +51,11 @@ Global
 		{9C1EEF8C-437A-4D9A-8143-152CBC88B98C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C1EEF8C-437A-4D9A-8143-152CBC88B98C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C1EEF8C-437A-4D9A-8143-152CBC88B98C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AE6D125-9597-410E-B95B-3D3DB9D6DC88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AE6D125-9597-410E-B95B-3D3DB9D6DC88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AE6D125-9597-410E-B95B-3D3DB9D6DC88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AE6D125-9597-410E-B95B-3D3DB9D6DC88}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 EndGlobal
