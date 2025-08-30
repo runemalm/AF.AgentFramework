@@ -1,3 +1,10 @@
+# [0.4.0](https://github.com/runemalm/AgentFramework.Agent/compare/v0.3.0...v0.4.0) (2025-08-30)
+
+
+### Features
+
+* **agent:** add core policy decorators and router ([c8f23c5](https://github.com/runemalm/AgentFramework.Agent/commit/c8f23c524e1b507c403afb3abef3ebe2c8abfe12))
+
 # [0.3.0](https://github.com/runemalm/AgentFramework.Agent/compare/v0.2.0...v0.3.0) (2025-08-29)
 
 
