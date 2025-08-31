@@ -28,8 +28,10 @@ public sealed class Agent
                 ? _middlewares[i].InvokeAsync(context, Next)
                 : RunCoreAsync(context);
         }
-        return await Next().ContinueWith(_ =>
-            context.Conversation.LastOrDefault(m => m.Role == "assistant"));
+
+        await Next();
+
+        return context.Conversation.LastOrDefault(m => m.Role == "assistant");
     }
 
     private async Task RunCoreAsync(AgentContext ctx)
