@@ -4,5 +4,6 @@
     </PropertyGroup>
     <ItemGroup>
       <ProjectReference Include="..\..\AgentFramework.Kernel\AgentFramework.Kernel.csproj" />
+      <ProjectReference Include="..\AgentFramework.Extras.Adapters.Abstractions\AgentFramework.Extras.Adapters.Abstractions.csproj" />
     </ItemGroup>
 </Project>
