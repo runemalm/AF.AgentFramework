@@ -1,3 +1,10 @@
+## [0.4.1](https://github.com/runemalm/AgentFramework.Kernel/compare/v0.4.0...v0.4.1) (2025-08-31)
+
+
+### Bug Fixes
+
+* **kernel:** propagate exceptions/cancellation from StepAsync ([e1400fd](https://github.com/runemalm/AgentFramework.Kernel/commit/e1400fd83dd51b5afbd58a076340f1d7fc1e8c69))
+
 # [0.4.0](https://github.com/runemalm/AgentFramework.Kernel/compare/v0.3.0...v0.4.0) (2025-08-30)
 
 
