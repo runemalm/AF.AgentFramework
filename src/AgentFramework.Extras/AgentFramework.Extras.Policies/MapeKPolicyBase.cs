@@ -1,5 +1,5 @@
 ﻿using System.Text.Json;
-using AgentFramework.Agent;
+using AgentFramework.Kernel;
 
 namespace AgentFramework.Extras.Policies;
 

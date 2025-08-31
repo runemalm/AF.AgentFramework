@@ -1,4 +1,4 @@
-﻿namespace AgentFramework.Agent.Policies;
+﻿namespace AgentFramework.Kernel.Policies;
 
 /// <summary>
 /// Routes DecideAsync to a sub-policy based on a classifier function.

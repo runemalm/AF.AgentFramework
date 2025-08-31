@@ -1,4 +1,4 @@
-﻿namespace AgentFramework.Agent;
+﻿namespace AgentFramework.Kernel;
 
 public readonly record struct AgentId(string Value);
 

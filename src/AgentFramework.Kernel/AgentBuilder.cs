@@ -1,4 +1,4 @@
-﻿namespace AgentFramework.Agent;
+﻿namespace AgentFramework.Kernel;
 
 public sealed class AgentBuilder
 {

@@ -1,4 +1,4 @@
-﻿namespace AgentFramework.Agent.Policies;
+﻿namespace AgentFramework.Kernel.Policies;
 
 /// <summary>
 /// Decorator that retries an inner IPolicy.DecideAsync when it throws,

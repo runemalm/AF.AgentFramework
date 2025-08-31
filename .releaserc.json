@@ -1,23 +1,23 @@
 {
-    "branches": ["master"],
-    "tagFormat": "v${version}",
-    "plugins": [
-        ["@semantic-release/commit-analyzer", {
-            "preset": "conventionalcommits",
-            "releaseRules": [
-                { "type": "feat", "scope": "agent", "release": "minor" },
-                { "type": "fix",  "scope": "agent", "release": "patch" },
-                { "type": "perf", "scope": "agent", "release": "patch" },
-                { "type": "refactor", "scope": "agent", "release": "patch" },
-                { "type": "revert", "scope": "agent", "release": "patch" }
-            ]
-        }],
-        "@semantic-release/release-notes-generator",
-        ["@semantic-release/changelog", { "changelogFile": "CHANGELOG.md" }],
-        ["@semantic-release/git", {
-            "assets": ["CHANGELOG.md"],
-            "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-        }],
-        "@semantic-release/github"
-    ]
+  "branches": ["master"],
+  "tagFormat": "v${version}",
+  "plugins": [
+    ["@semantic-release/commit-analyzer", {
+      "preset": "conventionalcommits",
+      "releaseRules": [
+        { "type": "feat", "scope": "kernel", "release": "minor" },
+        { "type": "fix",  "scope": "kernel", "release": "patch" },
+        { "type": "perf", "scope": "kernel", "release": "patch" },
+        { "type": "refactor", "scope": "kernel", "release": "patch" },
+        { "type": "revert", "scope": "kernel", "release": "patch" }
+      ]
+    }],
+    "@semantic-release/release-notes-generator",
+    ["@semantic-release/changelog", { "changelogFile": "CHANGELOG.md" }],
+    ["@semantic-release/git", {
+      "assets": ["CHANGELOG.md"],
+      "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+    }],
+    "@semantic-release/github"
+  ]
 }

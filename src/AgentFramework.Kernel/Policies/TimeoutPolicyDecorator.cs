@@ -1,4 +1,4 @@
-﻿namespace AgentFramework.Agent.Policies;
+﻿namespace AgentFramework.Kernel.Policies;
 
 /// <summary>
 /// Decorator that enforces a maximum duration for an inner policy's DecideAsync.

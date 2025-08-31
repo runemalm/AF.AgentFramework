@@ -1,4 +1,4 @@
-﻿using AgentFramework.Agent;
+﻿using AgentFramework.Kernel;
 
 public sealed class EchoPolicy : IPolicy
 {

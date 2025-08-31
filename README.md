@@ -1,7 +1,7 @@
-# AgentFramework.Agent
+# AgentFramework.Kernel
 
-[![NuGet version](https://img.shields.io/nuget/v/AgentFramework.Agent.svg)](https://www.nuget.org/packages/AgentFramework.Agent/)
-[![Build status](https://github.com/runemalm/AgentFramework.Agent/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/runemalm/AgentFramework.Agent/actions/workflows/release.yml)
+[![NuGet version](https://img.shields.io/nuget/v/AgentFramework.Kernel.svg)](https://www.nuget.org/packages/AgentFramework.Kernel/)
+[![Build status](https://github.com/runemalm/AgentFramework.Kernel/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/runemalm/AgentFramework.Kernel/actions/workflows/release.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 An agent framework for .NET.
@@ -9,13 +9,13 @@ An agent framework for .NET.
 ## Install
 
 ```bash
-dotnet add package AgentFramework.Agent
+dotnet add package AgentFramework.Kernel
 ```
 
 ## Quick start
 
 ```csharp
-using AgentFramework.Agent;
+using AgentFramework.Kernel;
 
 var (agent, ctx) = new AgentBuilder()
     .UsePolicy(new EchoPolicy()) // replace with your own policy

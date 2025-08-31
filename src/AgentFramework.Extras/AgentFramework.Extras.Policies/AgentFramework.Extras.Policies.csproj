@@ -3,6 +3,6 @@
     <IsPackable>false</IsPackable>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\AgentFramework.Agent\AgentFramework.Agent.csproj" />
+    <ProjectReference Include="..\..\AgentFramework.Kernel\AgentFramework.Kernel.csproj" />
   </ItemGroup>
 </Project>

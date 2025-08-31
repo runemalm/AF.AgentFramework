@@ -4,8 +4,8 @@ on:
   push:
     branches: [ master ]
     paths:
-      - 'src/AgentFramework.Agent/**'
-      - 'tests/AgentFramework.Agent.Tests/**'
+      - 'src/AgentFramework.Kernel/**'
+      - 'tests/AgentFramework.Kernel.Tests/**'
       - '.releaserc.json'
       - '.github/workflows/release.yml'
       - 'CHANGELOG.md'
@@ -66,7 +66,7 @@ jobs:
 
       - name: Pack NuGet with computed version
         run: |
-          dotnet pack src/AgentFramework.Agent/AgentFramework.Agent.csproj \
+          dotnet pack src/AgentFramework.Kernel/AgentFramework.Kernel.csproj \
             -c Release \
             -o artifacts \
             /p:PackageVersion=${{ steps.ver.outputs.version }}

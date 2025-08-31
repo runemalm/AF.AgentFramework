@@ -1,6 +1,6 @@
-namespace AgentFramework.Agent.Tests;
+namespace AgentFramework.Kernel.Tests;
 
-using AgentFramework.Agent;
+using AgentFramework.Kernel;
 using Xunit;
 
 public class AgentSmokeTests

@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <PackageId>AgentFramework.Agent</PackageId>
+        <PackageId>AgentFramework.Kernel</PackageId>
         <Description>An agent framework for .NET.</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <RepositoryUrl>https://github.com/runemalm/AgentFramework.Agent</RepositoryUrl>
+        <RepositoryUrl>https://github.com/runemalm/AgentFramework.Kernel</RepositoryUrl>
         <IsTrimmable>true</IsTrimmable>
         <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
     </PropertyGroup>

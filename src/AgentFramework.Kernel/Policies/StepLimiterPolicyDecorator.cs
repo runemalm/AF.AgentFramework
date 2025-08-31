@@ -1,4 +1,4 @@
-﻿namespace AgentFramework.Agent.Policies;
+﻿namespace AgentFramework.Kernel.Policies;
 
 /// <summary>
 /// Decorator that caps how many times DecideAsync can run per conversation/session.
