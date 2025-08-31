@@ -33,6 +33,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{2674
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld.Console", "samples\HelloWorld.Console\HelloWorld.Console.csproj", "{7E37A2E2-72A1-4BF1-827C-77D2CDBF8A51}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgentFramework.Extras.Policies.Tests", "tests\AgentFramework.Extras.Policies.Tests\AgentFramework.Extras.Policies.Tests.csproj", "{41AB64F3-FABD-42ED-99D6-E4CE8D3E57D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{7E37A2E2-72A1-4BF1-827C-77D2CDBF8A51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E37A2E2-72A1-4BF1-827C-77D2CDBF8A51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E37A2E2-72A1-4BF1-827C-77D2CDBF8A51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41AB64F3-FABD-42ED-99D6-E4CE8D3E57D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41AB64F3-FABD-42ED-99D6-E4CE8D3E57D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41AB64F3-FABD-42ED-99D6-E4CE8D3E57D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41AB64F3-FABD-42ED-99D6-E4CE8D3E57D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C3867A64-89AD-4696-9112-CE8B10FE9909} = {3725B600-0D92-442D-B3A1-BD8F3A455841}
@@ -86,5 +92,6 @@ Global
 		{594AC5AA-2A3B-4D6C-87AF-F40E28963348} = {BD1D0584-C612-4CB4-BA48-ABF403BA8FB4}
 		{75AE526B-BE3B-4CC5-9E31-14E5E3B46ADE} = {BD1D0584-C612-4CB4-BA48-ABF403BA8FB4}
 		{7E37A2E2-72A1-4BF1-827C-77D2CDBF8A51} = {2674107B-CE5A-45AD-A27C-E841ABF80EDB}
+		{41AB64F3-FABD-42ED-99D6-E4CE8D3E57D1} = {BD1D0584-C612-4CB4-BA48-ABF403BA8FB4}
 	EndGlobalSection
 EndGlobal
