@@ -22,6 +22,7 @@ PWD := $(shell pwd)
 SRC_DIR := $(PWD)/src
 TESTS_DIR := $(PWD)/tests
 SAMPLES_DIR := $(PWD)/samples
+ARTIFACTS_DIR := $(PWD)/artifacts
 
 ##########################################################################
 # HELP
@@ -117,13 +118,17 @@ restore: ##@Build	 restore the solution
 clear-nuget-caches: ##@Build	 clean all nuget caches
 	dotnet nuget locals all --clear
 
+.PHONY: pack
+pack: ##@Build	 pack the nuget
+	dotnet pack $(SRC_DIR)/AgentFramework.Kernel/AgentFramework.Kernel.csproj -c Release -o $(ARTIFACTS_DIR)
+
 ##########################################################################
 # RELEASE
 ##########################################################################
 
 .PHONY: release-dry-run
 release-dry-run: ##@Release	 Run semantic-release in dry-run mode (no tags/publish)
-	@mkdir -p artifacts
+	@mkdir -p $(ARTIFACTS_DIR)
 	@echo "Installing semantic-release (local dev deps)..."
 	npm i -D semantic-release \
 	      @semantic-release/commit-analyzer \
@@ -133,9 +138,9 @@ release-dry-run: ##@Release	 Run semantic-release in dry-run mode (no tags/publi
 	      @semantic-release/github \
 	      conventional-changelog-conventionalcommits
 	@echo "Running semantic-release --dry-run ..."
-	npx semantic-release --dry-run --no-ci 2>&1 | tee artifacts/semantic-release-dry-run.log
+	npx semantic-release --dry-run --no-ci 2>&1 | tee $(ARTIFACTS_DIR)/semantic-release-dry-run.log
 	@echo ""
-	@echo "${GREEN}Dry-run complete.${RESET} See artifacts/semantic-release-dry-run.log"
+	@echo "${GREEN}Dry-run complete.${RESET} See $(ARTIFACTS_DIR)/semantic-release-dry-run.log"
 
 ##########################################################################
 # SAMPLES

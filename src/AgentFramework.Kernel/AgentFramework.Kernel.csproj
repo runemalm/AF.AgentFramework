@@ -20,7 +20,17 @@
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
+        <!-- NEW: README + Icon -->
+        <PackageReadmeFile>README.NuGet.md</PackageReadmeFile>
+        <PackageIcon>icon.png</PackageIcon>
     </PropertyGroup>
+
+    <!-- Ensure README + icon are included in the nupkg root -->
+    <ItemGroup>
+        <None Include="README.NuGet.md" Pack="true" PackagePath="\"/>
+        <None Include="nuget/icon.png" Pack="true" PackagePath="\"/>
+    </ItemGroup>
     
     <!-- Let tests see internals (no signing yet; keep simple) -->
     <ItemGroup>
