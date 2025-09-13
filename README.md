@@ -4,79 +4,122 @@
 [![Build status](https://github.com/runemalm/AgentFramework.Kernel/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/runemalm/AgentFramework.Kernel/actions/workflows/release.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A minimal kernel for .NET agents.
+**AgentFramework.Kernel** is a minimal .NET 8 library for building agents based on
+the [MAPE-K loop](https://en.wikipedia.org/wiki/Monitor_analyze_plan_execute) and related control-loop architectures.
 
-## Install
+It provides:
+- A **kernel** that orchestrates agent execution.
+- A pluggable **middleware pipeline**.
+- Extensible **loop profiles** (e.g. MAPE-K, reactive loops).
+- Minimal abstractions to keep agents composable and testable.
+
+---
+
+## 📦 Installation
+
+From NuGet:
 
 ```bash
 dotnet add package AgentFramework.Kernel
 ```
 
-## Quick start
+---
+
+## 🚀 Quick Start
+
+Create a kernel, a profile, and run a tick:
 
 ```csharp
 using AgentFramework.Kernel;
+using AgentFramework.Kernel.Abstractions;
 
-var (agent, ctx) = new AgentBuilder()
-    .UsePolicy(new EchoPolicy()) // replace with your own policy
-    .Build(new AgentId("assistant-1"));
-
-ctx.Conversation.Add(new Message("user", "Hello Agent"));
-var reply = await agent.StepAsync(ctx);
-
-Console.WriteLine(reply?.Content); // "Hello Agent"
-```
-
-## Concepts
-
-- `Agent` - orchestrates **Decide → Act → Learn**
-- `IPolicy` - reasoning strategy (LLM, rules, heuristics)
-- `ITool` / `IToolRegistry` - executable capabilities
-- `IMemoryStore` - episodic/semantic memory
-- `IAgentMiddleware` - cross-cutting concerns
-- `AgentBuilder` - composition helper for building agents
-
-## Philosophy
-
-- **Open for extension, closed for modification**  
-  Add new tools, policies, memory stores, or middlewares without touching the core.
-- **Minimal agent**  
-  Just the agent loop and a handful of stable abstractions.
-- **Composable**  
-  Everything else is pluggable: swap in your own LLM policy, vector memory, or tracing middleware.
-
-## Example: add a tool
-
-```csharp
-public sealed class WeatherTool : ITool
+var profile = new TestProfile(); // sample profile (see HelloKernel)
+var kernel = new AgentKernel(profile, new IKernelMiddleware[]
 {
-    public string Name => "weather.get";
-    public string Description => "Get current weather by city name";
+    new LoggingMiddleware()
+});
 
-    public Task<ToolResult> InvokeAsync(ToolContext context, string argsJson, CancellationToken ct = default)
-    {
-        var city = System.Text.Json.JsonDocument.Parse(argsJson).RootElement.GetProperty("city").GetString();
-        var result = new ToolResult(Name, $"{"city":"{city}","tempC":21}");
-        return Task.FromResult(result);
-    }
-}
+await kernel.StartAsync();
+await kernel.TickAsync();
+await kernel.StopAsync();
 ```
 
-Register the tool:
+👉 See the [HelloKernel sample](samples/HelloKernel) for a runnable console app.
 
-```csharp
-var (agent, ctx) = new AgentBuilder()
-    .UsePolicy(new EchoPolicy())
-    .AddTool(new WeatherTool())
-    .Build(new AgentId("assistant-1"));
+---
+
+## 🧩 Key Concepts
+
+### Kernel
+The **`AgentKernel`** is the control loop runner.  
+It starts, stops, and executes ticks, invoking each step defined by the active profile.
+
+### Profiles
+A **`ILoopProfile`** defines the ordered steps an agent executes.  
+Examples:
+- **MAPE-K** (Monitor → Analyze → Plan → Execute → Knowledge update).
+- **Reactive** loop (Sense → Act).
+
+Profiles are the extensibility point for experimenting with different agent families.
+
+### Middleware
+Middleware implements `IKernelMiddleware` and runs **before/after each step**:
+- Tracing
+- Logging
+- Metrics
+- Policy enforcement
+
+### Context
+`KernelContext` flows through the pipeline and provides:
+- The current `StepId`
+- Cancellation token
+- A scratchpad (`Items`) for cross-cutting state
+
+---
+
+## 🧪 Samples & Tests
+
+- **[samples/HelloKernel](samples/HelloKernel)** – minimal console app showing a test profile and logging middleware.
+- **[tests/AgentFramework.Kernel.Tests](tests/AgentFramework.Kernel.Tests)** – xUnit smoke tests for kernel contracts.
+
+Run tests:
+
+```bash
+make test
 ```
 
-## Status
+Run the sample:
 
-- Early preview, public API subject to change before `1.0.0`.
-- Targeting .NET 8 (LTS).
-- MIT licensed.
+```bash
+make hello-kernel
+```
 
-## License
+---
 
-MIT
+## 🔄 Versioning & Releases
+
+- Versions are managed by [semantic-release](https://semantic-release.gitbook.io/) and git tags (`vX.Y.Z`).
+- Pre-1.0: **breaking changes bump minor**, not major (`preMajor:true`).
+- Package versions are injected at build time via [MinVer](https://github.com/adamralph/minver).
+- See [CHANGELOG.md](CHANGELOG.md) for release history.
+
+Dry-run a release locally:
+
+```bash
+make release-dry-run
+```
+
+---
+
+## 🤝 Contributing
+
+1. Fork & clone  
+2. Run `make build` / `make test`  
+3. Add features with Conventional Commit messages (`feat: ...`, `fix: ...`)  
+4. Open a PR
+
+---
+
+## 📄 License
+
+MIT © [David Runemalm](https://github.com/runemalm)
