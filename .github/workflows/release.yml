@@ -10,6 +10,8 @@ on:
       - '.github/workflows/release.yml'
       - 'CHANGELOG.md'
       - 'Directory.*.props'
+      - 'package.json'
+      - 'package-lock.json'
 
 permissions:
   contents: write
@@ -36,38 +38,24 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
+          cache-dependency-path: package-lock.json
 
-      - name: Cache NuGet
-        uses: actions/cache@v4
-        with:
-          path: ~/.nuget/packages
-          key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj', 'Directory.*.props') }}
-          restore-keys: |
-            ${{ runner.os }}-nuget-
+      - name: Install Node deps
+        run: npm ci
 
-      - name: Install semantic-release + plugins
-        run: |
-          npm i -D semantic-release \
-                 @semantic-release/commit-analyzer \
-                 @semantic-release/release-notes-generator \
-                 @semantic-release/changelog \
-                 @semantic-release/git \
-                 @semantic-release/github \
-                 conventional-changelog-conventionalcommits
-
-      # Build & test BEFORE release; this doesn't require a tag
+      # Build & test BEFORE release; fail fast if something's broken
       - name: Build & Test
         run: |
           dotnet restore
           dotnet build -c Release --no-restore
           dotnet test  -c Release --no-build
 
-      # This step decides if there is a new release and creates tag vX.Y.Z
+      # Decide release, create tag vX.Y.Z, update CHANGELOG, create GH release
       - name: Run semantic-release
         id: sr
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release
+        run: npm run release
 
       # Detect if HEAD is now tagged v* (semantic-release just created it)
       - name: Detect release tag on HEAD
@@ -77,7 +65,7 @@ jobs:
           set -e
           if git describe --exact-match --tags HEAD >/dev/null 2>&1; then
             TAG=$(git describe --exact-match --tags HEAD)
-            if [[ "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+ ]]; then
+            if [[ "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
               echo "tag=$TAG" >> "$GITHUB_OUTPUT"
               echo "version=${TAG#v}" >> "$GITHUB_OUTPUT"
               exit 0
