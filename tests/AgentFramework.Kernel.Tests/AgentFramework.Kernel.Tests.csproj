@@ -1,27 +1,29 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
-
+        <AssemblyName>AgentFramework.Kernel.Tests</AssemblyName>
+        <RootNamespace>AgentFramework.Kernel.Tests</RootNamespace>
         <IsPackable>false</IsPackable>
-        <IsTestProject>true</IsTestProject>
+        <GenerateDocumentationFile>false</GenerateDocumentationFile>
+        <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     </PropertyGroup>
-
+    
     <ItemGroup>
-        <PackageReference Include="coverlet.collector" Version="6.0.0"/>
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0"/>
-        <PackageReference Include="xunit" Version="2.5.3"/>
-        <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3"/>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" />
+        <PackageReference Include="xunit" />
+        <PackageReference Include="xunit.runner.visualstudio">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="coverlet.collector">
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="xunit.abstractions">
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
     </ItemGroup>
-
+    
     <ItemGroup>
-        <Using Include="Xunit"/>
+        <ProjectReference Include="..\..\src\AgentFramework.Kernel\AgentFramework.Kernel.csproj" />
     </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\..\src\AgentFramework.Kernel\AgentFramework.Kernel.csproj" />
-    </ItemGroup>
-
 </Project>
+

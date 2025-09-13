@@ -43,3 +43,11 @@ Thumbs.db
 
 # Other
 *.lock.json
+
+env.make
+
+# Release preview
+artifacts
+node_modules
+package-lock.json
+package.json

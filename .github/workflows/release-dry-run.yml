@@ -1,0 +1,66 @@
+name: release-dry-run
+
+on:
+  workflow_dispatch: {}   # run manually from the Actions tab
+
+permissions:
+  contents: read
+
+jobs:
+  dry-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # semantic-release needs full history & tags
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install semantic-release + plugins
+        run: |
+          npm i -D semantic-release \
+                 @semantic-release/commit-analyzer \
+                 @semantic-release/release-notes-generator \
+                 @semantic-release/changelog \
+                 @semantic-release/git \
+                 @semantic-release/github \
+                 conventional-changelog-conventionalcommits
+
+      - name: Semantic-release dry run
+        id: sr
+        env:
+          # Not strictly required for --dry-run, but avoids env warnings
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p artifacts
+          # Capture full output (decision + prospective notes) to an artifact
+          npx semantic-release --dry-run --no-ci 2>&1 | tee artifacts/semantic-release-dry-run.log
+
+      - name: Job summary
+        if: always()
+        run: |
+          {
+            echo "## semantic-release — dry run"
+            echo
+            echo "- This job does **not** publish or tag."
+            echo "- It shows what **would** be released based on commits to \`master\`."
+            echo
+            echo "### Output excerpt"
+            echo
+            echo '```text'
+            tail -n 200 artifacts/semantic-release-dry-run.log
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload dry-run log
+        uses: actions/upload-artifact@v4
+        with:
+          name: semantic-release-dry-run
+          path: artifacts/semantic-release-dry-run.log
+          if-no-files-found: warn
