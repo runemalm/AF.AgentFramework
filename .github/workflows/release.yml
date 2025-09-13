@@ -97,10 +97,3 @@ jobs:
           files: artifacts/*.nupkg
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Verify package exists on NuGet (optional)
-        if: ${{ steps.tag.outputs.tag != '' }}
-        run: |
-          NAME="AgentFramework.Kernel"
-          VER="${{ steps.tag.outputs.version }}"
-          curl -fsSL "https://api.nuget.org/v3-flatcontainer/${NAME,,}/${VER}/${NAME,,}.${VER}.nupkg" -o /dev/null
