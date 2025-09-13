@@ -26,6 +26,25 @@
         <PackageIcon>icon.png</PackageIcon>
     </PropertyGroup>
 
+    <PropertyGroup>
+        <!-- belt & suspenders: ensure SDK won’t auto-include bin/obj -->
+        <DefaultItemExcludes>$(DefaultItemExcludes);bin\**;obj\**</DefaultItemExcludes>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- strip any accidental includes -->
+        <Compile Remove="bin\**\*;obj\**\*" />
+        <None    Remove="bin\**\*;obj\**\*" />
+        <Content Remove="bin\**\*;obj\**\*" />
+        <EmbeddedResource Remove="bin\**\*;obj\**\*" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <!-- even if something still exists as an item, do NOT pack it -->
+        <None    Update="bin\**\*;obj\**\*" Pack="false" />
+        <Content Update="bin\**\*;obj\**\*" Pack="false" />
+    </ItemGroup>
+
     <!-- Ensure README + icon are included in the nupkg root -->
     <ItemGroup>
         <None Include="README.NuGet.md" Pack="true" PackagePath="\"/>
