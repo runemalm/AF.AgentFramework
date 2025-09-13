@@ -1,3 +1,9 @@
+## [0.5.0](https://github.com/runemalm/AgentFramework.Kernel/compare/v0.4.1...v0.5.0) (2025-09-13)
+
+### Features
+
+* refactor to more generic kernel using step-based loop profiles and middleware pipeline ([6b180a9](https://github.com/runemalm/AgentFramework.Kernel/commit/6b180a919bebdc4921904bf1b44fb4cddf0f6840))
+
 ## [0.4.1](https://github.com/runemalm/AgentFramework.Kernel/compare/v0.4.0...v0.4.1) (2025-08-31)
 
 
