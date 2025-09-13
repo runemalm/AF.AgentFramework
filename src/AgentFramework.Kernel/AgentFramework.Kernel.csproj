@@ -36,15 +36,6 @@
     <ItemGroup>
         <InternalsVisibleTo Include="AgentFramework.Kernel.Tests" />
     </ItemGroup>
-    <ItemGroup>
-      <Content Include="obj\Debug\net8.0\AgentFramework.Kernel.csproj.CoreCompileInputs.cache" />
-      <Content Include="obj\Debug\net8.0\AgentFramework.Kernel.csproj.FileListAbsolute.txt" />
-      <Content Include="obj\Debug\net8.0\AgentFramework.Kernel.dll" />
-      <Content Include="obj\Debug\net8.0\AgentFramework.Kernel.pdb" />
-      <Content Include="obj\Debug\net8.0\AgentFramework.Kernel.sourcelink.json" />
-      <Content Include="obj\Debug\net8.0\AgentFramework.Kernel.xml" />
-      <Content Include="obj\rider.project.model.nuget.info" />
-    </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="MinVer" PrivateAssets="all" />
