@@ -1,0 +1,618 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Kernel.IAgentContext
+  commentId: T:AgentFramework.Kernel.IAgentContext
+  id: IAgentContext
+  parent: AgentFramework.Kernel
+  children:
+  - AgentFramework.Kernel.IAgentContext.AgentId
+  - AgentFramework.Kernel.IAgentContext.Cancellation
+  - AgentFramework.Kernel.IAgentContext.CorrelationId
+  - AgentFramework.Kernel.IAgentContext.EngineId
+  - AgentFramework.Kernel.IAgentContext.Items
+  - AgentFramework.Kernel.IAgentContext.Now
+  - AgentFramework.Kernel.IAgentContext.Random
+  - AgentFramework.Kernel.IAgentContext.Trace(System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object})
+  - AgentFramework.Kernel.IAgentContext.WorkItemId
+  langs:
+  - csharp
+  - vb
+  name: IAgentContext
+  nameWithType: IAgentContext
+  fullName: AgentFramework.Kernel.IAgentContext
+  type: Interface
+  source:
+    id: IAgentContext
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgentContext.cs
+    startLine: 2
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  syntax:
+    content: public interface IAgentContext
+    content.vb: Public Interface IAgentContext
+- uid: AgentFramework.Kernel.IAgentContext.AgentId
+  commentId: P:AgentFramework.Kernel.IAgentContext.AgentId
+  id: AgentId
+  parent: AgentFramework.Kernel.IAgentContext
+  langs:
+  - csharp
+  - vb
+  name: AgentId
+  nameWithType: IAgentContext.AgentId
+  fullName: AgentFramework.Kernel.IAgentContext.AgentId
+  type: Property
+  source:
+    id: AgentId
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgentContext.cs
+    startLine: 4
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  syntax:
+    content: string AgentId { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property AgentId As String
+  overload: AgentFramework.Kernel.IAgentContext.AgentId*
+- uid: AgentFramework.Kernel.IAgentContext.EngineId
+  commentId: P:AgentFramework.Kernel.IAgentContext.EngineId
+  id: EngineId
+  parent: AgentFramework.Kernel.IAgentContext
+  langs:
+  - csharp
+  - vb
+  name: EngineId
+  nameWithType: IAgentContext.EngineId
+  fullName: AgentFramework.Kernel.IAgentContext.EngineId
+  type: Property
+  source:
+    id: EngineId
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgentContext.cs
+    startLine: 5
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  syntax:
+    content: string EngineId { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property EngineId As String
+  overload: AgentFramework.Kernel.IAgentContext.EngineId*
+- uid: AgentFramework.Kernel.IAgentContext.WorkItemId
+  commentId: P:AgentFramework.Kernel.IAgentContext.WorkItemId
+  id: WorkItemId
+  parent: AgentFramework.Kernel.IAgentContext
+  langs:
+  - csharp
+  - vb
+  name: WorkItemId
+  nameWithType: IAgentContext.WorkItemId
+  fullName: AgentFramework.Kernel.IAgentContext.WorkItemId
+  type: Property
+  source:
+    id: WorkItemId
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgentContext.cs
+    startLine: 6
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  syntax:
+    content: string WorkItemId { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property WorkItemId As String
+  overload: AgentFramework.Kernel.IAgentContext.WorkItemId*
+- uid: AgentFramework.Kernel.IAgentContext.CorrelationId
+  commentId: P:AgentFramework.Kernel.IAgentContext.CorrelationId
+  id: CorrelationId
+  parent: AgentFramework.Kernel.IAgentContext
+  langs:
+  - csharp
+  - vb
+  name: CorrelationId
+  nameWithType: IAgentContext.CorrelationId
+  fullName: AgentFramework.Kernel.IAgentContext.CorrelationId
+  type: Property
+  source:
+    id: CorrelationId
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgentContext.cs
+    startLine: 7
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  syntax:
+    content: string? CorrelationId { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property CorrelationId As String
+  overload: AgentFramework.Kernel.IAgentContext.CorrelationId*
+- uid: AgentFramework.Kernel.IAgentContext.Cancellation
+  commentId: P:AgentFramework.Kernel.IAgentContext.Cancellation
+  id: Cancellation
+  parent: AgentFramework.Kernel.IAgentContext
+  langs:
+  - csharp
+  - vb
+  name: Cancellation
+  nameWithType: IAgentContext.Cancellation
+  fullName: AgentFramework.Kernel.IAgentContext.Cancellation
+  type: Property
+  source:
+    id: Cancellation
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgentContext.cs
+    startLine: 10
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  summary: Cancellation for preemption, timeouts, and shutdown.
+  example: []
+  syntax:
+    content: CancellationToken Cancellation { get; }
+    parameters: []
+    return:
+      type: System.Threading.CancellationToken
+    content.vb: ReadOnly Property Cancellation As CancellationToken
+  overload: AgentFramework.Kernel.IAgentContext.Cancellation*
+- uid: AgentFramework.Kernel.IAgentContext.Now
+  commentId: P:AgentFramework.Kernel.IAgentContext.Now
+  id: Now
+  parent: AgentFramework.Kernel.IAgentContext
+  langs:
+  - csharp
+  - vb
+  name: Now
+  nameWithType: IAgentContext.Now
+  fullName: AgentFramework.Kernel.IAgentContext.Now
+  type: Property
+  source:
+    id: Now
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgentContext.cs
+    startLine: 13
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  summary: Deterministic time source (mockable).
+  example: []
+  syntax:
+    content: DateTimeOffset Now { get; }
+    parameters: []
+    return:
+      type: System.DateTimeOffset
+    content.vb: ReadOnly Property Now As DateTimeOffset
+  overload: AgentFramework.Kernel.IAgentContext.Now*
+- uid: AgentFramework.Kernel.IAgentContext.Random
+  commentId: P:AgentFramework.Kernel.IAgentContext.Random
+  id: Random
+  parent: AgentFramework.Kernel.IAgentContext
+  langs:
+  - csharp
+  - vb
+  name: Random
+  nameWithType: IAgentContext.Random
+  fullName: AgentFramework.Kernel.IAgentContext.Random
+  type: Property
+  source:
+    id: Random
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgentContext.cs
+    startLine: 16
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  summary: Scoped RNG for reproducible behavior in tests.
+  example: []
+  syntax:
+    content: Random Random { get; }
+    parameters: []
+    return:
+      type: System.Random
+    content.vb: ReadOnly Property Random As Random
+  overload: AgentFramework.Kernel.IAgentContext.Random*
+- uid: AgentFramework.Kernel.IAgentContext.Items
+  commentId: P:AgentFramework.Kernel.IAgentContext.Items
+  id: Items
+  parent: AgentFramework.Kernel.IAgentContext
+  langs:
+  - csharp
+  - vb
+  name: Items
+  nameWithType: IAgentContext.Items
+  fullName: AgentFramework.Kernel.IAgentContext.Items
+  type: Property
+  source:
+    id: Items
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgentContext.cs
+    startLine: 19
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  summary: Per-invocation scratchpad for stage handoffs.
+  example: []
+  syntax:
+    content: IDictionary<string, object?> Items { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IDictionary{System.String,System.Object}
+    content.vb: ReadOnly Property Items As IDictionary(Of String, Object)
+  overload: AgentFramework.Kernel.IAgentContext.Items*
+- uid: AgentFramework.Kernel.IAgentContext.Trace(System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object})
+  commentId: M:AgentFramework.Kernel.IAgentContext.Trace(System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object})
+  id: Trace(System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object})
+  parent: AgentFramework.Kernel.IAgentContext
+  langs:
+  - csharp
+  - vb
+  name: Trace(string, IReadOnlyDictionary<string, object?>?)
+  nameWithType: IAgentContext.Trace(string, IReadOnlyDictionary<string, object?>?)
+  fullName: AgentFramework.Kernel.IAgentContext.Trace(string, System.Collections.Generic.IReadOnlyDictionary<string, object?>?)
+  type: Method
+  source:
+    id: Trace
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgentContext.cs
+    startLine: 22
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  summary: Lightweight, correlated trace.
+  example: []
+  syntax:
+    content: void Trace(string message, IReadOnlyDictionary<string, object?>? data = null)
+    parameters:
+    - id: message
+      type: System.String
+    - id: data
+      type: System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object}
+    content.vb: Sub Trace(message As String, data As IReadOnlyDictionary(Of String, Object) = Nothing)
+  overload: AgentFramework.Kernel.IAgentContext.Trace*
+  nameWithType.vb: IAgentContext.Trace(String, IReadOnlyDictionary(Of String, Object))
+  fullName.vb: AgentFramework.Kernel.IAgentContext.Trace(String, System.Collections.Generic.IReadOnlyDictionary(Of String, Object))
+  name.vb: Trace(String, IReadOnlyDictionary(Of String, Object))
+references:
+- uid: AgentFramework.Kernel
+  commentId: N:AgentFramework.Kernel
+  href: AgentFramework.html
+  name: AgentFramework.Kernel
+  nameWithType: AgentFramework.Kernel
+  fullName: AgentFramework.Kernel
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+- uid: AgentFramework.Kernel.IAgentContext.AgentId*
+  commentId: Overload:AgentFramework.Kernel.IAgentContext.AgentId
+  href: AgentFramework.Kernel.IAgentContext.html#AgentFramework_Kernel_IAgentContext_AgentId
+  name: AgentId
+  nameWithType: IAgentContext.AgentId
+  fullName: AgentFramework.Kernel.IAgentContext.AgentId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AgentFramework.Kernel.IAgentContext.EngineId*
+  commentId: Overload:AgentFramework.Kernel.IAgentContext.EngineId
+  href: AgentFramework.Kernel.IAgentContext.html#AgentFramework_Kernel_IAgentContext_EngineId
+  name: EngineId
+  nameWithType: IAgentContext.EngineId
+  fullName: AgentFramework.Kernel.IAgentContext.EngineId
+- uid: AgentFramework.Kernel.IAgentContext.WorkItemId*
+  commentId: Overload:AgentFramework.Kernel.IAgentContext.WorkItemId
+  href: AgentFramework.Kernel.IAgentContext.html#AgentFramework_Kernel_IAgentContext_WorkItemId
+  name: WorkItemId
+  nameWithType: IAgentContext.WorkItemId
+  fullName: AgentFramework.Kernel.IAgentContext.WorkItemId
+- uid: AgentFramework.Kernel.IAgentContext.CorrelationId*
+  commentId: Overload:AgentFramework.Kernel.IAgentContext.CorrelationId
+  href: AgentFramework.Kernel.IAgentContext.html#AgentFramework_Kernel_IAgentContext_CorrelationId
+  name: CorrelationId
+  nameWithType: IAgentContext.CorrelationId
+  fullName: AgentFramework.Kernel.IAgentContext.CorrelationId
+- uid: AgentFramework.Kernel.IAgentContext.Cancellation*
+  commentId: Overload:AgentFramework.Kernel.IAgentContext.Cancellation
+  href: AgentFramework.Kernel.IAgentContext.html#AgentFramework_Kernel_IAgentContext_Cancellation
+  name: Cancellation
+  nameWithType: IAgentContext.Cancellation
+  fullName: AgentFramework.Kernel.IAgentContext.Cancellation
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: AgentFramework.Kernel.IAgentContext.Now*
+  commentId: Overload:AgentFramework.Kernel.IAgentContext.Now
+  href: AgentFramework.Kernel.IAgentContext.html#AgentFramework_Kernel_IAgentContext_Now
+  name: Now
+  nameWithType: IAgentContext.Now
+  fullName: AgentFramework.Kernel.IAgentContext.Now
+- uid: System.DateTimeOffset
+  commentId: T:System.DateTimeOffset
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetimeoffset
+  name: DateTimeOffset
+  nameWithType: DateTimeOffset
+  fullName: System.DateTimeOffset
+- uid: AgentFramework.Kernel.IAgentContext.Random*
+  commentId: Overload:AgentFramework.Kernel.IAgentContext.Random
+  href: AgentFramework.Kernel.IAgentContext.html#AgentFramework_Kernel_IAgentContext_Random
+  name: Random
+  nameWithType: IAgentContext.Random
+  fullName: AgentFramework.Kernel.IAgentContext.Random
+- uid: System.Random
+  commentId: T:System.Random
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.random
+  name: Random
+  nameWithType: Random
+  fullName: System.Random
+- uid: AgentFramework.Kernel.IAgentContext.Items*
+  commentId: Overload:AgentFramework.Kernel.IAgentContext.Items
+  href: AgentFramework.Kernel.IAgentContext.html#AgentFramework_Kernel_IAgentContext_Items
+  name: Items
+  nameWithType: IAgentContext.Items
+  fullName: AgentFramework.Kernel.IAgentContext.Items
+- uid: System.Collections.Generic.IDictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.IDictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<string, object>
+  nameWithType: IDictionary<string, object>
+  fullName: System.Collections.Generic.IDictionary<string, object>
+  nameWithType.vb: IDictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.IDictionary(Of String, Object)
+  name.vb: IDictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.IDictionary`2
+  commentId: T:System.Collections.Generic.IDictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<TKey, TValue>
+  nameWithType: IDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IDictionary<TKey, TValue>
+  nameWithType.vb: IDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IDictionary(Of TKey, TValue)
+  name.vb: IDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: AgentFramework.Kernel.IAgentContext.Trace*
+  commentId: Overload:AgentFramework.Kernel.IAgentContext.Trace
+  href: AgentFramework.Kernel.IAgentContext.html#AgentFramework_Kernel_IAgentContext_Trace_System_String_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__
+  name: Trace
+  nameWithType: IAgentContext.Trace
+  fullName: AgentFramework.Kernel.IAgentContext.Trace
+- uid: System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  name: IReadOnlyDictionary<string, object>
+  nameWithType: IReadOnlyDictionary<string, object>
+  fullName: System.Collections.Generic.IReadOnlyDictionary<string, object>
+  nameWithType.vb: IReadOnlyDictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.IReadOnlyDictionary(Of String, Object)
+  name.vb: IReadOnlyDictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyDictionary`2
+  commentId: T:System.Collections.Generic.IReadOnlyDictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  name: IReadOnlyDictionary<TKey, TValue>
+  nameWithType: IReadOnlyDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>
+  nameWithType.vb: IReadOnlyDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IReadOnlyDictionary(Of TKey, TValue)
+  name.vb: IReadOnlyDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )

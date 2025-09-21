@@ -1,0 +1,628 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Kernel.StubKernel
+  commentId: T:AgentFramework.Kernel.StubKernel
+  id: StubKernel
+  parent: AgentFramework.Kernel
+  children:
+  - AgentFramework.Kernel.StubKernel.#ctor(AgentFramework.Kernel.KernelOptions)
+  - AgentFramework.Kernel.StubKernel.EnqueueAsync(AgentFramework.Kernel.WorkItem,System.Threading.CancellationToken)
+  - AgentFramework.Kernel.StubKernel.StartAsync(System.Threading.CancellationToken)
+  - AgentFramework.Kernel.StubKernel.StopAsync(System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: StubKernel
+  nameWithType: StubKernel
+  fullName: AgentFramework.Kernel.StubKernel
+  type: Class
+  source:
+    id: StubKernel
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/StubKernel.cs
+    startLine: 5
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  summary: 'Temporary stub Kernel: logs enqueues; no dispatch yet.'
+  example: []
+  syntax:
+    content: 'public sealed class StubKernel : IKernel'
+    content.vb: Public NotInheritable Class StubKernel Implements IKernel
+  inheritance:
+  - System.Object
+  implements:
+  - AgentFramework.Kernel.IKernel
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AgentFramework.Kernel.StubKernel.#ctor(AgentFramework.Kernel.KernelOptions)
+  commentId: M:AgentFramework.Kernel.StubKernel.#ctor(AgentFramework.Kernel.KernelOptions)
+  id: '#ctor(AgentFramework.Kernel.KernelOptions)'
+  parent: AgentFramework.Kernel.StubKernel
+  langs:
+  - csharp
+  - vb
+  name: StubKernel(KernelOptions)
+  nameWithType: StubKernel.StubKernel(KernelOptions)
+  fullName: AgentFramework.Kernel.StubKernel.StubKernel(AgentFramework.Kernel.KernelOptions)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/StubKernel.cs
+    startLine: 9
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  syntax:
+    content: public StubKernel(KernelOptions options)
+    parameters:
+    - id: options
+      type: AgentFramework.Kernel.KernelOptions
+    content.vb: Public Sub New(options As KernelOptions)
+  overload: AgentFramework.Kernel.StubKernel.#ctor*
+  nameWithType.vb: StubKernel.New(KernelOptions)
+  fullName.vb: AgentFramework.Kernel.StubKernel.New(AgentFramework.Kernel.KernelOptions)
+  name.vb: New(KernelOptions)
+- uid: AgentFramework.Kernel.StubKernel.StartAsync(System.Threading.CancellationToken)
+  commentId: M:AgentFramework.Kernel.StubKernel.StartAsync(System.Threading.CancellationToken)
+  id: StartAsync(System.Threading.CancellationToken)
+  parent: AgentFramework.Kernel.StubKernel
+  langs:
+  - csharp
+  - vb
+  name: StartAsync(CancellationToken)
+  nameWithType: StubKernel.StartAsync(CancellationToken)
+  fullName: AgentFramework.Kernel.StubKernel.StartAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    id: StartAsync
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/StubKernel.cs
+    startLine: 11
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  example: []
+  syntax:
+    content: public Task StartAsync(CancellationToken ct = default)
+    parameters:
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function StartAsync(ct As CancellationToken = Nothing) As Task
+  overload: AgentFramework.Kernel.StubKernel.StartAsync*
+  implements:
+  - AgentFramework.Kernel.IKernel.StartAsync(System.Threading.CancellationToken)
+- uid: AgentFramework.Kernel.StubKernel.StopAsync(System.Threading.CancellationToken)
+  commentId: M:AgentFramework.Kernel.StubKernel.StopAsync(System.Threading.CancellationToken)
+  id: StopAsync(System.Threading.CancellationToken)
+  parent: AgentFramework.Kernel.StubKernel
+  langs:
+  - csharp
+  - vb
+  name: StopAsync(CancellationToken)
+  nameWithType: StubKernel.StopAsync(CancellationToken)
+  fullName: AgentFramework.Kernel.StubKernel.StopAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    id: StopAsync
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/StubKernel.cs
+    startLine: 17
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  example: []
+  syntax:
+    content: public Task StopAsync(CancellationToken ct = default)
+    parameters:
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function StopAsync(ct As CancellationToken = Nothing) As Task
+  overload: AgentFramework.Kernel.StubKernel.StopAsync*
+  implements:
+  - AgentFramework.Kernel.IKernel.StopAsync(System.Threading.CancellationToken)
+- uid: AgentFramework.Kernel.StubKernel.EnqueueAsync(AgentFramework.Kernel.WorkItem,System.Threading.CancellationToken)
+  commentId: M:AgentFramework.Kernel.StubKernel.EnqueueAsync(AgentFramework.Kernel.WorkItem,System.Threading.CancellationToken)
+  id: EnqueueAsync(AgentFramework.Kernel.WorkItem,System.Threading.CancellationToken)
+  parent: AgentFramework.Kernel.StubKernel
+  langs:
+  - csharp
+  - vb
+  name: EnqueueAsync(WorkItem, CancellationToken)
+  nameWithType: StubKernel.EnqueueAsync(WorkItem, CancellationToken)
+  fullName: AgentFramework.Kernel.StubKernel.EnqueueAsync(AgentFramework.Kernel.WorkItem, System.Threading.CancellationToken)
+  type: Method
+  source:
+    id: EnqueueAsync
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/StubKernel.cs
+    startLine: 23
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  summary: Engines submit work here. At-least-once within-process.
+  example: []
+  syntax:
+    content: public ValueTask EnqueueAsync(WorkItem item, CancellationToken ct = default)
+    parameters:
+    - id: item
+      type: AgentFramework.Kernel.WorkItem
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.ValueTask
+    content.vb: Public Function EnqueueAsync(item As WorkItem, ct As CancellationToken = Nothing) As ValueTask
+  overload: AgentFramework.Kernel.StubKernel.EnqueueAsync*
+  implements:
+  - AgentFramework.Kernel.IKernel.EnqueueAsync(AgentFramework.Kernel.WorkItem,System.Threading.CancellationToken)
+references:
+- uid: AgentFramework.Kernel
+  commentId: N:AgentFramework.Kernel
+  href: AgentFramework.html
+  name: AgentFramework.Kernel
+  nameWithType: AgentFramework.Kernel
+  fullName: AgentFramework.Kernel
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: AgentFramework.Kernel.IKernel
+  commentId: T:AgentFramework.Kernel.IKernel
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.IKernel.html
+  name: IKernel
+  nameWithType: IKernel
+  fullName: AgentFramework.Kernel.IKernel
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AgentFramework.Kernel.StubKernel.#ctor*
+  commentId: Overload:AgentFramework.Kernel.StubKernel.#ctor
+  href: AgentFramework.Kernel.StubKernel.html#AgentFramework_Kernel_StubKernel__ctor_AgentFramework_Kernel_KernelOptions_
+  name: StubKernel
+  nameWithType: StubKernel.StubKernel
+  fullName: AgentFramework.Kernel.StubKernel.StubKernel
+  nameWithType.vb: StubKernel.New
+  fullName.vb: AgentFramework.Kernel.StubKernel.New
+  name.vb: New
+- uid: AgentFramework.Kernel.KernelOptions
+  commentId: T:AgentFramework.Kernel.KernelOptions
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.KernelOptions.html
+  name: KernelOptions
+  nameWithType: KernelOptions
+  fullName: AgentFramework.Kernel.KernelOptions
+- uid: AgentFramework.Kernel.StubKernel.StartAsync*
+  commentId: Overload:AgentFramework.Kernel.StubKernel.StartAsync
+  href: AgentFramework.Kernel.StubKernel.html#AgentFramework_Kernel_StubKernel_StartAsync_System_Threading_CancellationToken_
+  name: StartAsync
+  nameWithType: StubKernel.StartAsync
+  fullName: AgentFramework.Kernel.StubKernel.StartAsync
+- uid: AgentFramework.Kernel.IKernel.StartAsync(System.Threading.CancellationToken)
+  commentId: M:AgentFramework.Kernel.IKernel.StartAsync(System.Threading.CancellationToken)
+  parent: AgentFramework.Kernel.IKernel
+  isExternal: true
+  href: AgentFramework.Kernel.IKernel.html#AgentFramework_Kernel_IKernel_StartAsync_System_Threading_CancellationToken_
+  name: StartAsync(CancellationToken)
+  nameWithType: IKernel.StartAsync(CancellationToken)
+  fullName: AgentFramework.Kernel.IKernel.StartAsync(System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: AgentFramework.Kernel.IKernel.StartAsync(System.Threading.CancellationToken)
+    name: StartAsync
+    href: AgentFramework.Kernel.IKernel.html#AgentFramework_Kernel_IKernel_StartAsync_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: AgentFramework.Kernel.IKernel.StartAsync(System.Threading.CancellationToken)
+    name: StartAsync
+    href: AgentFramework.Kernel.IKernel.html#AgentFramework_Kernel_IKernel_StartAsync_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: AgentFramework.Kernel.StubKernel.StopAsync*
+  commentId: Overload:AgentFramework.Kernel.StubKernel.StopAsync
+  href: AgentFramework.Kernel.StubKernel.html#AgentFramework_Kernel_StubKernel_StopAsync_System_Threading_CancellationToken_
+  name: StopAsync
+  nameWithType: StubKernel.StopAsync
+  fullName: AgentFramework.Kernel.StubKernel.StopAsync
+- uid: AgentFramework.Kernel.IKernel.StopAsync(System.Threading.CancellationToken)
+  commentId: M:AgentFramework.Kernel.IKernel.StopAsync(System.Threading.CancellationToken)
+  parent: AgentFramework.Kernel.IKernel
+  isExternal: true
+  href: AgentFramework.Kernel.IKernel.html#AgentFramework_Kernel_IKernel_StopAsync_System_Threading_CancellationToken_
+  name: StopAsync(CancellationToken)
+  nameWithType: IKernel.StopAsync(CancellationToken)
+  fullName: AgentFramework.Kernel.IKernel.StopAsync(System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: AgentFramework.Kernel.IKernel.StopAsync(System.Threading.CancellationToken)
+    name: StopAsync
+    href: AgentFramework.Kernel.IKernel.html#AgentFramework_Kernel_IKernel_StopAsync_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: AgentFramework.Kernel.IKernel.StopAsync(System.Threading.CancellationToken)
+    name: StopAsync
+    href: AgentFramework.Kernel.IKernel.html#AgentFramework_Kernel_IKernel_StopAsync_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: AgentFramework.Kernel.StubKernel.EnqueueAsync*
+  commentId: Overload:AgentFramework.Kernel.StubKernel.EnqueueAsync
+  href: AgentFramework.Kernel.StubKernel.html#AgentFramework_Kernel_StubKernel_EnqueueAsync_AgentFramework_Kernel_WorkItem_System_Threading_CancellationToken_
+  name: EnqueueAsync
+  nameWithType: StubKernel.EnqueueAsync
+  fullName: AgentFramework.Kernel.StubKernel.EnqueueAsync
+- uid: AgentFramework.Kernel.IKernel.EnqueueAsync(AgentFramework.Kernel.WorkItem,System.Threading.CancellationToken)
+  commentId: M:AgentFramework.Kernel.IKernel.EnqueueAsync(AgentFramework.Kernel.WorkItem,System.Threading.CancellationToken)
+  parent: AgentFramework.Kernel.IKernel
+  isExternal: true
+  href: AgentFramework.Kernel.IKernel.html#AgentFramework_Kernel_IKernel_EnqueueAsync_AgentFramework_Kernel_WorkItem_System_Threading_CancellationToken_
+  name: EnqueueAsync(WorkItem, CancellationToken)
+  nameWithType: IKernel.EnqueueAsync(WorkItem, CancellationToken)
+  fullName: AgentFramework.Kernel.IKernel.EnqueueAsync(AgentFramework.Kernel.WorkItem, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: AgentFramework.Kernel.IKernel.EnqueueAsync(AgentFramework.Kernel.WorkItem,System.Threading.CancellationToken)
+    name: EnqueueAsync
+    href: AgentFramework.Kernel.IKernel.html#AgentFramework_Kernel_IKernel_EnqueueAsync_AgentFramework_Kernel_WorkItem_System_Threading_CancellationToken_
+  - name: (
+  - uid: AgentFramework.Kernel.WorkItem
+    name: WorkItem
+    href: AgentFramework.Kernel.WorkItem.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: AgentFramework.Kernel.IKernel.EnqueueAsync(AgentFramework.Kernel.WorkItem,System.Threading.CancellationToken)
+    name: EnqueueAsync
+    href: AgentFramework.Kernel.IKernel.html#AgentFramework_Kernel_IKernel_EnqueueAsync_AgentFramework_Kernel_WorkItem_System_Threading_CancellationToken_
+  - name: (
+  - uid: AgentFramework.Kernel.WorkItem
+    name: WorkItem
+    href: AgentFramework.Kernel.WorkItem.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: AgentFramework.Kernel.WorkItem
+  commentId: T:AgentFramework.Kernel.WorkItem
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.WorkItem.html
+  name: WorkItem
+  nameWithType: WorkItem
+  fullName: AgentFramework.Kernel.WorkItem
+- uid: System.Threading.Tasks.ValueTask
+  commentId: T:System.Threading.Tasks.ValueTask
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask
+  name: ValueTask
+  nameWithType: ValueTask
+  fullName: System.Threading.Tasks.ValueTask

@@ -1,0 +1,108 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Kernel.Policies.PreemptionDecision
+  commentId: T:AgentFramework.Kernel.Policies.PreemptionDecision
+  id: PreemptionDecision
+  parent: AgentFramework.Kernel.Policies
+  children:
+  - AgentFramework.Kernel.Policies.PreemptionDecision.Cooperative
+  - AgentFramework.Kernel.Policies.PreemptionDecision.No
+  langs:
+  - csharp
+  - vb
+  name: PreemptionDecision
+  nameWithType: PreemptionDecision
+  fullName: AgentFramework.Kernel.Policies.PreemptionDecision
+  type: Enum
+  source:
+    id: PreemptionDecision
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+    startLine: 3
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel.Policies
+  syntax:
+    content: public enum PreemptionDecision
+    content.vb: Public Enum PreemptionDecision
+- uid: AgentFramework.Kernel.Policies.PreemptionDecision.No
+  commentId: F:AgentFramework.Kernel.Policies.PreemptionDecision.No
+  id: No
+  parent: AgentFramework.Kernel.Policies.PreemptionDecision
+  langs:
+  - csharp
+  - vb
+  name: No
+  nameWithType: PreemptionDecision.No
+  fullName: AgentFramework.Kernel.Policies.PreemptionDecision.No
+  type: Field
+  source:
+    id: No
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+    startLine: 3
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel.Policies
+  syntax:
+    content: No = 0
+    return:
+      type: AgentFramework.Kernel.Policies.PreemptionDecision
+- uid: AgentFramework.Kernel.Policies.PreemptionDecision.Cooperative
+  commentId: F:AgentFramework.Kernel.Policies.PreemptionDecision.Cooperative
+  id: Cooperative
+  parent: AgentFramework.Kernel.Policies.PreemptionDecision
+  langs:
+  - csharp
+  - vb
+  name: Cooperative
+  nameWithType: PreemptionDecision.Cooperative
+  fullName: AgentFramework.Kernel.Policies.PreemptionDecision.Cooperative
+  type: Field
+  source:
+    id: Cooperative
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+    startLine: 3
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel.Policies
+  syntax:
+    content: Cooperative = 1
+    return:
+      type: AgentFramework.Kernel.Policies.PreemptionDecision
+references:
+- uid: AgentFramework.Kernel.Policies
+  commentId: N:AgentFramework.Kernel.Policies
+  href: AgentFramework.html
+  name: AgentFramework.Kernel.Policies
+  nameWithType: AgentFramework.Kernel.Policies
+  fullName: AgentFramework.Kernel.Policies
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+- uid: AgentFramework.Kernel.Policies.PreemptionDecision
+  commentId: T:AgentFramework.Kernel.Policies.PreemptionDecision
+  parent: AgentFramework.Kernel.Policies
+  href: AgentFramework.Kernel.Policies.PreemptionDecision.html
+  name: PreemptionDecision
+  nameWithType: PreemptionDecision
+  fullName: AgentFramework.Kernel.Policies.PreemptionDecision

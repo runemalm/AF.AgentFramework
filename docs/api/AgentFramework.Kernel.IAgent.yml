@@ -1,0 +1,192 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Kernel.IAgent
+  commentId: T:AgentFramework.Kernel.IAgent
+  id: IAgent
+  parent: AgentFramework.Kernel
+  children:
+  - AgentFramework.Kernel.IAgent.HandleAsync(AgentFramework.Kernel.WorkItem,AgentFramework.Kernel.IAgentContext)
+  - AgentFramework.Kernel.IAgent.Id
+  langs:
+  - csharp
+  - vb
+  name: IAgent
+  nameWithType: IAgent
+  fullName: AgentFramework.Kernel.IAgent
+  type: Interface
+  source:
+    id: IAgent
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgent.cs
+    startLine: 2
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  syntax:
+    content: public interface IAgent
+    content.vb: Public Interface IAgent
+- uid: AgentFramework.Kernel.IAgent.Id
+  commentId: P:AgentFramework.Kernel.IAgent.Id
+  id: Id
+  parent: AgentFramework.Kernel.IAgent
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: IAgent.Id
+  fullName: AgentFramework.Kernel.IAgent.Id
+  type: Property
+  source:
+    id: Id
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgent.cs
+    startLine: 4
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  syntax:
+    content: string Id { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property Id As String
+  overload: AgentFramework.Kernel.IAgent.Id*
+- uid: AgentFramework.Kernel.IAgent.HandleAsync(AgentFramework.Kernel.WorkItem,AgentFramework.Kernel.IAgentContext)
+  commentId: M:AgentFramework.Kernel.IAgent.HandleAsync(AgentFramework.Kernel.WorkItem,AgentFramework.Kernel.IAgentContext)
+  id: HandleAsync(AgentFramework.Kernel.WorkItem,AgentFramework.Kernel.IAgentContext)
+  parent: AgentFramework.Kernel.IAgent
+  langs:
+  - csharp
+  - vb
+  name: HandleAsync(WorkItem, IAgentContext)
+  nameWithType: IAgent.HandleAsync(WorkItem, IAgentContext)
+  fullName: AgentFramework.Kernel.IAgent.HandleAsync(AgentFramework.Kernel.WorkItem, AgentFramework.Kernel.IAgentContext)
+  type: Method
+  source:
+    id: HandleAsync
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgent.cs
+    startLine: 5
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  syntax:
+    content: Task HandleAsync(WorkItem item, IAgentContext context)
+    parameters:
+    - id: item
+      type: AgentFramework.Kernel.WorkItem
+    - id: context
+      type: AgentFramework.Kernel.IAgentContext
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function HandleAsync(item As WorkItem, context As IAgentContext) As Task
+  overload: AgentFramework.Kernel.IAgent.HandleAsync*
+references:
+- uid: AgentFramework.Kernel
+  commentId: N:AgentFramework.Kernel
+  href: AgentFramework.html
+  name: AgentFramework.Kernel
+  nameWithType: AgentFramework.Kernel
+  fullName: AgentFramework.Kernel
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+- uid: AgentFramework.Kernel.IAgent.Id*
+  commentId: Overload:AgentFramework.Kernel.IAgent.Id
+  href: AgentFramework.Kernel.IAgent.html#AgentFramework_Kernel_IAgent_Id
+  name: Id
+  nameWithType: IAgent.Id
+  fullName: AgentFramework.Kernel.IAgent.Id
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AgentFramework.Kernel.IAgent.HandleAsync*
+  commentId: Overload:AgentFramework.Kernel.IAgent.HandleAsync
+  href: AgentFramework.Kernel.IAgent.html#AgentFramework_Kernel_IAgent_HandleAsync_AgentFramework_Kernel_WorkItem_AgentFramework_Kernel_IAgentContext_
+  name: HandleAsync
+  nameWithType: IAgent.HandleAsync
+  fullName: AgentFramework.Kernel.IAgent.HandleAsync
+- uid: AgentFramework.Kernel.WorkItem
+  commentId: T:AgentFramework.Kernel.WorkItem
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.WorkItem.html
+  name: WorkItem
+  nameWithType: WorkItem
+  fullName: AgentFramework.Kernel.WorkItem
+- uid: AgentFramework.Kernel.IAgentContext
+  commentId: T:AgentFramework.Kernel.IAgentContext
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.IAgentContext.html
+  name: IAgentContext
+  nameWithType: IAgentContext
+  fullName: AgentFramework.Kernel.IAgentContext
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

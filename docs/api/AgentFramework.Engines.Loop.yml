@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Engines.Loop
+  commentId: N:AgentFramework.Engines.Loop
+  id: AgentFramework.Engines.Loop
+  children:
+  - AgentFramework.Engines.Loop.LoopEngine
+  langs:
+  - csharp
+  - vb
+  name: AgentFramework.Engines.Loop
+  nameWithType: AgentFramework.Engines.Loop
+  fullName: AgentFramework.Engines.Loop
+  type: Namespace
+  assemblies:
+  - AF.AgentFramework
+references:
+- uid: AgentFramework.Engines.Loop.LoopEngine
+  commentId: T:AgentFramework.Engines.Loop.LoopEngine
+  href: AgentFramework.Engines.Loop.LoopEngine.html
+  name: LoopEngine
+  nameWithType: LoopEngine
+  fullName: AgentFramework.Engines.Loop.LoopEngine

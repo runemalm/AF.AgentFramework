@@ -1,0 +1,242 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Kernel.IAgentCatalog
+  commentId: T:AgentFramework.Kernel.IAgentCatalog
+  id: IAgentCatalog
+  parent: AgentFramework.Kernel
+  children:
+  - AgentFramework.Kernel.IAgentCatalog.Get(System.String)
+  - AgentFramework.Kernel.IAgentCatalog.ListIds
+  langs:
+  - csharp
+  - vb
+  name: IAgentCatalog
+  nameWithType: IAgentCatalog
+  fullName: AgentFramework.Kernel.IAgentCatalog
+  type: Interface
+  source:
+    id: IAgentCatalog
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgentCatalog.cs
+    startLine: 3
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  summary: Resolves agents by id for the Kernel.
+  example: []
+  syntax:
+    content: public interface IAgentCatalog
+    content.vb: Public Interface IAgentCatalog
+- uid: AgentFramework.Kernel.IAgentCatalog.Get(System.String)
+  commentId: M:AgentFramework.Kernel.IAgentCatalog.Get(System.String)
+  id: Get(System.String)
+  parent: AgentFramework.Kernel.IAgentCatalog
+  langs:
+  - csharp
+  - vb
+  name: Get(string)
+  nameWithType: IAgentCatalog.Get(string)
+  fullName: AgentFramework.Kernel.IAgentCatalog.Get(string)
+  type: Method
+  source:
+    id: Get
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgentCatalog.cs
+    startLine: 5
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  syntax:
+    content: IAgent Get(string agentId)
+    parameters:
+    - id: agentId
+      type: System.String
+    return:
+      type: AgentFramework.Kernel.IAgent
+    content.vb: Function [Get](agentId As String) As IAgent
+  overload: AgentFramework.Kernel.IAgentCatalog.Get*
+  nameWithType.vb: IAgentCatalog.Get(String)
+  fullName.vb: AgentFramework.Kernel.IAgentCatalog.Get(String)
+  name.vb: Get(String)
+- uid: AgentFramework.Kernel.IAgentCatalog.ListIds
+  commentId: M:AgentFramework.Kernel.IAgentCatalog.ListIds
+  id: ListIds
+  parent: AgentFramework.Kernel.IAgentCatalog
+  langs:
+  - csharp
+  - vb
+  name: ListIds()
+  nameWithType: IAgentCatalog.ListIds()
+  fullName: AgentFramework.Kernel.IAgentCatalog.ListIds()
+  type: Method
+  source:
+    id: ListIds
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgentCatalog.cs
+    startLine: 6
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  syntax:
+    content: IReadOnlyCollection<string> ListIds()
+    return:
+      type: System.Collections.Generic.IReadOnlyCollection{System.String}
+    content.vb: Function ListIds() As IReadOnlyCollection(Of String)
+  overload: AgentFramework.Kernel.IAgentCatalog.ListIds*
+references:
+- uid: AgentFramework.Kernel
+  commentId: N:AgentFramework.Kernel
+  href: AgentFramework.html
+  name: AgentFramework.Kernel
+  nameWithType: AgentFramework.Kernel
+  fullName: AgentFramework.Kernel
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+- uid: AgentFramework.Kernel.IAgentCatalog.Get*
+  commentId: Overload:AgentFramework.Kernel.IAgentCatalog.Get
+  href: AgentFramework.Kernel.IAgentCatalog.html#AgentFramework_Kernel_IAgentCatalog_Get_System_String_
+  name: Get
+  nameWithType: IAgentCatalog.Get
+  fullName: AgentFramework.Kernel.IAgentCatalog.Get
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AgentFramework.Kernel.IAgent
+  commentId: T:AgentFramework.Kernel.IAgent
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.IAgent.html
+  name: IAgent
+  nameWithType: IAgent
+  fullName: AgentFramework.Kernel.IAgent
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AgentFramework.Kernel.IAgentCatalog.ListIds*
+  commentId: Overload:AgentFramework.Kernel.IAgentCatalog.ListIds
+  href: AgentFramework.Kernel.IAgentCatalog.html#AgentFramework_Kernel_IAgentCatalog_ListIds
+  name: ListIds
+  nameWithType: IAgentCatalog.ListIds
+  fullName: AgentFramework.Kernel.IAgentCatalog.ListIds
+- uid: System.Collections.Generic.IReadOnlyCollection{System.String}
+  commentId: T:System.Collections.Generic.IReadOnlyCollection{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<string>
+  nameWithType: IReadOnlyCollection<string>
+  fullName: System.Collections.Generic.IReadOnlyCollection<string>
+  nameWithType.vb: IReadOnlyCollection(Of String)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of String)
+  name.vb: IReadOnlyCollection(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyCollection`1
+  commentId: T:System.Collections.Generic.IReadOnlyCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<T>
+  nameWithType: IReadOnlyCollection<T>
+  fullName: System.Collections.Generic.IReadOnlyCollection<T>
+  nameWithType.vb: IReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of T)
+  name.vb: IReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

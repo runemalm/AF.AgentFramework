@@ -1,0 +1,131 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Kernel.Policies.AdmissionDecision
+  commentId: T:AgentFramework.Kernel.Policies.AdmissionDecision
+  id: AdmissionDecision
+  parent: AgentFramework.Kernel.Policies
+  children:
+  - AgentFramework.Kernel.Policies.AdmissionDecision.Accept
+  - AgentFramework.Kernel.Policies.AdmissionDecision.Defer
+  - AgentFramework.Kernel.Policies.AdmissionDecision.Reject
+  langs:
+  - csharp
+  - vb
+  name: AdmissionDecision
+  nameWithType: AdmissionDecision
+  fullName: AgentFramework.Kernel.Policies.AdmissionDecision
+  type: Enum
+  source:
+    id: AdmissionDecision
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+    startLine: 2
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel.Policies
+  syntax:
+    content: public enum AdmissionDecision
+    content.vb: Public Enum AdmissionDecision
+- uid: AgentFramework.Kernel.Policies.AdmissionDecision.Accept
+  commentId: F:AgentFramework.Kernel.Policies.AdmissionDecision.Accept
+  id: Accept
+  parent: AgentFramework.Kernel.Policies.AdmissionDecision
+  langs:
+  - csharp
+  - vb
+  name: Accept
+  nameWithType: AdmissionDecision.Accept
+  fullName: AgentFramework.Kernel.Policies.AdmissionDecision.Accept
+  type: Field
+  source:
+    id: Accept
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+    startLine: 2
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel.Policies
+  syntax:
+    content: Accept = 0
+    return:
+      type: AgentFramework.Kernel.Policies.AdmissionDecision
+- uid: AgentFramework.Kernel.Policies.AdmissionDecision.Defer
+  commentId: F:AgentFramework.Kernel.Policies.AdmissionDecision.Defer
+  id: Defer
+  parent: AgentFramework.Kernel.Policies.AdmissionDecision
+  langs:
+  - csharp
+  - vb
+  name: Defer
+  nameWithType: AdmissionDecision.Defer
+  fullName: AgentFramework.Kernel.Policies.AdmissionDecision.Defer
+  type: Field
+  source:
+    id: Defer
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+    startLine: 2
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel.Policies
+  syntax:
+    content: Defer = 1
+    return:
+      type: AgentFramework.Kernel.Policies.AdmissionDecision
+- uid: AgentFramework.Kernel.Policies.AdmissionDecision.Reject
+  commentId: F:AgentFramework.Kernel.Policies.AdmissionDecision.Reject
+  id: Reject
+  parent: AgentFramework.Kernel.Policies.AdmissionDecision
+  langs:
+  - csharp
+  - vb
+  name: Reject
+  nameWithType: AdmissionDecision.Reject
+  fullName: AgentFramework.Kernel.Policies.AdmissionDecision.Reject
+  type: Field
+  source:
+    id: Reject
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+    startLine: 2
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel.Policies
+  syntax:
+    content: Reject = 2
+    return:
+      type: AgentFramework.Kernel.Policies.AdmissionDecision
+references:
+- uid: AgentFramework.Kernel.Policies
+  commentId: N:AgentFramework.Kernel.Policies
+  href: AgentFramework.html
+  name: AgentFramework.Kernel.Policies
+  nameWithType: AgentFramework.Kernel.Policies
+  fullName: AgentFramework.Kernel.Policies
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+- uid: AgentFramework.Kernel.Policies.AdmissionDecision
+  commentId: T:AgentFramework.Kernel.Policies.AdmissionDecision
+  parent: AgentFramework.Kernel.Policies
+  href: AgentFramework.Kernel.Policies.AdmissionDecision.html
+  name: AdmissionDecision
+  nameWithType: AdmissionDecision
+  fullName: AgentFramework.Kernel.Policies.AdmissionDecision

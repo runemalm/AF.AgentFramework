@@ -4,12 +4,11 @@ on:
   push:
     branches: [ master ]
     paths:
-      - 'src/AgentFramework.Kernel/**'
-      - 'tests/AgentFramework.Kernel.Tests/**'
+      - 'src/AF.AgentFramework/**'
+      - 'tests/AF.AgentFramework.Tests/**'
       - '.releaserc.json'
       - '.github/workflows/release.yml'
       - 'CHANGELOG.md'
-      - 'Directory.*.props'
       - 'package.json'
       - 'package-lock.json'
 
@@ -31,7 +30,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.0.x'
+          dotnet-version: '9.0.x'
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -79,7 +78,7 @@ jobs:
       - name: Pack NuGet (MinVer picks up version from tag)
         if: ${{ steps.tag.outputs.tag != '' }}
         run: |
-          dotnet pack src/AgentFramework.Kernel/AgentFramework.Kernel.csproj \
+          dotnet pack src/AF.AgentFramework/AF.AgentFramework.csproj \
             -c Release \
             -o artifacts
 

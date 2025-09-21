@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Engines.Reactive
+  commentId: N:AgentFramework.Engines.Reactive
+  id: AgentFramework.Engines.Reactive
+  children:
+  - AgentFramework.Engines.Reactive.ReactiveEngine
+  langs:
+  - csharp
+  - vb
+  name: AgentFramework.Engines.Reactive
+  nameWithType: AgentFramework.Engines.Reactive
+  fullName: AgentFramework.Engines.Reactive
+  type: Namespace
+  assemblies:
+  - AF.AgentFramework
+references:
+- uid: AgentFramework.Engines.Reactive.ReactiveEngine
+  commentId: T:AgentFramework.Engines.Reactive.ReactiveEngine
+  href: AgentFramework.Engines.Reactive.ReactiveEngine.html
+  name: ReactiveEngine
+  nameWithType: ReactiveEngine
+  fullName: AgentFramework.Engines.Reactive.ReactiveEngine

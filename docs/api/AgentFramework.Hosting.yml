@@ -1,0 +1,118 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Hosting
+  commentId: N:AgentFramework.Hosting
+  id: AgentFramework.Hosting
+  children:
+  - AgentFramework.Hosting.AgentCatalog
+  - AgentFramework.Hosting.AgentHost
+  - AgentFramework.Hosting.AgentHostBuilder
+  - AgentFramework.Hosting.AgentHostConfig
+  - AgentFramework.Hosting.AgentRegistration
+  - AgentFramework.Hosting.Attachment
+  - AgentFramework.Hosting.EngineRegistration
+  - AgentFramework.Hosting.IAgentHost
+  - AgentFramework.Hosting.IAgentHostBuilder
+  - AgentFramework.Hosting.NoopAgentHost
+  - AgentFramework.Hosting.RunnerRegistration
+  langs:
+  - csharp
+  - vb
+  name: AgentFramework.Hosting
+  nameWithType: AgentFramework.Hosting
+  fullName: AgentFramework.Hosting
+  type: Namespace
+  assemblies:
+  - AF.AgentFramework
+references:
+- uid: AgentFramework.Hosting.AgentCatalog
+  commentId: T:AgentFramework.Hosting.AgentCatalog
+  href: AgentFramework.Hosting.AgentCatalog.html
+  name: AgentCatalog
+  nameWithType: AgentCatalog
+  fullName: AgentFramework.Hosting.AgentCatalog
+- uid: AgentFramework.Hosting.AgentHost
+  commentId: T:AgentFramework.Hosting.AgentHost
+  href: AgentFramework.Hosting.AgentHost.html
+  name: AgentHost
+  nameWithType: AgentHost
+  fullName: AgentFramework.Hosting.AgentHost
+- uid: AgentFramework.Hosting.AgentHostBuilder
+  commentId: T:AgentFramework.Hosting.AgentHostBuilder
+  href: AgentFramework.Hosting.AgentHostBuilder.html
+  name: AgentHostBuilder
+  nameWithType: AgentHostBuilder
+  fullName: AgentFramework.Hosting.AgentHostBuilder
+- uid: AgentFramework.Hosting.AgentHostConfig
+  commentId: T:AgentFramework.Hosting.AgentHostConfig
+  parent: AgentFramework.Hosting
+  href: AgentFramework.Hosting.AgentHostConfig.html
+  name: AgentHostConfig
+  nameWithType: AgentHostConfig
+  fullName: AgentFramework.Hosting.AgentHostConfig
+- uid: AgentFramework.Hosting.AgentRegistration
+  commentId: T:AgentFramework.Hosting.AgentRegistration
+  href: AgentFramework.Hosting.AgentRegistration.html
+  name: AgentRegistration
+  nameWithType: AgentRegistration
+  fullName: AgentFramework.Hosting.AgentRegistration
+- uid: AgentFramework.Hosting.Attachment
+  commentId: T:AgentFramework.Hosting.Attachment
+  href: AgentFramework.Hosting.Attachment.html
+  name: Attachment
+  nameWithType: Attachment
+  fullName: AgentFramework.Hosting.Attachment
+- uid: AgentFramework.Hosting.EngineRegistration
+  commentId: T:AgentFramework.Hosting.EngineRegistration
+  href: AgentFramework.Hosting.EngineRegistration.html
+  name: EngineRegistration
+  nameWithType: EngineRegistration
+  fullName: AgentFramework.Hosting.EngineRegistration
+- uid: AgentFramework.Hosting.IAgentHost
+  commentId: T:AgentFramework.Hosting.IAgentHost
+  parent: AgentFramework.Hosting
+  href: AgentFramework.Hosting.IAgentHost.html
+  name: IAgentHost
+  nameWithType: IAgentHost
+  fullName: AgentFramework.Hosting.IAgentHost
+- uid: AgentFramework.Hosting.IAgentHostBuilder
+  commentId: T:AgentFramework.Hosting.IAgentHostBuilder
+  parent: AgentFramework.Hosting
+  href: AgentFramework.Hosting.IAgentHostBuilder.html
+  name: IAgentHostBuilder
+  nameWithType: IAgentHostBuilder
+  fullName: AgentFramework.Hosting.IAgentHostBuilder
+- uid: AgentFramework.Hosting.NoopAgentHost
+  commentId: T:AgentFramework.Hosting.NoopAgentHost
+  href: AgentFramework.Hosting.NoopAgentHost.html
+  name: NoopAgentHost
+  nameWithType: NoopAgentHost
+  fullName: AgentFramework.Hosting.NoopAgentHost
+- uid: AgentFramework.Hosting.RunnerRegistration
+  commentId: T:AgentFramework.Hosting.RunnerRegistration
+  href: AgentFramework.Hosting.RunnerRegistration.html
+  name: RunnerRegistration
+  nameWithType: RunnerRegistration
+  fullName: AgentFramework.Hosting.RunnerRegistration
+- uid: AgentFramework.Hosting
+  commentId: N:AgentFramework.Hosting
+  href: AgentFramework.html
+  name: AgentFramework.Hosting
+  nameWithType: AgentFramework.Hosting
+  fullName: AgentFramework.Hosting
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Hosting
+    name: Hosting
+    href: AgentFramework.Hosting.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Hosting
+    name: Hosting
+    href: AgentFramework.Hosting.html

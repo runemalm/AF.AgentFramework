@@ -1,0 +1,146 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Kernel.WorkItemKind
+  commentId: T:AgentFramework.Kernel.WorkItemKind
+  id: WorkItemKind
+  parent: AgentFramework.Kernel
+  children:
+  - AgentFramework.Kernel.WorkItemKind.Command
+  - AgentFramework.Kernel.WorkItemKind.Job
+  - AgentFramework.Kernel.WorkItemKind.Percept
+  - AgentFramework.Kernel.WorkItemKind.Tick
+  langs:
+  - csharp
+  - vb
+  name: WorkItemKind
+  nameWithType: WorkItemKind
+  fullName: AgentFramework.Kernel.WorkItemKind
+  type: Enum
+  source:
+    id: WorkItemKind
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/WorkItem.cs
+    startLine: 2
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  syntax:
+    content: public enum WorkItemKind
+    content.vb: Public Enum WorkItemKind
+- uid: AgentFramework.Kernel.WorkItemKind.Percept
+  commentId: F:AgentFramework.Kernel.WorkItemKind.Percept
+  id: Percept
+  parent: AgentFramework.Kernel.WorkItemKind
+  langs:
+  - csharp
+  - vb
+  name: Percept
+  nameWithType: WorkItemKind.Percept
+  fullName: AgentFramework.Kernel.WorkItemKind.Percept
+  type: Field
+  source:
+    id: Percept
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/WorkItem.cs
+    startLine: 2
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  syntax:
+    content: Percept = 0
+    return:
+      type: AgentFramework.Kernel.WorkItemKind
+- uid: AgentFramework.Kernel.WorkItemKind.Tick
+  commentId: F:AgentFramework.Kernel.WorkItemKind.Tick
+  id: Tick
+  parent: AgentFramework.Kernel.WorkItemKind
+  langs:
+  - csharp
+  - vb
+  name: Tick
+  nameWithType: WorkItemKind.Tick
+  fullName: AgentFramework.Kernel.WorkItemKind.Tick
+  type: Field
+  source:
+    id: Tick
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/WorkItem.cs
+    startLine: 2
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  syntax:
+    content: Tick = 1
+    return:
+      type: AgentFramework.Kernel.WorkItemKind
+- uid: AgentFramework.Kernel.WorkItemKind.Command
+  commentId: F:AgentFramework.Kernel.WorkItemKind.Command
+  id: Command
+  parent: AgentFramework.Kernel.WorkItemKind
+  langs:
+  - csharp
+  - vb
+  name: Command
+  nameWithType: WorkItemKind.Command
+  fullName: AgentFramework.Kernel.WorkItemKind.Command
+  type: Field
+  source:
+    id: Command
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/WorkItem.cs
+    startLine: 2
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  syntax:
+    content: Command = 2
+    return:
+      type: AgentFramework.Kernel.WorkItemKind
+- uid: AgentFramework.Kernel.WorkItemKind.Job
+  commentId: F:AgentFramework.Kernel.WorkItemKind.Job
+  id: Job
+  parent: AgentFramework.Kernel.WorkItemKind
+  langs:
+  - csharp
+  - vb
+  name: Job
+  nameWithType: WorkItemKind.Job
+  fullName: AgentFramework.Kernel.WorkItemKind.Job
+  type: Field
+  source:
+    id: Job
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/WorkItem.cs
+    startLine: 2
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  syntax:
+    content: Job = 3
+    return:
+      type: AgentFramework.Kernel.WorkItemKind
+references:
+- uid: AgentFramework.Kernel
+  commentId: N:AgentFramework.Kernel
+  href: AgentFramework.html
+  name: AgentFramework.Kernel
+  nameWithType: AgentFramework.Kernel
+  fullName: AgentFramework.Kernel
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+- uid: AgentFramework.Kernel.WorkItemKind
+  commentId: T:AgentFramework.Kernel.WorkItemKind
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.WorkItemKind.html
+  name: WorkItemKind
+  nameWithType: WorkItemKind
+  fullName: AgentFramework.Kernel.WorkItemKind

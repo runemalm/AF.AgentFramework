@@ -1,0 +1,125 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Kernel.Policies.IBackpressurePolicy
+  commentId: T:AgentFramework.Kernel.Policies.IBackpressurePolicy
+  id: IBackpressurePolicy
+  parent: AgentFramework.Kernel.Policies
+  children:
+  - AgentFramework.Kernel.Policies.IBackpressurePolicy.Evaluate(AgentFramework.Kernel.ClusterLoad)
+  langs:
+  - csharp
+  - vb
+  name: IBackpressurePolicy
+  nameWithType: IBackpressurePolicy
+  fullName: AgentFramework.Kernel.Policies.IBackpressurePolicy
+  type: Interface
+  source:
+    id: IBackpressurePolicy
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/IBackpressurePolicy.cs
+    startLine: 2
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel.Policies
+  syntax:
+    content: public interface IBackpressurePolicy
+    content.vb: Public Interface IBackpressurePolicy
+- uid: AgentFramework.Kernel.Policies.IBackpressurePolicy.Evaluate(AgentFramework.Kernel.ClusterLoad)
+  commentId: M:AgentFramework.Kernel.Policies.IBackpressurePolicy.Evaluate(AgentFramework.Kernel.ClusterLoad)
+  id: Evaluate(AgentFramework.Kernel.ClusterLoad)
+  parent: AgentFramework.Kernel.Policies.IBackpressurePolicy
+  langs:
+  - csharp
+  - vb
+  name: Evaluate(ClusterLoad)
+  nameWithType: IBackpressurePolicy.Evaluate(ClusterLoad)
+  fullName: AgentFramework.Kernel.Policies.IBackpressurePolicy.Evaluate(AgentFramework.Kernel.ClusterLoad)
+  type: Method
+  source:
+    id: Evaluate
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/IBackpressurePolicy.cs
+    startLine: 4
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel.Policies
+  syntax:
+    content: BackpressureDecision Evaluate(ClusterLoad load)
+    parameters:
+    - id: load
+      type: AgentFramework.Kernel.ClusterLoad
+    return:
+      type: AgentFramework.Kernel.Policies.BackpressureDecision
+    content.vb: Function Evaluate(load As ClusterLoad) As BackpressureDecision
+  overload: AgentFramework.Kernel.Policies.IBackpressurePolicy.Evaluate*
+references:
+- uid: AgentFramework.Kernel.Policies
+  commentId: N:AgentFramework.Kernel.Policies
+  href: AgentFramework.html
+  name: AgentFramework.Kernel.Policies
+  nameWithType: AgentFramework.Kernel.Policies
+  fullName: AgentFramework.Kernel.Policies
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+- uid: AgentFramework.Kernel.Policies.IBackpressurePolicy.Evaluate*
+  commentId: Overload:AgentFramework.Kernel.Policies.IBackpressurePolicy.Evaluate
+  href: AgentFramework.Kernel.Policies.IBackpressurePolicy.html#AgentFramework_Kernel_Policies_IBackpressurePolicy_Evaluate_AgentFramework_Kernel_ClusterLoad_
+  name: Evaluate
+  nameWithType: IBackpressurePolicy.Evaluate
+  fullName: AgentFramework.Kernel.Policies.IBackpressurePolicy.Evaluate
+- uid: AgentFramework.Kernel.ClusterLoad
+  commentId: T:AgentFramework.Kernel.ClusterLoad
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.ClusterLoad.html
+  name: ClusterLoad
+  nameWithType: ClusterLoad
+  fullName: AgentFramework.Kernel.ClusterLoad
+- uid: AgentFramework.Kernel.Policies.BackpressureDecision
+  commentId: T:AgentFramework.Kernel.Policies.BackpressureDecision
+  parent: AgentFramework.Kernel.Policies
+  href: AgentFramework.Kernel.Policies.BackpressureDecision.html
+  name: BackpressureDecision
+  nameWithType: BackpressureDecision
+  fullName: AgentFramework.Kernel.Policies.BackpressureDecision
+- uid: AgentFramework.Kernel
+  commentId: N:AgentFramework.Kernel
+  href: AgentFramework.html
+  name: AgentFramework.Kernel
+  nameWithType: AgentFramework.Kernel
+  fullName: AgentFramework.Kernel
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html

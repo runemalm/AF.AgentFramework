@@ -1,0 +1,567 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Hosting.NoopAgentHost
+  commentId: T:AgentFramework.Hosting.NoopAgentHost
+  id: NoopAgentHost
+  parent: AgentFramework.Hosting
+  children:
+  - AgentFramework.Hosting.NoopAgentHost.#ctor(AgentFramework.Hosting.AgentHostConfig)
+  - AgentFramework.Hosting.NoopAgentHost.Config
+  - AgentFramework.Hosting.NoopAgentHost.StartAsync(System.Threading.CancellationToken)
+  - AgentFramework.Hosting.NoopAgentHost.StopAsync(System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: NoopAgentHost
+  nameWithType: NoopAgentHost
+  fullName: AgentFramework.Hosting.NoopAgentHost
+  type: Class
+  source:
+    id: NoopAgentHost
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/NoopAgentHost.cs
+    startLine: 5
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Hosting
+  summary: Temporary no-op host so the builder compiles and tests can target the surface.
+  example: []
+  syntax:
+    content: 'public sealed class NoopAgentHost : IAgentHost'
+    content.vb: Public NotInheritable Class NoopAgentHost Implements IAgentHost
+  inheritance:
+  - System.Object
+  implements:
+  - AgentFramework.Hosting.IAgentHost
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AgentFramework.Hosting.NoopAgentHost.Config
+  commentId: P:AgentFramework.Hosting.NoopAgentHost.Config
+  id: Config
+  parent: AgentFramework.Hosting.NoopAgentHost
+  langs:
+  - csharp
+  - vb
+  name: Config
+  nameWithType: NoopAgentHost.Config
+  fullName: AgentFramework.Hosting.NoopAgentHost.Config
+  type: Property
+  source:
+    id: Config
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/NoopAgentHost.cs
+    startLine: 7
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Hosting
+  syntax:
+    content: public AgentHostConfig Config { get; }
+    parameters: []
+    return:
+      type: AgentFramework.Hosting.AgentHostConfig
+    content.vb: Public ReadOnly Property Config As AgentHostConfig
+  overload: AgentFramework.Hosting.NoopAgentHost.Config*
+- uid: AgentFramework.Hosting.NoopAgentHost.#ctor(AgentFramework.Hosting.AgentHostConfig)
+  commentId: M:AgentFramework.Hosting.NoopAgentHost.#ctor(AgentFramework.Hosting.AgentHostConfig)
+  id: '#ctor(AgentFramework.Hosting.AgentHostConfig)'
+  parent: AgentFramework.Hosting.NoopAgentHost
+  langs:
+  - csharp
+  - vb
+  name: NoopAgentHost(AgentHostConfig)
+  nameWithType: NoopAgentHost.NoopAgentHost(AgentHostConfig)
+  fullName: AgentFramework.Hosting.NoopAgentHost.NoopAgentHost(AgentFramework.Hosting.AgentHostConfig)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/NoopAgentHost.cs
+    startLine: 9
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Hosting
+  syntax:
+    content: public NoopAgentHost(AgentHostConfig config)
+    parameters:
+    - id: config
+      type: AgentFramework.Hosting.AgentHostConfig
+    content.vb: Public Sub New(config As AgentHostConfig)
+  overload: AgentFramework.Hosting.NoopAgentHost.#ctor*
+  nameWithType.vb: NoopAgentHost.New(AgentHostConfig)
+  fullName.vb: AgentFramework.Hosting.NoopAgentHost.New(AgentFramework.Hosting.AgentHostConfig)
+  name.vb: New(AgentHostConfig)
+- uid: AgentFramework.Hosting.NoopAgentHost.StartAsync(System.Threading.CancellationToken)
+  commentId: M:AgentFramework.Hosting.NoopAgentHost.StartAsync(System.Threading.CancellationToken)
+  id: StartAsync(System.Threading.CancellationToken)
+  parent: AgentFramework.Hosting.NoopAgentHost
+  langs:
+  - csharp
+  - vb
+  name: StartAsync(CancellationToken)
+  nameWithType: NoopAgentHost.StartAsync(CancellationToken)
+  fullName: AgentFramework.Hosting.NoopAgentHost.StartAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    id: StartAsync
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/NoopAgentHost.cs
+    startLine: 11
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Hosting
+  example: []
+  syntax:
+    content: public Task StartAsync(CancellationToken ct = default)
+    parameters:
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function StartAsync(ct As CancellationToken = Nothing) As Task
+  overload: AgentFramework.Hosting.NoopAgentHost.StartAsync*
+  implements:
+  - AgentFramework.Hosting.IAgentHost.StartAsync(System.Threading.CancellationToken)
+- uid: AgentFramework.Hosting.NoopAgentHost.StopAsync(System.Threading.CancellationToken)
+  commentId: M:AgentFramework.Hosting.NoopAgentHost.StopAsync(System.Threading.CancellationToken)
+  id: StopAsync(System.Threading.CancellationToken)
+  parent: AgentFramework.Hosting.NoopAgentHost
+  langs:
+  - csharp
+  - vb
+  name: StopAsync(CancellationToken)
+  nameWithType: NoopAgentHost.StopAsync(CancellationToken)
+  fullName: AgentFramework.Hosting.NoopAgentHost.StopAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    id: StopAsync
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/NoopAgentHost.cs
+    startLine: 12
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Hosting
+  example: []
+  syntax:
+    content: public Task StopAsync(CancellationToken ct = default)
+    parameters:
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function StopAsync(ct As CancellationToken = Nothing) As Task
+  overload: AgentFramework.Hosting.NoopAgentHost.StopAsync*
+  implements:
+  - AgentFramework.Hosting.IAgentHost.StopAsync(System.Threading.CancellationToken)
+references:
+- uid: AgentFramework.Hosting
+  commentId: N:AgentFramework.Hosting
+  href: AgentFramework.html
+  name: AgentFramework.Hosting
+  nameWithType: AgentFramework.Hosting
+  fullName: AgentFramework.Hosting
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Hosting
+    name: Hosting
+    href: AgentFramework.Hosting.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Hosting
+    name: Hosting
+    href: AgentFramework.Hosting.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: AgentFramework.Hosting.IAgentHost
+  commentId: T:AgentFramework.Hosting.IAgentHost
+  parent: AgentFramework.Hosting
+  href: AgentFramework.Hosting.IAgentHost.html
+  name: IAgentHost
+  nameWithType: IAgentHost
+  fullName: AgentFramework.Hosting.IAgentHost
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AgentFramework.Hosting.NoopAgentHost.Config*
+  commentId: Overload:AgentFramework.Hosting.NoopAgentHost.Config
+  href: AgentFramework.Hosting.NoopAgentHost.html#AgentFramework_Hosting_NoopAgentHost_Config
+  name: Config
+  nameWithType: NoopAgentHost.Config
+  fullName: AgentFramework.Hosting.NoopAgentHost.Config
+- uid: AgentFramework.Hosting.AgentHostConfig
+  commentId: T:AgentFramework.Hosting.AgentHostConfig
+  parent: AgentFramework.Hosting
+  href: AgentFramework.Hosting.AgentHostConfig.html
+  name: AgentHostConfig
+  nameWithType: AgentHostConfig
+  fullName: AgentFramework.Hosting.AgentHostConfig
+- uid: AgentFramework.Hosting.NoopAgentHost.#ctor*
+  commentId: Overload:AgentFramework.Hosting.NoopAgentHost.#ctor
+  href: AgentFramework.Hosting.NoopAgentHost.html#AgentFramework_Hosting_NoopAgentHost__ctor_AgentFramework_Hosting_AgentHostConfig_
+  name: NoopAgentHost
+  nameWithType: NoopAgentHost.NoopAgentHost
+  fullName: AgentFramework.Hosting.NoopAgentHost.NoopAgentHost
+  nameWithType.vb: NoopAgentHost.New
+  fullName.vb: AgentFramework.Hosting.NoopAgentHost.New
+  name.vb: New
+- uid: AgentFramework.Hosting.NoopAgentHost.StartAsync*
+  commentId: Overload:AgentFramework.Hosting.NoopAgentHost.StartAsync
+  href: AgentFramework.Hosting.NoopAgentHost.html#AgentFramework_Hosting_NoopAgentHost_StartAsync_System_Threading_CancellationToken_
+  name: StartAsync
+  nameWithType: NoopAgentHost.StartAsync
+  fullName: AgentFramework.Hosting.NoopAgentHost.StartAsync
+- uid: AgentFramework.Hosting.IAgentHost.StartAsync(System.Threading.CancellationToken)
+  commentId: M:AgentFramework.Hosting.IAgentHost.StartAsync(System.Threading.CancellationToken)
+  parent: AgentFramework.Hosting.IAgentHost
+  isExternal: true
+  href: AgentFramework.Hosting.IAgentHost.html#AgentFramework_Hosting_IAgentHost_StartAsync_System_Threading_CancellationToken_
+  name: StartAsync(CancellationToken)
+  nameWithType: IAgentHost.StartAsync(CancellationToken)
+  fullName: AgentFramework.Hosting.IAgentHost.StartAsync(System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: AgentFramework.Hosting.IAgentHost.StartAsync(System.Threading.CancellationToken)
+    name: StartAsync
+    href: AgentFramework.Hosting.IAgentHost.html#AgentFramework_Hosting_IAgentHost_StartAsync_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: AgentFramework.Hosting.IAgentHost.StartAsync(System.Threading.CancellationToken)
+    name: StartAsync
+    href: AgentFramework.Hosting.IAgentHost.html#AgentFramework_Hosting_IAgentHost_StartAsync_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: AgentFramework.Hosting.NoopAgentHost.StopAsync*
+  commentId: Overload:AgentFramework.Hosting.NoopAgentHost.StopAsync
+  href: AgentFramework.Hosting.NoopAgentHost.html#AgentFramework_Hosting_NoopAgentHost_StopAsync_System_Threading_CancellationToken_
+  name: StopAsync
+  nameWithType: NoopAgentHost.StopAsync
+  fullName: AgentFramework.Hosting.NoopAgentHost.StopAsync
+- uid: AgentFramework.Hosting.IAgentHost.StopAsync(System.Threading.CancellationToken)
+  commentId: M:AgentFramework.Hosting.IAgentHost.StopAsync(System.Threading.CancellationToken)
+  parent: AgentFramework.Hosting.IAgentHost
+  isExternal: true
+  href: AgentFramework.Hosting.IAgentHost.html#AgentFramework_Hosting_IAgentHost_StopAsync_System_Threading_CancellationToken_
+  name: StopAsync(CancellationToken)
+  nameWithType: IAgentHost.StopAsync(CancellationToken)
+  fullName: AgentFramework.Hosting.IAgentHost.StopAsync(System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: AgentFramework.Hosting.IAgentHost.StopAsync(System.Threading.CancellationToken)
+    name: StopAsync
+    href: AgentFramework.Hosting.IAgentHost.html#AgentFramework_Hosting_IAgentHost_StopAsync_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: AgentFramework.Hosting.IAgentHost.StopAsync(System.Threading.CancellationToken)
+    name: StopAsync
+    href: AgentFramework.Hosting.IAgentHost.html#AgentFramework_Hosting_IAgentHost_StopAsync_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )

@@ -1,0 +1,195 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Hosting.IAgentHost
+  commentId: T:AgentFramework.Hosting.IAgentHost
+  id: IAgentHost
+  parent: AgentFramework.Hosting
+  children:
+  - AgentFramework.Hosting.IAgentHost.StartAsync(System.Threading.CancellationToken)
+  - AgentFramework.Hosting.IAgentHost.StopAsync(System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: IAgentHost
+  nameWithType: IAgentHost
+  fullName: AgentFramework.Hosting.IAgentHost
+  type: Interface
+  source:
+    id: IAgentHost
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/IAgentHost.cs
+    startLine: 2
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Hosting
+  syntax:
+    content: public interface IAgentHost
+    content.vb: Public Interface IAgentHost
+- uid: AgentFramework.Hosting.IAgentHost.StartAsync(System.Threading.CancellationToken)
+  commentId: M:AgentFramework.Hosting.IAgentHost.StartAsync(System.Threading.CancellationToken)
+  id: StartAsync(System.Threading.CancellationToken)
+  parent: AgentFramework.Hosting.IAgentHost
+  langs:
+  - csharp
+  - vb
+  name: StartAsync(CancellationToken)
+  nameWithType: IAgentHost.StartAsync(CancellationToken)
+  fullName: AgentFramework.Hosting.IAgentHost.StartAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    id: StartAsync
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/IAgentHost.cs
+    startLine: 4
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Hosting
+  syntax:
+    content: Task StartAsync(CancellationToken ct = default)
+    parameters:
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function StartAsync(ct As CancellationToken = Nothing) As Task
+  overload: AgentFramework.Hosting.IAgentHost.StartAsync*
+- uid: AgentFramework.Hosting.IAgentHost.StopAsync(System.Threading.CancellationToken)
+  commentId: M:AgentFramework.Hosting.IAgentHost.StopAsync(System.Threading.CancellationToken)
+  id: StopAsync(System.Threading.CancellationToken)
+  parent: AgentFramework.Hosting.IAgentHost
+  langs:
+  - csharp
+  - vb
+  name: StopAsync(CancellationToken)
+  nameWithType: IAgentHost.StopAsync(CancellationToken)
+  fullName: AgentFramework.Hosting.IAgentHost.StopAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    id: StopAsync
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/IAgentHost.cs
+    startLine: 5
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Hosting
+  syntax:
+    content: Task StopAsync(CancellationToken ct = default)
+    parameters:
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function StopAsync(ct As CancellationToken = Nothing) As Task
+  overload: AgentFramework.Hosting.IAgentHost.StopAsync*
+references:
+- uid: AgentFramework.Hosting
+  commentId: N:AgentFramework.Hosting
+  href: AgentFramework.html
+  name: AgentFramework.Hosting
+  nameWithType: AgentFramework.Hosting
+  fullName: AgentFramework.Hosting
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Hosting
+    name: Hosting
+    href: AgentFramework.Hosting.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Hosting
+    name: Hosting
+    href: AgentFramework.Hosting.html
+- uid: AgentFramework.Hosting.IAgentHost.StartAsync*
+  commentId: Overload:AgentFramework.Hosting.IAgentHost.StartAsync
+  href: AgentFramework.Hosting.IAgentHost.html#AgentFramework_Hosting_IAgentHost_StartAsync_System_Threading_CancellationToken_
+  name: StartAsync
+  nameWithType: IAgentHost.StartAsync
+  fullName: AgentFramework.Hosting.IAgentHost.StartAsync
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: AgentFramework.Hosting.IAgentHost.StopAsync*
+  commentId: Overload:AgentFramework.Hosting.IAgentHost.StopAsync
+  href: AgentFramework.Hosting.IAgentHost.html#AgentFramework_Hosting_IAgentHost_StopAsync_System_Threading_CancellationToken_
+  name: StopAsync
+  nameWithType: IAgentHost.StopAsync
+  fullName: AgentFramework.Hosting.IAgentHost.StopAsync

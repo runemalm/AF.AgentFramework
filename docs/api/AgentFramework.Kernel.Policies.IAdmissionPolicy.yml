@@ -1,0 +1,134 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Kernel.Policies.IAdmissionPolicy
+  commentId: T:AgentFramework.Kernel.Policies.IAdmissionPolicy
+  id: IAdmissionPolicy
+  parent: AgentFramework.Kernel.Policies
+  children:
+  - AgentFramework.Kernel.Policies.IAdmissionPolicy.Admit(AgentFramework.Kernel.WorkItem,AgentFramework.Kernel.AgentRuntimeState)
+  langs:
+  - csharp
+  - vb
+  name: IAdmissionPolicy
+  nameWithType: IAdmissionPolicy
+  fullName: AgentFramework.Kernel.Policies.IAdmissionPolicy
+  type: Interface
+  source:
+    id: IAdmissionPolicy
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/IAdmissionPolicy.cs
+    startLine: 2
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel.Policies
+  syntax:
+    content: public interface IAdmissionPolicy
+    content.vb: Public Interface IAdmissionPolicy
+- uid: AgentFramework.Kernel.Policies.IAdmissionPolicy.Admit(AgentFramework.Kernel.WorkItem,AgentFramework.Kernel.AgentRuntimeState)
+  commentId: M:AgentFramework.Kernel.Policies.IAdmissionPolicy.Admit(AgentFramework.Kernel.WorkItem,AgentFramework.Kernel.AgentRuntimeState)
+  id: Admit(AgentFramework.Kernel.WorkItem,AgentFramework.Kernel.AgentRuntimeState)
+  parent: AgentFramework.Kernel.Policies.IAdmissionPolicy
+  langs:
+  - csharp
+  - vb
+  name: Admit(WorkItem, AgentRuntimeState)
+  nameWithType: IAdmissionPolicy.Admit(WorkItem, AgentRuntimeState)
+  fullName: AgentFramework.Kernel.Policies.IAdmissionPolicy.Admit(AgentFramework.Kernel.WorkItem, AgentFramework.Kernel.AgentRuntimeState)
+  type: Method
+  source:
+    id: Admit
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/IAdmissionPolicy.cs
+    startLine: 4
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel.Policies
+  syntax:
+    content: AdmissionDecision Admit(WorkItem item, AgentRuntimeState state)
+    parameters:
+    - id: item
+      type: AgentFramework.Kernel.WorkItem
+    - id: state
+      type: AgentFramework.Kernel.AgentRuntimeState
+    return:
+      type: AgentFramework.Kernel.Policies.AdmissionDecision
+    content.vb: Function Admit(item As WorkItem, state As AgentRuntimeState) As AdmissionDecision
+  overload: AgentFramework.Kernel.Policies.IAdmissionPolicy.Admit*
+references:
+- uid: AgentFramework.Kernel.Policies
+  commentId: N:AgentFramework.Kernel.Policies
+  href: AgentFramework.html
+  name: AgentFramework.Kernel.Policies
+  nameWithType: AgentFramework.Kernel.Policies
+  fullName: AgentFramework.Kernel.Policies
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+- uid: AgentFramework.Kernel.Policies.IAdmissionPolicy.Admit*
+  commentId: Overload:AgentFramework.Kernel.Policies.IAdmissionPolicy.Admit
+  href: AgentFramework.Kernel.Policies.IAdmissionPolicy.html#AgentFramework_Kernel_Policies_IAdmissionPolicy_Admit_AgentFramework_Kernel_WorkItem_AgentFramework_Kernel_AgentRuntimeState_
+  name: Admit
+  nameWithType: IAdmissionPolicy.Admit
+  fullName: AgentFramework.Kernel.Policies.IAdmissionPolicy.Admit
+- uid: AgentFramework.Kernel.WorkItem
+  commentId: T:AgentFramework.Kernel.WorkItem
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.WorkItem.html
+  name: WorkItem
+  nameWithType: WorkItem
+  fullName: AgentFramework.Kernel.WorkItem
+- uid: AgentFramework.Kernel.AgentRuntimeState
+  commentId: T:AgentFramework.Kernel.AgentRuntimeState
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.AgentRuntimeState.html
+  name: AgentRuntimeState
+  nameWithType: AgentRuntimeState
+  fullName: AgentFramework.Kernel.AgentRuntimeState
+- uid: AgentFramework.Kernel.Policies.AdmissionDecision
+  commentId: T:AgentFramework.Kernel.Policies.AdmissionDecision
+  parent: AgentFramework.Kernel.Policies
+  href: AgentFramework.Kernel.Policies.AdmissionDecision.html
+  name: AdmissionDecision
+  nameWithType: AdmissionDecision
+  fullName: AgentFramework.Kernel.Policies.AdmissionDecision
+- uid: AgentFramework.Kernel
+  commentId: N:AgentFramework.Kernel
+  href: AgentFramework.html
+  name: AgentFramework.Kernel
+  nameWithType: AgentFramework.Kernel
+  fullName: AgentFramework.Kernel
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html

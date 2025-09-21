@@ -1,0 +1,248 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Kernel.IKernel
+  commentId: T:AgentFramework.Kernel.IKernel
+  id: IKernel
+  parent: AgentFramework.Kernel
+  children:
+  - AgentFramework.Kernel.IKernel.EnqueueAsync(AgentFramework.Kernel.WorkItem,System.Threading.CancellationToken)
+  - AgentFramework.Kernel.IKernel.StartAsync(System.Threading.CancellationToken)
+  - AgentFramework.Kernel.IKernel.StopAsync(System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: IKernel
+  nameWithType: IKernel
+  fullName: AgentFramework.Kernel.IKernel
+  type: Interface
+  source:
+    id: IKernel
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IKernel.cs
+    startLine: 2
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  syntax:
+    content: public interface IKernel
+    content.vb: Public Interface IKernel
+- uid: AgentFramework.Kernel.IKernel.StartAsync(System.Threading.CancellationToken)
+  commentId: M:AgentFramework.Kernel.IKernel.StartAsync(System.Threading.CancellationToken)
+  id: StartAsync(System.Threading.CancellationToken)
+  parent: AgentFramework.Kernel.IKernel
+  langs:
+  - csharp
+  - vb
+  name: StartAsync(CancellationToken)
+  nameWithType: IKernel.StartAsync(CancellationToken)
+  fullName: AgentFramework.Kernel.IKernel.StartAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    id: StartAsync
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IKernel.cs
+    startLine: 4
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  syntax:
+    content: Task StartAsync(CancellationToken ct = default)
+    parameters:
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function StartAsync(ct As CancellationToken = Nothing) As Task
+  overload: AgentFramework.Kernel.IKernel.StartAsync*
+- uid: AgentFramework.Kernel.IKernel.StopAsync(System.Threading.CancellationToken)
+  commentId: M:AgentFramework.Kernel.IKernel.StopAsync(System.Threading.CancellationToken)
+  id: StopAsync(System.Threading.CancellationToken)
+  parent: AgentFramework.Kernel.IKernel
+  langs:
+  - csharp
+  - vb
+  name: StopAsync(CancellationToken)
+  nameWithType: IKernel.StopAsync(CancellationToken)
+  fullName: AgentFramework.Kernel.IKernel.StopAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    id: StopAsync
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IKernel.cs
+    startLine: 5
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  syntax:
+    content: Task StopAsync(CancellationToken ct = default)
+    parameters:
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function StopAsync(ct As CancellationToken = Nothing) As Task
+  overload: AgentFramework.Kernel.IKernel.StopAsync*
+- uid: AgentFramework.Kernel.IKernel.EnqueueAsync(AgentFramework.Kernel.WorkItem,System.Threading.CancellationToken)
+  commentId: M:AgentFramework.Kernel.IKernel.EnqueueAsync(AgentFramework.Kernel.WorkItem,System.Threading.CancellationToken)
+  id: EnqueueAsync(AgentFramework.Kernel.WorkItem,System.Threading.CancellationToken)
+  parent: AgentFramework.Kernel.IKernel
+  langs:
+  - csharp
+  - vb
+  name: EnqueueAsync(WorkItem, CancellationToken)
+  nameWithType: IKernel.EnqueueAsync(WorkItem, CancellationToken)
+  fullName: AgentFramework.Kernel.IKernel.EnqueueAsync(AgentFramework.Kernel.WorkItem, System.Threading.CancellationToken)
+  type: Method
+  source:
+    id: EnqueueAsync
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IKernel.cs
+    startLine: 8
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  summary: Engines submit work here. At-least-once within-process.
+  example: []
+  syntax:
+    content: ValueTask EnqueueAsync(WorkItem item, CancellationToken ct = default)
+    parameters:
+    - id: item
+      type: AgentFramework.Kernel.WorkItem
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.ValueTask
+    content.vb: Function EnqueueAsync(item As WorkItem, ct As CancellationToken = Nothing) As ValueTask
+  overload: AgentFramework.Kernel.IKernel.EnqueueAsync*
+references:
+- uid: AgentFramework.Kernel
+  commentId: N:AgentFramework.Kernel
+  href: AgentFramework.html
+  name: AgentFramework.Kernel
+  nameWithType: AgentFramework.Kernel
+  fullName: AgentFramework.Kernel
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+- uid: AgentFramework.Kernel.IKernel.StartAsync*
+  commentId: Overload:AgentFramework.Kernel.IKernel.StartAsync
+  href: AgentFramework.Kernel.IKernel.html#AgentFramework_Kernel_IKernel_StartAsync_System_Threading_CancellationToken_
+  name: StartAsync
+  nameWithType: IKernel.StartAsync
+  fullName: AgentFramework.Kernel.IKernel.StartAsync
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: AgentFramework.Kernel.IKernel.StopAsync*
+  commentId: Overload:AgentFramework.Kernel.IKernel.StopAsync
+  href: AgentFramework.Kernel.IKernel.html#AgentFramework_Kernel_IKernel_StopAsync_System_Threading_CancellationToken_
+  name: StopAsync
+  nameWithType: IKernel.StopAsync
+  fullName: AgentFramework.Kernel.IKernel.StopAsync
+- uid: AgentFramework.Kernel.IKernel.EnqueueAsync*
+  commentId: Overload:AgentFramework.Kernel.IKernel.EnqueueAsync
+  href: AgentFramework.Kernel.IKernel.html#AgentFramework_Kernel_IKernel_EnqueueAsync_AgentFramework_Kernel_WorkItem_System_Threading_CancellationToken_
+  name: EnqueueAsync
+  nameWithType: IKernel.EnqueueAsync
+  fullName: AgentFramework.Kernel.IKernel.EnqueueAsync
+- uid: AgentFramework.Kernel.WorkItem
+  commentId: T:AgentFramework.Kernel.WorkItem
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.WorkItem.html
+  name: WorkItem
+  nameWithType: WorkItem
+  fullName: AgentFramework.Kernel.WorkItem
+- uid: System.Threading.Tasks.ValueTask
+  commentId: T:System.Threading.Tasks.ValueTask
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask
+  name: ValueTask
+  nameWithType: ValueTask
+  fullName: System.Threading.Tasks.ValueTask

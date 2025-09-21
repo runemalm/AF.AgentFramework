@@ -1,0 +1,466 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Hosting.IAgentHostBuilder
+  commentId: T:AgentFramework.Hosting.IAgentHostBuilder
+  id: IAgentHostBuilder
+  parent: AgentFramework.Hosting
+  children:
+  - AgentFramework.Hosting.IAgentHostBuilder.AddAgent(System.String,System.Func{AgentFramework.Kernel.IAgent})
+  - AgentFramework.Hosting.IAgentHostBuilder.AddEngine(System.String,System.Func{AgentFramework.Engines.IEngine})
+  - AgentFramework.Hosting.IAgentHostBuilder.AddRunner(System.String,System.Func{AgentFramework.Runners.IRunner})
+  - AgentFramework.Hosting.IAgentHostBuilder.Attach(System.String,System.String,AgentFramework.Kernel.Policies.PolicySet)
+  - AgentFramework.Hosting.IAgentHostBuilder.Build
+  - AgentFramework.Hosting.IAgentHostBuilder.WithKernelDefaults(AgentFramework.Kernel.Policies.PolicySet)
+  langs:
+  - csharp
+  - vb
+  name: IAgentHostBuilder
+  nameWithType: IAgentHostBuilder
+  fullName: AgentFramework.Hosting.IAgentHostBuilder
+  type: Interface
+  source:
+    id: IAgentHostBuilder
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/IAgentHostBuilder.cs
+    startLine: 7
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Hosting
+  syntax:
+    content: public interface IAgentHostBuilder
+    content.vb: Public Interface IAgentHostBuilder
+- uid: AgentFramework.Hosting.IAgentHostBuilder.AddEngine(System.String,System.Func{AgentFramework.Engines.IEngine})
+  commentId: M:AgentFramework.Hosting.IAgentHostBuilder.AddEngine(System.String,System.Func{AgentFramework.Engines.IEngine})
+  id: AddEngine(System.String,System.Func{AgentFramework.Engines.IEngine})
+  parent: AgentFramework.Hosting.IAgentHostBuilder
+  langs:
+  - csharp
+  - vb
+  name: AddEngine(string, Func<IEngine>)
+  nameWithType: IAgentHostBuilder.AddEngine(string, Func<IEngine>)
+  fullName: AgentFramework.Hosting.IAgentHostBuilder.AddEngine(string, System.Func<AgentFramework.Engines.IEngine>)
+  type: Method
+  source:
+    id: AddEngine
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/IAgentHostBuilder.cs
+    startLine: 9
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Hosting
+  syntax:
+    content: IAgentHostBuilder AddEngine(string engineId, Func<IEngine> engineFactory)
+    parameters:
+    - id: engineId
+      type: System.String
+    - id: engineFactory
+      type: System.Func{AgentFramework.Engines.IEngine}
+    return:
+      type: AgentFramework.Hosting.IAgentHostBuilder
+    content.vb: Function AddEngine(engineId As String, engineFactory As Func(Of IEngine)) As IAgentHostBuilder
+  overload: AgentFramework.Hosting.IAgentHostBuilder.AddEngine*
+  nameWithType.vb: IAgentHostBuilder.AddEngine(String, Func(Of IEngine))
+  fullName.vb: AgentFramework.Hosting.IAgentHostBuilder.AddEngine(String, System.Func(Of AgentFramework.Engines.IEngine))
+  name.vb: AddEngine(String, Func(Of IEngine))
+- uid: AgentFramework.Hosting.IAgentHostBuilder.AddRunner(System.String,System.Func{AgentFramework.Runners.IRunner})
+  commentId: M:AgentFramework.Hosting.IAgentHostBuilder.AddRunner(System.String,System.Func{AgentFramework.Runners.IRunner})
+  id: AddRunner(System.String,System.Func{AgentFramework.Runners.IRunner})
+  parent: AgentFramework.Hosting.IAgentHostBuilder
+  langs:
+  - csharp
+  - vb
+  name: AddRunner(string, Func<IRunner>)
+  nameWithType: IAgentHostBuilder.AddRunner(string, Func<IRunner>)
+  fullName: AgentFramework.Hosting.IAgentHostBuilder.AddRunner(string, System.Func<AgentFramework.Runners.IRunner>)
+  type: Method
+  source:
+    id: AddRunner
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/IAgentHostBuilder.cs
+    startLine: 10
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Hosting
+  syntax:
+    content: IAgentHostBuilder AddRunner(string engineId, Func<IRunner> runnerFactory)
+    parameters:
+    - id: engineId
+      type: System.String
+    - id: runnerFactory
+      type: System.Func{AgentFramework.Runners.IRunner}
+    return:
+      type: AgentFramework.Hosting.IAgentHostBuilder
+    content.vb: Function AddRunner(engineId As String, runnerFactory As Func(Of IRunner)) As IAgentHostBuilder
+  overload: AgentFramework.Hosting.IAgentHostBuilder.AddRunner*
+  nameWithType.vb: IAgentHostBuilder.AddRunner(String, Func(Of IRunner))
+  fullName.vb: AgentFramework.Hosting.IAgentHostBuilder.AddRunner(String, System.Func(Of AgentFramework.Runners.IRunner))
+  name.vb: AddRunner(String, Func(Of IRunner))
+- uid: AgentFramework.Hosting.IAgentHostBuilder.AddAgent(System.String,System.Func{AgentFramework.Kernel.IAgent})
+  commentId: M:AgentFramework.Hosting.IAgentHostBuilder.AddAgent(System.String,System.Func{AgentFramework.Kernel.IAgent})
+  id: AddAgent(System.String,System.Func{AgentFramework.Kernel.IAgent})
+  parent: AgentFramework.Hosting.IAgentHostBuilder
+  langs:
+  - csharp
+  - vb
+  name: AddAgent(string, Func<IAgent>)
+  nameWithType: IAgentHostBuilder.AddAgent(string, Func<IAgent>)
+  fullName: AgentFramework.Hosting.IAgentHostBuilder.AddAgent(string, System.Func<AgentFramework.Kernel.IAgent>)
+  type: Method
+  source:
+    id: AddAgent
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/IAgentHostBuilder.cs
+    startLine: 11
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Hosting
+  syntax:
+    content: IAgentHostBuilder AddAgent(string agentId, Func<IAgent> agentFactory)
+    parameters:
+    - id: agentId
+      type: System.String
+    - id: agentFactory
+      type: System.Func{AgentFramework.Kernel.IAgent}
+    return:
+      type: AgentFramework.Hosting.IAgentHostBuilder
+    content.vb: Function AddAgent(agentId As String, agentFactory As Func(Of IAgent)) As IAgentHostBuilder
+  overload: AgentFramework.Hosting.IAgentHostBuilder.AddAgent*
+  nameWithType.vb: IAgentHostBuilder.AddAgent(String, Func(Of IAgent))
+  fullName.vb: AgentFramework.Hosting.IAgentHostBuilder.AddAgent(String, System.Func(Of AgentFramework.Kernel.IAgent))
+  name.vb: AddAgent(String, Func(Of IAgent))
+- uid: AgentFramework.Hosting.IAgentHostBuilder.Attach(System.String,System.String,AgentFramework.Kernel.Policies.PolicySet)
+  commentId: M:AgentFramework.Hosting.IAgentHostBuilder.Attach(System.String,System.String,AgentFramework.Kernel.Policies.PolicySet)
+  id: Attach(System.String,System.String,AgentFramework.Kernel.Policies.PolicySet)
+  parent: AgentFramework.Hosting.IAgentHostBuilder
+  langs:
+  - csharp
+  - vb
+  name: Attach(string, string, PolicySet?)
+  nameWithType: IAgentHostBuilder.Attach(string, string, PolicySet?)
+  fullName: AgentFramework.Hosting.IAgentHostBuilder.Attach(string, string, AgentFramework.Kernel.Policies.PolicySet?)
+  type: Method
+  source:
+    id: Attach
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/IAgentHostBuilder.cs
+    startLine: 12
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Hosting
+  syntax:
+    content: IAgentHostBuilder Attach(string agentId, string engineId, PolicySet? overrides = null)
+    parameters:
+    - id: agentId
+      type: System.String
+    - id: engineId
+      type: System.String
+    - id: overrides
+      type: AgentFramework.Kernel.Policies.PolicySet
+    return:
+      type: AgentFramework.Hosting.IAgentHostBuilder
+    content.vb: Function Attach(agentId As String, engineId As String, [overrides] As PolicySet = Nothing) As IAgentHostBuilder
+  overload: AgentFramework.Hosting.IAgentHostBuilder.Attach*
+  nameWithType.vb: IAgentHostBuilder.Attach(String, String, PolicySet)
+  fullName.vb: AgentFramework.Hosting.IAgentHostBuilder.Attach(String, String, AgentFramework.Kernel.Policies.PolicySet)
+  name.vb: Attach(String, String, PolicySet)
+- uid: AgentFramework.Hosting.IAgentHostBuilder.WithKernelDefaults(AgentFramework.Kernel.Policies.PolicySet)
+  commentId: M:AgentFramework.Hosting.IAgentHostBuilder.WithKernelDefaults(AgentFramework.Kernel.Policies.PolicySet)
+  id: WithKernelDefaults(AgentFramework.Kernel.Policies.PolicySet)
+  parent: AgentFramework.Hosting.IAgentHostBuilder
+  langs:
+  - csharp
+  - vb
+  name: WithKernelDefaults(PolicySet)
+  nameWithType: IAgentHostBuilder.WithKernelDefaults(PolicySet)
+  fullName: AgentFramework.Hosting.IAgentHostBuilder.WithKernelDefaults(AgentFramework.Kernel.Policies.PolicySet)
+  type: Method
+  source:
+    id: WithKernelDefaults
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/IAgentHostBuilder.cs
+    startLine: 13
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Hosting
+  syntax:
+    content: IAgentHostBuilder WithKernelDefaults(PolicySet defaults)
+    parameters:
+    - id: defaults
+      type: AgentFramework.Kernel.Policies.PolicySet
+    return:
+      type: AgentFramework.Hosting.IAgentHostBuilder
+    content.vb: Function WithKernelDefaults(defaults As PolicySet) As IAgentHostBuilder
+  overload: AgentFramework.Hosting.IAgentHostBuilder.WithKernelDefaults*
+- uid: AgentFramework.Hosting.IAgentHostBuilder.Build
+  commentId: M:AgentFramework.Hosting.IAgentHostBuilder.Build
+  id: Build
+  parent: AgentFramework.Hosting.IAgentHostBuilder
+  langs:
+  - csharp
+  - vb
+  name: Build()
+  nameWithType: IAgentHostBuilder.Build()
+  fullName: AgentFramework.Hosting.IAgentHostBuilder.Build()
+  type: Method
+  source:
+    id: Build
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/IAgentHostBuilder.cs
+    startLine: 14
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Hosting
+  syntax:
+    content: IAgentHost Build()
+    return:
+      type: AgentFramework.Hosting.IAgentHost
+    content.vb: Function Build() As IAgentHost
+  overload: AgentFramework.Hosting.IAgentHostBuilder.Build*
+references:
+- uid: AgentFramework.Hosting
+  commentId: N:AgentFramework.Hosting
+  href: AgentFramework.html
+  name: AgentFramework.Hosting
+  nameWithType: AgentFramework.Hosting
+  fullName: AgentFramework.Hosting
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Hosting
+    name: Hosting
+    href: AgentFramework.Hosting.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Hosting
+    name: Hosting
+    href: AgentFramework.Hosting.html
+- uid: AgentFramework.Hosting.IAgentHostBuilder.AddEngine*
+  commentId: Overload:AgentFramework.Hosting.IAgentHostBuilder.AddEngine
+  href: AgentFramework.Hosting.IAgentHostBuilder.html#AgentFramework_Hosting_IAgentHostBuilder_AddEngine_System_String_System_Func_AgentFramework_Engines_IEngine__
+  name: AddEngine
+  nameWithType: IAgentHostBuilder.AddEngine
+  fullName: AgentFramework.Hosting.IAgentHostBuilder.AddEngine
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Func{AgentFramework.Engines.IEngine}
+  commentId: T:System.Func{AgentFramework.Engines.IEngine}
+  parent: System
+  definition: System.Func`1
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<IEngine>
+  nameWithType: Func<IEngine>
+  fullName: System.Func<AgentFramework.Engines.IEngine>
+  nameWithType.vb: Func(Of IEngine)
+  fullName.vb: System.Func(Of AgentFramework.Engines.IEngine)
+  name.vb: Func(Of IEngine)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: AgentFramework.Engines.IEngine
+    name: IEngine
+    href: AgentFramework.Engines.IEngine.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AgentFramework.Engines.IEngine
+    name: IEngine
+    href: AgentFramework.Engines.IEngine.html
+  - name: )
+- uid: AgentFramework.Hosting.IAgentHostBuilder
+  commentId: T:AgentFramework.Hosting.IAgentHostBuilder
+  parent: AgentFramework.Hosting
+  href: AgentFramework.Hosting.IAgentHostBuilder.html
+  name: IAgentHostBuilder
+  nameWithType: IAgentHostBuilder
+  fullName: AgentFramework.Hosting.IAgentHostBuilder
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Func`1
+  commentId: T:System.Func`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<TResult>
+  nameWithType: Func<TResult>
+  fullName: System.Func<TResult>
+  nameWithType.vb: Func(Of TResult)
+  fullName.vb: System.Func(Of TResult)
+  name.vb: Func(Of TResult)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: AgentFramework.Hosting.IAgentHostBuilder.AddRunner*
+  commentId: Overload:AgentFramework.Hosting.IAgentHostBuilder.AddRunner
+  href: AgentFramework.Hosting.IAgentHostBuilder.html#AgentFramework_Hosting_IAgentHostBuilder_AddRunner_System_String_System_Func_AgentFramework_Runners_IRunner__
+  name: AddRunner
+  nameWithType: IAgentHostBuilder.AddRunner
+  fullName: AgentFramework.Hosting.IAgentHostBuilder.AddRunner
+- uid: System.Func{AgentFramework.Runners.IRunner}
+  commentId: T:System.Func{AgentFramework.Runners.IRunner}
+  parent: System
+  definition: System.Func`1
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<IRunner>
+  nameWithType: Func<IRunner>
+  fullName: System.Func<AgentFramework.Runners.IRunner>
+  nameWithType.vb: Func(Of IRunner)
+  fullName.vb: System.Func(Of AgentFramework.Runners.IRunner)
+  name.vb: Func(Of IRunner)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: AgentFramework.Runners.IRunner
+    name: IRunner
+    href: AgentFramework.Runners.IRunner.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AgentFramework.Runners.IRunner
+    name: IRunner
+    href: AgentFramework.Runners.IRunner.html
+  - name: )
+- uid: AgentFramework.Hosting.IAgentHostBuilder.AddAgent*
+  commentId: Overload:AgentFramework.Hosting.IAgentHostBuilder.AddAgent
+  href: AgentFramework.Hosting.IAgentHostBuilder.html#AgentFramework_Hosting_IAgentHostBuilder_AddAgent_System_String_System_Func_AgentFramework_Kernel_IAgent__
+  name: AddAgent
+  nameWithType: IAgentHostBuilder.AddAgent
+  fullName: AgentFramework.Hosting.IAgentHostBuilder.AddAgent
+- uid: System.Func{AgentFramework.Kernel.IAgent}
+  commentId: T:System.Func{AgentFramework.Kernel.IAgent}
+  parent: System
+  definition: System.Func`1
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<IAgent>
+  nameWithType: Func<IAgent>
+  fullName: System.Func<AgentFramework.Kernel.IAgent>
+  nameWithType.vb: Func(Of IAgent)
+  fullName.vb: System.Func(Of AgentFramework.Kernel.IAgent)
+  name.vb: Func(Of IAgent)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: AgentFramework.Kernel.IAgent
+    name: IAgent
+    href: AgentFramework.Kernel.IAgent.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AgentFramework.Kernel.IAgent
+    name: IAgent
+    href: AgentFramework.Kernel.IAgent.html
+  - name: )
+- uid: AgentFramework.Hosting.IAgentHostBuilder.Attach*
+  commentId: Overload:AgentFramework.Hosting.IAgentHostBuilder.Attach
+  href: AgentFramework.Hosting.IAgentHostBuilder.html#AgentFramework_Hosting_IAgentHostBuilder_Attach_System_String_System_String_AgentFramework_Kernel_Policies_PolicySet_
+  name: Attach
+  nameWithType: IAgentHostBuilder.Attach
+  fullName: AgentFramework.Hosting.IAgentHostBuilder.Attach
+- uid: AgentFramework.Kernel.Policies.PolicySet
+  commentId: T:AgentFramework.Kernel.Policies.PolicySet
+  parent: AgentFramework.Kernel.Policies
+  href: AgentFramework.Kernel.Policies.PolicySet.html
+  name: PolicySet
+  nameWithType: PolicySet
+  fullName: AgentFramework.Kernel.Policies.PolicySet
+- uid: AgentFramework.Kernel.Policies
+  commentId: N:AgentFramework.Kernel.Policies
+  href: AgentFramework.html
+  name: AgentFramework.Kernel.Policies
+  nameWithType: AgentFramework.Kernel.Policies
+  fullName: AgentFramework.Kernel.Policies
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+- uid: AgentFramework.Hosting.IAgentHostBuilder.WithKernelDefaults*
+  commentId: Overload:AgentFramework.Hosting.IAgentHostBuilder.WithKernelDefaults
+  href: AgentFramework.Hosting.IAgentHostBuilder.html#AgentFramework_Hosting_IAgentHostBuilder_WithKernelDefaults_AgentFramework_Kernel_Policies_PolicySet_
+  name: WithKernelDefaults
+  nameWithType: IAgentHostBuilder.WithKernelDefaults
+  fullName: AgentFramework.Hosting.IAgentHostBuilder.WithKernelDefaults
+- uid: AgentFramework.Hosting.IAgentHostBuilder.Build*
+  commentId: Overload:AgentFramework.Hosting.IAgentHostBuilder.Build
+  href: AgentFramework.Hosting.IAgentHostBuilder.html#AgentFramework_Hosting_IAgentHostBuilder_Build
+  name: Build
+  nameWithType: IAgentHostBuilder.Build
+  fullName: AgentFramework.Hosting.IAgentHostBuilder.Build
+- uid: AgentFramework.Hosting.IAgentHost
+  commentId: T:AgentFramework.Hosting.IAgentHost
+  parent: AgentFramework.Hosting
+  href: AgentFramework.Hosting.IAgentHost.html
+  name: IAgentHost
+  nameWithType: IAgentHost
+  fullName: AgentFramework.Hosting.IAgentHost

@@ -1,0 +1,245 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Runners.IRunner
+  commentId: T:AgentFramework.Runners.IRunner
+  id: IRunner
+  parent: AgentFramework.Runners
+  children:
+  - AgentFramework.Runners.IRunner.Name
+  - AgentFramework.Runners.IRunner.StartAsync(System.Threading.CancellationToken)
+  - AgentFramework.Runners.IRunner.StopAsync(System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: IRunner
+  nameWithType: IRunner
+  fullName: AgentFramework.Runners.IRunner
+  type: Interface
+  source:
+    id: IRunner
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Runners/IRunner.cs
+    startLine: 2
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Runners
+  syntax:
+    content: public interface IRunner
+    content.vb: Public Interface IRunner
+- uid: AgentFramework.Runners.IRunner.Name
+  commentId: P:AgentFramework.Runners.IRunner.Name
+  id: Name
+  parent: AgentFramework.Runners.IRunner
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: IRunner.Name
+  fullName: AgentFramework.Runners.IRunner.Name
+  type: Property
+  source:
+    id: Name
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Runners/IRunner.cs
+    startLine: 4
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Runners
+  syntax:
+    content: string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property Name As String
+  overload: AgentFramework.Runners.IRunner.Name*
+- uid: AgentFramework.Runners.IRunner.StartAsync(System.Threading.CancellationToken)
+  commentId: M:AgentFramework.Runners.IRunner.StartAsync(System.Threading.CancellationToken)
+  id: StartAsync(System.Threading.CancellationToken)
+  parent: AgentFramework.Runners.IRunner
+  langs:
+  - csharp
+  - vb
+  name: StartAsync(CancellationToken)
+  nameWithType: IRunner.StartAsync(CancellationToken)
+  fullName: AgentFramework.Runners.IRunner.StartAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    id: StartAsync
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Runners/IRunner.cs
+    startLine: 5
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Runners
+  syntax:
+    content: Task StartAsync(CancellationToken ct = default)
+    parameters:
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function StartAsync(ct As CancellationToken = Nothing) As Task
+  overload: AgentFramework.Runners.IRunner.StartAsync*
+- uid: AgentFramework.Runners.IRunner.StopAsync(System.Threading.CancellationToken)
+  commentId: M:AgentFramework.Runners.IRunner.StopAsync(System.Threading.CancellationToken)
+  id: StopAsync(System.Threading.CancellationToken)
+  parent: AgentFramework.Runners.IRunner
+  langs:
+  - csharp
+  - vb
+  name: StopAsync(CancellationToken)
+  nameWithType: IRunner.StopAsync(CancellationToken)
+  fullName: AgentFramework.Runners.IRunner.StopAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    id: StopAsync
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Runners/IRunner.cs
+    startLine: 6
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Runners
+  syntax:
+    content: Task StopAsync(CancellationToken ct = default)
+    parameters:
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function StopAsync(ct As CancellationToken = Nothing) As Task
+  overload: AgentFramework.Runners.IRunner.StopAsync*
+references:
+- uid: AgentFramework.Runners
+  commentId: N:AgentFramework.Runners
+  href: AgentFramework.html
+  name: AgentFramework.Runners
+  nameWithType: AgentFramework.Runners
+  fullName: AgentFramework.Runners
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Runners
+    name: Runners
+    href: AgentFramework.Runners.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Runners
+    name: Runners
+    href: AgentFramework.Runners.html
+- uid: AgentFramework.Runners.IRunner.Name*
+  commentId: Overload:AgentFramework.Runners.IRunner.Name
+  href: AgentFramework.Runners.IRunner.html#AgentFramework_Runners_IRunner_Name
+  name: Name
+  nameWithType: IRunner.Name
+  fullName: AgentFramework.Runners.IRunner.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AgentFramework.Runners.IRunner.StartAsync*
+  commentId: Overload:AgentFramework.Runners.IRunner.StartAsync
+  href: AgentFramework.Runners.IRunner.html#AgentFramework_Runners_IRunner_StartAsync_System_Threading_CancellationToken_
+  name: StartAsync
+  nameWithType: IRunner.StartAsync
+  fullName: AgentFramework.Runners.IRunner.StartAsync
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: AgentFramework.Runners.IRunner.StopAsync*
+  commentId: Overload:AgentFramework.Runners.IRunner.StopAsync
+  href: AgentFramework.Runners.IRunner.html#AgentFramework_Runners_IRunner_StopAsync_System_Threading_CancellationToken_
+  name: StopAsync
+  nameWithType: IRunner.StopAsync
+  fullName: AgentFramework.Runners.IRunner.StopAsync

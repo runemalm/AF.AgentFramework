@@ -1,0 +1,467 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy
+  commentId: T:AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy
+  id: DefaultBackpressurePolicy
+  parent: AgentFramework.Kernel.Policies.Defaults
+  children:
+  - AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy.#ctor(AgentFramework.Kernel.Policies.Defaults.BackpressureOptions)
+  - AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy.Evaluate(AgentFramework.Kernel.ClusterLoad)
+  langs:
+  - csharp
+  - vb
+  name: DefaultBackpressurePolicy
+  nameWithType: DefaultBackpressurePolicy
+  fullName: AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy
+  type: Class
+  source:
+    id: DefaultBackpressurePolicy
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultBackpressurePolicy.cs
+    startLine: 2
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel.Policies.Defaults
+  syntax:
+    content: 'public sealed class DefaultBackpressurePolicy : IBackpressurePolicy'
+    content.vb: Public NotInheritable Class DefaultBackpressurePolicy Implements IBackpressurePolicy
+  inheritance:
+  - System.Object
+  implements:
+  - AgentFramework.Kernel.Policies.IBackpressurePolicy
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy.#ctor(AgentFramework.Kernel.Policies.Defaults.BackpressureOptions)
+  commentId: M:AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy.#ctor(AgentFramework.Kernel.Policies.Defaults.BackpressureOptions)
+  id: '#ctor(AgentFramework.Kernel.Policies.Defaults.BackpressureOptions)'
+  parent: AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy
+  langs:
+  - csharp
+  - vb
+  name: DefaultBackpressurePolicy(BackpressureOptions?)
+  nameWithType: DefaultBackpressurePolicy.DefaultBackpressurePolicy(BackpressureOptions?)
+  fullName: AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy.DefaultBackpressurePolicy(AgentFramework.Kernel.Policies.Defaults.BackpressureOptions?)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultBackpressurePolicy.cs
+    startLine: 6
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel.Policies.Defaults
+  syntax:
+    content: public DefaultBackpressurePolicy(BackpressureOptions? options = null)
+    parameters:
+    - id: options
+      type: AgentFramework.Kernel.Policies.Defaults.BackpressureOptions
+    content.vb: Public Sub New(options As BackpressureOptions = Nothing)
+  overload: AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy.#ctor*
+  nameWithType.vb: DefaultBackpressurePolicy.New(BackpressureOptions)
+  fullName.vb: AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy.New(AgentFramework.Kernel.Policies.Defaults.BackpressureOptions)
+  name.vb: New(BackpressureOptions)
+- uid: AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy.Evaluate(AgentFramework.Kernel.ClusterLoad)
+  commentId: M:AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy.Evaluate(AgentFramework.Kernel.ClusterLoad)
+  id: Evaluate(AgentFramework.Kernel.ClusterLoad)
+  parent: AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy
+  langs:
+  - csharp
+  - vb
+  name: Evaluate(ClusterLoad)
+  nameWithType: DefaultBackpressurePolicy.Evaluate(ClusterLoad)
+  fullName: AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy.Evaluate(AgentFramework.Kernel.ClusterLoad)
+  type: Method
+  source:
+    id: Evaluate
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultBackpressurePolicy.cs
+    startLine: 9
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel.Policies.Defaults
+  example: []
+  syntax:
+    content: public BackpressureDecision Evaluate(ClusterLoad load)
+    parameters:
+    - id: load
+      type: AgentFramework.Kernel.ClusterLoad
+    return:
+      type: AgentFramework.Kernel.Policies.BackpressureDecision
+    content.vb: Public Function Evaluate(load As ClusterLoad) As BackpressureDecision
+  overload: AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy.Evaluate*
+  implements:
+  - AgentFramework.Kernel.Policies.IBackpressurePolicy.Evaluate(AgentFramework.Kernel.ClusterLoad)
+references:
+- uid: AgentFramework.Kernel.Policies.Defaults
+  commentId: N:AgentFramework.Kernel.Policies.Defaults
+  href: AgentFramework.html
+  name: AgentFramework.Kernel.Policies.Defaults
+  nameWithType: AgentFramework.Kernel.Policies.Defaults
+  fullName: AgentFramework.Kernel.Policies.Defaults
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies.Defaults
+    name: Defaults
+    href: AgentFramework.Kernel.Policies.Defaults.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies.Defaults
+    name: Defaults
+    href: AgentFramework.Kernel.Policies.Defaults.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: AgentFramework.Kernel.Policies.IBackpressurePolicy
+  commentId: T:AgentFramework.Kernel.Policies.IBackpressurePolicy
+  parent: AgentFramework.Kernel.Policies
+  href: AgentFramework.Kernel.Policies.IBackpressurePolicy.html
+  name: IBackpressurePolicy
+  nameWithType: IBackpressurePolicy
+  fullName: AgentFramework.Kernel.Policies.IBackpressurePolicy
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AgentFramework.Kernel.Policies
+  commentId: N:AgentFramework.Kernel.Policies
+  href: AgentFramework.html
+  name: AgentFramework.Kernel.Policies
+  nameWithType: AgentFramework.Kernel.Policies
+  fullName: AgentFramework.Kernel.Policies
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+- uid: AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy.#ctor*
+  commentId: Overload:AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy.#ctor
+  href: AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy.html#AgentFramework_Kernel_Policies_Defaults_DefaultBackpressurePolicy__ctor_AgentFramework_Kernel_Policies_Defaults_BackpressureOptions_
+  name: DefaultBackpressurePolicy
+  nameWithType: DefaultBackpressurePolicy.DefaultBackpressurePolicy
+  fullName: AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy.DefaultBackpressurePolicy
+  nameWithType.vb: DefaultBackpressurePolicy.New
+  fullName.vb: AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy.New
+  name.vb: New
+- uid: AgentFramework.Kernel.Policies.Defaults.BackpressureOptions
+  commentId: T:AgentFramework.Kernel.Policies.Defaults.BackpressureOptions
+  parent: AgentFramework.Kernel.Policies.Defaults
+  href: AgentFramework.Kernel.Policies.Defaults.BackpressureOptions.html
+  name: BackpressureOptions
+  nameWithType: BackpressureOptions
+  fullName: AgentFramework.Kernel.Policies.Defaults.BackpressureOptions
+- uid: AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy.Evaluate*
+  commentId: Overload:AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy.Evaluate
+  href: AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy.html#AgentFramework_Kernel_Policies_Defaults_DefaultBackpressurePolicy_Evaluate_AgentFramework_Kernel_ClusterLoad_
+  name: Evaluate
+  nameWithType: DefaultBackpressurePolicy.Evaluate
+  fullName: AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy.Evaluate
+- uid: AgentFramework.Kernel.Policies.IBackpressurePolicy.Evaluate(AgentFramework.Kernel.ClusterLoad)
+  commentId: M:AgentFramework.Kernel.Policies.IBackpressurePolicy.Evaluate(AgentFramework.Kernel.ClusterLoad)
+  parent: AgentFramework.Kernel.Policies.IBackpressurePolicy
+  href: AgentFramework.Kernel.Policies.IBackpressurePolicy.html#AgentFramework_Kernel_Policies_IBackpressurePolicy_Evaluate_AgentFramework_Kernel_ClusterLoad_
+  name: Evaluate(ClusterLoad)
+  nameWithType: IBackpressurePolicy.Evaluate(ClusterLoad)
+  fullName: AgentFramework.Kernel.Policies.IBackpressurePolicy.Evaluate(AgentFramework.Kernel.ClusterLoad)
+  spec.csharp:
+  - uid: AgentFramework.Kernel.Policies.IBackpressurePolicy.Evaluate(AgentFramework.Kernel.ClusterLoad)
+    name: Evaluate
+    href: AgentFramework.Kernel.Policies.IBackpressurePolicy.html#AgentFramework_Kernel_Policies_IBackpressurePolicy_Evaluate_AgentFramework_Kernel_ClusterLoad_
+  - name: (
+  - uid: AgentFramework.Kernel.ClusterLoad
+    name: ClusterLoad
+    href: AgentFramework.Kernel.ClusterLoad.html
+  - name: )
+  spec.vb:
+  - uid: AgentFramework.Kernel.Policies.IBackpressurePolicy.Evaluate(AgentFramework.Kernel.ClusterLoad)
+    name: Evaluate
+    href: AgentFramework.Kernel.Policies.IBackpressurePolicy.html#AgentFramework_Kernel_Policies_IBackpressurePolicy_Evaluate_AgentFramework_Kernel_ClusterLoad_
+  - name: (
+  - uid: AgentFramework.Kernel.ClusterLoad
+    name: ClusterLoad
+    href: AgentFramework.Kernel.ClusterLoad.html
+  - name: )
+- uid: AgentFramework.Kernel.ClusterLoad
+  commentId: T:AgentFramework.Kernel.ClusterLoad
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.ClusterLoad.html
+  name: ClusterLoad
+  nameWithType: ClusterLoad
+  fullName: AgentFramework.Kernel.ClusterLoad
+- uid: AgentFramework.Kernel.Policies.BackpressureDecision
+  commentId: T:AgentFramework.Kernel.Policies.BackpressureDecision
+  parent: AgentFramework.Kernel.Policies
+  href: AgentFramework.Kernel.Policies.BackpressureDecision.html
+  name: BackpressureDecision
+  nameWithType: BackpressureDecision
+  fullName: AgentFramework.Kernel.Policies.BackpressureDecision
+- uid: AgentFramework.Kernel
+  commentId: N:AgentFramework.Kernel
+  href: AgentFramework.html
+  name: AgentFramework.Kernel
+  nameWithType: AgentFramework.Kernel
+  fullName: AgentFramework.Kernel
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html

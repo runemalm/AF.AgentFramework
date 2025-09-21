@@ -1,0 +1,72 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <!-- Keep namespaces as AgentFramework.* while assembly/package is AF.AgentFramework -->
+    <RootNamespace>AgentFramework</RootNamespace>
+    <AssemblyName>AF.AgentFramework</AssemblyName>
+
+    <!-- NuGet metadata -->
+    <PackageId>AF.AgentFramework</PackageId>
+    <Authors>David Runemalm</Authors>
+    <Company>AgentFramework</Company>
+    <Description>A minimal, extensible agent runtime for .NET (Kernel/Engines/Hosting/Policies).</Description>
+    <PackageTags>agents;agent-framework;kernel;engine;runtime</PackageTags>
+    <RepositoryUrl>https://github.com/runemalm/AF.AgentFramework</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageProjectUrl>https://github.com/runemalm/AF.AgentFramework</PackageProjectUrl>
+
+    <!-- README -->
+    <PackageReadmeFile>README.NuGet.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <!-- Dev: no XML docs, suppress CS1591 -->
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <!-- Release: generate XML docs (you can enforce comments later if you want) -->
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(CI)'=='true'">
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <!-- Ensure README is included in the nupkg root -->
+  <ItemGroup>
+    <None Include="README.NuGet.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MinVer" Version="5.0.0" PrivateAssets="all" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <!-- Tell MinVer to read tags like v1.2.3 that semantic-release creates -->
+    <MinVerTagPrefix>v</MinVerTagPrefix>
+
+    <!-- Optional, nice for CI: adds +SHA metadata to non-tag builds -->
+    <MinVerBuildMetadata>$(SourceRevisionId)</MinVerBuildMetadata>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <!-- CI-only: deterministic build & repo info -->
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <IncludeRepositoryUrl>true</IncludeRepositoryUrl>
+    <DebugType>portable</DebugType>
+  </PropertyGroup>
+</Project>

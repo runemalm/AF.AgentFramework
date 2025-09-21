@@ -1,0 +1,154 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Kernel
+  commentId: N:AgentFramework.Kernel
+  id: AgentFramework.Kernel
+  children:
+  - AgentFramework.Kernel.AgentRuntimeState
+  - AgentFramework.Kernel.AttachmentBinding
+  - AgentFramework.Kernel.ClusterLoad
+  - AgentFramework.Kernel.DefaultKernelFactory
+  - AgentFramework.Kernel.IAgent
+  - AgentFramework.Kernel.IAgentCatalog
+  - AgentFramework.Kernel.IAgentContext
+  - AgentFramework.Kernel.IKernel
+  - AgentFramework.Kernel.IKernelFactory
+  - AgentFramework.Kernel.InProcKernel
+  - AgentFramework.Kernel.KernelOptions
+  - AgentFramework.Kernel.RunningInvocation
+  - AgentFramework.Kernel.StubKernel
+  - AgentFramework.Kernel.WorkItem
+  - AgentFramework.Kernel.WorkItemKind
+  langs:
+  - csharp
+  - vb
+  name: AgentFramework.Kernel
+  nameWithType: AgentFramework.Kernel
+  fullName: AgentFramework.Kernel
+  type: Namespace
+  assemblies:
+  - AF.AgentFramework
+references:
+- uid: AgentFramework.Kernel.DefaultKernelFactory
+  commentId: T:AgentFramework.Kernel.DefaultKernelFactory
+  href: AgentFramework.Kernel.DefaultKernelFactory.html
+  name: DefaultKernelFactory
+  nameWithType: DefaultKernelFactory
+  fullName: AgentFramework.Kernel.DefaultKernelFactory
+- uid: AgentFramework.Kernel.IAgent
+  commentId: T:AgentFramework.Kernel.IAgent
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.IAgent.html
+  name: IAgent
+  nameWithType: IAgent
+  fullName: AgentFramework.Kernel.IAgent
+- uid: AgentFramework.Kernel.IAgentCatalog
+  commentId: T:AgentFramework.Kernel.IAgentCatalog
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.IAgentCatalog.html
+  name: IAgentCatalog
+  nameWithType: IAgentCatalog
+  fullName: AgentFramework.Kernel.IAgentCatalog
+- uid: AgentFramework.Kernel.IAgentContext
+  commentId: T:AgentFramework.Kernel.IAgentContext
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.IAgentContext.html
+  name: IAgentContext
+  nameWithType: IAgentContext
+  fullName: AgentFramework.Kernel.IAgentContext
+- uid: AgentFramework.Kernel.IKernel
+  commentId: T:AgentFramework.Kernel.IKernel
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.IKernel.html
+  name: IKernel
+  nameWithType: IKernel
+  fullName: AgentFramework.Kernel.IKernel
+- uid: AgentFramework.Kernel.IKernelFactory
+  commentId: T:AgentFramework.Kernel.IKernelFactory
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.IKernelFactory.html
+  name: IKernelFactory
+  nameWithType: IKernelFactory
+  fullName: AgentFramework.Kernel.IKernelFactory
+- uid: AgentFramework.Kernel.InProcKernel
+  commentId: T:AgentFramework.Kernel.InProcKernel
+  href: AgentFramework.Kernel.InProcKernel.html
+  name: InProcKernel
+  nameWithType: InProcKernel
+  fullName: AgentFramework.Kernel.InProcKernel
+- uid: AgentFramework.Kernel.KernelOptions
+  commentId: T:AgentFramework.Kernel.KernelOptions
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.KernelOptions.html
+  name: KernelOptions
+  nameWithType: KernelOptions
+  fullName: AgentFramework.Kernel.KernelOptions
+- uid: AgentFramework.Kernel.AttachmentBinding
+  commentId: T:AgentFramework.Kernel.AttachmentBinding
+  href: AgentFramework.Kernel.AttachmentBinding.html
+  name: AttachmentBinding
+  nameWithType: AttachmentBinding
+  fullName: AgentFramework.Kernel.AttachmentBinding
+- uid: AgentFramework.Kernel.AgentRuntimeState
+  commentId: T:AgentFramework.Kernel.AgentRuntimeState
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.AgentRuntimeState.html
+  name: AgentRuntimeState
+  nameWithType: AgentRuntimeState
+  fullName: AgentFramework.Kernel.AgentRuntimeState
+- uid: AgentFramework.Kernel.RunningInvocation
+  commentId: T:AgentFramework.Kernel.RunningInvocation
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.RunningInvocation.html
+  name: RunningInvocation
+  nameWithType: RunningInvocation
+  fullName: AgentFramework.Kernel.RunningInvocation
+- uid: AgentFramework.Kernel.ClusterLoad
+  commentId: T:AgentFramework.Kernel.ClusterLoad
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.ClusterLoad.html
+  name: ClusterLoad
+  nameWithType: ClusterLoad
+  fullName: AgentFramework.Kernel.ClusterLoad
+- uid: AgentFramework.Kernel.StubKernel
+  commentId: T:AgentFramework.Kernel.StubKernel
+  href: AgentFramework.Kernel.StubKernel.html
+  name: StubKernel
+  nameWithType: StubKernel
+  fullName: AgentFramework.Kernel.StubKernel
+- uid: AgentFramework.Kernel.WorkItemKind
+  commentId: T:AgentFramework.Kernel.WorkItemKind
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.WorkItemKind.html
+  name: WorkItemKind
+  nameWithType: WorkItemKind
+  fullName: AgentFramework.Kernel.WorkItemKind
+- uid: AgentFramework.Kernel.WorkItem
+  commentId: T:AgentFramework.Kernel.WorkItem
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.WorkItem.html
+  name: WorkItem
+  nameWithType: WorkItem
+  fullName: AgentFramework.Kernel.WorkItem
+- uid: AgentFramework.Kernel
+  commentId: N:AgentFramework.Kernel
+  href: AgentFramework.html
+  name: AgentFramework.Kernel
+  nameWithType: AgentFramework.Kernel
+  fullName: AgentFramework.Kernel
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html

@@ -1,0 +1,46 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Engines
+  commentId: N:AgentFramework.Engines
+  id: AgentFramework.Engines
+  children:
+  - AgentFramework.Engines.IEngine
+  langs:
+  - csharp
+  - vb
+  name: AgentFramework.Engines
+  nameWithType: AgentFramework.Engines
+  fullName: AgentFramework.Engines
+  type: Namespace
+  assemblies:
+  - AF.AgentFramework
+references:
+- uid: AgentFramework.Engines.IEngine
+  commentId: T:AgentFramework.Engines.IEngine
+  parent: AgentFramework.Engines
+  href: AgentFramework.Engines.IEngine.html
+  name: IEngine
+  nameWithType: IEngine
+  fullName: AgentFramework.Engines.IEngine
+- uid: AgentFramework.Engines
+  commentId: N:AgentFramework.Engines
+  href: AgentFramework.html
+  name: AgentFramework.Engines
+  nameWithType: AgentFramework.Engines
+  fullName: AgentFramework.Engines
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Engines
+    name: Engines
+    href: AgentFramework.Engines.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Engines
+    name: Engines
+    href: AgentFramework.Engines.html

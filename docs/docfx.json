@@ -1,0 +1,26 @@
+{
+  "metadata": [
+    {
+      "src": [
+        { "src": "../src/AF.AgentFramework", "files": [ "AF.AgentFramework.csproj" ] }
+      ],
+      "dest": "api",
+      "properties": { "TargetFramework": "net8.0" }
+    }
+  ],
+  "build": {
+    "content": [
+      { "files": [ "toc.yml", "index.md" ] },
+      { "files": [ "api/**.yml", "api/index.md" ] },
+      { "files": [ "articles/**.md", "index.md" ] }
+    ],
+    "resource": [
+      { "files": [ "images/**" ] }
+    ],
+    "globalMetadata": {
+      "_appTitle": "AF.AgentFramework",
+      "_enableSearch": true
+    },
+    "dest": "_site"
+  }
+}

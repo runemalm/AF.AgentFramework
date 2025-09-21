@@ -1,0 +1,158 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Kernel.Policies.IRetryPolicy
+  commentId: T:AgentFramework.Kernel.Policies.IRetryPolicy
+  id: IRetryPolicy
+  parent: AgentFramework.Kernel.Policies
+  children:
+  - AgentFramework.Kernel.Policies.IRetryPolicy.OnFailure(AgentFramework.Kernel.WorkItem,System.Exception,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: IRetryPolicy
+  nameWithType: IRetryPolicy
+  fullName: AgentFramework.Kernel.Policies.IRetryPolicy
+  type: Interface
+  source:
+    id: IRetryPolicy
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/IRetryPolicy.cs
+    startLine: 2
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel.Policies
+  syntax:
+    content: public interface IRetryPolicy
+    content.vb: Public Interface IRetryPolicy
+- uid: AgentFramework.Kernel.Policies.IRetryPolicy.OnFailure(AgentFramework.Kernel.WorkItem,System.Exception,System.Int32)
+  commentId: M:AgentFramework.Kernel.Policies.IRetryPolicy.OnFailure(AgentFramework.Kernel.WorkItem,System.Exception,System.Int32)
+  id: OnFailure(AgentFramework.Kernel.WorkItem,System.Exception,System.Int32)
+  parent: AgentFramework.Kernel.Policies.IRetryPolicy
+  langs:
+  - csharp
+  - vb
+  name: OnFailure(WorkItem, Exception, int)
+  nameWithType: IRetryPolicy.OnFailure(WorkItem, Exception, int)
+  fullName: AgentFramework.Kernel.Policies.IRetryPolicy.OnFailure(AgentFramework.Kernel.WorkItem, System.Exception, int)
+  type: Method
+  source:
+    id: OnFailure
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/IRetryPolicy.cs
+    startLine: 4
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel.Policies
+  syntax:
+    content: RetryDecision OnFailure(WorkItem item, Exception error, int attempt)
+    parameters:
+    - id: item
+      type: AgentFramework.Kernel.WorkItem
+    - id: error
+      type: System.Exception
+    - id: attempt
+      type: System.Int32
+    return:
+      type: AgentFramework.Kernel.Policies.RetryDecision
+    content.vb: Function OnFailure(item As WorkItem, [error] As Exception, attempt As Integer) As RetryDecision
+  overload: AgentFramework.Kernel.Policies.IRetryPolicy.OnFailure*
+  nameWithType.vb: IRetryPolicy.OnFailure(WorkItem, Exception, Integer)
+  fullName.vb: AgentFramework.Kernel.Policies.IRetryPolicy.OnFailure(AgentFramework.Kernel.WorkItem, System.Exception, Integer)
+  name.vb: OnFailure(WorkItem, Exception, Integer)
+references:
+- uid: AgentFramework.Kernel.Policies
+  commentId: N:AgentFramework.Kernel.Policies
+  href: AgentFramework.html
+  name: AgentFramework.Kernel.Policies
+  nameWithType: AgentFramework.Kernel.Policies
+  fullName: AgentFramework.Kernel.Policies
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+- uid: AgentFramework.Kernel.Policies.IRetryPolicy.OnFailure*
+  commentId: Overload:AgentFramework.Kernel.Policies.IRetryPolicy.OnFailure
+  href: AgentFramework.Kernel.Policies.IRetryPolicy.html#AgentFramework_Kernel_Policies_IRetryPolicy_OnFailure_AgentFramework_Kernel_WorkItem_System_Exception_System_Int32_
+  name: OnFailure
+  nameWithType: IRetryPolicy.OnFailure
+  fullName: AgentFramework.Kernel.Policies.IRetryPolicy.OnFailure
+- uid: AgentFramework.Kernel.WorkItem
+  commentId: T:AgentFramework.Kernel.WorkItem
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.WorkItem.html
+  name: WorkItem
+  nameWithType: WorkItem
+  fullName: AgentFramework.Kernel.WorkItem
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: AgentFramework.Kernel.Policies.RetryDecision
+  commentId: T:AgentFramework.Kernel.Policies.RetryDecision
+  parent: AgentFramework.Kernel.Policies
+  href: AgentFramework.Kernel.Policies.RetryDecision.html
+  name: RetryDecision
+  nameWithType: RetryDecision
+  fullName: AgentFramework.Kernel.Policies.RetryDecision
+- uid: AgentFramework.Kernel
+  commentId: N:AgentFramework.Kernel
+  href: AgentFramework.html
+  name: AgentFramework.Kernel
+  nameWithType: AgentFramework.Kernel
+  fullName: AgentFramework.Kernel
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

@@ -1,0 +1,443 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Kernel.Policies.Defaults.PolicySetDefaults
+  commentId: T:AgentFramework.Kernel.Policies.Defaults.PolicySetDefaults
+  id: PolicySetDefaults
+  parent: AgentFramework.Kernel.Policies.Defaults
+  children:
+  - AgentFramework.Kernel.Policies.Defaults.PolicySetDefaults.Create(AgentFramework.Kernel.Policies.Defaults.AdmissionOptions,AgentFramework.Kernel.Policies.Defaults.RetryOptions,AgentFramework.Kernel.Policies.Defaults.BackpressureOptions,AgentFramework.Kernel.Policies.Defaults.TimeoutOptions,AgentFramework.Kernel.Policies.IOrderingPolicy,AgentFramework.Kernel.Policies.IPreemptionPolicy)
+  langs:
+  - csharp
+  - vb
+  name: PolicySetDefaults
+  nameWithType: PolicySetDefaults
+  fullName: AgentFramework.Kernel.Policies.Defaults.PolicySetDefaults
+  type: Class
+  source:
+    id: PolicySetDefaults
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/PolicySetDefaults.cs
+    startLine: 5
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel.Policies.Defaults
+  summary: Factory for a sane default PolicySet. Override via parameters as needed.
+  example: []
+  syntax:
+    content: public static class PolicySetDefaults
+    content.vb: Public Module PolicySetDefaults
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AgentFramework.Kernel.Policies.Defaults.PolicySetDefaults.Create(AgentFramework.Kernel.Policies.Defaults.AdmissionOptions,AgentFramework.Kernel.Policies.Defaults.RetryOptions,AgentFramework.Kernel.Policies.Defaults.BackpressureOptions,AgentFramework.Kernel.Policies.Defaults.TimeoutOptions,AgentFramework.Kernel.Policies.IOrderingPolicy,AgentFramework.Kernel.Policies.IPreemptionPolicy)
+  commentId: M:AgentFramework.Kernel.Policies.Defaults.PolicySetDefaults.Create(AgentFramework.Kernel.Policies.Defaults.AdmissionOptions,AgentFramework.Kernel.Policies.Defaults.RetryOptions,AgentFramework.Kernel.Policies.Defaults.BackpressureOptions,AgentFramework.Kernel.Policies.Defaults.TimeoutOptions,AgentFramework.Kernel.Policies.IOrderingPolicy,AgentFramework.Kernel.Policies.IPreemptionPolicy)
+  id: Create(AgentFramework.Kernel.Policies.Defaults.AdmissionOptions,AgentFramework.Kernel.Policies.Defaults.RetryOptions,AgentFramework.Kernel.Policies.Defaults.BackpressureOptions,AgentFramework.Kernel.Policies.Defaults.TimeoutOptions,AgentFramework.Kernel.Policies.IOrderingPolicy,AgentFramework.Kernel.Policies.IPreemptionPolicy)
+  parent: AgentFramework.Kernel.Policies.Defaults.PolicySetDefaults
+  langs:
+  - csharp
+  - vb
+  name: Create(AdmissionOptions?, RetryOptions?, BackpressureOptions?, TimeoutOptions?, IOrderingPolicy?, IPreemptionPolicy?)
+  nameWithType: PolicySetDefaults.Create(AdmissionOptions?, RetryOptions?, BackpressureOptions?, TimeoutOptions?, IOrderingPolicy?, IPreemptionPolicy?)
+  fullName: AgentFramework.Kernel.Policies.Defaults.PolicySetDefaults.Create(AgentFramework.Kernel.Policies.Defaults.AdmissionOptions?, AgentFramework.Kernel.Policies.Defaults.RetryOptions?, AgentFramework.Kernel.Policies.Defaults.BackpressureOptions?, AgentFramework.Kernel.Policies.Defaults.TimeoutOptions?, AgentFramework.Kernel.Policies.IOrderingPolicy?, AgentFramework.Kernel.Policies.IPreemptionPolicy?)
+  type: Method
+  source:
+    id: Create
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/PolicySetDefaults.cs
+    startLine: 11
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel.Policies.Defaults
+  summary: >-
+    Create a PolicySet populated with default policies.
+
+    Pass options or specific policy instances to override pieces.
+  example: []
+  syntax:
+    content: public static PolicySet Create(AdmissionOptions? admission = null, RetryOptions? retry = null, BackpressureOptions? backpressure = null, TimeoutOptions? timeout = null, IOrderingPolicy? ordering = null, IPreemptionPolicy? preemption = null)
+    parameters:
+    - id: admission
+      type: AgentFramework.Kernel.Policies.Defaults.AdmissionOptions
+    - id: retry
+      type: AgentFramework.Kernel.Policies.Defaults.RetryOptions
+    - id: backpressure
+      type: AgentFramework.Kernel.Policies.Defaults.BackpressureOptions
+    - id: timeout
+      type: AgentFramework.Kernel.Policies.Defaults.TimeoutOptions
+    - id: ordering
+      type: AgentFramework.Kernel.Policies.IOrderingPolicy
+    - id: preemption
+      type: AgentFramework.Kernel.Policies.IPreemptionPolicy
+    return:
+      type: AgentFramework.Kernel.Policies.PolicySet
+    content.vb: Public Shared Function Create(admission As AdmissionOptions = Nothing, retry As RetryOptions = Nothing, backpressure As BackpressureOptions = Nothing, timeout As TimeoutOptions = Nothing, ordering As IOrderingPolicy = Nothing, preemption As IPreemptionPolicy = Nothing) As PolicySet
+  overload: AgentFramework.Kernel.Policies.Defaults.PolicySetDefaults.Create*
+  nameWithType.vb: PolicySetDefaults.Create(AdmissionOptions, RetryOptions, BackpressureOptions, TimeoutOptions, IOrderingPolicy, IPreemptionPolicy)
+  fullName.vb: AgentFramework.Kernel.Policies.Defaults.PolicySetDefaults.Create(AgentFramework.Kernel.Policies.Defaults.AdmissionOptions, AgentFramework.Kernel.Policies.Defaults.RetryOptions, AgentFramework.Kernel.Policies.Defaults.BackpressureOptions, AgentFramework.Kernel.Policies.Defaults.TimeoutOptions, AgentFramework.Kernel.Policies.IOrderingPolicy, AgentFramework.Kernel.Policies.IPreemptionPolicy)
+  name.vb: Create(AdmissionOptions, RetryOptions, BackpressureOptions, TimeoutOptions, IOrderingPolicy, IPreemptionPolicy)
+references:
+- uid: AgentFramework.Kernel.Policies.Defaults
+  commentId: N:AgentFramework.Kernel.Policies.Defaults
+  href: AgentFramework.html
+  name: AgentFramework.Kernel.Policies.Defaults
+  nameWithType: AgentFramework.Kernel.Policies.Defaults
+  fullName: AgentFramework.Kernel.Policies.Defaults
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies.Defaults
+    name: Defaults
+    href: AgentFramework.Kernel.Policies.Defaults.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies.Defaults
+    name: Defaults
+    href: AgentFramework.Kernel.Policies.Defaults.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AgentFramework.Kernel.Policies.Defaults.PolicySetDefaults.Create*
+  commentId: Overload:AgentFramework.Kernel.Policies.Defaults.PolicySetDefaults.Create
+  href: AgentFramework.Kernel.Policies.Defaults.PolicySetDefaults.html#AgentFramework_Kernel_Policies_Defaults_PolicySetDefaults_Create_AgentFramework_Kernel_Policies_Defaults_AdmissionOptions_AgentFramework_Kernel_Policies_Defaults_RetryOptions_AgentFramework_Kernel_Policies_Defaults_BackpressureOptions_AgentFramework_Kernel_Policies_Defaults_TimeoutOptions_AgentFramework_Kernel_Policies_IOrderingPolicy_AgentFramework_Kernel_Policies_IPreemptionPolicy_
+  name: Create
+  nameWithType: PolicySetDefaults.Create
+  fullName: AgentFramework.Kernel.Policies.Defaults.PolicySetDefaults.Create
+- uid: AgentFramework.Kernel.Policies.Defaults.AdmissionOptions
+  commentId: T:AgentFramework.Kernel.Policies.Defaults.AdmissionOptions
+  parent: AgentFramework.Kernel.Policies.Defaults
+  href: AgentFramework.Kernel.Policies.Defaults.AdmissionOptions.html
+  name: AdmissionOptions
+  nameWithType: AdmissionOptions
+  fullName: AgentFramework.Kernel.Policies.Defaults.AdmissionOptions
+- uid: AgentFramework.Kernel.Policies.Defaults.RetryOptions
+  commentId: T:AgentFramework.Kernel.Policies.Defaults.RetryOptions
+  parent: AgentFramework.Kernel.Policies.Defaults
+  href: AgentFramework.Kernel.Policies.Defaults.RetryOptions.html
+  name: RetryOptions
+  nameWithType: RetryOptions
+  fullName: AgentFramework.Kernel.Policies.Defaults.RetryOptions
+- uid: AgentFramework.Kernel.Policies.Defaults.BackpressureOptions
+  commentId: T:AgentFramework.Kernel.Policies.Defaults.BackpressureOptions
+  parent: AgentFramework.Kernel.Policies.Defaults
+  href: AgentFramework.Kernel.Policies.Defaults.BackpressureOptions.html
+  name: BackpressureOptions
+  nameWithType: BackpressureOptions
+  fullName: AgentFramework.Kernel.Policies.Defaults.BackpressureOptions
+- uid: AgentFramework.Kernel.Policies.Defaults.TimeoutOptions
+  commentId: T:AgentFramework.Kernel.Policies.Defaults.TimeoutOptions
+  parent: AgentFramework.Kernel.Policies.Defaults
+  href: AgentFramework.Kernel.Policies.Defaults.TimeoutOptions.html
+  name: TimeoutOptions
+  nameWithType: TimeoutOptions
+  fullName: AgentFramework.Kernel.Policies.Defaults.TimeoutOptions
+- uid: AgentFramework.Kernel.Policies.IOrderingPolicy
+  commentId: T:AgentFramework.Kernel.Policies.IOrderingPolicy
+  parent: AgentFramework.Kernel.Policies
+  href: AgentFramework.Kernel.Policies.IOrderingPolicy.html
+  name: IOrderingPolicy
+  nameWithType: IOrderingPolicy
+  fullName: AgentFramework.Kernel.Policies.IOrderingPolicy
+- uid: AgentFramework.Kernel.Policies.IPreemptionPolicy
+  commentId: T:AgentFramework.Kernel.Policies.IPreemptionPolicy
+  parent: AgentFramework.Kernel.Policies
+  href: AgentFramework.Kernel.Policies.IPreemptionPolicy.html
+  name: IPreemptionPolicy
+  nameWithType: IPreemptionPolicy
+  fullName: AgentFramework.Kernel.Policies.IPreemptionPolicy
+- uid: AgentFramework.Kernel.Policies.PolicySet
+  commentId: T:AgentFramework.Kernel.Policies.PolicySet
+  parent: AgentFramework.Kernel.Policies
+  href: AgentFramework.Kernel.Policies.PolicySet.html
+  name: PolicySet
+  nameWithType: PolicySet
+  fullName: AgentFramework.Kernel.Policies.PolicySet
+- uid: AgentFramework.Kernel.Policies
+  commentId: N:AgentFramework.Kernel.Policies
+  href: AgentFramework.html
+  name: AgentFramework.Kernel.Policies
+  nameWithType: AgentFramework.Kernel.Policies
+  fullName: AgentFramework.Kernel.Policies
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html

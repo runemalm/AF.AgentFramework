@@ -1,0 +1,439 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Kernel.Policies.Defaults.DefaultOrderingPolicy
+  commentId: T:AgentFramework.Kernel.Policies.Defaults.DefaultOrderingPolicy
+  id: DefaultOrderingPolicy
+  parent: AgentFramework.Kernel.Policies.Defaults
+  children:
+  - AgentFramework.Kernel.Policies.Defaults.DefaultOrderingPolicy.Compare(AgentFramework.Kernel.WorkItem,AgentFramework.Kernel.WorkItem)
+  langs:
+  - csharp
+  - vb
+  name: DefaultOrderingPolicy
+  nameWithType: DefaultOrderingPolicy
+  fullName: AgentFramework.Kernel.Policies.Defaults.DefaultOrderingPolicy
+  type: Class
+  source:
+    id: DefaultOrderingPolicy
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultOrderingPolicy.cs
+    startLine: 2
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel.Policies.Defaults
+  syntax:
+    content: 'public sealed class DefaultOrderingPolicy : IOrderingPolicy'
+    content.vb: Public NotInheritable Class DefaultOrderingPolicy Implements IOrderingPolicy
+  inheritance:
+  - System.Object
+  implements:
+  - AgentFramework.Kernel.Policies.IOrderingPolicy
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AgentFramework.Kernel.Policies.Defaults.DefaultOrderingPolicy.Compare(AgentFramework.Kernel.WorkItem,AgentFramework.Kernel.WorkItem)
+  commentId: M:AgentFramework.Kernel.Policies.Defaults.DefaultOrderingPolicy.Compare(AgentFramework.Kernel.WorkItem,AgentFramework.Kernel.WorkItem)
+  id: Compare(AgentFramework.Kernel.WorkItem,AgentFramework.Kernel.WorkItem)
+  parent: AgentFramework.Kernel.Policies.Defaults.DefaultOrderingPolicy
+  langs:
+  - csharp
+  - vb
+  name: Compare(WorkItem, WorkItem)
+  nameWithType: DefaultOrderingPolicy.Compare(WorkItem, WorkItem)
+  fullName: AgentFramework.Kernel.Policies.Defaults.DefaultOrderingPolicy.Compare(AgentFramework.Kernel.WorkItem, AgentFramework.Kernel.WorkItem)
+  type: Method
+  source:
+    id: Compare
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultOrderingPolicy.cs
+    startLine: 4
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel.Policies.Defaults
+  summary: Return &lt;0 if a before b, 0 if equal, &gt;0 if after.
+  example: []
+  syntax:
+    content: public int Compare(WorkItem a, WorkItem b)
+    parameters:
+    - id: a
+      type: AgentFramework.Kernel.WorkItem
+    - id: b
+      type: AgentFramework.Kernel.WorkItem
+    return:
+      type: System.Int32
+    content.vb: Public Function Compare(a As WorkItem, b As WorkItem) As Integer
+  overload: AgentFramework.Kernel.Policies.Defaults.DefaultOrderingPolicy.Compare*
+  implements:
+  - AgentFramework.Kernel.Policies.IOrderingPolicy.Compare(AgentFramework.Kernel.WorkItem,AgentFramework.Kernel.WorkItem)
+references:
+- uid: AgentFramework.Kernel.Policies.Defaults
+  commentId: N:AgentFramework.Kernel.Policies.Defaults
+  href: AgentFramework.html
+  name: AgentFramework.Kernel.Policies.Defaults
+  nameWithType: AgentFramework.Kernel.Policies.Defaults
+  fullName: AgentFramework.Kernel.Policies.Defaults
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies.Defaults
+    name: Defaults
+    href: AgentFramework.Kernel.Policies.Defaults.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies.Defaults
+    name: Defaults
+    href: AgentFramework.Kernel.Policies.Defaults.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: AgentFramework.Kernel.Policies.IOrderingPolicy
+  commentId: T:AgentFramework.Kernel.Policies.IOrderingPolicy
+  parent: AgentFramework.Kernel.Policies
+  href: AgentFramework.Kernel.Policies.IOrderingPolicy.html
+  name: IOrderingPolicy
+  nameWithType: IOrderingPolicy
+  fullName: AgentFramework.Kernel.Policies.IOrderingPolicy
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AgentFramework.Kernel.Policies
+  commentId: N:AgentFramework.Kernel.Policies
+  href: AgentFramework.html
+  name: AgentFramework.Kernel.Policies
+  nameWithType: AgentFramework.Kernel.Policies
+  fullName: AgentFramework.Kernel.Policies
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+- uid: AgentFramework.Kernel.Policies.Defaults.DefaultOrderingPolicy.Compare*
+  commentId: Overload:AgentFramework.Kernel.Policies.Defaults.DefaultOrderingPolicy.Compare
+  href: AgentFramework.Kernel.Policies.Defaults.DefaultOrderingPolicy.html#AgentFramework_Kernel_Policies_Defaults_DefaultOrderingPolicy_Compare_AgentFramework_Kernel_WorkItem_AgentFramework_Kernel_WorkItem_
+  name: Compare
+  nameWithType: DefaultOrderingPolicy.Compare
+  fullName: AgentFramework.Kernel.Policies.Defaults.DefaultOrderingPolicy.Compare
+- uid: AgentFramework.Kernel.Policies.IOrderingPolicy.Compare(AgentFramework.Kernel.WorkItem,AgentFramework.Kernel.WorkItem)
+  commentId: M:AgentFramework.Kernel.Policies.IOrderingPolicy.Compare(AgentFramework.Kernel.WorkItem,AgentFramework.Kernel.WorkItem)
+  parent: AgentFramework.Kernel.Policies.IOrderingPolicy
+  href: AgentFramework.Kernel.Policies.IOrderingPolicy.html#AgentFramework_Kernel_Policies_IOrderingPolicy_Compare_AgentFramework_Kernel_WorkItem_AgentFramework_Kernel_WorkItem_
+  name: Compare(WorkItem, WorkItem)
+  nameWithType: IOrderingPolicy.Compare(WorkItem, WorkItem)
+  fullName: AgentFramework.Kernel.Policies.IOrderingPolicy.Compare(AgentFramework.Kernel.WorkItem, AgentFramework.Kernel.WorkItem)
+  spec.csharp:
+  - uid: AgentFramework.Kernel.Policies.IOrderingPolicy.Compare(AgentFramework.Kernel.WorkItem,AgentFramework.Kernel.WorkItem)
+    name: Compare
+    href: AgentFramework.Kernel.Policies.IOrderingPolicy.html#AgentFramework_Kernel_Policies_IOrderingPolicy_Compare_AgentFramework_Kernel_WorkItem_AgentFramework_Kernel_WorkItem_
+  - name: (
+  - uid: AgentFramework.Kernel.WorkItem
+    name: WorkItem
+    href: AgentFramework.Kernel.WorkItem.html
+  - name: ','
+  - name: " "
+  - uid: AgentFramework.Kernel.WorkItem
+    name: WorkItem
+    href: AgentFramework.Kernel.WorkItem.html
+  - name: )
+  spec.vb:
+  - uid: AgentFramework.Kernel.Policies.IOrderingPolicy.Compare(AgentFramework.Kernel.WorkItem,AgentFramework.Kernel.WorkItem)
+    name: Compare
+    href: AgentFramework.Kernel.Policies.IOrderingPolicy.html#AgentFramework_Kernel_Policies_IOrderingPolicy_Compare_AgentFramework_Kernel_WorkItem_AgentFramework_Kernel_WorkItem_
+  - name: (
+  - uid: AgentFramework.Kernel.WorkItem
+    name: WorkItem
+    href: AgentFramework.Kernel.WorkItem.html
+  - name: ','
+  - name: " "
+  - uid: AgentFramework.Kernel.WorkItem
+    name: WorkItem
+    href: AgentFramework.Kernel.WorkItem.html
+  - name: )
+- uid: AgentFramework.Kernel.WorkItem
+  commentId: T:AgentFramework.Kernel.WorkItem
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.WorkItem.html
+  name: WorkItem
+  nameWithType: WorkItem
+  fullName: AgentFramework.Kernel.WorkItem
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: AgentFramework.Kernel
+  commentId: N:AgentFramework.Kernel
+  href: AgentFramework.html
+  name: AgentFramework.Kernel
+  nameWithType: AgentFramework.Kernel
+  fullName: AgentFramework.Kernel
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html

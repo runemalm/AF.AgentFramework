@@ -1,0 +1,508 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Engines.IEngine
+  commentId: T:AgentFramework.Engines.IEngine
+  id: IEngine
+  parent: AgentFramework.Engines
+  children:
+  - AgentFramework.Engines.IEngine.AddRunner(AgentFramework.Runners.IRunner)
+  - AgentFramework.Engines.IEngine.BindKernel(AgentFramework.Kernel.IKernel)
+  - AgentFramework.Engines.IEngine.Id
+  - AgentFramework.Engines.IEngine.SetAttachments(System.Collections.Generic.IReadOnlyList{System.String})
+  - AgentFramework.Engines.IEngine.StartAsync(System.Threading.CancellationToken)
+  - AgentFramework.Engines.IEngine.StopAsync(System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: IEngine
+  nameWithType: IEngine
+  fullName: AgentFramework.Engines.IEngine
+  type: Interface
+  source:
+    id: IEngine
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/IEngine.cs
+    startLine: 5
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Engines
+  syntax:
+    content: public interface IEngine
+    content.vb: Public Interface IEngine
+- uid: AgentFramework.Engines.IEngine.Id
+  commentId: P:AgentFramework.Engines.IEngine.Id
+  id: Id
+  parent: AgentFramework.Engines.IEngine
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: IEngine.Id
+  fullName: AgentFramework.Engines.IEngine.Id
+  type: Property
+  source:
+    id: Id
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/IEngine.cs
+    startLine: 7
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Engines
+  syntax:
+    content: string Id { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property Id As String
+  overload: AgentFramework.Engines.IEngine.Id*
+- uid: AgentFramework.Engines.IEngine.BindKernel(AgentFramework.Kernel.IKernel)
+  commentId: M:AgentFramework.Engines.IEngine.BindKernel(AgentFramework.Kernel.IKernel)
+  id: BindKernel(AgentFramework.Kernel.IKernel)
+  parent: AgentFramework.Engines.IEngine
+  langs:
+  - csharp
+  - vb
+  name: BindKernel(IKernel)
+  nameWithType: IEngine.BindKernel(IKernel)
+  fullName: AgentFramework.Engines.IEngine.BindKernel(AgentFramework.Kernel.IKernel)
+  type: Method
+  source:
+    id: BindKernel
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/IEngine.cs
+    startLine: 10
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Engines
+  summary: Kernel will be provided by the Host before StartAsync.
+  example: []
+  syntax:
+    content: void BindKernel(IKernel kernel)
+    parameters:
+    - id: kernel
+      type: AgentFramework.Kernel.IKernel
+    content.vb: Sub BindKernel(kernel As IKernel)
+  overload: AgentFramework.Engines.IEngine.BindKernel*
+- uid: AgentFramework.Engines.IEngine.AddRunner(AgentFramework.Runners.IRunner)
+  commentId: M:AgentFramework.Engines.IEngine.AddRunner(AgentFramework.Runners.IRunner)
+  id: AddRunner(AgentFramework.Runners.IRunner)
+  parent: AgentFramework.Engines.IEngine
+  langs:
+  - csharp
+  - vb
+  name: AddRunner(IRunner)
+  nameWithType: IEngine.AddRunner(IRunner)
+  fullName: AgentFramework.Engines.IEngine.AddRunner(AgentFramework.Runners.IRunner)
+  type: Method
+  source:
+    id: AddRunner
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/IEngine.cs
+    startLine: 13
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Engines
+  summary: Host registers runners on the engine prior to StartAsync.
+  example: []
+  syntax:
+    content: void AddRunner(IRunner runner)
+    parameters:
+    - id: runner
+      type: AgentFramework.Runners.IRunner
+    content.vb: Sub AddRunner(runner As IRunner)
+  overload: AgentFramework.Engines.IEngine.AddRunner*
+- uid: AgentFramework.Engines.IEngine.SetAttachments(System.Collections.Generic.IReadOnlyList{System.String})
+  commentId: M:AgentFramework.Engines.IEngine.SetAttachments(System.Collections.Generic.IReadOnlyList{System.String})
+  id: SetAttachments(System.Collections.Generic.IReadOnlyList{System.String})
+  parent: AgentFramework.Engines.IEngine
+  langs:
+  - csharp
+  - vb
+  name: SetAttachments(IReadOnlyList<string>)
+  nameWithType: IEngine.SetAttachments(IReadOnlyList<string>)
+  fullName: AgentFramework.Engines.IEngine.SetAttachments(System.Collections.Generic.IReadOnlyList<string>)
+  type: Method
+  source:
+    id: SetAttachments
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/IEngine.cs
+    startLine: 16
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Engines
+  summary: Host provides the list of agent ids attached to this engine.
+  example: []
+  syntax:
+    content: void SetAttachments(IReadOnlyList<string> agentIds)
+    parameters:
+    - id: agentIds
+      type: System.Collections.Generic.IReadOnlyList{System.String}
+    content.vb: Sub SetAttachments(agentIds As IReadOnlyList(Of String))
+  overload: AgentFramework.Engines.IEngine.SetAttachments*
+  nameWithType.vb: IEngine.SetAttachments(IReadOnlyList(Of String))
+  fullName.vb: AgentFramework.Engines.IEngine.SetAttachments(System.Collections.Generic.IReadOnlyList(Of String))
+  name.vb: SetAttachments(IReadOnlyList(Of String))
+- uid: AgentFramework.Engines.IEngine.StartAsync(System.Threading.CancellationToken)
+  commentId: M:AgentFramework.Engines.IEngine.StartAsync(System.Threading.CancellationToken)
+  id: StartAsync(System.Threading.CancellationToken)
+  parent: AgentFramework.Engines.IEngine
+  langs:
+  - csharp
+  - vb
+  name: StartAsync(CancellationToken)
+  nameWithType: IEngine.StartAsync(CancellationToken)
+  fullName: AgentFramework.Engines.IEngine.StartAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    id: StartAsync
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/IEngine.cs
+    startLine: 18
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Engines
+  syntax:
+    content: Task StartAsync(CancellationToken ct = default)
+    parameters:
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function StartAsync(ct As CancellationToken = Nothing) As Task
+  overload: AgentFramework.Engines.IEngine.StartAsync*
+- uid: AgentFramework.Engines.IEngine.StopAsync(System.Threading.CancellationToken)
+  commentId: M:AgentFramework.Engines.IEngine.StopAsync(System.Threading.CancellationToken)
+  id: StopAsync(System.Threading.CancellationToken)
+  parent: AgentFramework.Engines.IEngine
+  langs:
+  - csharp
+  - vb
+  name: StopAsync(CancellationToken)
+  nameWithType: IEngine.StopAsync(CancellationToken)
+  fullName: AgentFramework.Engines.IEngine.StopAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    id: StopAsync
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/IEngine.cs
+    startLine: 19
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Engines
+  syntax:
+    content: Task StopAsync(CancellationToken ct = default)
+    parameters:
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function StopAsync(ct As CancellationToken = Nothing) As Task
+  overload: AgentFramework.Engines.IEngine.StopAsync*
+references:
+- uid: AgentFramework.Engines
+  commentId: N:AgentFramework.Engines
+  href: AgentFramework.html
+  name: AgentFramework.Engines
+  nameWithType: AgentFramework.Engines
+  fullName: AgentFramework.Engines
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Engines
+    name: Engines
+    href: AgentFramework.Engines.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Engines
+    name: Engines
+    href: AgentFramework.Engines.html
+- uid: AgentFramework.Engines.IEngine.Id*
+  commentId: Overload:AgentFramework.Engines.IEngine.Id
+  href: AgentFramework.Engines.IEngine.html#AgentFramework_Engines_IEngine_Id
+  name: Id
+  nameWithType: IEngine.Id
+  fullName: AgentFramework.Engines.IEngine.Id
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AgentFramework.Engines.IEngine.BindKernel*
+  commentId: Overload:AgentFramework.Engines.IEngine.BindKernel
+  href: AgentFramework.Engines.IEngine.html#AgentFramework_Engines_IEngine_BindKernel_AgentFramework_Kernel_IKernel_
+  name: BindKernel
+  nameWithType: IEngine.BindKernel
+  fullName: AgentFramework.Engines.IEngine.BindKernel
+- uid: AgentFramework.Kernel.IKernel
+  commentId: T:AgentFramework.Kernel.IKernel
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.IKernel.html
+  name: IKernel
+  nameWithType: IKernel
+  fullName: AgentFramework.Kernel.IKernel
+- uid: AgentFramework.Kernel
+  commentId: N:AgentFramework.Kernel
+  href: AgentFramework.html
+  name: AgentFramework.Kernel
+  nameWithType: AgentFramework.Kernel
+  fullName: AgentFramework.Kernel
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+- uid: AgentFramework.Engines.IEngine.AddRunner*
+  commentId: Overload:AgentFramework.Engines.IEngine.AddRunner
+  href: AgentFramework.Engines.IEngine.html#AgentFramework_Engines_IEngine_AddRunner_AgentFramework_Runners_IRunner_
+  name: AddRunner
+  nameWithType: IEngine.AddRunner
+  fullName: AgentFramework.Engines.IEngine.AddRunner
+- uid: AgentFramework.Runners.IRunner
+  commentId: T:AgentFramework.Runners.IRunner
+  parent: AgentFramework.Runners
+  href: AgentFramework.Runners.IRunner.html
+  name: IRunner
+  nameWithType: IRunner
+  fullName: AgentFramework.Runners.IRunner
+- uid: AgentFramework.Runners
+  commentId: N:AgentFramework.Runners
+  href: AgentFramework.html
+  name: AgentFramework.Runners
+  nameWithType: AgentFramework.Runners
+  fullName: AgentFramework.Runners
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Runners
+    name: Runners
+    href: AgentFramework.Runners.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Runners
+    name: Runners
+    href: AgentFramework.Runners.html
+- uid: AgentFramework.Engines.IEngine.SetAttachments*
+  commentId: Overload:AgentFramework.Engines.IEngine.SetAttachments
+  href: AgentFramework.Engines.IEngine.html#AgentFramework_Engines_IEngine_SetAttachments_System_Collections_Generic_IReadOnlyList_System_String__
+  name: SetAttachments
+  nameWithType: IEngine.SetAttachments
+  fullName: AgentFramework.Engines.IEngine.SetAttachments
+- uid: System.Collections.Generic.IReadOnlyList{System.String}
+  commentId: T:System.Collections.Generic.IReadOnlyList{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<string>
+  nameWithType: IReadOnlyList<string>
+  fullName: System.Collections.Generic.IReadOnlyList<string>
+  nameWithType.vb: IReadOnlyList(Of String)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of String)
+  name.vb: IReadOnlyList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: AgentFramework.Engines.IEngine.StartAsync*
+  commentId: Overload:AgentFramework.Engines.IEngine.StartAsync
+  href: AgentFramework.Engines.IEngine.html#AgentFramework_Engines_IEngine_StartAsync_System_Threading_CancellationToken_
+  name: StartAsync
+  nameWithType: IEngine.StartAsync
+  fullName: AgentFramework.Engines.IEngine.StartAsync
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: AgentFramework.Engines.IEngine.StopAsync*
+  commentId: Overload:AgentFramework.Engines.IEngine.StopAsync
+  href: AgentFramework.Engines.IEngine.html#AgentFramework_Engines_IEngine_StopAsync_System_Threading_CancellationToken_
+  name: StopAsync
+  nameWithType: IEngine.StopAsync
+  fullName: AgentFramework.Engines.IEngine.StopAsync

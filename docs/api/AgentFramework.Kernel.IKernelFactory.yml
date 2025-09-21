@@ -1,0 +1,97 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Kernel.IKernelFactory
+  commentId: T:AgentFramework.Kernel.IKernelFactory
+  id: IKernelFactory
+  parent: AgentFramework.Kernel
+  children:
+  - AgentFramework.Kernel.IKernelFactory.Create(AgentFramework.Kernel.KernelOptions)
+  langs:
+  - csharp
+  - vb
+  name: IKernelFactory
+  nameWithType: IKernelFactory
+  fullName: AgentFramework.Kernel.IKernelFactory
+  type: Interface
+  source:
+    id: IKernelFactory
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IKernelFactory.cs
+    startLine: 3
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  summary: Factory abstraction so Hosting can create a Kernel without knowing its implementation.
+  example: []
+  syntax:
+    content: public interface IKernelFactory
+    content.vb: Public Interface IKernelFactory
+- uid: AgentFramework.Kernel.IKernelFactory.Create(AgentFramework.Kernel.KernelOptions)
+  commentId: M:AgentFramework.Kernel.IKernelFactory.Create(AgentFramework.Kernel.KernelOptions)
+  id: Create(AgentFramework.Kernel.KernelOptions)
+  parent: AgentFramework.Kernel.IKernelFactory
+  langs:
+  - csharp
+  - vb
+  name: Create(KernelOptions)
+  nameWithType: IKernelFactory.Create(KernelOptions)
+  fullName: AgentFramework.Kernel.IKernelFactory.Create(AgentFramework.Kernel.KernelOptions)
+  type: Method
+  source:
+    id: Create
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IKernelFactory.cs
+    startLine: 5
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  syntax:
+    content: IKernel Create(KernelOptions options)
+    parameters:
+    - id: options
+      type: AgentFramework.Kernel.KernelOptions
+    return:
+      type: AgentFramework.Kernel.IKernel
+    content.vb: Function Create(options As KernelOptions) As IKernel
+  overload: AgentFramework.Kernel.IKernelFactory.Create*
+references:
+- uid: AgentFramework.Kernel
+  commentId: N:AgentFramework.Kernel
+  href: AgentFramework.html
+  name: AgentFramework.Kernel
+  nameWithType: AgentFramework.Kernel
+  fullName: AgentFramework.Kernel
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+- uid: AgentFramework.Kernel.IKernelFactory.Create*
+  commentId: Overload:AgentFramework.Kernel.IKernelFactory.Create
+  href: AgentFramework.Kernel.IKernelFactory.html#AgentFramework_Kernel_IKernelFactory_Create_AgentFramework_Kernel_KernelOptions_
+  name: Create
+  nameWithType: IKernelFactory.Create
+  fullName: AgentFramework.Kernel.IKernelFactory.Create
+- uid: AgentFramework.Kernel.KernelOptions
+  commentId: T:AgentFramework.Kernel.KernelOptions
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.KernelOptions.html
+  name: KernelOptions
+  nameWithType: KernelOptions
+  fullName: AgentFramework.Kernel.KernelOptions
+- uid: AgentFramework.Kernel.IKernel
+  commentId: T:AgentFramework.Kernel.IKernel
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.IKernel.html
+  name: IKernel
+  nameWithType: IKernel
+  fullName: AgentFramework.Kernel.IKernel

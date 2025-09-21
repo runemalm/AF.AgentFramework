@@ -1,0 +1,665 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Hosting.AgentHostConfig
+  commentId: T:AgentFramework.Hosting.AgentHostConfig
+  id: AgentHostConfig
+  parent: AgentFramework.Hosting
+  children:
+  - AgentFramework.Hosting.AgentHostConfig.Agents
+  - AgentFramework.Hosting.AgentHostConfig.Attachments
+  - AgentFramework.Hosting.AgentHostConfig.Engines
+  - AgentFramework.Hosting.AgentHostConfig.KernelDefaults
+  - AgentFramework.Hosting.AgentHostConfig.Runners
+  langs:
+  - csharp
+  - vb
+  name: AgentHostConfig
+  nameWithType: AgentHostConfig
+  fullName: AgentFramework.Hosting.AgentHostConfig
+  type: Class
+  source:
+    id: AgentHostConfig
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentHostConfig.cs
+    startLine: 7
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Hosting
+  summary: Internal bag of registrations; produced by AgentHostBuilder.
+  example: []
+  syntax:
+    content: public sealed class AgentHostConfig
+    content.vb: Public NotInheritable Class AgentHostConfig
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AgentFramework.Hosting.AgentHostConfig.Engines
+  commentId: P:AgentFramework.Hosting.AgentHostConfig.Engines
+  id: Engines
+  parent: AgentFramework.Hosting.AgentHostConfig
+  langs:
+  - csharp
+  - vb
+  name: Engines
+  nameWithType: AgentHostConfig.Engines
+  fullName: AgentFramework.Hosting.AgentHostConfig.Engines
+  type: Property
+  source:
+    id: Engines
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentHostConfig.cs
+    startLine: 9
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Hosting
+  syntax:
+    content: public List<EngineRegistration> Engines { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{AgentFramework.Hosting.EngineRegistration}
+    content.vb: Public ReadOnly Property Engines As List(Of EngineRegistration)
+  overload: AgentFramework.Hosting.AgentHostConfig.Engines*
+- uid: AgentFramework.Hosting.AgentHostConfig.Runners
+  commentId: P:AgentFramework.Hosting.AgentHostConfig.Runners
+  id: Runners
+  parent: AgentFramework.Hosting.AgentHostConfig
+  langs:
+  - csharp
+  - vb
+  name: Runners
+  nameWithType: AgentHostConfig.Runners
+  fullName: AgentFramework.Hosting.AgentHostConfig.Runners
+  type: Property
+  source:
+    id: Runners
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentHostConfig.cs
+    startLine: 10
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Hosting
+  syntax:
+    content: public List<RunnerRegistration> Runners { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{AgentFramework.Hosting.RunnerRegistration}
+    content.vb: Public ReadOnly Property Runners As List(Of RunnerRegistration)
+  overload: AgentFramework.Hosting.AgentHostConfig.Runners*
+- uid: AgentFramework.Hosting.AgentHostConfig.Agents
+  commentId: P:AgentFramework.Hosting.AgentHostConfig.Agents
+  id: Agents
+  parent: AgentFramework.Hosting.AgentHostConfig
+  langs:
+  - csharp
+  - vb
+  name: Agents
+  nameWithType: AgentHostConfig.Agents
+  fullName: AgentFramework.Hosting.AgentHostConfig.Agents
+  type: Property
+  source:
+    id: Agents
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentHostConfig.cs
+    startLine: 11
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Hosting
+  syntax:
+    content: public List<AgentRegistration> Agents { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{AgentFramework.Hosting.AgentRegistration}
+    content.vb: Public ReadOnly Property Agents As List(Of AgentRegistration)
+  overload: AgentFramework.Hosting.AgentHostConfig.Agents*
+- uid: AgentFramework.Hosting.AgentHostConfig.Attachments
+  commentId: P:AgentFramework.Hosting.AgentHostConfig.Attachments
+  id: Attachments
+  parent: AgentFramework.Hosting.AgentHostConfig
+  langs:
+  - csharp
+  - vb
+  name: Attachments
+  nameWithType: AgentHostConfig.Attachments
+  fullName: AgentFramework.Hosting.AgentHostConfig.Attachments
+  type: Property
+  source:
+    id: Attachments
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentHostConfig.cs
+    startLine: 12
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Hosting
+  syntax:
+    content: public List<Attachment> Attachments { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{AgentFramework.Hosting.Attachment}
+    content.vb: Public ReadOnly Property Attachments As List(Of Attachment)
+  overload: AgentFramework.Hosting.AgentHostConfig.Attachments*
+- uid: AgentFramework.Hosting.AgentHostConfig.KernelDefaults
+  commentId: P:AgentFramework.Hosting.AgentHostConfig.KernelDefaults
+  id: KernelDefaults
+  parent: AgentFramework.Hosting.AgentHostConfig
+  langs:
+  - csharp
+  - vb
+  name: KernelDefaults
+  nameWithType: AgentHostConfig.KernelDefaults
+  fullName: AgentFramework.Hosting.AgentHostConfig.KernelDefaults
+  type: Property
+  source:
+    id: KernelDefaults
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentHostConfig.cs
+    startLine: 13
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Hosting
+  syntax:
+    content: public PolicySet? KernelDefaults { get; set; }
+    parameters: []
+    return:
+      type: AgentFramework.Kernel.Policies.PolicySet
+    content.vb: Public Property KernelDefaults As PolicySet
+  overload: AgentFramework.Hosting.AgentHostConfig.KernelDefaults*
+references:
+- uid: AgentFramework.Hosting
+  commentId: N:AgentFramework.Hosting
+  href: AgentFramework.html
+  name: AgentFramework.Hosting
+  nameWithType: AgentFramework.Hosting
+  fullName: AgentFramework.Hosting
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Hosting
+    name: Hosting
+    href: AgentFramework.Hosting.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Hosting
+    name: Hosting
+    href: AgentFramework.Hosting.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AgentFramework.Hosting.AgentHostConfig.Engines*
+  commentId: Overload:AgentFramework.Hosting.AgentHostConfig.Engines
+  href: AgentFramework.Hosting.AgentHostConfig.html#AgentFramework_Hosting_AgentHostConfig_Engines
+  name: Engines
+  nameWithType: AgentHostConfig.Engines
+  fullName: AgentFramework.Hosting.AgentHostConfig.Engines
+- uid: System.Collections.Generic.List{AgentFramework.Hosting.EngineRegistration}
+  commentId: T:System.Collections.Generic.List{AgentFramework.Hosting.EngineRegistration}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<EngineRegistration>
+  nameWithType: List<EngineRegistration>
+  fullName: System.Collections.Generic.List<AgentFramework.Hosting.EngineRegistration>
+  nameWithType.vb: List(Of EngineRegistration)
+  fullName.vb: System.Collections.Generic.List(Of AgentFramework.Hosting.EngineRegistration)
+  name.vb: List(Of EngineRegistration)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: AgentFramework.Hosting.EngineRegistration
+    name: EngineRegistration
+    href: AgentFramework.Hosting.EngineRegistration.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AgentFramework.Hosting.EngineRegistration
+    name: EngineRegistration
+    href: AgentFramework.Hosting.EngineRegistration.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: AgentFramework.Hosting.AgentHostConfig.Runners*
+  commentId: Overload:AgentFramework.Hosting.AgentHostConfig.Runners
+  href: AgentFramework.Hosting.AgentHostConfig.html#AgentFramework_Hosting_AgentHostConfig_Runners
+  name: Runners
+  nameWithType: AgentHostConfig.Runners
+  fullName: AgentFramework.Hosting.AgentHostConfig.Runners
+- uid: System.Collections.Generic.List{AgentFramework.Hosting.RunnerRegistration}
+  commentId: T:System.Collections.Generic.List{AgentFramework.Hosting.RunnerRegistration}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<RunnerRegistration>
+  nameWithType: List<RunnerRegistration>
+  fullName: System.Collections.Generic.List<AgentFramework.Hosting.RunnerRegistration>
+  nameWithType.vb: List(Of RunnerRegistration)
+  fullName.vb: System.Collections.Generic.List(Of AgentFramework.Hosting.RunnerRegistration)
+  name.vb: List(Of RunnerRegistration)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: AgentFramework.Hosting.RunnerRegistration
+    name: RunnerRegistration
+    href: AgentFramework.Hosting.RunnerRegistration.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AgentFramework.Hosting.RunnerRegistration
+    name: RunnerRegistration
+    href: AgentFramework.Hosting.RunnerRegistration.html
+  - name: )
+- uid: AgentFramework.Hosting.AgentHostConfig.Agents*
+  commentId: Overload:AgentFramework.Hosting.AgentHostConfig.Agents
+  href: AgentFramework.Hosting.AgentHostConfig.html#AgentFramework_Hosting_AgentHostConfig_Agents
+  name: Agents
+  nameWithType: AgentHostConfig.Agents
+  fullName: AgentFramework.Hosting.AgentHostConfig.Agents
+- uid: System.Collections.Generic.List{AgentFramework.Hosting.AgentRegistration}
+  commentId: T:System.Collections.Generic.List{AgentFramework.Hosting.AgentRegistration}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<AgentRegistration>
+  nameWithType: List<AgentRegistration>
+  fullName: System.Collections.Generic.List<AgentFramework.Hosting.AgentRegistration>
+  nameWithType.vb: List(Of AgentRegistration)
+  fullName.vb: System.Collections.Generic.List(Of AgentFramework.Hosting.AgentRegistration)
+  name.vb: List(Of AgentRegistration)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: AgentFramework.Hosting.AgentRegistration
+    name: AgentRegistration
+    href: AgentFramework.Hosting.AgentRegistration.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AgentFramework.Hosting.AgentRegistration
+    name: AgentRegistration
+    href: AgentFramework.Hosting.AgentRegistration.html
+  - name: )
+- uid: AgentFramework.Hosting.AgentHostConfig.Attachments*
+  commentId: Overload:AgentFramework.Hosting.AgentHostConfig.Attachments
+  href: AgentFramework.Hosting.AgentHostConfig.html#AgentFramework_Hosting_AgentHostConfig_Attachments
+  name: Attachments
+  nameWithType: AgentHostConfig.Attachments
+  fullName: AgentFramework.Hosting.AgentHostConfig.Attachments
+- uid: System.Collections.Generic.List{AgentFramework.Hosting.Attachment}
+  commentId: T:System.Collections.Generic.List{AgentFramework.Hosting.Attachment}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Attachment>
+  nameWithType: List<Attachment>
+  fullName: System.Collections.Generic.List<AgentFramework.Hosting.Attachment>
+  nameWithType.vb: List(Of Attachment)
+  fullName.vb: System.Collections.Generic.List(Of AgentFramework.Hosting.Attachment)
+  name.vb: List(Of Attachment)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: AgentFramework.Hosting.Attachment
+    name: Attachment
+    href: AgentFramework.Hosting.Attachment.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AgentFramework.Hosting.Attachment
+    name: Attachment
+    href: AgentFramework.Hosting.Attachment.html
+  - name: )
+- uid: AgentFramework.Hosting.AgentHostConfig.KernelDefaults*
+  commentId: Overload:AgentFramework.Hosting.AgentHostConfig.KernelDefaults
+  href: AgentFramework.Hosting.AgentHostConfig.html#AgentFramework_Hosting_AgentHostConfig_KernelDefaults
+  name: KernelDefaults
+  nameWithType: AgentHostConfig.KernelDefaults
+  fullName: AgentFramework.Hosting.AgentHostConfig.KernelDefaults
+- uid: AgentFramework.Kernel.Policies.PolicySet
+  commentId: T:AgentFramework.Kernel.Policies.PolicySet
+  parent: AgentFramework.Kernel.Policies
+  href: AgentFramework.Kernel.Policies.PolicySet.html
+  name: PolicySet
+  nameWithType: PolicySet
+  fullName: AgentFramework.Kernel.Policies.PolicySet
+- uid: AgentFramework.Kernel.Policies
+  commentId: N:AgentFramework.Kernel.Policies
+  href: AgentFramework.html
+  name: AgentFramework.Kernel.Policies
+  nameWithType: AgentFramework.Kernel.Policies
+  fullName: AgentFramework.Kernel.Policies
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html

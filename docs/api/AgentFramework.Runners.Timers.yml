@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Runners.Timers
+  commentId: N:AgentFramework.Runners.Timers
+  id: AgentFramework.Runners.Timers
+  children:
+  - AgentFramework.Runners.Timers.TimerRunner
+  langs:
+  - csharp
+  - vb
+  name: AgentFramework.Runners.Timers
+  nameWithType: AgentFramework.Runners.Timers
+  fullName: AgentFramework.Runners.Timers
+  type: Namespace
+  assemblies:
+  - AF.AgentFramework
+references:
+- uid: AgentFramework.Runners.Timers.TimerRunner
+  commentId: T:AgentFramework.Runners.Timers.TimerRunner
+  href: AgentFramework.Runners.Timers.TimerRunner.html
+  name: TimerRunner
+  nameWithType: TimerRunner
+  fullName: AgentFramework.Runners.Timers.TimerRunner

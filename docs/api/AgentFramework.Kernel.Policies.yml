@@ -1,0 +1,134 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Kernel.Policies
+  commentId: N:AgentFramework.Kernel.Policies
+  id: AgentFramework.Kernel.Policies
+  children:
+  - AgentFramework.Kernel.Policies.AdmissionDecision
+  - AgentFramework.Kernel.Policies.BackpressureDecision
+  - AgentFramework.Kernel.Policies.IAdmissionPolicy
+  - AgentFramework.Kernel.Policies.IBackpressurePolicy
+  - AgentFramework.Kernel.Policies.IOrderingPolicy
+  - AgentFramework.Kernel.Policies.IPreemptionPolicy
+  - AgentFramework.Kernel.Policies.IRetryPolicy
+  - AgentFramework.Kernel.Policies.ITimeoutPolicy
+  - AgentFramework.Kernel.Policies.PolicySet
+  - AgentFramework.Kernel.Policies.PreemptionDecision
+  - AgentFramework.Kernel.Policies.RetryDecision
+  langs:
+  - csharp
+  - vb
+  name: AgentFramework.Kernel.Policies
+  nameWithType: AgentFramework.Kernel.Policies
+  fullName: AgentFramework.Kernel.Policies
+  type: Namespace
+  assemblies:
+  - AF.AgentFramework
+references:
+- uid: AgentFramework.Kernel.Policies.AdmissionDecision
+  commentId: T:AgentFramework.Kernel.Policies.AdmissionDecision
+  parent: AgentFramework.Kernel.Policies
+  href: AgentFramework.Kernel.Policies.AdmissionDecision.html
+  name: AdmissionDecision
+  nameWithType: AdmissionDecision
+  fullName: AgentFramework.Kernel.Policies.AdmissionDecision
+- uid: AgentFramework.Kernel.Policies.PreemptionDecision
+  commentId: T:AgentFramework.Kernel.Policies.PreemptionDecision
+  parent: AgentFramework.Kernel.Policies
+  href: AgentFramework.Kernel.Policies.PreemptionDecision.html
+  name: PreemptionDecision
+  nameWithType: PreemptionDecision
+  fullName: AgentFramework.Kernel.Policies.PreemptionDecision
+- uid: AgentFramework.Kernel.Policies.BackpressureDecision
+  commentId: T:AgentFramework.Kernel.Policies.BackpressureDecision
+  parent: AgentFramework.Kernel.Policies
+  href: AgentFramework.Kernel.Policies.BackpressureDecision.html
+  name: BackpressureDecision
+  nameWithType: BackpressureDecision
+  fullName: AgentFramework.Kernel.Policies.BackpressureDecision
+- uid: AgentFramework.Kernel.Policies.RetryDecision
+  commentId: T:AgentFramework.Kernel.Policies.RetryDecision
+  parent: AgentFramework.Kernel.Policies
+  href: AgentFramework.Kernel.Policies.RetryDecision.html
+  name: RetryDecision
+  nameWithType: RetryDecision
+  fullName: AgentFramework.Kernel.Policies.RetryDecision
+- uid: AgentFramework.Kernel.Policies.IAdmissionPolicy
+  commentId: T:AgentFramework.Kernel.Policies.IAdmissionPolicy
+  parent: AgentFramework.Kernel.Policies
+  href: AgentFramework.Kernel.Policies.IAdmissionPolicy.html
+  name: IAdmissionPolicy
+  nameWithType: IAdmissionPolicy
+  fullName: AgentFramework.Kernel.Policies.IAdmissionPolicy
+- uid: AgentFramework.Kernel.Policies.IBackpressurePolicy
+  commentId: T:AgentFramework.Kernel.Policies.IBackpressurePolicy
+  parent: AgentFramework.Kernel.Policies
+  href: AgentFramework.Kernel.Policies.IBackpressurePolicy.html
+  name: IBackpressurePolicy
+  nameWithType: IBackpressurePolicy
+  fullName: AgentFramework.Kernel.Policies.IBackpressurePolicy
+- uid: AgentFramework.Kernel.Policies.IOrderingPolicy
+  commentId: T:AgentFramework.Kernel.Policies.IOrderingPolicy
+  parent: AgentFramework.Kernel.Policies
+  href: AgentFramework.Kernel.Policies.IOrderingPolicy.html
+  name: IOrderingPolicy
+  nameWithType: IOrderingPolicy
+  fullName: AgentFramework.Kernel.Policies.IOrderingPolicy
+- uid: AgentFramework.Kernel.Policies.IPreemptionPolicy
+  commentId: T:AgentFramework.Kernel.Policies.IPreemptionPolicy
+  parent: AgentFramework.Kernel.Policies
+  href: AgentFramework.Kernel.Policies.IPreemptionPolicy.html
+  name: IPreemptionPolicy
+  nameWithType: IPreemptionPolicy
+  fullName: AgentFramework.Kernel.Policies.IPreemptionPolicy
+- uid: AgentFramework.Kernel.Policies.IRetryPolicy
+  commentId: T:AgentFramework.Kernel.Policies.IRetryPolicy
+  parent: AgentFramework.Kernel.Policies
+  href: AgentFramework.Kernel.Policies.IRetryPolicy.html
+  name: IRetryPolicy
+  nameWithType: IRetryPolicy
+  fullName: AgentFramework.Kernel.Policies.IRetryPolicy
+- uid: AgentFramework.Kernel.Policies.ITimeoutPolicy
+  commentId: T:AgentFramework.Kernel.Policies.ITimeoutPolicy
+  parent: AgentFramework.Kernel.Policies
+  href: AgentFramework.Kernel.Policies.ITimeoutPolicy.html
+  name: ITimeoutPolicy
+  nameWithType: ITimeoutPolicy
+  fullName: AgentFramework.Kernel.Policies.ITimeoutPolicy
+- uid: AgentFramework.Kernel.Policies.PolicySet
+  commentId: T:AgentFramework.Kernel.Policies.PolicySet
+  parent: AgentFramework.Kernel.Policies
+  href: AgentFramework.Kernel.Policies.PolicySet.html
+  name: PolicySet
+  nameWithType: PolicySet
+  fullName: AgentFramework.Kernel.Policies.PolicySet
+- uid: AgentFramework.Kernel.Policies
+  commentId: N:AgentFramework.Kernel.Policies
+  href: AgentFramework.html
+  name: AgentFramework.Kernel.Policies
+  nameWithType: AgentFramework.Kernel.Policies
+  fullName: AgentFramework.Kernel.Policies
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html

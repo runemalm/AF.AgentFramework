@@ -1,0 +1,198 @@
+### YamlMime:TableOfContent
+items:
+- uid: AgentFramework.Engines
+  name: AgentFramework.Engines
+  type: Namespace
+  items:
+  - uid: AgentFramework.Engines.IEngine
+    name: IEngine
+    type: Interface
+- uid: AgentFramework.Engines.Loop
+  name: AgentFramework.Engines.Loop
+  type: Namespace
+  items:
+  - uid: AgentFramework.Engines.Loop.LoopEngine
+    name: LoopEngine
+    type: Class
+- uid: AgentFramework.Engines.Reactive
+  name: AgentFramework.Engines.Reactive
+  type: Namespace
+  items:
+  - uid: AgentFramework.Engines.Reactive.ReactiveEngine
+    name: ReactiveEngine
+    type: Class
+- uid: AgentFramework.Hosting
+  name: AgentFramework.Hosting
+  type: Namespace
+  items:
+  - uid: AgentFramework.Hosting.AgentCatalog
+    name: AgentCatalog
+    type: Class
+  - uid: AgentFramework.Hosting.AgentHost
+    name: AgentHost
+    type: Class
+  - uid: AgentFramework.Hosting.AgentHostBuilder
+    name: AgentHostBuilder
+    type: Class
+  - uid: AgentFramework.Hosting.AgentHostConfig
+    name: AgentHostConfig
+    type: Class
+  - uid: AgentFramework.Hosting.AgentRegistration
+    name: AgentRegistration
+    type: Class
+  - uid: AgentFramework.Hosting.Attachment
+    name: Attachment
+    type: Class
+  - uid: AgentFramework.Hosting.EngineRegistration
+    name: EngineRegistration
+    type: Class
+  - uid: AgentFramework.Hosting.IAgentHost
+    name: IAgentHost
+    type: Interface
+  - uid: AgentFramework.Hosting.IAgentHostBuilder
+    name: IAgentHostBuilder
+    type: Interface
+  - uid: AgentFramework.Hosting.NoopAgentHost
+    name: NoopAgentHost
+    type: Class
+  - uid: AgentFramework.Hosting.RunnerRegistration
+    name: RunnerRegistration
+    type: Class
+- uid: AgentFramework.Kernel
+  name: AgentFramework.Kernel
+  type: Namespace
+  items:
+  - uid: AgentFramework.Kernel.AgentRuntimeState
+    name: AgentRuntimeState
+    type: Class
+  - uid: AgentFramework.Kernel.AttachmentBinding
+    name: AttachmentBinding
+    type: Class
+  - uid: AgentFramework.Kernel.ClusterLoad
+    name: ClusterLoad
+    type: Class
+  - uid: AgentFramework.Kernel.DefaultKernelFactory
+    name: DefaultKernelFactory
+    type: Class
+  - uid: AgentFramework.Kernel.IAgent
+    name: IAgent
+    type: Interface
+  - uid: AgentFramework.Kernel.IAgentCatalog
+    name: IAgentCatalog
+    type: Interface
+  - uid: AgentFramework.Kernel.IAgentContext
+    name: IAgentContext
+    type: Interface
+  - uid: AgentFramework.Kernel.IKernel
+    name: IKernel
+    type: Interface
+  - uid: AgentFramework.Kernel.IKernelFactory
+    name: IKernelFactory
+    type: Interface
+  - uid: AgentFramework.Kernel.InProcKernel
+    name: InProcKernel
+    type: Class
+  - uid: AgentFramework.Kernel.KernelOptions
+    name: KernelOptions
+    type: Class
+  - uid: AgentFramework.Kernel.RunningInvocation
+    name: RunningInvocation
+    type: Class
+  - uid: AgentFramework.Kernel.StubKernel
+    name: StubKernel
+    type: Class
+  - uid: AgentFramework.Kernel.WorkItem
+    name: WorkItem
+    type: Class
+  - uid: AgentFramework.Kernel.WorkItemKind
+    name: WorkItemKind
+    type: Enum
+- uid: AgentFramework.Kernel.Policies
+  name: AgentFramework.Kernel.Policies
+  type: Namespace
+  items:
+  - uid: AgentFramework.Kernel.Policies.AdmissionDecision
+    name: AdmissionDecision
+    type: Enum
+  - uid: AgentFramework.Kernel.Policies.BackpressureDecision
+    name: BackpressureDecision
+    type: Enum
+  - uid: AgentFramework.Kernel.Policies.IAdmissionPolicy
+    name: IAdmissionPolicy
+    type: Interface
+  - uid: AgentFramework.Kernel.Policies.IBackpressurePolicy
+    name: IBackpressurePolicy
+    type: Interface
+  - uid: AgentFramework.Kernel.Policies.IOrderingPolicy
+    name: IOrderingPolicy
+    type: Interface
+  - uid: AgentFramework.Kernel.Policies.IPreemptionPolicy
+    name: IPreemptionPolicy
+    type: Interface
+  - uid: AgentFramework.Kernel.Policies.IRetryPolicy
+    name: IRetryPolicy
+    type: Interface
+  - uid: AgentFramework.Kernel.Policies.ITimeoutPolicy
+    name: ITimeoutPolicy
+    type: Interface
+  - uid: AgentFramework.Kernel.Policies.PolicySet
+    name: PolicySet
+    type: Class
+  - uid: AgentFramework.Kernel.Policies.PreemptionDecision
+    name: PreemptionDecision
+    type: Enum
+  - uid: AgentFramework.Kernel.Policies.RetryDecision
+    name: RetryDecision
+    type: Class
+- uid: AgentFramework.Kernel.Policies.Defaults
+  name: AgentFramework.Kernel.Policies.Defaults
+  type: Namespace
+  items:
+  - uid: AgentFramework.Kernel.Policies.Defaults.AdmissionOptions
+    name: AdmissionOptions
+    type: Class
+  - uid: AgentFramework.Kernel.Policies.Defaults.BackpressureOptions
+    name: BackpressureOptions
+    type: Class
+  - uid: AgentFramework.Kernel.Policies.Defaults.DefaultAdmissionPolicy
+    name: DefaultAdmissionPolicy
+    type: Class
+  - uid: AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy
+    name: DefaultBackpressurePolicy
+    type: Class
+  - uid: AgentFramework.Kernel.Policies.Defaults.DefaultOrderingPolicy
+    name: DefaultOrderingPolicy
+    type: Class
+  - uid: AgentFramework.Kernel.Policies.Defaults.DefaultPreemptionPolicy
+    name: DefaultPreemptionPolicy
+    type: Class
+  - uid: AgentFramework.Kernel.Policies.Defaults.DefaultRetryPolicy
+    name: DefaultRetryPolicy
+    type: Class
+  - uid: AgentFramework.Kernel.Policies.Defaults.DefaultTimeoutPolicy
+    name: DefaultTimeoutPolicy
+    type: Class
+  - uid: AgentFramework.Kernel.Policies.Defaults.PolicySetDefaults
+    name: PolicySetDefaults
+    type: Class
+  - uid: AgentFramework.Kernel.Policies.Defaults.RetryOptions
+    name: RetryOptions
+    type: Class
+  - uid: AgentFramework.Kernel.Policies.Defaults.TimeoutOptions
+    name: TimeoutOptions
+    type: Class
+- uid: AgentFramework.Runners
+  name: AgentFramework.Runners
+  type: Namespace
+  items:
+  - uid: AgentFramework.Runners.IRunner
+    name: IRunner
+    type: Interface
+- uid: AgentFramework.Runners.Timers
+  name: AgentFramework.Runners.Timers
+  type: Namespace
+  items:
+  - uid: AgentFramework.Runners.Timers.TimerRunner
+    name: TimerRunner
+    type: Class
+memberLayout: SamePage

@@ -1,0 +1,135 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Kernel.Policies.Defaults
+  commentId: N:AgentFramework.Kernel.Policies.Defaults
+  id: AgentFramework.Kernel.Policies.Defaults
+  children:
+  - AgentFramework.Kernel.Policies.Defaults.AdmissionOptions
+  - AgentFramework.Kernel.Policies.Defaults.BackpressureOptions
+  - AgentFramework.Kernel.Policies.Defaults.DefaultAdmissionPolicy
+  - AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy
+  - AgentFramework.Kernel.Policies.Defaults.DefaultOrderingPolicy
+  - AgentFramework.Kernel.Policies.Defaults.DefaultPreemptionPolicy
+  - AgentFramework.Kernel.Policies.Defaults.DefaultRetryPolicy
+  - AgentFramework.Kernel.Policies.Defaults.DefaultTimeoutPolicy
+  - AgentFramework.Kernel.Policies.Defaults.PolicySetDefaults
+  - AgentFramework.Kernel.Policies.Defaults.RetryOptions
+  - AgentFramework.Kernel.Policies.Defaults.TimeoutOptions
+  langs:
+  - csharp
+  - vb
+  name: AgentFramework.Kernel.Policies.Defaults
+  nameWithType: AgentFramework.Kernel.Policies.Defaults
+  fullName: AgentFramework.Kernel.Policies.Defaults
+  type: Namespace
+  assemblies:
+  - AF.AgentFramework
+references:
+- uid: AgentFramework.Kernel.Policies.Defaults.AdmissionOptions
+  commentId: T:AgentFramework.Kernel.Policies.Defaults.AdmissionOptions
+  parent: AgentFramework.Kernel.Policies.Defaults
+  href: AgentFramework.Kernel.Policies.Defaults.AdmissionOptions.html
+  name: AdmissionOptions
+  nameWithType: AdmissionOptions
+  fullName: AgentFramework.Kernel.Policies.Defaults.AdmissionOptions
+- uid: AgentFramework.Kernel.Policies.Defaults.BackpressureOptions
+  commentId: T:AgentFramework.Kernel.Policies.Defaults.BackpressureOptions
+  parent: AgentFramework.Kernel.Policies.Defaults
+  href: AgentFramework.Kernel.Policies.Defaults.BackpressureOptions.html
+  name: BackpressureOptions
+  nameWithType: BackpressureOptions
+  fullName: AgentFramework.Kernel.Policies.Defaults.BackpressureOptions
+- uid: AgentFramework.Kernel.Policies.Defaults.DefaultAdmissionPolicy
+  commentId: T:AgentFramework.Kernel.Policies.Defaults.DefaultAdmissionPolicy
+  href: AgentFramework.Kernel.Policies.Defaults.DefaultAdmissionPolicy.html
+  name: DefaultAdmissionPolicy
+  nameWithType: DefaultAdmissionPolicy
+  fullName: AgentFramework.Kernel.Policies.Defaults.DefaultAdmissionPolicy
+- uid: AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy
+  commentId: T:AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy
+  href: AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy.html
+  name: DefaultBackpressurePolicy
+  nameWithType: DefaultBackpressurePolicy
+  fullName: AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy
+- uid: AgentFramework.Kernel.Policies.Defaults.DefaultOrderingPolicy
+  commentId: T:AgentFramework.Kernel.Policies.Defaults.DefaultOrderingPolicy
+  href: AgentFramework.Kernel.Policies.Defaults.DefaultOrderingPolicy.html
+  name: DefaultOrderingPolicy
+  nameWithType: DefaultOrderingPolicy
+  fullName: AgentFramework.Kernel.Policies.Defaults.DefaultOrderingPolicy
+- uid: AgentFramework.Kernel.Policies.Defaults.DefaultPreemptionPolicy
+  commentId: T:AgentFramework.Kernel.Policies.Defaults.DefaultPreemptionPolicy
+  href: AgentFramework.Kernel.Policies.Defaults.DefaultPreemptionPolicy.html
+  name: DefaultPreemptionPolicy
+  nameWithType: DefaultPreemptionPolicy
+  fullName: AgentFramework.Kernel.Policies.Defaults.DefaultPreemptionPolicy
+- uid: AgentFramework.Kernel.Policies.Defaults.DefaultRetryPolicy
+  commentId: T:AgentFramework.Kernel.Policies.Defaults.DefaultRetryPolicy
+  href: AgentFramework.Kernel.Policies.Defaults.DefaultRetryPolicy.html
+  name: DefaultRetryPolicy
+  nameWithType: DefaultRetryPolicy
+  fullName: AgentFramework.Kernel.Policies.Defaults.DefaultRetryPolicy
+- uid: AgentFramework.Kernel.Policies.Defaults.DefaultTimeoutPolicy
+  commentId: T:AgentFramework.Kernel.Policies.Defaults.DefaultTimeoutPolicy
+  href: AgentFramework.Kernel.Policies.Defaults.DefaultTimeoutPolicy.html
+  name: DefaultTimeoutPolicy
+  nameWithType: DefaultTimeoutPolicy
+  fullName: AgentFramework.Kernel.Policies.Defaults.DefaultTimeoutPolicy
+- uid: AgentFramework.Kernel.Policies.Defaults.PolicySetDefaults
+  commentId: T:AgentFramework.Kernel.Policies.Defaults.PolicySetDefaults
+  href: AgentFramework.Kernel.Policies.Defaults.PolicySetDefaults.html
+  name: PolicySetDefaults
+  nameWithType: PolicySetDefaults
+  fullName: AgentFramework.Kernel.Policies.Defaults.PolicySetDefaults
+- uid: AgentFramework.Kernel.Policies.Defaults.RetryOptions
+  commentId: T:AgentFramework.Kernel.Policies.Defaults.RetryOptions
+  parent: AgentFramework.Kernel.Policies.Defaults
+  href: AgentFramework.Kernel.Policies.Defaults.RetryOptions.html
+  name: RetryOptions
+  nameWithType: RetryOptions
+  fullName: AgentFramework.Kernel.Policies.Defaults.RetryOptions
+- uid: AgentFramework.Kernel.Policies.Defaults.TimeoutOptions
+  commentId: T:AgentFramework.Kernel.Policies.Defaults.TimeoutOptions
+  parent: AgentFramework.Kernel.Policies.Defaults
+  href: AgentFramework.Kernel.Policies.Defaults.TimeoutOptions.html
+  name: TimeoutOptions
+  nameWithType: TimeoutOptions
+  fullName: AgentFramework.Kernel.Policies.Defaults.TimeoutOptions
+- uid: AgentFramework.Kernel.Policies.Defaults
+  commentId: N:AgentFramework.Kernel.Policies.Defaults
+  href: AgentFramework.html
+  name: AgentFramework.Kernel.Policies.Defaults
+  nameWithType: AgentFramework.Kernel.Policies.Defaults
+  fullName: AgentFramework.Kernel.Policies.Defaults
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies.Defaults
+    name: Defaults
+    href: AgentFramework.Kernel.Policies.Defaults.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies.Defaults
+    name: Defaults
+    href: AgentFramework.Kernel.Policies.Defaults.html

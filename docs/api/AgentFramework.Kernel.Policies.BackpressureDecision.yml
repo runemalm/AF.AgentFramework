@@ -1,0 +1,131 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Kernel.Policies.BackpressureDecision
+  commentId: T:AgentFramework.Kernel.Policies.BackpressureDecision
+  id: BackpressureDecision
+  parent: AgentFramework.Kernel.Policies
+  children:
+  - AgentFramework.Kernel.Policies.BackpressureDecision.Normal
+  - AgentFramework.Kernel.Policies.BackpressureDecision.Shed
+  - AgentFramework.Kernel.Policies.BackpressureDecision.Throttle
+  langs:
+  - csharp
+  - vb
+  name: BackpressureDecision
+  nameWithType: BackpressureDecision
+  fullName: AgentFramework.Kernel.Policies.BackpressureDecision
+  type: Enum
+  source:
+    id: BackpressureDecision
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+    startLine: 4
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel.Policies
+  syntax:
+    content: public enum BackpressureDecision
+    content.vb: Public Enum BackpressureDecision
+- uid: AgentFramework.Kernel.Policies.BackpressureDecision.Normal
+  commentId: F:AgentFramework.Kernel.Policies.BackpressureDecision.Normal
+  id: Normal
+  parent: AgentFramework.Kernel.Policies.BackpressureDecision
+  langs:
+  - csharp
+  - vb
+  name: Normal
+  nameWithType: BackpressureDecision.Normal
+  fullName: AgentFramework.Kernel.Policies.BackpressureDecision.Normal
+  type: Field
+  source:
+    id: Normal
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+    startLine: 4
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel.Policies
+  syntax:
+    content: Normal = 0
+    return:
+      type: AgentFramework.Kernel.Policies.BackpressureDecision
+- uid: AgentFramework.Kernel.Policies.BackpressureDecision.Throttle
+  commentId: F:AgentFramework.Kernel.Policies.BackpressureDecision.Throttle
+  id: Throttle
+  parent: AgentFramework.Kernel.Policies.BackpressureDecision
+  langs:
+  - csharp
+  - vb
+  name: Throttle
+  nameWithType: BackpressureDecision.Throttle
+  fullName: AgentFramework.Kernel.Policies.BackpressureDecision.Throttle
+  type: Field
+  source:
+    id: Throttle
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+    startLine: 4
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel.Policies
+  syntax:
+    content: Throttle = 1
+    return:
+      type: AgentFramework.Kernel.Policies.BackpressureDecision
+- uid: AgentFramework.Kernel.Policies.BackpressureDecision.Shed
+  commentId: F:AgentFramework.Kernel.Policies.BackpressureDecision.Shed
+  id: Shed
+  parent: AgentFramework.Kernel.Policies.BackpressureDecision
+  langs:
+  - csharp
+  - vb
+  name: Shed
+  nameWithType: BackpressureDecision.Shed
+  fullName: AgentFramework.Kernel.Policies.BackpressureDecision.Shed
+  type: Field
+  source:
+    id: Shed
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+    startLine: 4
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel.Policies
+  syntax:
+    content: Shed = 2
+    return:
+      type: AgentFramework.Kernel.Policies.BackpressureDecision
+references:
+- uid: AgentFramework.Kernel.Policies
+  commentId: N:AgentFramework.Kernel.Policies
+  href: AgentFramework.html
+  name: AgentFramework.Kernel.Policies
+  nameWithType: AgentFramework.Kernel.Policies
+  fullName: AgentFramework.Kernel.Policies
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+- uid: AgentFramework.Kernel.Policies.BackpressureDecision
+  commentId: T:AgentFramework.Kernel.Policies.BackpressureDecision
+  parent: AgentFramework.Kernel.Policies
+  href: AgentFramework.Kernel.Policies.BackpressureDecision.html
+  name: BackpressureDecision
+  nameWithType: BackpressureDecision
+  fullName: AgentFramework.Kernel.Policies.BackpressureDecision

@@ -1,0 +1,175 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Kernel.Policies.ITimeoutPolicy
+  commentId: T:AgentFramework.Kernel.Policies.ITimeoutPolicy
+  id: ITimeoutPolicy
+  parent: AgentFramework.Kernel.Policies
+  children:
+  - AgentFramework.Kernel.Policies.ITimeoutPolicy.GetTimeout(AgentFramework.Kernel.WorkItem)
+  langs:
+  - csharp
+  - vb
+  name: ITimeoutPolicy
+  nameWithType: ITimeoutPolicy
+  fullName: AgentFramework.Kernel.Policies.ITimeoutPolicy
+  type: Interface
+  source:
+    id: ITimeoutPolicy
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/ITimeoutPolicy.cs
+    startLine: 2
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel.Policies
+  syntax:
+    content: public interface ITimeoutPolicy
+    content.vb: Public Interface ITimeoutPolicy
+- uid: AgentFramework.Kernel.Policies.ITimeoutPolicy.GetTimeout(AgentFramework.Kernel.WorkItem)
+  commentId: M:AgentFramework.Kernel.Policies.ITimeoutPolicy.GetTimeout(AgentFramework.Kernel.WorkItem)
+  id: GetTimeout(AgentFramework.Kernel.WorkItem)
+  parent: AgentFramework.Kernel.Policies.ITimeoutPolicy
+  langs:
+  - csharp
+  - vb
+  name: GetTimeout(WorkItem)
+  nameWithType: ITimeoutPolicy.GetTimeout(WorkItem)
+  fullName: AgentFramework.Kernel.Policies.ITimeoutPolicy.GetTimeout(AgentFramework.Kernel.WorkItem)
+  type: Method
+  source:
+    id: GetTimeout
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/ITimeoutPolicy.cs
+    startLine: 5
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel.Policies
+  summary: Return null for no timeout; otherwise used to cancel the agent context.
+  example: []
+  syntax:
+    content: TimeSpan? GetTimeout(WorkItem item)
+    parameters:
+    - id: item
+      type: AgentFramework.Kernel.WorkItem
+    return:
+      type: System.Nullable{System.TimeSpan}
+    content.vb: Function GetTimeout(item As WorkItem) As TimeSpan?
+  overload: AgentFramework.Kernel.Policies.ITimeoutPolicy.GetTimeout*
+references:
+- uid: AgentFramework.Kernel.Policies
+  commentId: N:AgentFramework.Kernel.Policies
+  href: AgentFramework.html
+  name: AgentFramework.Kernel.Policies
+  nameWithType: AgentFramework.Kernel.Policies
+  fullName: AgentFramework.Kernel.Policies
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+- uid: AgentFramework.Kernel.Policies.ITimeoutPolicy.GetTimeout*
+  commentId: Overload:AgentFramework.Kernel.Policies.ITimeoutPolicy.GetTimeout
+  href: AgentFramework.Kernel.Policies.ITimeoutPolicy.html#AgentFramework_Kernel_Policies_ITimeoutPolicy_GetTimeout_AgentFramework_Kernel_WorkItem_
+  name: GetTimeout
+  nameWithType: ITimeoutPolicy.GetTimeout
+  fullName: AgentFramework.Kernel.Policies.ITimeoutPolicy.GetTimeout
+- uid: AgentFramework.Kernel.WorkItem
+  commentId: T:AgentFramework.Kernel.WorkItem
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.WorkItem.html
+  name: WorkItem
+  nameWithType: WorkItem
+  fullName: AgentFramework.Kernel.WorkItem
+- uid: System.Nullable{System.TimeSpan}
+  commentId: T:System.Nullable{System.TimeSpan}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan?
+  nameWithType: TimeSpan?
+  fullName: System.TimeSpan?
+  spec.csharp:
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: '?'
+  spec.vb:
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: '?'
+- uid: AgentFramework.Kernel
+  commentId: N:AgentFramework.Kernel
+  href: AgentFramework.html
+  name: AgentFramework.Kernel
+  nameWithType: AgentFramework.Kernel
+  fullName: AgentFramework.Kernel
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

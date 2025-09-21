@@ -1,0 +1,136 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Kernel.Policies.IPreemptionPolicy
+  commentId: T:AgentFramework.Kernel.Policies.IPreemptionPolicy
+  id: IPreemptionPolicy
+  parent: AgentFramework.Kernel.Policies
+  children:
+  - AgentFramework.Kernel.Policies.IPreemptionPolicy.ShouldPreempt(AgentFramework.Kernel.WorkItem,AgentFramework.Kernel.RunningInvocation)
+  langs:
+  - csharp
+  - vb
+  name: IPreemptionPolicy
+  nameWithType: IPreemptionPolicy
+  fullName: AgentFramework.Kernel.Policies.IPreemptionPolicy
+  type: Interface
+  source:
+    id: IPreemptionPolicy
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/IPreemptionPolicy.cs
+    startLine: 2
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel.Policies
+  syntax:
+    content: public interface IPreemptionPolicy
+    content.vb: Public Interface IPreemptionPolicy
+- uid: AgentFramework.Kernel.Policies.IPreemptionPolicy.ShouldPreempt(AgentFramework.Kernel.WorkItem,AgentFramework.Kernel.RunningInvocation)
+  commentId: M:AgentFramework.Kernel.Policies.IPreemptionPolicy.ShouldPreempt(AgentFramework.Kernel.WorkItem,AgentFramework.Kernel.RunningInvocation)
+  id: ShouldPreempt(AgentFramework.Kernel.WorkItem,AgentFramework.Kernel.RunningInvocation)
+  parent: AgentFramework.Kernel.Policies.IPreemptionPolicy
+  langs:
+  - csharp
+  - vb
+  name: ShouldPreempt(WorkItem, RunningInvocation)
+  nameWithType: IPreemptionPolicy.ShouldPreempt(WorkItem, RunningInvocation)
+  fullName: AgentFramework.Kernel.Policies.IPreemptionPolicy.ShouldPreempt(AgentFramework.Kernel.WorkItem, AgentFramework.Kernel.RunningInvocation)
+  type: Method
+  source:
+    id: ShouldPreempt
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/IPreemptionPolicy.cs
+    startLine: 5
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel.Policies
+  summary: Decide if the incoming item may preempt the currently running one (same agent).
+  example: []
+  syntax:
+    content: PreemptionDecision ShouldPreempt(WorkItem incoming, RunningInvocation current)
+    parameters:
+    - id: incoming
+      type: AgentFramework.Kernel.WorkItem
+    - id: current
+      type: AgentFramework.Kernel.RunningInvocation
+    return:
+      type: AgentFramework.Kernel.Policies.PreemptionDecision
+    content.vb: Function ShouldPreempt(incoming As WorkItem, current As RunningInvocation) As PreemptionDecision
+  overload: AgentFramework.Kernel.Policies.IPreemptionPolicy.ShouldPreempt*
+references:
+- uid: AgentFramework.Kernel.Policies
+  commentId: N:AgentFramework.Kernel.Policies
+  href: AgentFramework.html
+  name: AgentFramework.Kernel.Policies
+  nameWithType: AgentFramework.Kernel.Policies
+  fullName: AgentFramework.Kernel.Policies
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  - name: .
+  - uid: AgentFramework.Kernel.Policies
+    name: Policies
+    href: AgentFramework.Kernel.Policies.html
+- uid: AgentFramework.Kernel.Policies.IPreemptionPolicy.ShouldPreempt*
+  commentId: Overload:AgentFramework.Kernel.Policies.IPreemptionPolicy.ShouldPreempt
+  href: AgentFramework.Kernel.Policies.IPreemptionPolicy.html#AgentFramework_Kernel_Policies_IPreemptionPolicy_ShouldPreempt_AgentFramework_Kernel_WorkItem_AgentFramework_Kernel_RunningInvocation_
+  name: ShouldPreempt
+  nameWithType: IPreemptionPolicy.ShouldPreempt
+  fullName: AgentFramework.Kernel.Policies.IPreemptionPolicy.ShouldPreempt
+- uid: AgentFramework.Kernel.WorkItem
+  commentId: T:AgentFramework.Kernel.WorkItem
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.WorkItem.html
+  name: WorkItem
+  nameWithType: WorkItem
+  fullName: AgentFramework.Kernel.WorkItem
+- uid: AgentFramework.Kernel.RunningInvocation
+  commentId: T:AgentFramework.Kernel.RunningInvocation
+  parent: AgentFramework.Kernel
+  href: AgentFramework.Kernel.RunningInvocation.html
+  name: RunningInvocation
+  nameWithType: RunningInvocation
+  fullName: AgentFramework.Kernel.RunningInvocation
+- uid: AgentFramework.Kernel.Policies.PreemptionDecision
+  commentId: T:AgentFramework.Kernel.Policies.PreemptionDecision
+  parent: AgentFramework.Kernel.Policies
+  href: AgentFramework.Kernel.Policies.PreemptionDecision.html
+  name: PreemptionDecision
+  nameWithType: PreemptionDecision
+  fullName: AgentFramework.Kernel.Policies.PreemptionDecision
+- uid: AgentFramework.Kernel
+  commentId: N:AgentFramework.Kernel
+  href: AgentFramework.html
+  name: AgentFramework.Kernel
+  nameWithType: AgentFramework.Kernel
+  fullName: AgentFramework.Kernel
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html

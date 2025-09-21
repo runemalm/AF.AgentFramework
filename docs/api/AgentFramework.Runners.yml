@@ -1,0 +1,46 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Runners
+  commentId: N:AgentFramework.Runners
+  id: AgentFramework.Runners
+  children:
+  - AgentFramework.Runners.IRunner
+  langs:
+  - csharp
+  - vb
+  name: AgentFramework.Runners
+  nameWithType: AgentFramework.Runners
+  fullName: AgentFramework.Runners
+  type: Namespace
+  assemblies:
+  - AF.AgentFramework
+references:
+- uid: AgentFramework.Runners.IRunner
+  commentId: T:AgentFramework.Runners.IRunner
+  parent: AgentFramework.Runners
+  href: AgentFramework.Runners.IRunner.html
+  name: IRunner
+  nameWithType: IRunner
+  fullName: AgentFramework.Runners.IRunner
+- uid: AgentFramework.Runners
+  commentId: N:AgentFramework.Runners
+  href: AgentFramework.html
+  name: AgentFramework.Runners
+  nameWithType: AgentFramework.Runners
+  fullName: AgentFramework.Runners
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Runners
+    name: Runners
+    href: AgentFramework.Runners.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Runners
+    name: Runners
+    href: AgentFramework.Runners.html

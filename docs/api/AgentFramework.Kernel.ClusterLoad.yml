@@ -1,0 +1,447 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Kernel.ClusterLoad
+  commentId: T:AgentFramework.Kernel.ClusterLoad
+  id: ClusterLoad
+  parent: AgentFramework.Kernel
+  children:
+  - AgentFramework.Kernel.ClusterLoad.#ctor(System.Int32,System.Int32)
+  - AgentFramework.Kernel.ClusterLoad.TotalQueued
+  - AgentFramework.Kernel.ClusterLoad.TotalRunning
+  langs:
+  - csharp
+  - vb
+  name: ClusterLoad
+  nameWithType: ClusterLoad
+  fullName: AgentFramework.Kernel.ClusterLoad
+  type: Class
+  source:
+    id: ClusterLoad
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/RuntimeModels.cs
+    startLine: 4
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  syntax:
+    content: 'public sealed record ClusterLoad : IEquatable<ClusterLoad>'
+    content.vb: Public NotInheritable Class ClusterLoad Implements IEquatable(Of ClusterLoad)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{AgentFramework.Kernel.ClusterLoad}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AgentFramework.Kernel.ClusterLoad.#ctor(System.Int32,System.Int32)
+  commentId: M:AgentFramework.Kernel.ClusterLoad.#ctor(System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32)'
+  parent: AgentFramework.Kernel.ClusterLoad
+  langs:
+  - csharp
+  - vb
+  name: ClusterLoad(int, int)
+  nameWithType: ClusterLoad.ClusterLoad(int, int)
+  fullName: AgentFramework.Kernel.ClusterLoad.ClusterLoad(int, int)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/RuntimeModels.cs
+    startLine: 4
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  syntax:
+    content: public ClusterLoad(int TotalQueued, int TotalRunning)
+    parameters:
+    - id: TotalQueued
+      type: System.Int32
+    - id: TotalRunning
+      type: System.Int32
+    content.vb: Public Sub New(TotalQueued As Integer, TotalRunning As Integer)
+  overload: AgentFramework.Kernel.ClusterLoad.#ctor*
+  nameWithType.vb: ClusterLoad.New(Integer, Integer)
+  fullName.vb: AgentFramework.Kernel.ClusterLoad.New(Integer, Integer)
+  name.vb: New(Integer, Integer)
+- uid: AgentFramework.Kernel.ClusterLoad.TotalQueued
+  commentId: P:AgentFramework.Kernel.ClusterLoad.TotalQueued
+  id: TotalQueued
+  parent: AgentFramework.Kernel.ClusterLoad
+  langs:
+  - csharp
+  - vb
+  name: TotalQueued
+  nameWithType: ClusterLoad.TotalQueued
+  fullName: AgentFramework.Kernel.ClusterLoad.TotalQueued
+  type: Property
+  source:
+    id: TotalQueued
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/RuntimeModels.cs
+    startLine: 4
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  syntax:
+    content: public int TotalQueued { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property TotalQueued As Integer
+  overload: AgentFramework.Kernel.ClusterLoad.TotalQueued*
+- uid: AgentFramework.Kernel.ClusterLoad.TotalRunning
+  commentId: P:AgentFramework.Kernel.ClusterLoad.TotalRunning
+  id: TotalRunning
+  parent: AgentFramework.Kernel.ClusterLoad
+  langs:
+  - csharp
+  - vb
+  name: TotalRunning
+  nameWithType: ClusterLoad.TotalRunning
+  fullName: AgentFramework.Kernel.ClusterLoad.TotalRunning
+  type: Property
+  source:
+    id: TotalRunning
+    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/RuntimeModels.cs
+    startLine: 4
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Kernel
+  syntax:
+    content: public int TotalRunning { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property TotalRunning As Integer
+  overload: AgentFramework.Kernel.ClusterLoad.TotalRunning*
+references:
+- uid: AgentFramework.Kernel
+  commentId: N:AgentFramework.Kernel
+  href: AgentFramework.html
+  name: AgentFramework.Kernel
+  nameWithType: AgentFramework.Kernel
+  fullName: AgentFramework.Kernel
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Kernel
+    name: Kernel
+    href: AgentFramework.Kernel.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{AgentFramework.Kernel.ClusterLoad}
+  commentId: T:System.IEquatable{AgentFramework.Kernel.ClusterLoad}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<ClusterLoad>
+  nameWithType: IEquatable<ClusterLoad>
+  fullName: System.IEquatable<AgentFramework.Kernel.ClusterLoad>
+  nameWithType.vb: IEquatable(Of ClusterLoad)
+  fullName.vb: System.IEquatable(Of AgentFramework.Kernel.ClusterLoad)
+  name.vb: IEquatable(Of ClusterLoad)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: AgentFramework.Kernel.ClusterLoad
+    name: ClusterLoad
+    href: AgentFramework.Kernel.ClusterLoad.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AgentFramework.Kernel.ClusterLoad
+    name: ClusterLoad
+    href: AgentFramework.Kernel.ClusterLoad.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: AgentFramework.Kernel.ClusterLoad.#ctor*
+  commentId: Overload:AgentFramework.Kernel.ClusterLoad.#ctor
+  href: AgentFramework.Kernel.ClusterLoad.html#AgentFramework_Kernel_ClusterLoad__ctor_System_Int32_System_Int32_
+  name: ClusterLoad
+  nameWithType: ClusterLoad.ClusterLoad
+  fullName: AgentFramework.Kernel.ClusterLoad.ClusterLoad
+  nameWithType.vb: ClusterLoad.New
+  fullName.vb: AgentFramework.Kernel.ClusterLoad.New
+  name.vb: New
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: AgentFramework.Kernel.ClusterLoad.TotalQueued*
+  commentId: Overload:AgentFramework.Kernel.ClusterLoad.TotalQueued
+  href: AgentFramework.Kernel.ClusterLoad.html#AgentFramework_Kernel_ClusterLoad_TotalQueued
+  name: TotalQueued
+  nameWithType: ClusterLoad.TotalQueued
+  fullName: AgentFramework.Kernel.ClusterLoad.TotalQueued
+- uid: AgentFramework.Kernel.ClusterLoad.TotalRunning*
+  commentId: Overload:AgentFramework.Kernel.ClusterLoad.TotalRunning
+  href: AgentFramework.Kernel.ClusterLoad.html#AgentFramework_Kernel_ClusterLoad_TotalRunning
+  name: TotalRunning
+  nameWithType: ClusterLoad.TotalRunning
+  fullName: AgentFramework.Kernel.ClusterLoad.TotalRunning
