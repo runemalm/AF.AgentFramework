@@ -138,19 +138,7 @@ pack: ##@Build	 pack the nuget
 
 .PHONY: release-dry-run
 release-dry-run: ##@Release	 Run semantic-release in dry-run mode (no tags/publish)
-	@mkdir -p $(ARTIFACTS_DIR)
-	@echo "Installing semantic-release (local dev deps)..."
-	npm i -D semantic-release \
-	      @semantic-release/commit-analyzer \
-	      @semantic-release/release-notes-generator \
-	      @semantic-release/changelog \
-	      @semantic-release/git \
-	      @semantic-release/github \
-	      conventional-changelog-conventionalcommits
-	@echo "Running semantic-release --dry-run ..."
-	npx semantic-release --dry-run --no-ci 2>&1 | tee $(ARTIFACTS_DIR)/semantic-release-dry-run.log
-	@echo ""
-	@echo "${GREEN}Dry-run complete.${RESET} See $(ARTIFACTS_DIR)/semantic-release-dry-run.log"
+	npx semantic-release --dry-run --no-ci
 
 ##########################################################################
 # SAMPLES
