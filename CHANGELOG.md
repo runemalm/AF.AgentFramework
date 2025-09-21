@@ -1,3 +1,16 @@
+## [1.0.0](https://github.com/runemalm/AF.AgentFramework/compare/v0.5.0...v1.0.0) (2025-09-21)
+
+### ⚠ BREAKING CHANGES
+
+* **kernel,hosting,engines,runners,policies,docs,ci:** repository and package have been restructured.
+- Namespaces unified under `AgentFramework.*`; assembly/package is `AF.AgentFramework`
+- Previous `AgentFramework.Kernel` code has been replaced
+- Package ID changed to `AF.AgentFramework` and public API is not backward compatible
+
+### Features
+
+* **kernel,hosting,engines,runners,policies,docs,ci:** introduce AF.AgentFramework runtime, docs site, and release pipeline ([0760321](https://github.com/runemalm/AF.AgentFramework/commit/0760321c54351a4a090773b168f33940ddc18365))
+
 ## [0.5.0](https://github.com/runemalm/AgentFramework.Kernel/compare/v0.4.1...v0.5.0) (2025-09-13)
 
 ### Features
