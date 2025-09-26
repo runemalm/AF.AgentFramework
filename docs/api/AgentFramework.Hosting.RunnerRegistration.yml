@@ -15,8 +15,12 @@ items:
   fullName: AgentFramework.Hosting.RunnerRegistration
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/RunnerRegistration.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: RunnerRegistration
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/RunnerRegistration.cs
+    path: ../src/AF.AgentFramework/Hosting/RunnerRegistration.cs
     startLine: 4
   assemblies:
   - AF.AgentFramework
@@ -45,8 +49,12 @@ items:
   fullName: AgentFramework.Hosting.RunnerRegistration.EngineId
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/RunnerRegistration.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: EngineId
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/RunnerRegistration.cs
+    path: ../src/AF.AgentFramework/Hosting/RunnerRegistration.cs
     startLine: 6
   assemblies:
   - AF.AgentFramework
@@ -70,8 +78,12 @@ items:
   fullName: AgentFramework.Hosting.RunnerRegistration.Factory
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/RunnerRegistration.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Factory
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/RunnerRegistration.cs
+    path: ../src/AF.AgentFramework/Hosting/RunnerRegistration.cs
     startLine: 7
   assemblies:
   - AF.AgentFramework

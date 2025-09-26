@@ -14,8 +14,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.ITimeoutPolicy
   type: Interface
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/ITimeoutPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: ITimeoutPolicy
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/ITimeoutPolicy.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/ITimeoutPolicy.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -35,8 +39,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.ITimeoutPolicy.GetTimeout(AgentFramework.Kernel.WorkItem)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/ITimeoutPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: GetTimeout
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/ITimeoutPolicy.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/ITimeoutPolicy.cs
     startLine: 5
   assemblies:
   - AF.AgentFramework

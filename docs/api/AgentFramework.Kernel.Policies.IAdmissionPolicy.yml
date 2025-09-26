@@ -14,8 +14,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.IAdmissionPolicy
   type: Interface
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/IAdmissionPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: IAdmissionPolicy
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/IAdmissionPolicy.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/IAdmissionPolicy.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -35,8 +39,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.IAdmissionPolicy.Admit(AgentFramework.Kernel.WorkItem, AgentFramework.Kernel.AgentRuntimeState)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/IAdmissionPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Admit
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/IAdmissionPolicy.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/IAdmissionPolicy.cs
     startLine: 4
   assemblies:
   - AF.AgentFramework

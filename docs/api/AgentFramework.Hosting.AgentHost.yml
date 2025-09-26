@@ -16,8 +16,12 @@ items:
   fullName: AgentFramework.Hosting.AgentHost
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/AgentHost.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: AgentHost
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentHost.cs
+    path: ../src/AF.AgentFramework/Hosting/AgentHost.cs
     startLine: 9
   assemblies:
   - AF.AgentFramework
@@ -53,8 +57,12 @@ items:
   fullName: AgentFramework.Hosting.AgentHost.AgentHost(AgentFramework.Hosting.AgentHostConfig, AgentFramework.Kernel.IKernelFactory?)
   type: Constructor
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/AgentHost.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: .ctor
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentHost.cs
+    path: ../src/AF.AgentFramework/Hosting/AgentHost.cs
     startLine: 18
   assemblies:
   - AF.AgentFramework
@@ -83,8 +91,12 @@ items:
   fullName: AgentFramework.Hosting.AgentHost.StartAsync(System.Threading.CancellationToken)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/AgentHost.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: StartAsync
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentHost.cs
+    path: ../src/AF.AgentFramework/Hosting/AgentHost.cs
     startLine: 24
   assemblies:
   - AF.AgentFramework
@@ -113,8 +125,12 @@ items:
   fullName: AgentFramework.Hosting.AgentHost.StopAsync(System.Threading.CancellationToken)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/AgentHost.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: StopAsync
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentHost.cs
+    path: ../src/AF.AgentFramework/Hosting/AgentHost.cs
     startLine: 110
   assemblies:
   - AF.AgentFramework

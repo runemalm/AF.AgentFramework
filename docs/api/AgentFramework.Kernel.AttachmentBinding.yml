@@ -16,8 +16,12 @@ items:
   fullName: AgentFramework.Kernel.AttachmentBinding
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/KernelOptions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: AttachmentBinding
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/KernelOptions.cs
+    path: ../src/AF.AgentFramework/Kernel/KernelOptions.cs
     startLine: 15
   assemblies:
   - AF.AgentFramework
@@ -48,8 +52,12 @@ items:
   fullName: AgentFramework.Kernel.AttachmentBinding.AgentId
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/KernelOptions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: AgentId
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/KernelOptions.cs
+    path: ../src/AF.AgentFramework/Kernel/KernelOptions.cs
     startLine: 17
   assemblies:
   - AF.AgentFramework
@@ -73,8 +81,12 @@ items:
   fullName: AgentFramework.Kernel.AttachmentBinding.EngineId
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/KernelOptions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: EngineId
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/KernelOptions.cs
+    path: ../src/AF.AgentFramework/Kernel/KernelOptions.cs
     startLine: 18
   assemblies:
   - AF.AgentFramework
@@ -98,8 +110,12 @@ items:
   fullName: AgentFramework.Kernel.AttachmentBinding.Policies
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/KernelOptions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Policies
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/KernelOptions.cs
+    path: ../src/AF.AgentFramework/Kernel/KernelOptions.cs
     startLine: 19
   assemblies:
   - AF.AgentFramework

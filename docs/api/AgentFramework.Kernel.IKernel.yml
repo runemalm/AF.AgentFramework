@@ -16,8 +16,12 @@ items:
   fullName: AgentFramework.Kernel.IKernel
   type: Interface
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/IKernel.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: IKernel
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IKernel.cs
+    path: ../src/AF.AgentFramework/Kernel/IKernel.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -37,8 +41,12 @@ items:
   fullName: AgentFramework.Kernel.IKernel.StartAsync(System.Threading.CancellationToken)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/IKernel.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: StartAsync
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IKernel.cs
+    path: ../src/AF.AgentFramework/Kernel/IKernel.cs
     startLine: 4
   assemblies:
   - AF.AgentFramework
@@ -64,8 +72,12 @@ items:
   fullName: AgentFramework.Kernel.IKernel.StopAsync(System.Threading.CancellationToken)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/IKernel.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: StopAsync
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IKernel.cs
+    path: ../src/AF.AgentFramework/Kernel/IKernel.cs
     startLine: 5
   assemblies:
   - AF.AgentFramework
@@ -91,8 +103,12 @@ items:
   fullName: AgentFramework.Kernel.IKernel.EnqueueAsync(AgentFramework.Kernel.WorkItem, System.Threading.CancellationToken)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/IKernel.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: EnqueueAsync
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IKernel.cs
+    path: ../src/AF.AgentFramework/Kernel/IKernel.cs
     startLine: 8
   assemblies:
   - AF.AgentFramework

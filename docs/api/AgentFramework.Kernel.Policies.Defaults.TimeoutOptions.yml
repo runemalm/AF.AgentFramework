@@ -15,8 +15,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.TimeoutOptions
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/TimeoutOptions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: TimeoutOptions
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/TimeoutOptions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/TimeoutOptions.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -47,8 +51,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.TimeoutOptions.TimeoutOptions(System.TimeSpan?)
   type: Constructor
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/TimeoutOptions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: .ctor
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/TimeoutOptions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/TimeoutOptions.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -75,8 +83,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.TimeoutOptions.GlobalTimeout
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/TimeoutOptions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: GlobalTimeout
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/TimeoutOptions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/TimeoutOptions.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework

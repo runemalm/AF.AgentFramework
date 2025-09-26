@@ -16,8 +16,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.AdmissionDecision
   type: Enum
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: AdmissionDecision
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Decisions.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -37,8 +41,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.AdmissionDecision.Accept
   type: Field
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Accept
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Decisions.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -59,8 +67,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.AdmissionDecision.Defer
   type: Field
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Defer
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Decisions.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -81,8 +93,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.AdmissionDecision.Reject
   type: Field
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Reject
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Decisions.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework

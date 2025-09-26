@@ -16,8 +16,12 @@ items:
   fullName: AgentFramework.Kernel.KernelOptions
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/KernelOptions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: KernelOptions
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/KernelOptions.cs
+    path: ../src/AF.AgentFramework/Kernel/KernelOptions.cs
     startLine: 5
   assemblies:
   - AF.AgentFramework
@@ -48,8 +52,12 @@ items:
   fullName: AgentFramework.Kernel.KernelOptions.Agents
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/KernelOptions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Agents
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/KernelOptions.cs
+    path: ../src/AF.AgentFramework/Kernel/KernelOptions.cs
     startLine: 7
   assemblies:
   - AF.AgentFramework
@@ -73,8 +81,12 @@ items:
   fullName: AgentFramework.Kernel.KernelOptions.Defaults
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/KernelOptions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Defaults
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/KernelOptions.cs
+    path: ../src/AF.AgentFramework/Kernel/KernelOptions.cs
     startLine: 8
   assemblies:
   - AF.AgentFramework
@@ -98,8 +110,12 @@ items:
   fullName: AgentFramework.Kernel.KernelOptions.Bindings
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/KernelOptions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Bindings
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/KernelOptions.cs
+    path: ../src/AF.AgentFramework/Kernel/KernelOptions.cs
     startLine: 11
   assemblies:
   - AF.AgentFramework

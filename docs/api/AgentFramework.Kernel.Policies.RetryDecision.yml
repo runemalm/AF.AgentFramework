@@ -17,8 +17,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.RetryDecision
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: RetryDecision
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Decisions.cs
     startLine: 6
   assemblies:
   - AF.AgentFramework
@@ -49,8 +53,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.RetryDecision.RetryDecision(bool, System.TimeSpan?, string?)
   type: Constructor
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: .ctor
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Decisions.cs
     startLine: 6
   assemblies:
   - AF.AgentFramework
@@ -81,8 +89,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.RetryDecision.ShouldRetry
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: ShouldRetry
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Decisions.cs
     startLine: 6
   assemblies:
   - AF.AgentFramework
@@ -106,8 +118,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.RetryDecision.Delay
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Delay
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Decisions.cs
     startLine: 6
   assemblies:
   - AF.AgentFramework
@@ -131,8 +147,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.RetryDecision.Reason
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Reason
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Decisions.cs
     startLine: 6
   assemblies:
   - AF.AgentFramework

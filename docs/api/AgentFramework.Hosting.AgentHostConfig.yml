@@ -18,8 +18,12 @@ items:
   fullName: AgentFramework.Hosting.AgentHostConfig
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/AgentHostConfig.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: AgentHostConfig
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentHostConfig.cs
+    path: ../src/AF.AgentFramework/Hosting/AgentHostConfig.cs
     startLine: 7
   assemblies:
   - AF.AgentFramework
@@ -50,8 +54,12 @@ items:
   fullName: AgentFramework.Hosting.AgentHostConfig.Engines
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/AgentHostConfig.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Engines
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentHostConfig.cs
+    path: ../src/AF.AgentFramework/Hosting/AgentHostConfig.cs
     startLine: 9
   assemblies:
   - AF.AgentFramework
@@ -75,8 +83,12 @@ items:
   fullName: AgentFramework.Hosting.AgentHostConfig.Runners
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/AgentHostConfig.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Runners
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentHostConfig.cs
+    path: ../src/AF.AgentFramework/Hosting/AgentHostConfig.cs
     startLine: 10
   assemblies:
   - AF.AgentFramework
@@ -100,8 +112,12 @@ items:
   fullName: AgentFramework.Hosting.AgentHostConfig.Agents
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/AgentHostConfig.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Agents
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentHostConfig.cs
+    path: ../src/AF.AgentFramework/Hosting/AgentHostConfig.cs
     startLine: 11
   assemblies:
   - AF.AgentFramework
@@ -125,8 +141,12 @@ items:
   fullName: AgentFramework.Hosting.AgentHostConfig.Attachments
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/AgentHostConfig.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Attachments
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentHostConfig.cs
+    path: ../src/AF.AgentFramework/Hosting/AgentHostConfig.cs
     startLine: 12
   assemblies:
   - AF.AgentFramework
@@ -150,8 +170,12 @@ items:
   fullName: AgentFramework.Hosting.AgentHostConfig.KernelDefaults
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/AgentHostConfig.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: KernelDefaults
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentHostConfig.cs
+    path: ../src/AF.AgentFramework/Hosting/AgentHostConfig.cs
     startLine: 13
   assemblies:
   - AF.AgentFramework

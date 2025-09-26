@@ -16,8 +16,12 @@ items:
   fullName: AgentFramework.Kernel.AgentRuntimeState
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/RuntimeModels.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: AgentRuntimeState
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/RuntimeModels.cs
+    path: ../src/AF.AgentFramework/Kernel/RuntimeModels.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -48,8 +52,12 @@ items:
   fullName: AgentFramework.Kernel.AgentRuntimeState.AgentRuntimeState(bool, int)
   type: Constructor
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/RuntimeModels.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: .ctor
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/RuntimeModels.cs
+    path: ../src/AF.AgentFramework/Kernel/RuntimeModels.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -78,8 +86,12 @@ items:
   fullName: AgentFramework.Kernel.AgentRuntimeState.IsRunning
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/RuntimeModels.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: IsRunning
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/RuntimeModels.cs
+    path: ../src/AF.AgentFramework/Kernel/RuntimeModels.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -103,8 +115,12 @@ items:
   fullName: AgentFramework.Kernel.AgentRuntimeState.QueueLength
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/RuntimeModels.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: QueueLength
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/RuntimeModels.cs
+    path: ../src/AF.AgentFramework/Kernel/RuntimeModels.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework

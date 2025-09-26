@@ -15,8 +15,12 @@ items:
   fullName: AgentFramework.Hosting.AgentRegistration
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/AgentRegistration.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: AgentRegistration
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentRegistration.cs
+    path: ../src/AF.AgentFramework/Hosting/AgentRegistration.cs
     startLine: 4
   assemblies:
   - AF.AgentFramework
@@ -45,8 +49,12 @@ items:
   fullName: AgentFramework.Hosting.AgentRegistration.AgentId
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/AgentRegistration.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: AgentId
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentRegistration.cs
+    path: ../src/AF.AgentFramework/Hosting/AgentRegistration.cs
     startLine: 6
   assemblies:
   - AF.AgentFramework
@@ -70,8 +78,12 @@ items:
   fullName: AgentFramework.Hosting.AgentRegistration.Factory
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/AgentRegistration.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Factory
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentRegistration.cs
+    path: ../src/AF.AgentFramework/Hosting/AgentRegistration.cs
     startLine: 7
   assemblies:
   - AF.AgentFramework

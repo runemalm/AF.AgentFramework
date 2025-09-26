@@ -15,8 +15,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultBackpressurePolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: DefaultBackpressurePolicy
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultBackpressurePolicy.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultBackpressurePolicy.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -47,8 +51,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy.DefaultBackpressurePolicy(AgentFramework.Kernel.Policies.Defaults.BackpressureOptions?)
   type: Constructor
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultBackpressurePolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: .ctor
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultBackpressurePolicy.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultBackpressurePolicy.cs
     startLine: 6
   assemblies:
   - AF.AgentFramework
@@ -75,8 +83,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.DefaultBackpressurePolicy.Evaluate(AgentFramework.Kernel.ClusterLoad)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultBackpressurePolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Evaluate
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultBackpressurePolicy.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultBackpressurePolicy.cs
     startLine: 9
   assemblies:
   - AF.AgentFramework

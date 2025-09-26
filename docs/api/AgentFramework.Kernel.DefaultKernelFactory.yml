@@ -14,8 +14,12 @@ items:
   fullName: AgentFramework.Kernel.DefaultKernelFactory
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/DefaultKernelFactory.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: DefaultKernelFactory
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/DefaultKernelFactory.cs
+    path: ../src/AF.AgentFramework/Kernel/DefaultKernelFactory.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -46,8 +50,12 @@ items:
   fullName: AgentFramework.Kernel.DefaultKernelFactory.Create(AgentFramework.Kernel.KernelOptions)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/DefaultKernelFactory.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Create
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/DefaultKernelFactory.cs
+    path: ../src/AF.AgentFramework/Kernel/DefaultKernelFactory.cs
     startLine: 4
   assemblies:
   - AF.AgentFramework

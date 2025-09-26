@@ -16,8 +16,12 @@ items:
   fullName: AgentFramework.Kernel.ClusterLoad
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/RuntimeModels.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: ClusterLoad
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/RuntimeModels.cs
+    path: ../src/AF.AgentFramework/Kernel/RuntimeModels.cs
     startLine: 4
   assemblies:
   - AF.AgentFramework
@@ -48,8 +52,12 @@ items:
   fullName: AgentFramework.Kernel.ClusterLoad.ClusterLoad(int, int)
   type: Constructor
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/RuntimeModels.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: .ctor
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/RuntimeModels.cs
+    path: ../src/AF.AgentFramework/Kernel/RuntimeModels.cs
     startLine: 4
   assemblies:
   - AF.AgentFramework
@@ -78,8 +86,12 @@ items:
   fullName: AgentFramework.Kernel.ClusterLoad.TotalQueued
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/RuntimeModels.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: TotalQueued
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/RuntimeModels.cs
+    path: ../src/AF.AgentFramework/Kernel/RuntimeModels.cs
     startLine: 4
   assemblies:
   - AF.AgentFramework
@@ -103,8 +115,12 @@ items:
   fullName: AgentFramework.Kernel.ClusterLoad.TotalRunning
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/RuntimeModels.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: TotalRunning
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/RuntimeModels.cs
+    path: ../src/AF.AgentFramework/Kernel/RuntimeModels.cs
     startLine: 4
   assemblies:
   - AF.AgentFramework

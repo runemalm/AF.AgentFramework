@@ -19,8 +19,12 @@ items:
   fullName: AgentFramework.Engines.IEngine
   type: Interface
   source:
+    remote:
+      path: src/AF.AgentFramework/Engines/IEngine.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: IEngine
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/IEngine.cs
+    path: ../src/AF.AgentFramework/Engines/IEngine.cs
     startLine: 5
   assemblies:
   - AF.AgentFramework
@@ -40,8 +44,12 @@ items:
   fullName: AgentFramework.Engines.IEngine.Id
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Engines/IEngine.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Id
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/IEngine.cs
+    path: ../src/AF.AgentFramework/Engines/IEngine.cs
     startLine: 7
   assemblies:
   - AF.AgentFramework
@@ -65,8 +73,12 @@ items:
   fullName: AgentFramework.Engines.IEngine.BindKernel(AgentFramework.Kernel.IKernel)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Engines/IEngine.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: BindKernel
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/IEngine.cs
+    path: ../src/AF.AgentFramework/Engines/IEngine.cs
     startLine: 10
   assemblies:
   - AF.AgentFramework
@@ -92,8 +104,12 @@ items:
   fullName: AgentFramework.Engines.IEngine.AddRunner(AgentFramework.Runners.IRunner)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Engines/IEngine.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: AddRunner
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/IEngine.cs
+    path: ../src/AF.AgentFramework/Engines/IEngine.cs
     startLine: 13
   assemblies:
   - AF.AgentFramework
@@ -119,8 +135,12 @@ items:
   fullName: AgentFramework.Engines.IEngine.SetAttachments(System.Collections.Generic.IReadOnlyList<string>)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Engines/IEngine.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: SetAttachments
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/IEngine.cs
+    path: ../src/AF.AgentFramework/Engines/IEngine.cs
     startLine: 16
   assemblies:
   - AF.AgentFramework
@@ -149,8 +169,12 @@ items:
   fullName: AgentFramework.Engines.IEngine.StartAsync(System.Threading.CancellationToken)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Engines/IEngine.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: StartAsync
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/IEngine.cs
+    path: ../src/AF.AgentFramework/Engines/IEngine.cs
     startLine: 18
   assemblies:
   - AF.AgentFramework
@@ -176,8 +200,12 @@ items:
   fullName: AgentFramework.Engines.IEngine.StopAsync(System.Threading.CancellationToken)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Engines/IEngine.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: StopAsync
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/IEngine.cs
+    path: ../src/AF.AgentFramework/Engines/IEngine.cs
     startLine: 19
   assemblies:
   - AF.AgentFramework

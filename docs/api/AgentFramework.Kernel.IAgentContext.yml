@@ -22,8 +22,12 @@ items:
   fullName: AgentFramework.Kernel.IAgentContext
   type: Interface
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/IAgentContext.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: IAgentContext
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgentContext.cs
+    path: ../src/AF.AgentFramework/Kernel/IAgentContext.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -43,8 +47,12 @@ items:
   fullName: AgentFramework.Kernel.IAgentContext.AgentId
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/IAgentContext.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: AgentId
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgentContext.cs
+    path: ../src/AF.AgentFramework/Kernel/IAgentContext.cs
     startLine: 4
   assemblies:
   - AF.AgentFramework
@@ -68,8 +76,12 @@ items:
   fullName: AgentFramework.Kernel.IAgentContext.EngineId
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/IAgentContext.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: EngineId
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgentContext.cs
+    path: ../src/AF.AgentFramework/Kernel/IAgentContext.cs
     startLine: 5
   assemblies:
   - AF.AgentFramework
@@ -93,8 +105,12 @@ items:
   fullName: AgentFramework.Kernel.IAgentContext.WorkItemId
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/IAgentContext.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: WorkItemId
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgentContext.cs
+    path: ../src/AF.AgentFramework/Kernel/IAgentContext.cs
     startLine: 6
   assemblies:
   - AF.AgentFramework
@@ -118,8 +134,12 @@ items:
   fullName: AgentFramework.Kernel.IAgentContext.CorrelationId
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/IAgentContext.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: CorrelationId
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgentContext.cs
+    path: ../src/AF.AgentFramework/Kernel/IAgentContext.cs
     startLine: 7
   assemblies:
   - AF.AgentFramework
@@ -143,8 +163,12 @@ items:
   fullName: AgentFramework.Kernel.IAgentContext.Cancellation
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/IAgentContext.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Cancellation
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgentContext.cs
+    path: ../src/AF.AgentFramework/Kernel/IAgentContext.cs
     startLine: 10
   assemblies:
   - AF.AgentFramework
@@ -170,8 +194,12 @@ items:
   fullName: AgentFramework.Kernel.IAgentContext.Now
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/IAgentContext.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Now
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgentContext.cs
+    path: ../src/AF.AgentFramework/Kernel/IAgentContext.cs
     startLine: 13
   assemblies:
   - AF.AgentFramework
@@ -197,8 +225,12 @@ items:
   fullName: AgentFramework.Kernel.IAgentContext.Random
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/IAgentContext.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Random
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgentContext.cs
+    path: ../src/AF.AgentFramework/Kernel/IAgentContext.cs
     startLine: 16
   assemblies:
   - AF.AgentFramework
@@ -224,8 +256,12 @@ items:
   fullName: AgentFramework.Kernel.IAgentContext.Items
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/IAgentContext.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Items
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgentContext.cs
+    path: ../src/AF.AgentFramework/Kernel/IAgentContext.cs
     startLine: 19
   assemblies:
   - AF.AgentFramework
@@ -251,8 +287,12 @@ items:
   fullName: AgentFramework.Kernel.IAgentContext.Trace(string, System.Collections.Generic.IReadOnlyDictionary<string, object?>?)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/IAgentContext.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Trace
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgentContext.cs
+    path: ../src/AF.AgentFramework/Kernel/IAgentContext.cs
     startLine: 22
   assemblies:
   - AF.AgentFramework

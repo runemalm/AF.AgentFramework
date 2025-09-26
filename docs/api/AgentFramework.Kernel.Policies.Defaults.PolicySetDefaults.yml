@@ -14,8 +14,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.PolicySetDefaults
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/PolicySetDefaults.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: PolicySetDefaults
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/PolicySetDefaults.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/PolicySetDefaults.cs
     startLine: 5
   assemblies:
   - AF.AgentFramework
@@ -47,8 +51,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.PolicySetDefaults.Create(AgentFramework.Kernel.Policies.Defaults.AdmissionOptions?, AgentFramework.Kernel.Policies.Defaults.RetryOptions?, AgentFramework.Kernel.Policies.Defaults.BackpressureOptions?, AgentFramework.Kernel.Policies.Defaults.TimeoutOptions?, AgentFramework.Kernel.Policies.IOrderingPolicy?, AgentFramework.Kernel.Policies.IPreemptionPolicy?)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/PolicySetDefaults.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Create
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/PolicySetDefaults.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/PolicySetDefaults.cs
     startLine: 11
   assemblies:
   - AF.AgentFramework

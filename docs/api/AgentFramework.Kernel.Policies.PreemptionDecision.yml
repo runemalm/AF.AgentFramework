@@ -15,8 +15,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.PreemptionDecision
   type: Enum
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: PreemptionDecision
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Decisions.cs
     startLine: 3
   assemblies:
   - AF.AgentFramework
@@ -36,8 +40,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.PreemptionDecision.No
   type: Field
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: No
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Decisions.cs
     startLine: 3
   assemblies:
   - AF.AgentFramework
@@ -58,8 +66,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.PreemptionDecision.Cooperative
   type: Field
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Cooperative
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Decisions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Decisions.cs
     startLine: 3
   assemblies:
   - AF.AgentFramework

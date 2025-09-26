@@ -20,8 +20,12 @@ items:
   fullName: AgentFramework.Engines.Reactive.ReactiveEngine
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Engines/Reactive/ReactiveEngine.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: ReactiveEngine
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/Reactive/ReactiveEngine.cs
+    path: ../src/AF.AgentFramework/Engines/Reactive/ReactiveEngine.cs
     startLine: 8
   assemblies:
   - AF.AgentFramework
@@ -54,8 +58,12 @@ items:
   fullName: AgentFramework.Engines.Reactive.ReactiveEngine.Id
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Engines/Reactive/ReactiveEngine.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Id
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/Reactive/ReactiveEngine.cs
+    path: ../src/AF.AgentFramework/Engines/Reactive/ReactiveEngine.cs
     startLine: 14
   assemblies:
   - AF.AgentFramework
@@ -82,8 +90,12 @@ items:
   fullName: AgentFramework.Engines.Reactive.ReactiveEngine.ReactiveEngine(string)
   type: Constructor
   source:
+    remote:
+      path: src/AF.AgentFramework/Engines/Reactive/ReactiveEngine.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: .ctor
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/Reactive/ReactiveEngine.cs
+    path: ../src/AF.AgentFramework/Engines/Reactive/ReactiveEngine.cs
     startLine: 16
   assemblies:
   - AF.AgentFramework
@@ -110,8 +122,12 @@ items:
   fullName: AgentFramework.Engines.Reactive.ReactiveEngine.BindKernel(AgentFramework.Kernel.IKernel)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Engines/Reactive/ReactiveEngine.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: BindKernel
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/Reactive/ReactiveEngine.cs
+    path: ../src/AF.AgentFramework/Engines/Reactive/ReactiveEngine.cs
     startLine: 21
   assemblies:
   - AF.AgentFramework
@@ -139,8 +155,12 @@ items:
   fullName: AgentFramework.Engines.Reactive.ReactiveEngine.AddRunner(AgentFramework.Runners.IRunner)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Engines/Reactive/ReactiveEngine.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: AddRunner
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/Reactive/ReactiveEngine.cs
+    path: ../src/AF.AgentFramework/Engines/Reactive/ReactiveEngine.cs
     startLine: 23
   assemblies:
   - AF.AgentFramework
@@ -168,8 +188,12 @@ items:
   fullName: AgentFramework.Engines.Reactive.ReactiveEngine.SetAttachments(System.Collections.Generic.IReadOnlyList<string>)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Engines/Reactive/ReactiveEngine.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: SetAttachments
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/Reactive/ReactiveEngine.cs
+    path: ../src/AF.AgentFramework/Engines/Reactive/ReactiveEngine.cs
     startLine: 30
   assemblies:
   - AF.AgentFramework
@@ -200,8 +224,12 @@ items:
   fullName: AgentFramework.Engines.Reactive.ReactiveEngine.StartAsync(System.Threading.CancellationToken)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Engines/Reactive/ReactiveEngine.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: StartAsync
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/Reactive/ReactiveEngine.cs
+    path: ../src/AF.AgentFramework/Engines/Reactive/ReactiveEngine.cs
     startLine: 37
   assemblies:
   - AF.AgentFramework
@@ -230,8 +258,12 @@ items:
   fullName: AgentFramework.Engines.Reactive.ReactiveEngine.StopAsync(System.Threading.CancellationToken)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Engines/Reactive/ReactiveEngine.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: StopAsync
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/Reactive/ReactiveEngine.cs
+    path: ../src/AF.AgentFramework/Engines/Reactive/ReactiveEngine.cs
     startLine: 45
   assemblies:
   - AF.AgentFramework

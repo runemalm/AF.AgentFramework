@@ -15,8 +15,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.DefaultRetryPolicy
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultRetryPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: DefaultRetryPolicy
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultRetryPolicy.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultRetryPolicy.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -47,8 +51,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.DefaultRetryPolicy.DefaultRetryPolicy(AgentFramework.Kernel.Policies.Defaults.RetryOptions?)
   type: Constructor
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultRetryPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: .ctor
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultRetryPolicy.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultRetryPolicy.cs
     startLine: 6
   assemblies:
   - AF.AgentFramework
@@ -75,8 +83,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.DefaultRetryPolicy.OnFailure(AgentFramework.Kernel.WorkItem, System.Exception, int)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultRetryPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: OnFailure
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultRetryPolicy.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultRetryPolicy.cs
     startLine: 9
   assemblies:
   - AF.AgentFramework

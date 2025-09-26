@@ -15,8 +15,12 @@ items:
   fullName: AgentFramework.Kernel.IAgentCatalog
   type: Interface
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/IAgentCatalog.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: IAgentCatalog
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgentCatalog.cs
+    path: ../src/AF.AgentFramework/Kernel/IAgentCatalog.cs
     startLine: 3
   assemblies:
   - AF.AgentFramework
@@ -38,8 +42,12 @@ items:
   fullName: AgentFramework.Kernel.IAgentCatalog.Get(string)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/IAgentCatalog.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Get
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgentCatalog.cs
+    path: ../src/AF.AgentFramework/Kernel/IAgentCatalog.cs
     startLine: 5
   assemblies:
   - AF.AgentFramework
@@ -68,8 +76,12 @@ items:
   fullName: AgentFramework.Kernel.IAgentCatalog.ListIds()
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/IAgentCatalog.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: ListIds
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgentCatalog.cs
+    path: ../src/AF.AgentFramework/Kernel/IAgentCatalog.cs
     startLine: 6
   assemblies:
   - AF.AgentFramework

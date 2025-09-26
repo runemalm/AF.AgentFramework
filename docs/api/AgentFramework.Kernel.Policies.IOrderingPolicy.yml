@@ -14,8 +14,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.IOrderingPolicy
   type: Interface
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/IOrderingPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: IOrderingPolicy
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/IOrderingPolicy.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/IOrderingPolicy.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -35,8 +39,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.IOrderingPolicy.Compare(AgentFramework.Kernel.WorkItem, AgentFramework.Kernel.WorkItem)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/IOrderingPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Compare
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/IOrderingPolicy.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/IOrderingPolicy.cs
     startLine: 5
   assemblies:
   - AF.AgentFramework

@@ -14,8 +14,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.IBackpressurePolicy
   type: Interface
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/IBackpressurePolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: IBackpressurePolicy
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/IBackpressurePolicy.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/IBackpressurePolicy.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -35,8 +39,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.IBackpressurePolicy.Evaluate(AgentFramework.Kernel.ClusterLoad)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/IBackpressurePolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Evaluate
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/IBackpressurePolicy.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/IBackpressurePolicy.cs
     startLine: 4
   assemblies:
   - AF.AgentFramework

@@ -14,8 +14,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.IRetryPolicy
   type: Interface
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/IRetryPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: IRetryPolicy
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/IRetryPolicy.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/IRetryPolicy.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -35,8 +39,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.IRetryPolicy.OnFailure(AgentFramework.Kernel.WorkItem, System.Exception, int)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/IRetryPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: OnFailure
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/IRetryPolicy.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/IRetryPolicy.cs
     startLine: 4
   assemblies:
   - AF.AgentFramework

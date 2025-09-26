@@ -19,8 +19,12 @@ items:
   fullName: AgentFramework.Runners.Timers.TimerRunner
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Runners/Timers/TimerRunner.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: TimerRunner
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Runners/Timers/TimerRunner.cs
+    path: ../src/AF.AgentFramework/Runners/Timers/TimerRunner.cs
     startLine: 5
   assemblies:
   - AF.AgentFramework
@@ -54,8 +58,12 @@ items:
   fullName: AgentFramework.Runners.Timers.TimerRunner.Name
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Runners/Timers/TimerRunner.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Name
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Runners/Timers/TimerRunner.cs
+    path: ../src/AF.AgentFramework/Runners/Timers/TimerRunner.cs
     startLine: 11
   assemblies:
   - AF.AgentFramework
@@ -82,8 +90,12 @@ items:
   fullName: AgentFramework.Runners.Timers.TimerRunner.OnTickAsync
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Runners/Timers/TimerRunner.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: OnTickAsync
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Runners/Timers/TimerRunner.cs
+    path: ../src/AF.AgentFramework/Runners/Timers/TimerRunner.cs
     startLine: 14
   assemblies:
   - AF.AgentFramework
@@ -109,8 +121,12 @@ items:
   fullName: AgentFramework.Runners.Timers.TimerRunner.TimerRunner(System.TimeSpan, string?)
   type: Constructor
   source:
+    remote:
+      path: src/AF.AgentFramework/Runners/Timers/TimerRunner.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: .ctor
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Runners/Timers/TimerRunner.cs
+    path: ../src/AF.AgentFramework/Runners/Timers/TimerRunner.cs
     startLine: 16
   assemblies:
   - AF.AgentFramework
@@ -139,8 +155,12 @@ items:
   fullName: AgentFramework.Runners.Timers.TimerRunner.StartAsync(System.Threading.CancellationToken)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Runners/Timers/TimerRunner.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: StartAsync
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Runners/Timers/TimerRunner.cs
+    path: ../src/AF.AgentFramework/Runners/Timers/TimerRunner.cs
     startLine: 22
   assemblies:
   - AF.AgentFramework
@@ -169,8 +189,12 @@ items:
   fullName: AgentFramework.Runners.Timers.TimerRunner.StopAsync(System.Threading.CancellationToken)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Runners/Timers/TimerRunner.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: StopAsync
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Runners/Timers/TimerRunner.cs
+    path: ../src/AF.AgentFramework/Runners/Timers/TimerRunner.cs
     startLine: 57
   assemblies:
   - AF.AgentFramework
@@ -199,13 +223,20 @@ items:
   fullName: AgentFramework.Runners.Timers.TimerRunner.DisposeAsync()
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Runners/Timers/TimerRunner.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: DisposeAsync
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Runners/Timers/TimerRunner.cs
+    path: ../src/AF.AgentFramework/Runners/Timers/TimerRunner.cs
     startLine: 80
   assemblies:
   - AF.AgentFramework
   namespace: AgentFramework.Runners.Timers
-  summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources asynchronously.
+  summary: >-
+    Performs application-defined tasks associated with freeing, releasing, or
+
+    resetting unmanaged resources asynchronously.
   example: []
   syntax:
     content: public ValueTask DisposeAsync()

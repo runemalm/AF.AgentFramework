@@ -16,8 +16,12 @@ items:
   fullName: AgentFramework.Runners.IRunner
   type: Interface
   source:
+    remote:
+      path: src/AF.AgentFramework/Runners/IRunner.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: IRunner
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Runners/IRunner.cs
+    path: ../src/AF.AgentFramework/Runners/IRunner.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -37,8 +41,12 @@ items:
   fullName: AgentFramework.Runners.IRunner.Name
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Runners/IRunner.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Name
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Runners/IRunner.cs
+    path: ../src/AF.AgentFramework/Runners/IRunner.cs
     startLine: 4
   assemblies:
   - AF.AgentFramework
@@ -62,8 +70,12 @@ items:
   fullName: AgentFramework.Runners.IRunner.StartAsync(System.Threading.CancellationToken)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Runners/IRunner.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: StartAsync
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Runners/IRunner.cs
+    path: ../src/AF.AgentFramework/Runners/IRunner.cs
     startLine: 5
   assemblies:
   - AF.AgentFramework
@@ -89,8 +101,12 @@ items:
   fullName: AgentFramework.Runners.IRunner.StopAsync(System.Threading.CancellationToken)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Runners/IRunner.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: StopAsync
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Runners/IRunner.cs
+    path: ../src/AF.AgentFramework/Runners/IRunner.cs
     startLine: 6
   assemblies:
   - AF.AgentFramework

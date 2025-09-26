@@ -3,8 +3,8 @@
 \> A minimal, extensible **agent runtime** for .NET — built around a small set of primitives:  
 \> **Kernel**, **Engines**, **Runners**, **Hosting**, **Agents**, and **Policies**.
 
-[![NuGet version](https://img.shields.io/nuget/v/AgentFramework.Kernel.svg)](https://www.nuget.org/packages/AgentFramework.Kernel/)
-[![Build status](https://github.com/runemalm/AgentFramework.Kernel/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/runemalm/AgentFramework.Kernel/actions/workflows/release.yml)
+[![NuGet version](https://img.shields.io/nuget/v/AF.AgentFramework.svg)](https://www.nuget.org/packages/AF.AgentFramework/)
+[![Build status](https://github.com/runemalm/AF.AgentFramework/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/runemalm/AF.AgentFramework/actions/workflows/release.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Target](https://img.shields.io/badge/.NET-9.0-512BD4)
 

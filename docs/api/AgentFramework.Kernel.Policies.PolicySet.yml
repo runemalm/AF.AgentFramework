@@ -19,8 +19,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.PolicySet
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/PolicySet.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: PolicySet
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/PolicySet.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/PolicySet.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -49,8 +53,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.PolicySet.Admission
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/PolicySet.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Admission
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/PolicySet.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/PolicySet.cs
     startLine: 4
   assemblies:
   - AF.AgentFramework
@@ -74,8 +82,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.PolicySet.Preemption
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/PolicySet.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Preemption
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/PolicySet.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/PolicySet.cs
     startLine: 5
   assemblies:
   - AF.AgentFramework
@@ -99,8 +111,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.PolicySet.Retry
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/PolicySet.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Retry
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/PolicySet.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/PolicySet.cs
     startLine: 6
   assemblies:
   - AF.AgentFramework
@@ -124,8 +140,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.PolicySet.Timeout
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/PolicySet.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Timeout
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/PolicySet.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/PolicySet.cs
     startLine: 7
   assemblies:
   - AF.AgentFramework
@@ -149,8 +169,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.PolicySet.Ordering
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/PolicySet.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Ordering
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/PolicySet.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/PolicySet.cs
     startLine: 8
   assemblies:
   - AF.AgentFramework
@@ -174,8 +198,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.PolicySet.Backpressure
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/PolicySet.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Backpressure
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/PolicySet.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/PolicySet.cs
     startLine: 9
   assemblies:
   - AF.AgentFramework

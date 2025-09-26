@@ -14,8 +14,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.DefaultPreemptionPolicy
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultPreemptionPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: DefaultPreemptionPolicy
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultPreemptionPolicy.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultPreemptionPolicy.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -46,8 +50,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.DefaultPreemptionPolicy.ShouldPreempt(AgentFramework.Kernel.WorkItem, AgentFramework.Kernel.RunningInvocation)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultPreemptionPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: ShouldPreempt
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultPreemptionPolicy.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultPreemptionPolicy.cs
     startLine: 4
   assemblies:
   - AF.AgentFramework

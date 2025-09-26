@@ -15,8 +15,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.DefaultTimeoutPolicy
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultTimeoutPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: DefaultTimeoutPolicy
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultTimeoutPolicy.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultTimeoutPolicy.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -47,8 +51,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.DefaultTimeoutPolicy.DefaultTimeoutPolicy(AgentFramework.Kernel.Policies.Defaults.TimeoutOptions?)
   type: Constructor
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultTimeoutPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: .ctor
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultTimeoutPolicy.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultTimeoutPolicy.cs
     startLine: 6
   assemblies:
   - AF.AgentFramework
@@ -75,8 +83,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.DefaultTimeoutPolicy.GetTimeout(AgentFramework.Kernel.WorkItem)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultTimeoutPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: GetTimeout
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultTimeoutPolicy.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultTimeoutPolicy.cs
     startLine: 9
   assemblies:
   - AF.AgentFramework

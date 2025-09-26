@@ -15,8 +15,12 @@ items:
   fullName: AgentFramework.Hosting.IAgentHost
   type: Interface
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/IAgentHost.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: IAgentHost
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/IAgentHost.cs
+    path: ../src/AF.AgentFramework/Hosting/IAgentHost.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -36,8 +40,12 @@ items:
   fullName: AgentFramework.Hosting.IAgentHost.StartAsync(System.Threading.CancellationToken)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/IAgentHost.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: StartAsync
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/IAgentHost.cs
+    path: ../src/AF.AgentFramework/Hosting/IAgentHost.cs
     startLine: 4
   assemblies:
   - AF.AgentFramework
@@ -63,8 +71,12 @@ items:
   fullName: AgentFramework.Hosting.IAgentHost.StopAsync(System.Threading.CancellationToken)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/IAgentHost.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: StopAsync
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/IAgentHost.cs
+    path: ../src/AF.AgentFramework/Hosting/IAgentHost.cs
     startLine: 5
   assemblies:
   - AF.AgentFramework

@@ -20,8 +20,12 @@ items:
   fullName: AgentFramework.Hosting.AgentHostBuilder
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: AgentHostBuilder
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
+    path: ../src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
     startLine: 10
   assemblies:
   - AF.AgentFramework
@@ -54,8 +58,12 @@ items:
   fullName: AgentFramework.Hosting.AgentHostBuilder.Create()
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Create
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
+    path: ../src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
     startLine: 14
   assemblies:
   - AF.AgentFramework
@@ -78,8 +86,12 @@ items:
   fullName: AgentFramework.Hosting.AgentHostBuilder.AddEngine(string, System.Func<AgentFramework.Engines.IEngine>)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: AddEngine
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
+    path: ../src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
     startLine: 16
   assemblies:
   - AF.AgentFramework
@@ -113,8 +125,12 @@ items:
   fullName: AgentFramework.Hosting.AgentHostBuilder.AddRunner(string, System.Func<AgentFramework.Runners.IRunner>)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: AddRunner
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
+    path: ../src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
     startLine: 23
   assemblies:
   - AF.AgentFramework
@@ -148,8 +164,12 @@ items:
   fullName: AgentFramework.Hosting.AgentHostBuilder.AddAgent(string, System.Func<AgentFramework.Kernel.IAgent>)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: AddAgent
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
+    path: ../src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
     startLine: 30
   assemblies:
   - AF.AgentFramework
@@ -183,8 +203,12 @@ items:
   fullName: AgentFramework.Hosting.AgentHostBuilder.Attach(string, string, AgentFramework.Kernel.Policies.PolicySet?)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Attach
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
+    path: ../src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
     startLine: 37
   assemblies:
   - AF.AgentFramework
@@ -220,8 +244,12 @@ items:
   fullName: AgentFramework.Hosting.AgentHostBuilder.WithKernelDefaults(AgentFramework.Kernel.Policies.PolicySet)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: WithKernelDefaults
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
+    path: ../src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
     startLine: 45
   assemblies:
   - AF.AgentFramework
@@ -250,8 +278,12 @@ items:
   fullName: AgentFramework.Hosting.AgentHostBuilder.Build()
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Build
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
+    path: ../src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
     startLine: 51
   assemblies:
   - AF.AgentFramework

@@ -17,8 +17,12 @@ items:
   fullName: AgentFramework.Kernel.StubKernel
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/StubKernel.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: StubKernel
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/StubKernel.cs
+    path: ../src/AF.AgentFramework/Kernel/StubKernel.cs
     startLine: 5
   assemblies:
   - AF.AgentFramework
@@ -51,8 +55,12 @@ items:
   fullName: AgentFramework.Kernel.StubKernel.StubKernel(AgentFramework.Kernel.KernelOptions)
   type: Constructor
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/StubKernel.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: .ctor
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/StubKernel.cs
+    path: ../src/AF.AgentFramework/Kernel/StubKernel.cs
     startLine: 9
   assemblies:
   - AF.AgentFramework
@@ -79,8 +87,12 @@ items:
   fullName: AgentFramework.Kernel.StubKernel.StartAsync(System.Threading.CancellationToken)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/StubKernel.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: StartAsync
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/StubKernel.cs
+    path: ../src/AF.AgentFramework/Kernel/StubKernel.cs
     startLine: 11
   assemblies:
   - AF.AgentFramework
@@ -109,8 +121,12 @@ items:
   fullName: AgentFramework.Kernel.StubKernel.StopAsync(System.Threading.CancellationToken)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/StubKernel.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: StopAsync
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/StubKernel.cs
+    path: ../src/AF.AgentFramework/Kernel/StubKernel.cs
     startLine: 17
   assemblies:
   - AF.AgentFramework
@@ -139,8 +155,12 @@ items:
   fullName: AgentFramework.Kernel.StubKernel.EnqueueAsync(AgentFramework.Kernel.WorkItem, System.Threading.CancellationToken)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/StubKernel.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: EnqueueAsync
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/StubKernel.cs
+    path: ../src/AF.AgentFramework/Kernel/StubKernel.cs
     startLine: 23
   assemblies:
   - AF.AgentFramework

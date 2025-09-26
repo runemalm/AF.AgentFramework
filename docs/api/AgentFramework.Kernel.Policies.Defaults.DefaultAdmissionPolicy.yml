@@ -15,8 +15,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.DefaultAdmissionPolicy
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultAdmissionPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: DefaultAdmissionPolicy
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultAdmissionPolicy.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultAdmissionPolicy.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -47,8 +51,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.DefaultAdmissionPolicy.DefaultAdmissionPolicy(AgentFramework.Kernel.Policies.Defaults.AdmissionOptions?)
   type: Constructor
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultAdmissionPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: .ctor
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultAdmissionPolicy.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultAdmissionPolicy.cs
     startLine: 6
   assemblies:
   - AF.AgentFramework
@@ -75,8 +83,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.DefaultAdmissionPolicy.Admit(AgentFramework.Kernel.WorkItem, AgentFramework.Kernel.AgentRuntimeState)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultAdmissionPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Admit
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultAdmissionPolicy.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultAdmissionPolicy.cs
     startLine: 9
   assemblies:
   - AF.AgentFramework

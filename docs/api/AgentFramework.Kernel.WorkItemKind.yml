@@ -17,8 +17,12 @@ items:
   fullName: AgentFramework.Kernel.WorkItemKind
   type: Enum
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/WorkItem.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: WorkItemKind
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/WorkItem.cs
+    path: ../src/AF.AgentFramework/Kernel/WorkItem.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -38,8 +42,12 @@ items:
   fullName: AgentFramework.Kernel.WorkItemKind.Percept
   type: Field
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/WorkItem.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Percept
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/WorkItem.cs
+    path: ../src/AF.AgentFramework/Kernel/WorkItem.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -60,8 +68,12 @@ items:
   fullName: AgentFramework.Kernel.WorkItemKind.Tick
   type: Field
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/WorkItem.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Tick
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/WorkItem.cs
+    path: ../src/AF.AgentFramework/Kernel/WorkItem.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -82,8 +94,12 @@ items:
   fullName: AgentFramework.Kernel.WorkItemKind.Command
   type: Field
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/WorkItem.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Command
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/WorkItem.cs
+    path: ../src/AF.AgentFramework/Kernel/WorkItem.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -104,8 +120,12 @@ items:
   fullName: AgentFramework.Kernel.WorkItemKind.Job
   type: Field
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/WorkItem.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Job
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/WorkItem.cs
+    path: ../src/AF.AgentFramework/Kernel/WorkItem.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework

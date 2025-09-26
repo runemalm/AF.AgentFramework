@@ -16,8 +16,12 @@ items:
   fullName: AgentFramework.Kernel.RunningInvocation
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/RuntimeModels.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: RunningInvocation
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/RuntimeModels.cs
+    path: ../src/AF.AgentFramework/Kernel/RuntimeModels.cs
     startLine: 3
   assemblies:
   - AF.AgentFramework
@@ -48,8 +52,12 @@ items:
   fullName: AgentFramework.Kernel.RunningInvocation.RunningInvocation(AgentFramework.Kernel.WorkItem, System.DateTimeOffset)
   type: Constructor
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/RuntimeModels.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: .ctor
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/RuntimeModels.cs
+    path: ../src/AF.AgentFramework/Kernel/RuntimeModels.cs
     startLine: 3
   assemblies:
   - AF.AgentFramework
@@ -78,8 +86,12 @@ items:
   fullName: AgentFramework.Kernel.RunningInvocation.Item
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/RuntimeModels.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Item
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/RuntimeModels.cs
+    path: ../src/AF.AgentFramework/Kernel/RuntimeModels.cs
     startLine: 3
   assemblies:
   - AF.AgentFramework
@@ -103,8 +115,12 @@ items:
   fullName: AgentFramework.Kernel.RunningInvocation.StartedAt
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/RuntimeModels.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: StartedAt
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/RuntimeModels.cs
+    path: ../src/AF.AgentFramework/Kernel/RuntimeModels.cs
     startLine: 3
   assemblies:
   - AF.AgentFramework

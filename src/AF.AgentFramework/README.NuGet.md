@@ -63,9 +63,7 @@ await host.StopAsync();
 ## Links
 
 - Source \& issues: https://github.com/runemalm/AF.AgentFramework  
-- API docs (DocFX): see the repository’s `docs/` site  
-
-MIT © David Runemalm
+- API docs (DocFX): see the repository’s `docs/` site
 
 ## License
 

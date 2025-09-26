@@ -17,8 +17,12 @@ items:
   fullName: AgentFramework.Hosting.NoopAgentHost
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/NoopAgentHost.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: NoopAgentHost
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/NoopAgentHost.cs
+    path: ../src/AF.AgentFramework/Hosting/NoopAgentHost.cs
     startLine: 5
   assemblies:
   - AF.AgentFramework
@@ -51,8 +55,12 @@ items:
   fullName: AgentFramework.Hosting.NoopAgentHost.Config
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/NoopAgentHost.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Config
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/NoopAgentHost.cs
+    path: ../src/AF.AgentFramework/Hosting/NoopAgentHost.cs
     startLine: 7
   assemblies:
   - AF.AgentFramework
@@ -76,8 +84,12 @@ items:
   fullName: AgentFramework.Hosting.NoopAgentHost.NoopAgentHost(AgentFramework.Hosting.AgentHostConfig)
   type: Constructor
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/NoopAgentHost.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: .ctor
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/NoopAgentHost.cs
+    path: ../src/AF.AgentFramework/Hosting/NoopAgentHost.cs
     startLine: 9
   assemblies:
   - AF.AgentFramework
@@ -104,8 +116,12 @@ items:
   fullName: AgentFramework.Hosting.NoopAgentHost.StartAsync(System.Threading.CancellationToken)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/NoopAgentHost.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: StartAsync
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/NoopAgentHost.cs
+    path: ../src/AF.AgentFramework/Hosting/NoopAgentHost.cs
     startLine: 11
   assemblies:
   - AF.AgentFramework
@@ -134,8 +150,12 @@ items:
   fullName: AgentFramework.Hosting.NoopAgentHost.StopAsync(System.Threading.CancellationToken)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/NoopAgentHost.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: StopAsync
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/NoopAgentHost.cs
+    path: ../src/AF.AgentFramework/Hosting/NoopAgentHost.cs
     startLine: 12
   assemblies:
   - AF.AgentFramework

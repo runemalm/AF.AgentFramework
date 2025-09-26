@@ -14,8 +14,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.IPreemptionPolicy
   type: Interface
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/IPreemptionPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: IPreemptionPolicy
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/IPreemptionPolicy.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/IPreemptionPolicy.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -35,8 +39,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.IPreemptionPolicy.ShouldPreempt(AgentFramework.Kernel.WorkItem, AgentFramework.Kernel.RunningInvocation)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/IPreemptionPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: ShouldPreempt
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/IPreemptionPolicy.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/IPreemptionPolicy.cs
     startLine: 5
   assemblies:
   - AF.AgentFramework

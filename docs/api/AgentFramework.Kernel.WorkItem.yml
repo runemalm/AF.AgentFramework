@@ -22,8 +22,12 @@ items:
   fullName: AgentFramework.Kernel.WorkItem
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/WorkItem.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: WorkItem
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/WorkItem.cs
+    path: ../src/AF.AgentFramework/Kernel/WorkItem.cs
     startLine: 4
   assemblies:
   - AF.AgentFramework
@@ -52,8 +56,12 @@ items:
   fullName: AgentFramework.Kernel.WorkItem.Id
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/WorkItem.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Id
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/WorkItem.cs
+    path: ../src/AF.AgentFramework/Kernel/WorkItem.cs
     startLine: 6
   assemblies:
   - AF.AgentFramework
@@ -77,8 +85,12 @@ items:
   fullName: AgentFramework.Kernel.WorkItem.EngineId
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/WorkItem.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: EngineId
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/WorkItem.cs
+    path: ../src/AF.AgentFramework/Kernel/WorkItem.cs
     startLine: 7
   assemblies:
   - AF.AgentFramework
@@ -102,8 +114,12 @@ items:
   fullName: AgentFramework.Kernel.WorkItem.AgentId
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/WorkItem.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: AgentId
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/WorkItem.cs
+    path: ../src/AF.AgentFramework/Kernel/WorkItem.cs
     startLine: 8
   assemblies:
   - AF.AgentFramework
@@ -127,8 +143,12 @@ items:
   fullName: AgentFramework.Kernel.WorkItem.Kind
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/WorkItem.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Kind
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/WorkItem.cs
+    path: ../src/AF.AgentFramework/Kernel/WorkItem.cs
     startLine: 10
   assemblies:
   - AF.AgentFramework
@@ -152,8 +172,12 @@ items:
   fullName: AgentFramework.Kernel.WorkItem.Payload
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/WorkItem.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Payload
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/WorkItem.cs
+    path: ../src/AF.AgentFramework/Kernel/WorkItem.cs
     startLine: 11
   assemblies:
   - AF.AgentFramework
@@ -177,8 +201,12 @@ items:
   fullName: AgentFramework.Kernel.WorkItem.Priority
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/WorkItem.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Priority
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/WorkItem.cs
+    path: ../src/AF.AgentFramework/Kernel/WorkItem.cs
     startLine: 14
   assemblies:
   - AF.AgentFramework
@@ -204,8 +232,12 @@ items:
   fullName: AgentFramework.Kernel.WorkItem.Deadline
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/WorkItem.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Deadline
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/WorkItem.cs
+    path: ../src/AF.AgentFramework/Kernel/WorkItem.cs
     startLine: 16
   assemblies:
   - AF.AgentFramework
@@ -229,8 +261,12 @@ items:
   fullName: AgentFramework.Kernel.WorkItem.CorrelationId
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/WorkItem.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: CorrelationId
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/WorkItem.cs
+    path: ../src/AF.AgentFramework/Kernel/WorkItem.cs
     startLine: 17
   assemblies:
   - AF.AgentFramework
@@ -254,8 +290,12 @@ items:
   fullName: AgentFramework.Kernel.WorkItem.Metadata
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/WorkItem.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Metadata
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/WorkItem.cs
+    path: ../src/AF.AgentFramework/Kernel/WorkItem.cs
     startLine: 19
   assemblies:
   - AF.AgentFramework

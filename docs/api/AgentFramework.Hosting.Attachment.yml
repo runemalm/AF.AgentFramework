@@ -16,8 +16,12 @@ items:
   fullName: AgentFramework.Hosting.Attachment
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/Attachment.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Attachment
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/Attachment.cs
+    path: ../src/AF.AgentFramework/Hosting/Attachment.cs
     startLine: 4
   assemblies:
   - AF.AgentFramework
@@ -46,8 +50,12 @@ items:
   fullName: AgentFramework.Hosting.Attachment.AgentId
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/Attachment.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: AgentId
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/Attachment.cs
+    path: ../src/AF.AgentFramework/Hosting/Attachment.cs
     startLine: 6
   assemblies:
   - AF.AgentFramework
@@ -71,8 +79,12 @@ items:
   fullName: AgentFramework.Hosting.Attachment.EngineId
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/Attachment.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: EngineId
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/Attachment.cs
+    path: ../src/AF.AgentFramework/Hosting/Attachment.cs
     startLine: 7
   assemblies:
   - AF.AgentFramework
@@ -96,8 +108,12 @@ items:
   fullName: AgentFramework.Hosting.Attachment.Overrides
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/Attachment.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Overrides
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/Attachment.cs
+    path: ../src/AF.AgentFramework/Hosting/Attachment.cs
     startLine: 8
   assemblies:
   - AF.AgentFramework

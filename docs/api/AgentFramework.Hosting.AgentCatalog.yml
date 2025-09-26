@@ -16,8 +16,12 @@ items:
   fullName: AgentFramework.Hosting.AgentCatalog
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/AgentCatalog.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: AgentCatalog
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentCatalog.cs
+    path: ../src/AF.AgentFramework/Hosting/AgentCatalog.cs
     startLine: 5
   assemblies:
   - AF.AgentFramework
@@ -50,8 +54,12 @@ items:
   fullName: AgentFramework.Hosting.AgentCatalog.AgentCatalog(System.Collections.Generic.Dictionary<string, AgentFramework.Kernel.IAgent>)
   type: Constructor
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/AgentCatalog.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: .ctor
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentCatalog.cs
+    path: ../src/AF.AgentFramework/Hosting/AgentCatalog.cs
     startLine: 9
   assemblies:
   - AF.AgentFramework
@@ -78,8 +86,12 @@ items:
   fullName: AgentFramework.Hosting.AgentCatalog.Get(string)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/AgentCatalog.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Get
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentCatalog.cs
+    path: ../src/AF.AgentFramework/Hosting/AgentCatalog.cs
     startLine: 12
   assemblies:
   - AF.AgentFramework
@@ -111,8 +123,12 @@ items:
   fullName: AgentFramework.Hosting.AgentCatalog.ListIds()
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/AgentCatalog.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: ListIds
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Hosting/AgentCatalog.cs
+    path: ../src/AF.AgentFramework/Hosting/AgentCatalog.cs
     startLine: 17
   assemblies:
   - AF.AgentFramework

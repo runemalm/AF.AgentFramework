@@ -18,8 +18,12 @@ items:
   fullName: AgentFramework.Kernel.InProcKernel
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/InProcKernel.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: InProcKernel
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/InProcKernel.cs
+    path: ../src/AF.AgentFramework/Kernel/InProcKernel.cs
     startLine: 10
   assemblies:
   - AF.AgentFramework
@@ -56,8 +60,12 @@ items:
   fullName: AgentFramework.Kernel.InProcKernel.InProcKernel(AgentFramework.Kernel.KernelOptions)
   type: Constructor
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/InProcKernel.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: .ctor
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/InProcKernel.cs
+    path: ../src/AF.AgentFramework/Kernel/InProcKernel.cs
     startLine: 36
   assemblies:
   - AF.AgentFramework
@@ -84,8 +92,12 @@ items:
   fullName: AgentFramework.Kernel.InProcKernel.StartAsync(System.Threading.CancellationToken)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/InProcKernel.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: StartAsync
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/InProcKernel.cs
+    path: ../src/AF.AgentFramework/Kernel/InProcKernel.cs
     startLine: 44
   assemblies:
   - AF.AgentFramework
@@ -114,8 +126,12 @@ items:
   fullName: AgentFramework.Kernel.InProcKernel.StopAsync(System.Threading.CancellationToken)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/InProcKernel.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: StopAsync
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/InProcKernel.cs
+    path: ../src/AF.AgentFramework/Kernel/InProcKernel.cs
     startLine: 52
   assemblies:
   - AF.AgentFramework
@@ -144,8 +160,12 @@ items:
   fullName: AgentFramework.Kernel.InProcKernel.EnqueueAsync(AgentFramework.Kernel.WorkItem, System.Threading.CancellationToken)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/InProcKernel.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: EnqueueAsync
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/InProcKernel.cs
+    path: ../src/AF.AgentFramework/Kernel/InProcKernel.cs
     startLine: 63
   assemblies:
   - AF.AgentFramework
@@ -177,8 +197,12 @@ items:
   fullName: AgentFramework.Kernel.InProcKernel.Dispose()
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/InProcKernel.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Dispose
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/InProcKernel.cs
+    path: ../src/AF.AgentFramework/Kernel/InProcKernel.cs
     startLine: 204
   assemblies:
   - AF.AgentFramework

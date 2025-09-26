@@ -20,8 +20,12 @@ items:
   fullName: AgentFramework.Engines.Loop.LoopEngine
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Engines/Loop/LoopEngine.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: LoopEngine
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/Loop/LoopEngine.cs
+    path: ../src/AF.AgentFramework/Engines/Loop/LoopEngine.cs
     startLine: 9
   assemblies:
   - AF.AgentFramework
@@ -54,8 +58,12 @@ items:
   fullName: AgentFramework.Engines.Loop.LoopEngine.Id
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Engines/Loop/LoopEngine.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Id
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/Loop/LoopEngine.cs
+    path: ../src/AF.AgentFramework/Engines/Loop/LoopEngine.cs
     startLine: 15
   assemblies:
   - AF.AgentFramework
@@ -82,8 +90,12 @@ items:
   fullName: AgentFramework.Engines.Loop.LoopEngine.LoopEngine(string)
   type: Constructor
   source:
+    remote:
+      path: src/AF.AgentFramework/Engines/Loop/LoopEngine.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: .ctor
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/Loop/LoopEngine.cs
+    path: ../src/AF.AgentFramework/Engines/Loop/LoopEngine.cs
     startLine: 17
   assemblies:
   - AF.AgentFramework
@@ -110,8 +122,12 @@ items:
   fullName: AgentFramework.Engines.Loop.LoopEngine.BindKernel(AgentFramework.Kernel.IKernel)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Engines/Loop/LoopEngine.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: BindKernel
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/Loop/LoopEngine.cs
+    path: ../src/AF.AgentFramework/Engines/Loop/LoopEngine.cs
     startLine: 22
   assemblies:
   - AF.AgentFramework
@@ -139,8 +155,12 @@ items:
   fullName: AgentFramework.Engines.Loop.LoopEngine.AddRunner(AgentFramework.Runners.IRunner)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Engines/Loop/LoopEngine.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: AddRunner
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/Loop/LoopEngine.cs
+    path: ../src/AF.AgentFramework/Engines/Loop/LoopEngine.cs
     startLine: 24
   assemblies:
   - AF.AgentFramework
@@ -168,8 +188,12 @@ items:
   fullName: AgentFramework.Engines.Loop.LoopEngine.SetAttachments(System.Collections.Generic.IReadOnlyList<string>)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Engines/Loop/LoopEngine.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: SetAttachments
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/Loop/LoopEngine.cs
+    path: ../src/AF.AgentFramework/Engines/Loop/LoopEngine.cs
     startLine: 53
   assemblies:
   - AF.AgentFramework
@@ -200,8 +224,12 @@ items:
   fullName: AgentFramework.Engines.Loop.LoopEngine.StartAsync(System.Threading.CancellationToken)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Engines/Loop/LoopEngine.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: StartAsync
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/Loop/LoopEngine.cs
+    path: ../src/AF.AgentFramework/Engines/Loop/LoopEngine.cs
     startLine: 60
   assemblies:
   - AF.AgentFramework
@@ -230,8 +258,12 @@ items:
   fullName: AgentFramework.Engines.Loop.LoopEngine.StopAsync(System.Threading.CancellationToken)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Engines/Loop/LoopEngine.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: StopAsync
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Engines/Loop/LoopEngine.cs
+    path: ../src/AF.AgentFramework/Engines/Loop/LoopEngine.cs
     startLine: 68
   assemblies:
   - AF.AgentFramework

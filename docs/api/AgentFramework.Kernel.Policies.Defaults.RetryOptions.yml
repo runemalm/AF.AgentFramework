@@ -19,8 +19,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.RetryOptions
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/RetryOptions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: RetryOptions
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/RetryOptions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/RetryOptions.cs
     startLine: 4
   assemblies:
   - AF.AgentFramework
@@ -51,8 +55,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.RetryOptions.RetryOptions(int, System.TimeSpan, System.TimeSpan, bool)
   type: Constructor
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/RetryOptions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: .ctor
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/RetryOptions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/RetryOptions.cs
     startLine: 4
   assemblies:
   - AF.AgentFramework
@@ -85,8 +93,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.RetryOptions.MaxAttempts
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/RetryOptions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: MaxAttempts
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/RetryOptions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/RetryOptions.cs
     startLine: 5
   assemblies:
   - AF.AgentFramework
@@ -110,8 +122,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.RetryOptions.BaseDelay
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/RetryOptions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: BaseDelay
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/RetryOptions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/RetryOptions.cs
     startLine: 6
   assemblies:
   - AF.AgentFramework
@@ -135,8 +151,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.RetryOptions.MaxDelay
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/RetryOptions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: MaxDelay
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/RetryOptions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/RetryOptions.cs
     startLine: 7
   assemblies:
   - AF.AgentFramework
@@ -160,8 +180,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.RetryOptions.UseJitter
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/RetryOptions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: UseJitter
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/RetryOptions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/RetryOptions.cs
     startLine: 8
   assemblies:
   - AF.AgentFramework
@@ -185,8 +209,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.RetryOptions.Default
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/RetryOptions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Default
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/RetryOptions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/RetryOptions.cs
     startLine: 11
   assemblies:
   - AF.AgentFramework

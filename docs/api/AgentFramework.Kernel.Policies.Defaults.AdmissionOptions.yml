@@ -17,8 +17,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.AdmissionOptions
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/AdmissionOptions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: AdmissionOptions
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/AdmissionOptions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/AdmissionOptions.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -49,8 +53,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.AdmissionOptions.AdmissionOptions(int, int, bool)
   type: Constructor
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/AdmissionOptions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: .ctor
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/AdmissionOptions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/AdmissionOptions.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -81,8 +89,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.AdmissionOptions.QueueSoftLimit
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/AdmissionOptions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: QueueSoftLimit
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/AdmissionOptions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/AdmissionOptions.cs
     startLine: 3
   assemblies:
   - AF.AgentFramework
@@ -106,8 +118,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.AdmissionOptions.QueueHardLimit
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/AdmissionOptions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: QueueHardLimit
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/AdmissionOptions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/AdmissionOptions.cs
     startLine: 4
   assemblies:
   - AF.AgentFramework
@@ -131,8 +147,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.AdmissionOptions.RespectDeadline
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/AdmissionOptions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: RespectDeadline
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/AdmissionOptions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/AdmissionOptions.cs
     startLine: 5
   assemblies:
   - AF.AgentFramework

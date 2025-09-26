@@ -16,8 +16,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.BackpressureOptions
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/BackpressureOptions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: BackpressureOptions
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/BackpressureOptions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/BackpressureOptions.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -48,8 +52,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.BackpressureOptions.BackpressureOptions(int, int)
   type: Constructor
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/BackpressureOptions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: .ctor
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/BackpressureOptions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/BackpressureOptions.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -78,8 +86,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.BackpressureOptions.ThrottleThreshold
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/BackpressureOptions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: ThrottleThreshold
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/BackpressureOptions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/BackpressureOptions.cs
     startLine: 3
   assemblies:
   - AF.AgentFramework
@@ -103,8 +115,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.BackpressureOptions.ShedThreshold
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/BackpressureOptions.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: ShedThreshold
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/BackpressureOptions.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/BackpressureOptions.cs
     startLine: 4
   assemblies:
   - AF.AgentFramework

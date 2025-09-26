@@ -15,8 +15,12 @@ items:
   fullName: AgentFramework.Kernel.IAgent
   type: Interface
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/IAgent.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: IAgent
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgent.cs
+    path: ../src/AF.AgentFramework/Kernel/IAgent.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -36,8 +40,12 @@ items:
   fullName: AgentFramework.Kernel.IAgent.Id
   type: Property
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/IAgent.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Id
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgent.cs
+    path: ../src/AF.AgentFramework/Kernel/IAgent.cs
     startLine: 4
   assemblies:
   - AF.AgentFramework
@@ -61,8 +69,12 @@ items:
   fullName: AgentFramework.Kernel.IAgent.HandleAsync(AgentFramework.Kernel.WorkItem, AgentFramework.Kernel.IAgentContext)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/IAgent.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: HandleAsync
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IAgent.cs
+    path: ../src/AF.AgentFramework/Kernel/IAgent.cs
     startLine: 5
   assemblies:
   - AF.AgentFramework

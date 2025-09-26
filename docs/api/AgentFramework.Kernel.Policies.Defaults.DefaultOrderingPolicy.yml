@@ -14,8 +14,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.DefaultOrderingPolicy
   type: Class
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultOrderingPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: DefaultOrderingPolicy
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultOrderingPolicy.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultOrderingPolicy.cs
     startLine: 2
   assemblies:
   - AF.AgentFramework
@@ -46,8 +50,12 @@ items:
   fullName: AgentFramework.Kernel.Policies.Defaults.DefaultOrderingPolicy.Compare(AgentFramework.Kernel.WorkItem, AgentFramework.Kernel.WorkItem)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultOrderingPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Compare
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultOrderingPolicy.cs
+    path: ../src/AF.AgentFramework/Kernel/Policies/Defaults/DefaultOrderingPolicy.cs
     startLine: 4
   assemblies:
   - AF.AgentFramework

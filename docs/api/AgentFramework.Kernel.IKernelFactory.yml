@@ -14,8 +14,12 @@ items:
   fullName: AgentFramework.Kernel.IKernelFactory
   type: Interface
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/IKernelFactory.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: IKernelFactory
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IKernelFactory.cs
+    path: ../src/AF.AgentFramework/Kernel/IKernelFactory.cs
     startLine: 3
   assemblies:
   - AF.AgentFramework
@@ -37,8 +41,12 @@ items:
   fullName: AgentFramework.Kernel.IKernelFactory.Create(AgentFramework.Kernel.KernelOptions)
   type: Method
   source:
+    remote:
+      path: src/AF.AgentFramework/Kernel/IKernelFactory.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Create
-    path: /Users/david/Projects/AF.AgentFramework/src/AF.AgentFramework/Kernel/IKernelFactory.cs
+    path: ../src/AF.AgentFramework/Kernel/IKernelFactory.cs
     startLine: 5
   assemblies:
   - AF.AgentFramework
