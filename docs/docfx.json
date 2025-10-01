@@ -1,26 +1,32 @@
 {
-  "metadata": [
-    {
-      "src": [
-        { "src": "../src/AF.AgentFramework", "files": [ "AF.AgentFramework.csproj" ] }
-      ],
-      "dest": "api",
-      "properties": { "TargetFramework": "net9.0" }
+    "metadata": [
+        {
+            "src": [
+                { "src": "../src/AF.AgentFramework", "files": [ "AF.AgentFramework.csproj" ] }
+            ],
+            "dest": "api",
+            "properties": { "TargetFramework": "net9.0" }
+        }
+    ],
+    "build": {
+        "content": [
+            { "files": [ "toc.yml", "index.md" ] },
+            { "files": [ "api/**.yml", "api/index.md" ] },
+            { "files": [ "articles/**.md", "articles/**/toc.yml" ] }
+        ],
+        "resource": [
+            { "files": [ "images/**" ] }
+        ],
+        "postProcessors": [ "ExtractSearchIndex" ],
+        "globalMetadata": {
+            "_appTitle": "AF.AgentFramework",
+            "_appName": "AgentFramework",
+            "_enableSearch": true,
+            "_disableNewTab": false
+        },
+        "template": [
+            "default",
+            "modern"
+        ]
     }
-  ],
-  "build": {
-    "content": [
-      { "files": [ "toc.yml", "index.md" ] },
-      { "files": [ "api/**.yml", "api/index.md" ] },
-      { "files": [ "articles/**.md", "index.md" ] }
-    ],
-    "resource": [
-      { "files": [ "images/**" ] }
-    ],
-    "globalMetadata": {
-      "_appTitle": "AF.AgentFramework",
-      "_enableSearch": true
-    },
-    "dest": "_site"
-  }
 }

@@ -1,25 +1,27 @@
 using AgentFramework.Engines;
 using AgentFramework.Kernel;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace AgentFramework.Hosting;
 
 /// <summary>
 /// Composes Kernel + Engines + Runners + Agents and manages lifecycle.
-/// Uses DefaultKernelFactory for now; replace with DI/injection later.
 /// </summary>
 public sealed class AgentHost : IAgentHost
 {
     private readonly AgentHostConfig _config;
+    private readonly IServiceProvider _services;
     private readonly IKernelFactory _kernelFactory;
 
     private IKernel? _kernel;
     private readonly Dictionary<string, IEngine> _engines = new(StringComparer.Ordinal);
     private AgentCatalog? _catalog;
 
-    public AgentHost(AgentHostConfig config, IKernelFactory? factory = null)
+    public AgentHost(AgentHostConfig config, IServiceProvider services)
     {
         _config = config ?? throw new ArgumentNullException(nameof(config));
-        _kernelFactory = factory ?? new DefaultKernelFactory();
+        _services = services ?? throw new ArgumentNullException(nameof(services));
+        _kernelFactory = _services.GetRequiredService<IKernelFactory>();
     }
 
     public async Task StartAsync(CancellationToken ct = default)

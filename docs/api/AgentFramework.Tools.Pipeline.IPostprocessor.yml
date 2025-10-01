@@ -1,0 +1,169 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Tools.Pipeline.IPostprocessor
+  commentId: T:AgentFramework.Tools.Pipeline.IPostprocessor
+  id: IPostprocessor
+  parent: AgentFramework.Tools.Pipeline
+  children:
+  - AgentFramework.Tools.Pipeline.IPostprocessor.Postprocess(AgentFramework.Tools.Contracts.ToolResult,System.Object)
+  langs:
+  - csharp
+  - vb
+  name: IPostprocessor
+  nameWithType: IPostprocessor
+  fullName: AgentFramework.Tools.Pipeline.IPostprocessor
+  type: Interface
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Pipeline/IPostprocessor.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: IPostprocessor
+    path: ../src/AF.AgentFramework/Tools/Pipeline/IPostprocessor.cs
+    startLine: 8
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Pipeline
+  summary: >-
+    Performs output validation, redaction, or transformation after execution,
+
+    before the final result is returned.
+  example: []
+  syntax:
+    content: public interface IPostprocessor
+    content.vb: Public Interface IPostprocessor
+- uid: AgentFramework.Tools.Pipeline.IPostprocessor.Postprocess(AgentFramework.Tools.Contracts.ToolResult,System.Object)
+  commentId: M:AgentFramework.Tools.Pipeline.IPostprocessor.Postprocess(AgentFramework.Tools.Contracts.ToolResult,System.Object)
+  id: Postprocess(AgentFramework.Tools.Contracts.ToolResult,System.Object)
+  parent: AgentFramework.Tools.Pipeline.IPostprocessor
+  langs:
+  - csharp
+  - vb
+  name: Postprocess(ToolResult, object?)
+  nameWithType: IPostprocessor.Postprocess(ToolResult, object?)
+  fullName: AgentFramework.Tools.Pipeline.IPostprocessor.Postprocess(AgentFramework.Tools.Contracts.ToolResult, object?)
+  type: Method
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Pipeline/IPostprocessor.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Postprocess
+    path: ../src/AF.AgentFramework/Tools/Pipeline/IPostprocessor.cs
+    startLine: 10
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Pipeline
+  syntax:
+    content: PostprocessOutcome Postprocess(ToolResult result, object? outputSchema)
+    parameters:
+    - id: result
+      type: AgentFramework.Tools.Contracts.ToolResult
+    - id: outputSchema
+      type: System.Object
+    return:
+      type: AgentFramework.Tools.Pipeline.PostprocessOutcome
+    content.vb: Function Postprocess(result As ToolResult, outputSchema As Object) As PostprocessOutcome
+  overload: AgentFramework.Tools.Pipeline.IPostprocessor.Postprocess*
+  nameWithType.vb: IPostprocessor.Postprocess(ToolResult, Object)
+  fullName.vb: AgentFramework.Tools.Pipeline.IPostprocessor.Postprocess(AgentFramework.Tools.Contracts.ToolResult, Object)
+  name.vb: Postprocess(ToolResult, Object)
+references:
+- uid: AgentFramework.Tools.Pipeline
+  commentId: N:AgentFramework.Tools.Pipeline
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Pipeline
+  nameWithType: AgentFramework.Tools.Pipeline
+  fullName: AgentFramework.Tools.Pipeline
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline
+    name: Pipeline
+    href: AgentFramework.Tools.Pipeline.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline
+    name: Pipeline
+    href: AgentFramework.Tools.Pipeline.html
+- uid: AgentFramework.Tools.Pipeline.IPostprocessor.Postprocess*
+  commentId: Overload:AgentFramework.Tools.Pipeline.IPostprocessor.Postprocess
+  href: AgentFramework.Tools.Pipeline.IPostprocessor.html#AgentFramework_Tools_Pipeline_IPostprocessor_Postprocess_AgentFramework_Tools_Contracts_ToolResult_System_Object_
+  name: Postprocess
+  nameWithType: IPostprocessor.Postprocess
+  fullName: AgentFramework.Tools.Pipeline.IPostprocessor.Postprocess
+- uid: AgentFramework.Tools.Contracts.ToolResult
+  commentId: T:AgentFramework.Tools.Contracts.ToolResult
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolResult.html
+  name: ToolResult
+  nameWithType: ToolResult
+  fullName: AgentFramework.Tools.Contracts.ToolResult
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: AgentFramework.Tools.Pipeline.PostprocessOutcome
+  commentId: T:AgentFramework.Tools.Pipeline.PostprocessOutcome
+  parent: AgentFramework.Tools.Pipeline
+  href: AgentFramework.Tools.Pipeline.PostprocessOutcome.html
+  name: PostprocessOutcome
+  nameWithType: PostprocessOutcome
+  fullName: AgentFramework.Tools.Pipeline.PostprocessOutcome
+- uid: AgentFramework.Tools.Contracts
+  commentId: N:AgentFramework.Tools.Contracts
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Contracts
+  nameWithType: AgentFramework.Tools.Contracts
+  fullName: AgentFramework.Tools.Contracts
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

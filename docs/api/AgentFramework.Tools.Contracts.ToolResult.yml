@@ -1,0 +1,815 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Tools.Contracts.ToolResult
+  commentId: T:AgentFramework.Tools.Contracts.ToolResult
+  id: ToolResult
+  parent: AgentFramework.Tools.Contracts
+  children:
+  - AgentFramework.Tools.Contracts.ToolResult.Attempts
+  - AgentFramework.Tools.Contracts.ToolResult.CompletedUtc
+  - AgentFramework.Tools.Contracts.ToolResult.CorrelationId
+  - AgentFramework.Tools.Contracts.ToolResult.DurationMs
+  - AgentFramework.Tools.Contracts.ToolResult.Error
+  - AgentFramework.Tools.Contracts.ToolResult.Origin
+  - AgentFramework.Tools.Contracts.ToolResult.Output
+  - AgentFramework.Tools.Contracts.ToolResult.PolicySnapshot
+  - AgentFramework.Tools.Contracts.ToolResult.ResolvedVersion
+  - AgentFramework.Tools.Contracts.ToolResult.Status
+  langs:
+  - csharp
+  - vb
+  name: ToolResult
+  nameWithType: ToolResult
+  fullName: AgentFramework.Tools.Contracts.ToolResult
+  type: Class
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolResult.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: ToolResult
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolResult.cs
+    startLine: 5
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: Result envelope returned from a tool invocation.
+  example: []
+  syntax:
+    content: 'public sealed record ToolResult : IEquatable<ToolResult>'
+    content.vb: Public NotInheritable Class ToolResult Implements IEquatable(Of ToolResult)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{AgentFramework.Tools.Contracts.ToolResult}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AgentFramework.Tools.Contracts.ToolResult.Status
+  commentId: P:AgentFramework.Tools.Contracts.ToolResult.Status
+  id: Status
+  parent: AgentFramework.Tools.Contracts.ToolResult
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: ToolResult.Status
+  fullName: AgentFramework.Tools.Contracts.ToolResult.Status
+  type: Property
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolResult.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Status
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolResult.cs
+    startLine: 10
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: Overall outcome classification.
+  example: []
+  syntax:
+    content: public ToolResultStatus Status { get; init; }
+    parameters: []
+    return:
+      type: AgentFramework.Tools.Contracts.ToolResultStatus
+    content.vb: Public Property Status As ToolResultStatus
+  overload: AgentFramework.Tools.Contracts.ToolResult.Status*
+- uid: AgentFramework.Tools.Contracts.ToolResult.Output
+  commentId: P:AgentFramework.Tools.Contracts.ToolResult.Output
+  id: Output
+  parent: AgentFramework.Tools.Contracts.ToolResult
+  langs:
+  - csharp
+  - vb
+  name: Output
+  nameWithType: ToolResult.Output
+  fullName: AgentFramework.Tools.Contracts.ToolResult.Output
+  type: Property
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolResult.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Output
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolResult.cs
+    startLine: 15
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: Successful output (present when Status == Ok).
+  example: []
+  syntax:
+    content: public object? Output { get; init; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: Public Property Output As Object
+  overload: AgentFramework.Tools.Contracts.ToolResult.Output*
+- uid: AgentFramework.Tools.Contracts.ToolResult.Error
+  commentId: P:AgentFramework.Tools.Contracts.ToolResult.Error
+  id: Error
+  parent: AgentFramework.Tools.Contracts.ToolResult
+  langs:
+  - csharp
+  - vb
+  name: Error
+  nameWithType: ToolResult.Error
+  fullName: AgentFramework.Tools.Contracts.ToolResult.Error
+  type: Property
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolResult.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Error
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolResult.cs
+    startLine: 20
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: Structured error (present when Status != Ok).
+  example: []
+  syntax:
+    content: public ToolError? Error { get; init; }
+    parameters: []
+    return:
+      type: AgentFramework.Tools.Contracts.ToolError
+    content.vb: Public Property [Error] As ToolError
+  overload: AgentFramework.Tools.Contracts.ToolResult.Error*
+- uid: AgentFramework.Tools.Contracts.ToolResult.DurationMs
+  commentId: P:AgentFramework.Tools.Contracts.ToolResult.DurationMs
+  id: DurationMs
+  parent: AgentFramework.Tools.Contracts.ToolResult
+  langs:
+  - csharp
+  - vb
+  name: DurationMs
+  nameWithType: ToolResult.DurationMs
+  fullName: AgentFramework.Tools.Contracts.ToolResult.DurationMs
+  type: Property
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolResult.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: DurationMs
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolResult.cs
+    startLine: 25
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: End-to-end duration in milliseconds, including policy overheads.
+  example: []
+  syntax:
+    content: public int DurationMs { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property DurationMs As Integer
+  overload: AgentFramework.Tools.Contracts.ToolResult.DurationMs*
+- uid: AgentFramework.Tools.Contracts.ToolResult.Attempts
+  commentId: P:AgentFramework.Tools.Contracts.ToolResult.Attempts
+  id: Attempts
+  parent: AgentFramework.Tools.Contracts.ToolResult
+  langs:
+  - csharp
+  - vb
+  name: Attempts
+  nameWithType: ToolResult.Attempts
+  fullName: AgentFramework.Tools.Contracts.ToolResult.Attempts
+  type: Property
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolResult.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Attempts
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolResult.cs
+    startLine: 30
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: Total number of attempts performed (&gt;= 1).
+  example: []
+  syntax:
+    content: public int Attempts { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Attempts As Integer
+  overload: AgentFramework.Tools.Contracts.ToolResult.Attempts*
+- uid: AgentFramework.Tools.Contracts.ToolResult.ResolvedVersion
+  commentId: P:AgentFramework.Tools.Contracts.ToolResult.ResolvedVersion
+  id: ResolvedVersion
+  parent: AgentFramework.Tools.Contracts.ToolResult
+  langs:
+  - csharp
+  - vb
+  name: ResolvedVersion
+  nameWithType: ToolResult.ResolvedVersion
+  fullName: AgentFramework.Tools.Contracts.ToolResult.ResolvedVersion
+  type: Property
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolResult.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: ResolvedVersion
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolResult.cs
+    startLine: 35
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: Concrete version of the tool that was executed (if resolution succeeded).
+  example: []
+  syntax:
+    content: public string? ResolvedVersion { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ResolvedVersion As String
+  overload: AgentFramework.Tools.Contracts.ToolResult.ResolvedVersion*
+- uid: AgentFramework.Tools.Contracts.ToolResult.PolicySnapshot
+  commentId: P:AgentFramework.Tools.Contracts.ToolResult.PolicySnapshot
+  id: PolicySnapshot
+  parent: AgentFramework.Tools.Contracts.ToolResult
+  langs:
+  - csharp
+  - vb
+  name: PolicySnapshot
+  nameWithType: ToolResult.PolicySnapshot
+  fullName: AgentFramework.Tools.Contracts.ToolResult.PolicySnapshot
+  type: Property
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolResult.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: PolicySnapshot
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolResult.cs
+    startLine: 40
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: Snapshot of the effective policies at execution time.
+  example: []
+  syntax:
+    content: public PolicySnapshot? PolicySnapshot { get; init; }
+    parameters: []
+    return:
+      type: AgentFramework.Tools.Contracts.PolicySnapshot
+    content.vb: Public Property PolicySnapshot As PolicySnapshot
+  overload: AgentFramework.Tools.Contracts.ToolResult.PolicySnapshot*
+- uid: AgentFramework.Tools.Contracts.ToolResult.CorrelationId
+  commentId: P:AgentFramework.Tools.Contracts.ToolResult.CorrelationId
+  id: CorrelationId
+  parent: AgentFramework.Tools.Contracts.ToolResult
+  langs:
+  - csharp
+  - vb
+  name: CorrelationId
+  nameWithType: ToolResult.CorrelationId
+  fullName: AgentFramework.Tools.Contracts.ToolResult.CorrelationId
+  type: Property
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolResult.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: CorrelationId
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolResult.cs
+    startLine: 45
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: Correlation identifier echoing the invocation for tracing.
+  example: []
+  syntax:
+    content: public string CorrelationId { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CorrelationId As String
+  overload: AgentFramework.Tools.Contracts.ToolResult.CorrelationId*
+- uid: AgentFramework.Tools.Contracts.ToolResult.Origin
+  commentId: P:AgentFramework.Tools.Contracts.ToolResult.Origin
+  id: Origin
+  parent: AgentFramework.Tools.Contracts.ToolResult
+  langs:
+  - csharp
+  - vb
+  name: Origin
+  nameWithType: ToolResult.Origin
+  fullName: AgentFramework.Tools.Contracts.ToolResult.Origin
+  type: Property
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolResult.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Origin
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolResult.cs
+    startLine: 50
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  syntax:
+    content: public string? Origin { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Origin As String
+  overload: AgentFramework.Tools.Contracts.ToolResult.Origin*
+- uid: AgentFramework.Tools.Contracts.ToolResult.CompletedUtc
+  commentId: P:AgentFramework.Tools.Contracts.ToolResult.CompletedUtc
+  id: CompletedUtc
+  parent: AgentFramework.Tools.Contracts.ToolResult
+  langs:
+  - csharp
+  - vb
+  name: CompletedUtc
+  nameWithType: ToolResult.CompletedUtc
+  fullName: AgentFramework.Tools.Contracts.ToolResult.CompletedUtc
+  type: Property
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolResult.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: CompletedUtc
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolResult.cs
+    startLine: 55
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: Optional timestamp when the invocation completed (UTC).
+  example: []
+  syntax:
+    content: public DateTimeOffset? CompletedUtc { get; init; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTimeOffset}
+    content.vb: Public Property CompletedUtc As DateTimeOffset?
+  overload: AgentFramework.Tools.Contracts.ToolResult.CompletedUtc*
+references:
+- uid: AgentFramework.Tools.Contracts
+  commentId: N:AgentFramework.Tools.Contracts
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Contracts
+  nameWithType: AgentFramework.Tools.Contracts
+  fullName: AgentFramework.Tools.Contracts
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{AgentFramework.Tools.Contracts.ToolResult}
+  commentId: T:System.IEquatable{AgentFramework.Tools.Contracts.ToolResult}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<ToolResult>
+  nameWithType: IEquatable<ToolResult>
+  fullName: System.IEquatable<AgentFramework.Tools.Contracts.ToolResult>
+  nameWithType.vb: IEquatable(Of ToolResult)
+  fullName.vb: System.IEquatable(Of AgentFramework.Tools.Contracts.ToolResult)
+  name.vb: IEquatable(Of ToolResult)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: AgentFramework.Tools.Contracts.ToolResult
+    name: ToolResult
+    href: AgentFramework.Tools.Contracts.ToolResult.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AgentFramework.Tools.Contracts.ToolResult
+    name: ToolResult
+    href: AgentFramework.Tools.Contracts.ToolResult.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: AgentFramework.Tools.Contracts.ToolResult.Status*
+  commentId: Overload:AgentFramework.Tools.Contracts.ToolResult.Status
+  href: AgentFramework.Tools.Contracts.ToolResult.html#AgentFramework_Tools_Contracts_ToolResult_Status
+  name: Status
+  nameWithType: ToolResult.Status
+  fullName: AgentFramework.Tools.Contracts.ToolResult.Status
+- uid: AgentFramework.Tools.Contracts.ToolResultStatus
+  commentId: T:AgentFramework.Tools.Contracts.ToolResultStatus
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolResultStatus.html
+  name: ToolResultStatus
+  nameWithType: ToolResultStatus
+  fullName: AgentFramework.Tools.Contracts.ToolResultStatus
+- uid: AgentFramework.Tools.Contracts.ToolResult.Output*
+  commentId: Overload:AgentFramework.Tools.Contracts.ToolResult.Output
+  href: AgentFramework.Tools.Contracts.ToolResult.html#AgentFramework_Tools_Contracts_ToolResult_Output
+  name: Output
+  nameWithType: ToolResult.Output
+  fullName: AgentFramework.Tools.Contracts.ToolResult.Output
+- uid: AgentFramework.Tools.Contracts.ToolResult.Error*
+  commentId: Overload:AgentFramework.Tools.Contracts.ToolResult.Error
+  href: AgentFramework.Tools.Contracts.ToolResult.html#AgentFramework_Tools_Contracts_ToolResult_Error
+  name: Error
+  nameWithType: ToolResult.Error
+  fullName: AgentFramework.Tools.Contracts.ToolResult.Error
+- uid: AgentFramework.Tools.Contracts.ToolError
+  commentId: T:AgentFramework.Tools.Contracts.ToolError
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolError.html
+  name: ToolError
+  nameWithType: ToolError
+  fullName: AgentFramework.Tools.Contracts.ToolError
+- uid: AgentFramework.Tools.Contracts.ToolResult.DurationMs*
+  commentId: Overload:AgentFramework.Tools.Contracts.ToolResult.DurationMs
+  href: AgentFramework.Tools.Contracts.ToolResult.html#AgentFramework_Tools_Contracts_ToolResult_DurationMs
+  name: DurationMs
+  nameWithType: ToolResult.DurationMs
+  fullName: AgentFramework.Tools.Contracts.ToolResult.DurationMs
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: AgentFramework.Tools.Contracts.ToolResult.Attempts*
+  commentId: Overload:AgentFramework.Tools.Contracts.ToolResult.Attempts
+  href: AgentFramework.Tools.Contracts.ToolResult.html#AgentFramework_Tools_Contracts_ToolResult_Attempts
+  name: Attempts
+  nameWithType: ToolResult.Attempts
+  fullName: AgentFramework.Tools.Contracts.ToolResult.Attempts
+- uid: AgentFramework.Tools.Contracts.ToolResult.ResolvedVersion*
+  commentId: Overload:AgentFramework.Tools.Contracts.ToolResult.ResolvedVersion
+  href: AgentFramework.Tools.Contracts.ToolResult.html#AgentFramework_Tools_Contracts_ToolResult_ResolvedVersion
+  name: ResolvedVersion
+  nameWithType: ToolResult.ResolvedVersion
+  fullName: AgentFramework.Tools.Contracts.ToolResult.ResolvedVersion
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AgentFramework.Tools.Contracts.ToolResult.PolicySnapshot*
+  commentId: Overload:AgentFramework.Tools.Contracts.ToolResult.PolicySnapshot
+  href: AgentFramework.Tools.Contracts.ToolResult.html#AgentFramework_Tools_Contracts_ToolResult_PolicySnapshot
+  name: PolicySnapshot
+  nameWithType: ToolResult.PolicySnapshot
+  fullName: AgentFramework.Tools.Contracts.ToolResult.PolicySnapshot
+- uid: AgentFramework.Tools.Contracts.PolicySnapshot
+  commentId: T:AgentFramework.Tools.Contracts.PolicySnapshot
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.PolicySnapshot.html
+  name: PolicySnapshot
+  nameWithType: PolicySnapshot
+  fullName: AgentFramework.Tools.Contracts.PolicySnapshot
+- uid: AgentFramework.Tools.Contracts.ToolResult.CorrelationId*
+  commentId: Overload:AgentFramework.Tools.Contracts.ToolResult.CorrelationId
+  href: AgentFramework.Tools.Contracts.ToolResult.html#AgentFramework_Tools_Contracts_ToolResult_CorrelationId
+  name: CorrelationId
+  nameWithType: ToolResult.CorrelationId
+  fullName: AgentFramework.Tools.Contracts.ToolResult.CorrelationId
+- uid: AgentFramework.Tools.Contracts.ToolResult.Origin*
+  commentId: Overload:AgentFramework.Tools.Contracts.ToolResult.Origin
+  href: AgentFramework.Tools.Contracts.ToolResult.html#AgentFramework_Tools_Contracts_ToolResult_Origin
+  name: Origin
+  nameWithType: ToolResult.Origin
+  fullName: AgentFramework.Tools.Contracts.ToolResult.Origin
+- uid: AgentFramework.Tools.Contracts.ToolResult.CompletedUtc*
+  commentId: Overload:AgentFramework.Tools.Contracts.ToolResult.CompletedUtc
+  href: AgentFramework.Tools.Contracts.ToolResult.html#AgentFramework_Tools_Contracts_ToolResult_CompletedUtc
+  name: CompletedUtc
+  nameWithType: ToolResult.CompletedUtc
+  fullName: AgentFramework.Tools.Contracts.ToolResult.CompletedUtc
+- uid: System.Nullable{System.DateTimeOffset}
+  commentId: T:System.Nullable{System.DateTimeOffset}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.datetimeoffset
+  name: DateTimeOffset?
+  nameWithType: DateTimeOffset?
+  fullName: System.DateTimeOffset?
+  spec.csharp:
+  - uid: System.DateTimeOffset
+    name: DateTimeOffset
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetimeoffset
+  - name: '?'
+  spec.vb:
+  - uid: System.DateTimeOffset
+    name: DateTimeOffset
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetimeoffset
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

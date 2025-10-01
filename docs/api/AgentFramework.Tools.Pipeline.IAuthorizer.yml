@@ -1,0 +1,194 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Tools.Pipeline.IAuthorizer
+  commentId: T:AgentFramework.Tools.Pipeline.IAuthorizer
+  id: IAuthorizer
+  parent: AgentFramework.Tools.Pipeline
+  children:
+  - AgentFramework.Tools.Pipeline.IAuthorizer.Authorize(AgentFramework.Tools.Contracts.ToolInvocation,AgentFramework.Tools.Contracts.ToolDescriptor,AgentFramework.Tools.Registry.ToolBindingContext)
+  langs:
+  - csharp
+  - vb
+  name: IAuthorizer
+  nameWithType: IAuthorizer
+  fullName: AgentFramework.Tools.Pipeline.IAuthorizer
+  type: Interface
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Pipeline/IAuthorizer.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: IAuthorizer
+    path: ../src/AF.AgentFramework/Tools/Pipeline/IAuthorizer.cs
+    startLine: 9
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Pipeline
+  summary: >-
+    Decides whether a given invocation is authorized for execution.
+
+    Default implementation may always allow; hosts can replace with policy-aware authorizers.
+  example: []
+  syntax:
+    content: public interface IAuthorizer
+    content.vb: Public Interface IAuthorizer
+- uid: AgentFramework.Tools.Pipeline.IAuthorizer.Authorize(AgentFramework.Tools.Contracts.ToolInvocation,AgentFramework.Tools.Contracts.ToolDescriptor,AgentFramework.Tools.Registry.ToolBindingContext)
+  commentId: M:AgentFramework.Tools.Pipeline.IAuthorizer.Authorize(AgentFramework.Tools.Contracts.ToolInvocation,AgentFramework.Tools.Contracts.ToolDescriptor,AgentFramework.Tools.Registry.ToolBindingContext)
+  id: Authorize(AgentFramework.Tools.Contracts.ToolInvocation,AgentFramework.Tools.Contracts.ToolDescriptor,AgentFramework.Tools.Registry.ToolBindingContext)
+  parent: AgentFramework.Tools.Pipeline.IAuthorizer
+  langs:
+  - csharp
+  - vb
+  name: Authorize(ToolInvocation, ToolDescriptor, ToolBindingContext)
+  nameWithType: IAuthorizer.Authorize(ToolInvocation, ToolDescriptor, ToolBindingContext)
+  fullName: AgentFramework.Tools.Pipeline.IAuthorizer.Authorize(AgentFramework.Tools.Contracts.ToolInvocation, AgentFramework.Tools.Contracts.ToolDescriptor, AgentFramework.Tools.Registry.ToolBindingContext)
+  type: Method
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Pipeline/IAuthorizer.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Authorize
+    path: ../src/AF.AgentFramework/Tools/Pipeline/IAuthorizer.cs
+    startLine: 11
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Pipeline
+  syntax:
+    content: AuthorizationOutcome Authorize(ToolInvocation invocation, ToolDescriptor descriptor, ToolBindingContext bindingContext)
+    parameters:
+    - id: invocation
+      type: AgentFramework.Tools.Contracts.ToolInvocation
+    - id: descriptor
+      type: AgentFramework.Tools.Contracts.ToolDescriptor
+    - id: bindingContext
+      type: AgentFramework.Tools.Registry.ToolBindingContext
+    return:
+      type: AgentFramework.Tools.Pipeline.AuthorizationOutcome
+    content.vb: Function Authorize(invocation As ToolInvocation, descriptor As ToolDescriptor, bindingContext As ToolBindingContext) As AuthorizationOutcome
+  overload: AgentFramework.Tools.Pipeline.IAuthorizer.Authorize*
+references:
+- uid: AgentFramework.Tools.Pipeline
+  commentId: N:AgentFramework.Tools.Pipeline
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Pipeline
+  nameWithType: AgentFramework.Tools.Pipeline
+  fullName: AgentFramework.Tools.Pipeline
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline
+    name: Pipeline
+    href: AgentFramework.Tools.Pipeline.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline
+    name: Pipeline
+    href: AgentFramework.Tools.Pipeline.html
+- uid: AgentFramework.Tools.Pipeline.IAuthorizer.Authorize*
+  commentId: Overload:AgentFramework.Tools.Pipeline.IAuthorizer.Authorize
+  href: AgentFramework.Tools.Pipeline.IAuthorizer.html#AgentFramework_Tools_Pipeline_IAuthorizer_Authorize_AgentFramework_Tools_Contracts_ToolInvocation_AgentFramework_Tools_Contracts_ToolDescriptor_AgentFramework_Tools_Registry_ToolBindingContext_
+  name: Authorize
+  nameWithType: IAuthorizer.Authorize
+  fullName: AgentFramework.Tools.Pipeline.IAuthorizer.Authorize
+- uid: AgentFramework.Tools.Contracts.ToolInvocation
+  commentId: T:AgentFramework.Tools.Contracts.ToolInvocation
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolInvocation.html
+  name: ToolInvocation
+  nameWithType: ToolInvocation
+  fullName: AgentFramework.Tools.Contracts.ToolInvocation
+- uid: AgentFramework.Tools.Contracts.ToolDescriptor
+  commentId: T:AgentFramework.Tools.Contracts.ToolDescriptor
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolDescriptor.html
+  name: ToolDescriptor
+  nameWithType: ToolDescriptor
+  fullName: AgentFramework.Tools.Contracts.ToolDescriptor
+- uid: AgentFramework.Tools.Registry.ToolBindingContext
+  commentId: T:AgentFramework.Tools.Registry.ToolBindingContext
+  parent: AgentFramework.Tools.Registry
+  href: AgentFramework.Tools.Registry.ToolBindingContext.html
+  name: ToolBindingContext
+  nameWithType: ToolBindingContext
+  fullName: AgentFramework.Tools.Registry.ToolBindingContext
+- uid: AgentFramework.Tools.Pipeline.AuthorizationOutcome
+  commentId: T:AgentFramework.Tools.Pipeline.AuthorizationOutcome
+  parent: AgentFramework.Tools.Pipeline
+  href: AgentFramework.Tools.Pipeline.AuthorizationOutcome.html
+  name: AuthorizationOutcome
+  nameWithType: AuthorizationOutcome
+  fullName: AgentFramework.Tools.Pipeline.AuthorizationOutcome
+- uid: AgentFramework.Tools.Contracts
+  commentId: N:AgentFramework.Tools.Contracts
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Contracts
+  nameWithType: AgentFramework.Tools.Contracts
+  fullName: AgentFramework.Tools.Contracts
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+- uid: AgentFramework.Tools.Registry
+  commentId: N:AgentFramework.Tools.Registry
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Registry
+  nameWithType: AgentFramework.Tools.Registry
+  fullName: AgentFramework.Tools.Registry
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Registry
+    name: Registry
+    href: AgentFramework.Tools.Registry.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Registry
+    name: Registry
+    href: AgentFramework.Tools.Registry.html

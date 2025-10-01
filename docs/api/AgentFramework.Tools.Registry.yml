@@ -1,0 +1,91 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Tools.Registry
+  commentId: N:AgentFramework.Tools.Registry
+  id: AgentFramework.Tools.Registry
+  children:
+  - AgentFramework.Tools.Registry.IToolRegistry
+  - AgentFramework.Tools.Registry.InMemoryToolRegistry
+  - AgentFramework.Tools.Registry.ToolBinding
+  - AgentFramework.Tools.Registry.ToolBindingContext
+  - AgentFramework.Tools.Registry.ToolRegistryExtensions
+  - AgentFramework.Tools.Registry.VersionSelector
+  langs:
+  - csharp
+  - vb
+  name: AgentFramework.Tools.Registry
+  nameWithType: AgentFramework.Tools.Registry
+  fullName: AgentFramework.Tools.Registry
+  type: Namespace
+  assemblies:
+  - AF.AgentFramework
+references:
+- uid: AgentFramework.Tools.Registry.InMemoryToolRegistry
+  commentId: T:AgentFramework.Tools.Registry.InMemoryToolRegistry
+  href: AgentFramework.Tools.Registry.InMemoryToolRegistry.html
+  name: InMemoryToolRegistry
+  nameWithType: InMemoryToolRegistry
+  fullName: AgentFramework.Tools.Registry.InMemoryToolRegistry
+- uid: AgentFramework.Tools.Registry.IToolRegistry
+  commentId: T:AgentFramework.Tools.Registry.IToolRegistry
+  parent: AgentFramework.Tools.Registry
+  href: AgentFramework.Tools.Registry.IToolRegistry.html
+  name: IToolRegistry
+  nameWithType: IToolRegistry
+  fullName: AgentFramework.Tools.Registry.IToolRegistry
+- uid: AgentFramework.Tools.Registry.ToolBinding
+  commentId: T:AgentFramework.Tools.Registry.ToolBinding
+  href: AgentFramework.Tools.Registry.ToolBinding.html
+  name: ToolBinding
+  nameWithType: ToolBinding
+  fullName: AgentFramework.Tools.Registry.ToolBinding
+- uid: AgentFramework.Tools.Registry.ToolBindingContext
+  commentId: T:AgentFramework.Tools.Registry.ToolBindingContext
+  parent: AgentFramework.Tools.Registry
+  href: AgentFramework.Tools.Registry.ToolBindingContext.html
+  name: ToolBindingContext
+  nameWithType: ToolBindingContext
+  fullName: AgentFramework.Tools.Registry.ToolBindingContext
+- uid: AgentFramework.Tools.Registry.ToolRegistryExtensions
+  commentId: T:AgentFramework.Tools.Registry.ToolRegistryExtensions
+  parent: AgentFramework.Tools.Registry
+  href: AgentFramework.Tools.Registry.ToolRegistryExtensions.html
+  name: ToolRegistryExtensions
+  nameWithType: ToolRegistryExtensions
+  fullName: AgentFramework.Tools.Registry.ToolRegistryExtensions
+- uid: AgentFramework.Tools.Registry.VersionSelector
+  commentId: T:AgentFramework.Tools.Registry.VersionSelector
+  href: AgentFramework.Tools.Registry.VersionSelector.html
+  name: VersionSelector
+  nameWithType: VersionSelector
+  fullName: AgentFramework.Tools.Registry.VersionSelector
+- uid: AgentFramework.Tools.Registry
+  commentId: N:AgentFramework.Tools.Registry
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Registry
+  nameWithType: AgentFramework.Tools.Registry
+  fullName: AgentFramework.Tools.Registry
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Registry
+    name: Registry
+    href: AgentFramework.Tools.Registry.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Registry
+    name: Registry
+    href: AgentFramework.Tools.Registry.html

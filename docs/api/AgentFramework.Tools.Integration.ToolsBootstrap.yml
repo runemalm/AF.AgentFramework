@@ -1,0 +1,488 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Tools.Integration.ToolsBootstrap
+  commentId: T:AgentFramework.Tools.Integration.ToolsBootstrap
+  id: ToolsBootstrap
+  parent: AgentFramework.Tools.Integration
+  children:
+  - AgentFramework.Tools.Integration.ToolsBootstrap.CreateAgentContextTools(System.String)
+  - AgentFramework.Tools.Integration.ToolsBootstrap.CreateDefaults
+  langs:
+  - csharp
+  - vb
+  name: ToolsBootstrap
+  nameWithType: ToolsBootstrap
+  fullName: AgentFramework.Tools.Integration.ToolsBootstrap
+  type: Class
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Integration/ToolsBootstrap.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: ToolsBootstrap
+    path: ../src/AF.AgentFramework/Tools/Integration/ToolsBootstrap.cs
+    startLine: 11
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Integration
+  summary: >-
+    Minimal bootstrap helper to wire up the default tools pipeline and registry
+
+    without taking a dependency on a specific DI container or host builder.
+
+    Hosts can replace any component after calling this.
+  example: []
+  syntax:
+    content: public static class ToolsBootstrap
+    content.vb: Public Module ToolsBootstrap
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AgentFramework.Tools.Integration.ToolsBootstrap.CreateDefaults
+  commentId: M:AgentFramework.Tools.Integration.ToolsBootstrap.CreateDefaults
+  id: CreateDefaults
+  parent: AgentFramework.Tools.Integration.ToolsBootstrap
+  langs:
+  - csharp
+  - vb
+  name: CreateDefaults()
+  nameWithType: ToolsBootstrap.CreateDefaults()
+  fullName: AgentFramework.Tools.Integration.ToolsBootstrap.CreateDefaults()
+  type: Method
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Integration/ToolsBootstrap.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: CreateDefaults
+    path: ../src/AF.AgentFramework/Tools/Integration/ToolsBootstrap.cs
+    startLine: 18
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Integration
+  summary: >-
+    Creates a default in-memory registry and a basic pipeline with pass-through validation,
+
+    allow-all authorization, timeout-only policy, not-implemented executor, and pass-through postprocessor.
+
+    Observability is wired to no-op sinks by default.
+  example: []
+  syntax:
+    content: public static (IToolRegistry Registry, IToolInvoker Invoker) CreateDefaults()
+    return:
+      type: System.ValueTuple{AgentFramework.Tools.Registry.IToolRegistry,AgentFramework.Tools.Pipeline.IToolInvoker}
+    content.vb: Public Shared Function CreateDefaults() As (Registry As IToolRegistry, Invoker As IToolInvoker)
+  overload: AgentFramework.Tools.Integration.ToolsBootstrap.CreateDefaults*
+- uid: AgentFramework.Tools.Integration.ToolsBootstrap.CreateAgentContextTools(System.String)
+  commentId: M:AgentFramework.Tools.Integration.ToolsBootstrap.CreateAgentContextTools(System.String)
+  id: CreateAgentContextTools(System.String)
+  parent: AgentFramework.Tools.Integration.ToolsBootstrap
+  langs:
+  - csharp
+  - vb
+  name: CreateAgentContextTools(string)
+  nameWithType: ToolsBootstrap.CreateAgentContextTools(string)
+  fullName: AgentFramework.Tools.Integration.ToolsBootstrap.CreateAgentContextTools(string)
+  type: Method
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Integration/ToolsBootstrap.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: CreateAgentContextTools
+    path: ../src/AF.AgentFramework/Tools/Integration/ToolsBootstrap.cs
+    startLine: 44
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Integration
+  summary: Convenience to construct the facade normally exposed on an agent context.
+  example: []
+  syntax:
+    content: public static AgentContextTools CreateAgentContextTools(string agentId)
+    parameters:
+    - id: agentId
+      type: System.String
+    return:
+      type: AgentFramework.Tools.Integration.AgentContextTools
+    content.vb: Public Shared Function CreateAgentContextTools(agentId As String) As AgentContextTools
+  overload: AgentFramework.Tools.Integration.ToolsBootstrap.CreateAgentContextTools*
+  nameWithType.vb: ToolsBootstrap.CreateAgentContextTools(String)
+  fullName.vb: AgentFramework.Tools.Integration.ToolsBootstrap.CreateAgentContextTools(String)
+  name.vb: CreateAgentContextTools(String)
+references:
+- uid: AgentFramework.Tools.Integration
+  commentId: N:AgentFramework.Tools.Integration
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Integration
+  nameWithType: AgentFramework.Tools.Integration
+  fullName: AgentFramework.Tools.Integration
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Integration
+    name: Integration
+    href: AgentFramework.Tools.Integration.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Integration
+    name: Integration
+    href: AgentFramework.Tools.Integration.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AgentFramework.Tools.Integration.ToolsBootstrap.CreateDefaults*
+  commentId: Overload:AgentFramework.Tools.Integration.ToolsBootstrap.CreateDefaults
+  href: AgentFramework.Tools.Integration.ToolsBootstrap.html#AgentFramework_Tools_Integration_ToolsBootstrap_CreateDefaults
+  name: CreateDefaults
+  nameWithType: ToolsBootstrap.CreateDefaults
+  fullName: AgentFramework.Tools.Integration.ToolsBootstrap.CreateDefaults
+- uid: System.ValueTuple{AgentFramework.Tools.Registry.IToolRegistry,AgentFramework.Tools.Pipeline.IToolInvoker}
+  commentId: T:System.ValueTuple{AgentFramework.Tools.Registry.IToolRegistry,AgentFramework.Tools.Pipeline.IToolInvoker}
+  parent: System
+  definition: System.ValueTuple`2
+  href: AgentFramework.Tools.Registry.IToolRegistry.html
+  name: (IToolRegistry Registry, IToolInvoker Invoker)
+  nameWithType: (IToolRegistry Registry, IToolInvoker Invoker)
+  fullName: (AgentFramework.Tools.Registry.IToolRegistry Registry, AgentFramework.Tools.Pipeline.IToolInvoker Invoker)
+  nameWithType.vb: (Registry As IToolRegistry, Invoker As IToolInvoker)
+  fullName.vb: (Registry As AgentFramework.Tools.Registry.IToolRegistry, Invoker As AgentFramework.Tools.Pipeline.IToolInvoker)
+  name.vb: (Registry As IToolRegistry, Invoker As IToolInvoker)
+  spec.csharp:
+  - name: (
+  - uid: AgentFramework.Tools.Registry.IToolRegistry
+    name: IToolRegistry
+    href: AgentFramework.Tools.Registry.IToolRegistry.html
+  - name: " "
+  - uid: System.ValueTuple{AgentFramework.Tools.Registry.IToolRegistry,AgentFramework.Tools.Pipeline.IToolInvoker}.Registry
+    name: Registry
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-agentframework.tools.registry.itoolregistry,agentframework.tools.pipeline.itoolinvoker-.registry
+  - name: ','
+  - name: " "
+  - uid: AgentFramework.Tools.Pipeline.IToolInvoker
+    name: IToolInvoker
+    href: AgentFramework.Tools.Pipeline.IToolInvoker.html
+  - name: " "
+  - uid: System.ValueTuple{AgentFramework.Tools.Registry.IToolRegistry,AgentFramework.Tools.Pipeline.IToolInvoker}.Invoker
+    name: Invoker
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-agentframework.tools.registry.itoolregistry,agentframework.tools.pipeline.itoolinvoker-.invoker
+  - name: )
+  spec.vb:
+  - name: (
+  - uid: System.ValueTuple{AgentFramework.Tools.Registry.IToolRegistry,AgentFramework.Tools.Pipeline.IToolInvoker}.Registry
+    name: Registry
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-agentframework.tools.registry.itoolregistry,agentframework.tools.pipeline.itoolinvoker-.registry
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: AgentFramework.Tools.Registry.IToolRegistry
+    name: IToolRegistry
+    href: AgentFramework.Tools.Registry.IToolRegistry.html
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{AgentFramework.Tools.Registry.IToolRegistry,AgentFramework.Tools.Pipeline.IToolInvoker}.Invoker
+    name: Invoker
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-agentframework.tools.registry.itoolregistry,agentframework.tools.pipeline.itoolinvoker-.invoker
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: AgentFramework.Tools.Pipeline.IToolInvoker
+    name: IToolInvoker
+    href: AgentFramework.Tools.Pipeline.IToolInvoker.html
+  - name: )
+- uid: System.ValueTuple`2
+  commentId: T:System.ValueTuple`2
+  name: (T1, T2)
+  nameWithType: (T1, T2)
+  fullName: (T1, T2)
+  spec.csharp:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+  spec.vb:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: AgentFramework.Tools.Integration.ToolsBootstrap.CreateAgentContextTools*
+  commentId: Overload:AgentFramework.Tools.Integration.ToolsBootstrap.CreateAgentContextTools
+  href: AgentFramework.Tools.Integration.ToolsBootstrap.html#AgentFramework_Tools_Integration_ToolsBootstrap_CreateAgentContextTools_System_String_
+  name: CreateAgentContextTools
+  nameWithType: ToolsBootstrap.CreateAgentContextTools
+  fullName: AgentFramework.Tools.Integration.ToolsBootstrap.CreateAgentContextTools
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AgentFramework.Tools.Integration.AgentContextTools
+  commentId: T:AgentFramework.Tools.Integration.AgentContextTools
+  parent: AgentFramework.Tools.Integration
+  href: AgentFramework.Tools.Integration.AgentContextTools.html
+  name: AgentContextTools
+  nameWithType: AgentContextTools
+  fullName: AgentFramework.Tools.Integration.AgentContextTools

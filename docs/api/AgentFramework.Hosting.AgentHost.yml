@@ -5,7 +5,7 @@ items:
   id: AgentHost
   parent: AgentFramework.Hosting
   children:
-  - AgentFramework.Hosting.AgentHost.#ctor(AgentFramework.Hosting.AgentHostConfig,AgentFramework.Kernel.IKernelFactory)
+  - AgentFramework.Hosting.AgentHost.#ctor(AgentFramework.Hosting.AgentHostConfig,System.IServiceProvider)
   - AgentFramework.Hosting.AgentHost.StartAsync(System.Threading.CancellationToken)
   - AgentFramework.Hosting.AgentHost.StopAsync(System.Threading.CancellationToken)
   langs:
@@ -26,10 +26,7 @@ items:
   assemblies:
   - AF.AgentFramework
   namespace: AgentFramework.Hosting
-  summary: >-
-    Composes Kernel + Engines + Runners + Agents and manages lifecycle.
-
-    Uses DefaultKernelFactory for now; replace with DI/injection later.
+  summary: Composes Kernel + Engines + Runners + Agents and manages lifecycle.
   example: []
   syntax:
     content: 'public sealed class AgentHost : IAgentHost'
@@ -45,16 +42,16 @@ items:
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: AgentFramework.Hosting.AgentHost.#ctor(AgentFramework.Hosting.AgentHostConfig,AgentFramework.Kernel.IKernelFactory)
-  commentId: M:AgentFramework.Hosting.AgentHost.#ctor(AgentFramework.Hosting.AgentHostConfig,AgentFramework.Kernel.IKernelFactory)
-  id: '#ctor(AgentFramework.Hosting.AgentHostConfig,AgentFramework.Kernel.IKernelFactory)'
+- uid: AgentFramework.Hosting.AgentHost.#ctor(AgentFramework.Hosting.AgentHostConfig,System.IServiceProvider)
+  commentId: M:AgentFramework.Hosting.AgentHost.#ctor(AgentFramework.Hosting.AgentHostConfig,System.IServiceProvider)
+  id: '#ctor(AgentFramework.Hosting.AgentHostConfig,System.IServiceProvider)'
   parent: AgentFramework.Hosting.AgentHost
   langs:
   - csharp
   - vb
-  name: AgentHost(AgentHostConfig, IKernelFactory?)
-  nameWithType: AgentHost.AgentHost(AgentHostConfig, IKernelFactory?)
-  fullName: AgentFramework.Hosting.AgentHost.AgentHost(AgentFramework.Hosting.AgentHostConfig, AgentFramework.Kernel.IKernelFactory?)
+  name: AgentHost(AgentHostConfig, IServiceProvider)
+  nameWithType: AgentHost.AgentHost(AgentHostConfig, IServiceProvider)
+  fullName: AgentFramework.Hosting.AgentHost.AgentHost(AgentFramework.Hosting.AgentHostConfig, System.IServiceProvider)
   type: Constructor
   source:
     remote:
@@ -63,22 +60,22 @@ items:
       repo: git@github.com:runemalm/AF.AgentFramework.git
     id: .ctor
     path: ../src/AF.AgentFramework/Hosting/AgentHost.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - AF.AgentFramework
   namespace: AgentFramework.Hosting
   syntax:
-    content: public AgentHost(AgentHostConfig config, IKernelFactory? factory = null)
+    content: public AgentHost(AgentHostConfig config, IServiceProvider services)
     parameters:
     - id: config
       type: AgentFramework.Hosting.AgentHostConfig
-    - id: factory
-      type: AgentFramework.Kernel.IKernelFactory
-    content.vb: Public Sub New(config As AgentHostConfig, factory As IKernelFactory = Nothing)
+    - id: services
+      type: System.IServiceProvider
+    content.vb: Public Sub New(config As AgentHostConfig, services As IServiceProvider)
   overload: AgentFramework.Hosting.AgentHost.#ctor*
-  nameWithType.vb: AgentHost.New(AgentHostConfig, IKernelFactory)
-  fullName.vb: AgentFramework.Hosting.AgentHost.New(AgentFramework.Hosting.AgentHostConfig, AgentFramework.Kernel.IKernelFactory)
-  name.vb: New(AgentHostConfig, IKernelFactory)
+  nameWithType.vb: AgentHost.New(AgentHostConfig, IServiceProvider)
+  fullName.vb: AgentFramework.Hosting.AgentHost.New(AgentFramework.Hosting.AgentHostConfig, System.IServiceProvider)
+  name.vb: New(AgentHostConfig, IServiceProvider)
 - uid: AgentFramework.Hosting.AgentHost.StartAsync(System.Threading.CancellationToken)
   commentId: M:AgentFramework.Hosting.AgentHost.StartAsync(System.Threading.CancellationToken)
   id: StartAsync(System.Threading.CancellationToken)
@@ -97,7 +94,7 @@ items:
       repo: git@github.com:runemalm/AF.AgentFramework.git
     id: StartAsync
     path: ../src/AF.AgentFramework/Hosting/AgentHost.cs
-    startLine: 24
+    startLine: 26
   assemblies:
   - AF.AgentFramework
   namespace: AgentFramework.Hosting
@@ -131,7 +128,7 @@ items:
       repo: git@github.com:runemalm/AF.AgentFramework.git
     id: StopAsync
     path: ../src/AF.AgentFramework/Hosting/AgentHost.cs
-    startLine: 110
+    startLine: 112
   assemblies:
   - AF.AgentFramework
   namespace: AgentFramework.Hosting
@@ -392,7 +389,7 @@ references:
   fullName: System
 - uid: AgentFramework.Hosting.AgentHost.#ctor*
   commentId: Overload:AgentFramework.Hosting.AgentHost.#ctor
-  href: AgentFramework.Hosting.AgentHost.html#AgentFramework_Hosting_AgentHost__ctor_AgentFramework_Hosting_AgentHostConfig_AgentFramework_Kernel_IKernelFactory_
+  href: AgentFramework.Hosting.AgentHost.html#AgentFramework_Hosting_AgentHost__ctor_AgentFramework_Hosting_AgentHostConfig_System_IServiceProvider_
   name: AgentHost
   nameWithType: AgentHost.AgentHost
   fullName: AgentFramework.Hosting.AgentHost.AgentHost
@@ -406,35 +403,14 @@ references:
   name: AgentHostConfig
   nameWithType: AgentHostConfig
   fullName: AgentFramework.Hosting.AgentHostConfig
-- uid: AgentFramework.Kernel.IKernelFactory
-  commentId: T:AgentFramework.Kernel.IKernelFactory
-  parent: AgentFramework.Kernel
-  href: AgentFramework.Kernel.IKernelFactory.html
-  name: IKernelFactory
-  nameWithType: IKernelFactory
-  fullName: AgentFramework.Kernel.IKernelFactory
-- uid: AgentFramework.Kernel
-  commentId: N:AgentFramework.Kernel
-  href: AgentFramework.html
-  name: AgentFramework.Kernel
-  nameWithType: AgentFramework.Kernel
-  fullName: AgentFramework.Kernel
-  spec.csharp:
-  - uid: AgentFramework
-    name: AgentFramework
-    href: AgentFramework.html
-  - name: .
-  - uid: AgentFramework.Kernel
-    name: Kernel
-    href: AgentFramework.Kernel.html
-  spec.vb:
-  - uid: AgentFramework
-    name: AgentFramework
-    href: AgentFramework.html
-  - name: .
-  - uid: AgentFramework.Kernel
-    name: Kernel
-    href: AgentFramework.Kernel.html
+- uid: System.IServiceProvider
+  commentId: T:System.IServiceProvider
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iserviceprovider
+  name: IServiceProvider
+  nameWithType: IServiceProvider
+  fullName: System.IServiceProvider
 - uid: AgentFramework.Hosting.AgentHost.StartAsync*
   commentId: Overload:AgentFramework.Hosting.AgentHost.StartAsync
   href: AgentFramework.Hosting.AgentHost.html#AgentFramework_Hosting_AgentHost_StartAsync_System_Threading_CancellationToken_

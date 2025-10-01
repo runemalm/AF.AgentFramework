@@ -1,0 +1,229 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Tools.Observability.IToolTracer
+  commentId: T:AgentFramework.Tools.Observability.IToolTracer
+  id: IToolTracer
+  parent: AgentFramework.Tools.Observability
+  children:
+  - AgentFramework.Tools.Observability.IToolTracer.AnnotateResult(AgentFramework.Tools.Contracts.ToolResult)
+  - AgentFramework.Tools.Observability.IToolTracer.StartScope(System.String,AgentFramework.Tools.Contracts.ToolInvocation,AgentFramework.Tools.Contracts.ToolDescriptor)
+  langs:
+  - csharp
+  - vb
+  name: IToolTracer
+  nameWithType: IToolTracer
+  fullName: AgentFramework.Tools.Observability.IToolTracer
+  type: Interface
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Observability/IToolTracer.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: IToolTracer
+    path: ../src/AF.AgentFramework/Tools/Observability/IToolTracer.cs
+    startLine: 8
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Observability
+  summary: >-
+    Lightweight tracing abstraction for tool invocations.
+
+    Implementations may bridge to OpenTelemetry or any tracing system.
+  example: []
+  syntax:
+    content: public interface IToolTracer
+    content.vb: Public Interface IToolTracer
+- uid: AgentFramework.Tools.Observability.IToolTracer.StartScope(System.String,AgentFramework.Tools.Contracts.ToolInvocation,AgentFramework.Tools.Contracts.ToolDescriptor)
+  commentId: M:AgentFramework.Tools.Observability.IToolTracer.StartScope(System.String,AgentFramework.Tools.Contracts.ToolInvocation,AgentFramework.Tools.Contracts.ToolDescriptor)
+  id: StartScope(System.String,AgentFramework.Tools.Contracts.ToolInvocation,AgentFramework.Tools.Contracts.ToolDescriptor)
+  parent: AgentFramework.Tools.Observability.IToolTracer
+  langs:
+  - csharp
+  - vb
+  name: StartScope(string, ToolInvocation, ToolDescriptor?)
+  nameWithType: IToolTracer.StartScope(string, ToolInvocation, ToolDescriptor?)
+  fullName: AgentFramework.Tools.Observability.IToolTracer.StartScope(string, AgentFramework.Tools.Contracts.ToolInvocation, AgentFramework.Tools.Contracts.ToolDescriptor?)
+  type: Method
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Observability/IToolTracer.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: StartScope
+    path: ../src/AF.AgentFramework/Tools/Observability/IToolTracer.cs
+    startLine: 14
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Observability
+  summary: >-
+    Starts a tracing scope for the given invocation and descriptor (if resolved).
+
+    Returns an IDisposable that must be disposed at the end of the invocation.
+  example: []
+  syntax:
+    content: IDisposable StartScope(string correlationId, ToolInvocation invocation, ToolDescriptor? descriptor)
+    parameters:
+    - id: correlationId
+      type: System.String
+    - id: invocation
+      type: AgentFramework.Tools.Contracts.ToolInvocation
+    - id: descriptor
+      type: AgentFramework.Tools.Contracts.ToolDescriptor
+    return:
+      type: System.IDisposable
+    content.vb: Function StartScope(correlationId As String, invocation As ToolInvocation, descriptor As ToolDescriptor) As IDisposable
+  overload: AgentFramework.Tools.Observability.IToolTracer.StartScope*
+  nameWithType.vb: IToolTracer.StartScope(String, ToolInvocation, ToolDescriptor)
+  fullName.vb: AgentFramework.Tools.Observability.IToolTracer.StartScope(String, AgentFramework.Tools.Contracts.ToolInvocation, AgentFramework.Tools.Contracts.ToolDescriptor)
+  name.vb: StartScope(String, ToolInvocation, ToolDescriptor)
+- uid: AgentFramework.Tools.Observability.IToolTracer.AnnotateResult(AgentFramework.Tools.Contracts.ToolResult)
+  commentId: M:AgentFramework.Tools.Observability.IToolTracer.AnnotateResult(AgentFramework.Tools.Contracts.ToolResult)
+  id: AnnotateResult(AgentFramework.Tools.Contracts.ToolResult)
+  parent: AgentFramework.Tools.Observability.IToolTracer
+  langs:
+  - csharp
+  - vb
+  name: AnnotateResult(ToolResult)
+  nameWithType: IToolTracer.AnnotateResult(ToolResult)
+  fullName: AgentFramework.Tools.Observability.IToolTracer.AnnotateResult(AgentFramework.Tools.Contracts.ToolResult)
+  type: Method
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Observability/IToolTracer.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: AnnotateResult
+    path: ../src/AF.AgentFramework/Tools/Observability/IToolTracer.cs
+    startLine: 19
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Observability
+  summary: Attaches result fields (status, error code, duration, etc.) to the current scope.
+  example: []
+  syntax:
+    content: void AnnotateResult(ToolResult result)
+    parameters:
+    - id: result
+      type: AgentFramework.Tools.Contracts.ToolResult
+    content.vb: Sub AnnotateResult(result As ToolResult)
+  overload: AgentFramework.Tools.Observability.IToolTracer.AnnotateResult*
+references:
+- uid: AgentFramework.Tools.Observability
+  commentId: N:AgentFramework.Tools.Observability
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Observability
+  nameWithType: AgentFramework.Tools.Observability
+  fullName: AgentFramework.Tools.Observability
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Observability
+    name: Observability
+    href: AgentFramework.Tools.Observability.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Observability
+    name: Observability
+    href: AgentFramework.Tools.Observability.html
+- uid: AgentFramework.Tools.Observability.IToolTracer.StartScope*
+  commentId: Overload:AgentFramework.Tools.Observability.IToolTracer.StartScope
+  href: AgentFramework.Tools.Observability.IToolTracer.html#AgentFramework_Tools_Observability_IToolTracer_StartScope_System_String_AgentFramework_Tools_Contracts_ToolInvocation_AgentFramework_Tools_Contracts_ToolDescriptor_
+  name: StartScope
+  nameWithType: IToolTracer.StartScope
+  fullName: AgentFramework.Tools.Observability.IToolTracer.StartScope
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AgentFramework.Tools.Contracts.ToolInvocation
+  commentId: T:AgentFramework.Tools.Contracts.ToolInvocation
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolInvocation.html
+  name: ToolInvocation
+  nameWithType: ToolInvocation
+  fullName: AgentFramework.Tools.Contracts.ToolInvocation
+- uid: AgentFramework.Tools.Contracts.ToolDescriptor
+  commentId: T:AgentFramework.Tools.Contracts.ToolDescriptor
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolDescriptor.html
+  name: ToolDescriptor
+  nameWithType: ToolDescriptor
+  fullName: AgentFramework.Tools.Contracts.ToolDescriptor
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AgentFramework.Tools.Contracts
+  commentId: N:AgentFramework.Tools.Contracts
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Contracts
+  nameWithType: AgentFramework.Tools.Contracts
+  fullName: AgentFramework.Tools.Contracts
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+- uid: AgentFramework.Tools.Observability.IToolTracer.AnnotateResult*
+  commentId: Overload:AgentFramework.Tools.Observability.IToolTracer.AnnotateResult
+  href: AgentFramework.Tools.Observability.IToolTracer.html#AgentFramework_Tools_Observability_IToolTracer_AnnotateResult_AgentFramework_Tools_Contracts_ToolResult_
+  name: AnnotateResult
+  nameWithType: IToolTracer.AnnotateResult
+  fullName: AgentFramework.Tools.Observability.IToolTracer.AnnotateResult
+- uid: AgentFramework.Tools.Contracts.ToolResult
+  commentId: T:AgentFramework.Tools.Contracts.ToolResult
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolResult.html
+  name: ToolResult
+  nameWithType: ToolResult
+  fullName: AgentFramework.Tools.Contracts.ToolResult

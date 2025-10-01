@@ -1,0 +1,69 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Tools.Integration
+  commentId: N:AgentFramework.Tools.Integration
+  id: AgentFramework.Tools.Integration
+  children:
+  - AgentFramework.Tools.Integration.AgentContextTools
+  - AgentFramework.Tools.Integration.AgentHostBuilderExtensions
+  - AgentFramework.Tools.Integration.ToolsBootstrap
+  langs:
+  - csharp
+  - vb
+  name: AgentFramework.Tools.Integration
+  nameWithType: AgentFramework.Tools.Integration
+  fullName: AgentFramework.Tools.Integration
+  type: Namespace
+  assemblies:
+  - AF.AgentFramework
+references:
+- uid: AgentFramework.Tools.Integration.AgentContextTools
+  commentId: T:AgentFramework.Tools.Integration.AgentContextTools
+  parent: AgentFramework.Tools.Integration
+  href: AgentFramework.Tools.Integration.AgentContextTools.html
+  name: AgentContextTools
+  nameWithType: AgentContextTools
+  fullName: AgentFramework.Tools.Integration.AgentContextTools
+- uid: AgentFramework.Tools.Integration.AgentHostBuilderExtensions
+  commentId: T:AgentFramework.Tools.Integration.AgentHostBuilderExtensions
+  parent: AgentFramework.Tools.Integration
+  href: AgentFramework.Tools.Integration.AgentHostBuilderExtensions.html
+  name: AgentHostBuilderExtensions
+  nameWithType: AgentHostBuilderExtensions
+  fullName: AgentFramework.Tools.Integration.AgentHostBuilderExtensions
+- uid: AgentFramework.Tools.Integration.ToolsBootstrap
+  commentId: T:AgentFramework.Tools.Integration.ToolsBootstrap
+  href: AgentFramework.Tools.Integration.ToolsBootstrap.html
+  name: ToolsBootstrap
+  nameWithType: ToolsBootstrap
+  fullName: AgentFramework.Tools.Integration.ToolsBootstrap
+- uid: AgentFramework.Tools.Integration
+  commentId: N:AgentFramework.Tools.Integration
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Integration
+  nameWithType: AgentFramework.Tools.Integration
+  fullName: AgentFramework.Tools.Integration
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Integration
+    name: Integration
+    href: AgentFramework.Tools.Integration.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Integration
+    name: Integration
+    href: AgentFramework.Tools.Integration.html

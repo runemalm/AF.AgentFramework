@@ -1,0 +1,76 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Tools.Observability
+  commentId: N:AgentFramework.Tools.Observability
+  id: AgentFramework.Tools.Observability
+  children:
+  - AgentFramework.Tools.Observability.IToolEventSink
+  - AgentFramework.Tools.Observability.IToolTracer
+  - AgentFramework.Tools.Observability.NullToolEventSink
+  - AgentFramework.Tools.Observability.NullToolTracer
+  langs:
+  - csharp
+  - vb
+  name: AgentFramework.Tools.Observability
+  nameWithType: AgentFramework.Tools.Observability
+  fullName: AgentFramework.Tools.Observability
+  type: Namespace
+  assemblies:
+  - AF.AgentFramework
+references:
+- uid: AgentFramework.Tools.Observability.IToolEventSink
+  commentId: T:AgentFramework.Tools.Observability.IToolEventSink
+  parent: AgentFramework.Tools.Observability
+  href: AgentFramework.Tools.Observability.IToolEventSink.html
+  name: IToolEventSink
+  nameWithType: IToolEventSink
+  fullName: AgentFramework.Tools.Observability.IToolEventSink
+- uid: AgentFramework.Tools.Observability.NullToolEventSink
+  commentId: T:AgentFramework.Tools.Observability.NullToolEventSink
+  href: AgentFramework.Tools.Observability.NullToolEventSink.html
+  name: NullToolEventSink
+  nameWithType: NullToolEventSink
+  fullName: AgentFramework.Tools.Observability.NullToolEventSink
+- uid: AgentFramework.Tools.Observability.IToolTracer
+  commentId: T:AgentFramework.Tools.Observability.IToolTracer
+  parent: AgentFramework.Tools.Observability
+  href: AgentFramework.Tools.Observability.IToolTracer.html
+  name: IToolTracer
+  nameWithType: IToolTracer
+  fullName: AgentFramework.Tools.Observability.IToolTracer
+- uid: AgentFramework.Tools.Observability.NullToolTracer
+  commentId: T:AgentFramework.Tools.Observability.NullToolTracer
+  href: AgentFramework.Tools.Observability.NullToolTracer.html
+  name: NullToolTracer
+  nameWithType: NullToolTracer
+  fullName: AgentFramework.Tools.Observability.NullToolTracer
+- uid: AgentFramework.Tools.Observability
+  commentId: N:AgentFramework.Tools.Observability
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Observability
+  nameWithType: AgentFramework.Tools.Observability
+  fullName: AgentFramework.Tools.Observability
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Observability
+    name: Observability
+    href: AgentFramework.Tools.Observability.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Observability
+    name: Observability
+    href: AgentFramework.Tools.Observability.html

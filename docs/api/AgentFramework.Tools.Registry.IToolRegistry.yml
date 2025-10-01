@@ -1,0 +1,763 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Tools.Registry.IToolRegistry
+  commentId: T:AgentFramework.Tools.Registry.IToolRegistry
+  id: IToolRegistry
+  parent: AgentFramework.Tools.Registry
+  children:
+  - AgentFramework.Tools.Registry.IToolRegistry.List(AgentFramework.Tools.Registry.ToolBindingContext)
+  - AgentFramework.Tools.Registry.IToolRegistry.Publish(AgentFramework.Tools.Contracts.ToolDescriptor)
+  - AgentFramework.Tools.Registry.IToolRegistry.Resolve(System.String,System.String,AgentFramework.Tools.Registry.ToolBindingContext)
+  - AgentFramework.Tools.Registry.IToolRegistry.Unpublish(System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: IToolRegistry
+  nameWithType: IToolRegistry
+  fullName: AgentFramework.Tools.Registry.IToolRegistry
+  type: Interface
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Registry/IToolRegistry.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: IToolRegistry
+    path: ../src/AF.AgentFramework/Tools/Registry/IToolRegistry.cs
+    startLine: 8
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Registry
+  summary: >-
+    Registry of published tools. Supports publishing/unpublishing, resolution by name/version,
+
+    and listing tools subject to binding context.
+  example: []
+  syntax:
+    content: public interface IToolRegistry
+    content.vb: Public Interface IToolRegistry
+  extensionMethods:
+  - AgentFramework.Tools.Registry.IToolRegistry.AgentFramework.Tools.Pipeline.PipelineExtensions.WithDefaultStages
+  - AgentFramework.Tools.Registry.IToolRegistry.AgentFramework.Tools.Registry.ToolRegistryExtensions.PublishRange(System.Collections.Generic.IEnumerable{AgentFramework.Tools.Contracts.ToolDescriptor})
+  - AgentFramework.Tools.Registry.IToolRegistry.AgentFramework.Tools.Registry.ToolRegistryExtensions.TryResolve(System.String,System.String,AgentFramework.Tools.Registry.ToolBindingContext,AgentFramework.Tools.Contracts.ToolDescriptor@)
+- uid: AgentFramework.Tools.Registry.IToolRegistry.Publish(AgentFramework.Tools.Contracts.ToolDescriptor)
+  commentId: M:AgentFramework.Tools.Registry.IToolRegistry.Publish(AgentFramework.Tools.Contracts.ToolDescriptor)
+  id: Publish(AgentFramework.Tools.Contracts.ToolDescriptor)
+  parent: AgentFramework.Tools.Registry.IToolRegistry
+  langs:
+  - csharp
+  - vb
+  name: Publish(ToolDescriptor)
+  nameWithType: IToolRegistry.Publish(ToolDescriptor)
+  fullName: AgentFramework.Tools.Registry.IToolRegistry.Publish(AgentFramework.Tools.Contracts.ToolDescriptor)
+  type: Method
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Registry/IToolRegistry.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Publish
+    path: ../src/AF.AgentFramework/Tools/Registry/IToolRegistry.cs
+    startLine: 13
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Registry
+  summary: Publish a new tool descriptor into the registry.
+  example: []
+  syntax:
+    content: void Publish(ToolDescriptor descriptor)
+    parameters:
+    - id: descriptor
+      type: AgentFramework.Tools.Contracts.ToolDescriptor
+    content.vb: Sub Publish(descriptor As ToolDescriptor)
+  overload: AgentFramework.Tools.Registry.IToolRegistry.Publish*
+- uid: AgentFramework.Tools.Registry.IToolRegistry.Unpublish(System.String,System.String)
+  commentId: M:AgentFramework.Tools.Registry.IToolRegistry.Unpublish(System.String,System.String)
+  id: Unpublish(System.String,System.String)
+  parent: AgentFramework.Tools.Registry.IToolRegistry
+  langs:
+  - csharp
+  - vb
+  name: Unpublish(string, string)
+  nameWithType: IToolRegistry.Unpublish(string, string)
+  fullName: AgentFramework.Tools.Registry.IToolRegistry.Unpublish(string, string)
+  type: Method
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Registry/IToolRegistry.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Unpublish
+    path: ../src/AF.AgentFramework/Tools/Registry/IToolRegistry.cs
+    startLine: 19
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Registry
+  summary: >-
+    Remove a tool from the registry by name and version.
+
+    Returns true if removed, false if not found.
+  example: []
+  syntax:
+    content: bool Unpublish(string name, string version)
+    parameters:
+    - id: name
+      type: System.String
+    - id: version
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Function Unpublish(name As String, version As String) As Boolean
+  overload: AgentFramework.Tools.Registry.IToolRegistry.Unpublish*
+  nameWithType.vb: IToolRegistry.Unpublish(String, String)
+  fullName.vb: AgentFramework.Tools.Registry.IToolRegistry.Unpublish(String, String)
+  name.vb: Unpublish(String, String)
+- uid: AgentFramework.Tools.Registry.IToolRegistry.Resolve(System.String,System.String,AgentFramework.Tools.Registry.ToolBindingContext)
+  commentId: M:AgentFramework.Tools.Registry.IToolRegistry.Resolve(System.String,System.String,AgentFramework.Tools.Registry.ToolBindingContext)
+  id: Resolve(System.String,System.String,AgentFramework.Tools.Registry.ToolBindingContext)
+  parent: AgentFramework.Tools.Registry.IToolRegistry
+  langs:
+  - csharp
+  - vb
+  name: Resolve(string, string?, ToolBindingContext)
+  nameWithType: IToolRegistry.Resolve(string, string?, ToolBindingContext)
+  fullName: AgentFramework.Tools.Registry.IToolRegistry.Resolve(string, string?, AgentFramework.Tools.Registry.ToolBindingContext)
+  type: Method
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Registry/IToolRegistry.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Resolve
+    path: ../src/AF.AgentFramework/Tools/Registry/IToolRegistry.cs
+    startLine: 25
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Registry
+  summary: >-
+    Resolve a tool descriptor by name and optional version range.
+
+    Returns null if no match is found.
+  example: []
+  syntax:
+    content: ToolDescriptor? Resolve(string name, string? versionRange, ToolBindingContext bindingContext)
+    parameters:
+    - id: name
+      type: System.String
+    - id: versionRange
+      type: System.String
+    - id: bindingContext
+      type: AgentFramework.Tools.Registry.ToolBindingContext
+    return:
+      type: AgentFramework.Tools.Contracts.ToolDescriptor
+    content.vb: Function Resolve(name As String, versionRange As String, bindingContext As ToolBindingContext) As ToolDescriptor
+  overload: AgentFramework.Tools.Registry.IToolRegistry.Resolve*
+  nameWithType.vb: IToolRegistry.Resolve(String, String, ToolBindingContext)
+  fullName.vb: AgentFramework.Tools.Registry.IToolRegistry.Resolve(String, String, AgentFramework.Tools.Registry.ToolBindingContext)
+  name.vb: Resolve(String, String, ToolBindingContext)
+- uid: AgentFramework.Tools.Registry.IToolRegistry.List(AgentFramework.Tools.Registry.ToolBindingContext)
+  commentId: M:AgentFramework.Tools.Registry.IToolRegistry.List(AgentFramework.Tools.Registry.ToolBindingContext)
+  id: List(AgentFramework.Tools.Registry.ToolBindingContext)
+  parent: AgentFramework.Tools.Registry.IToolRegistry
+  langs:
+  - csharp
+  - vb
+  name: List(ToolBindingContext)
+  nameWithType: IToolRegistry.List(ToolBindingContext)
+  fullName: AgentFramework.Tools.Registry.IToolRegistry.List(AgentFramework.Tools.Registry.ToolBindingContext)
+  type: Method
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Registry/IToolRegistry.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: List
+    path: ../src/AF.AgentFramework/Tools/Registry/IToolRegistry.cs
+    startLine: 30
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Registry
+  summary: List all tools visible under the given binding context.
+  example: []
+  syntax:
+    content: IReadOnlyList<ToolDescriptor> List(ToolBindingContext bindingContext)
+    parameters:
+    - id: bindingContext
+      type: AgentFramework.Tools.Registry.ToolBindingContext
+    return:
+      type: System.Collections.Generic.IReadOnlyList{AgentFramework.Tools.Contracts.ToolDescriptor}
+    content.vb: Function List(bindingContext As ToolBindingContext) As IReadOnlyList(Of ToolDescriptor)
+  overload: AgentFramework.Tools.Registry.IToolRegistry.List*
+references:
+- uid: AgentFramework.Tools.Registry
+  commentId: N:AgentFramework.Tools.Registry
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Registry
+  nameWithType: AgentFramework.Tools.Registry
+  fullName: AgentFramework.Tools.Registry
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Registry
+    name: Registry
+    href: AgentFramework.Tools.Registry.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Registry
+    name: Registry
+    href: AgentFramework.Tools.Registry.html
+- uid: AgentFramework.Tools.Registry.IToolRegistry.AgentFramework.Tools.Pipeline.PipelineExtensions.WithDefaultStages
+  commentId: M:AgentFramework.Tools.Pipeline.PipelineExtensions.WithDefaultStages(AgentFramework.Tools.Registry.IToolRegistry)
+  parent: AgentFramework.Tools.Pipeline.PipelineExtensions
+  definition: AgentFramework.Tools.Pipeline.PipelineExtensions.WithDefaultStages(AgentFramework.Tools.Registry.IToolRegistry)
+  href: AgentFramework.Tools.Pipeline.PipelineExtensions.html#AgentFramework_Tools_Pipeline_PipelineExtensions_WithDefaultStages_AgentFramework_Tools_Registry_IToolRegistry_
+  name: WithDefaultStages(IToolRegistry)
+  nameWithType: PipelineExtensions.WithDefaultStages(IToolRegistry)
+  fullName: AgentFramework.Tools.Pipeline.PipelineExtensions.WithDefaultStages(AgentFramework.Tools.Registry.IToolRegistry)
+  spec.csharp:
+  - uid: AgentFramework.Tools.Pipeline.PipelineExtensions.WithDefaultStages(AgentFramework.Tools.Registry.IToolRegistry)
+    name: WithDefaultStages
+    href: AgentFramework.Tools.Pipeline.PipelineExtensions.html#AgentFramework_Tools_Pipeline_PipelineExtensions_WithDefaultStages_AgentFramework_Tools_Registry_IToolRegistry_
+  - name: (
+  - uid: AgentFramework.Tools.Registry.IToolRegistry
+    name: IToolRegistry
+    href: AgentFramework.Tools.Registry.IToolRegistry.html
+  - name: )
+  spec.vb:
+  - uid: AgentFramework.Tools.Pipeline.PipelineExtensions.WithDefaultStages(AgentFramework.Tools.Registry.IToolRegistry)
+    name: WithDefaultStages
+    href: AgentFramework.Tools.Pipeline.PipelineExtensions.html#AgentFramework_Tools_Pipeline_PipelineExtensions_WithDefaultStages_AgentFramework_Tools_Registry_IToolRegistry_
+  - name: (
+  - uid: AgentFramework.Tools.Registry.IToolRegistry
+    name: IToolRegistry
+    href: AgentFramework.Tools.Registry.IToolRegistry.html
+  - name: )
+- uid: AgentFramework.Tools.Registry.IToolRegistry.AgentFramework.Tools.Registry.ToolRegistryExtensions.PublishRange(System.Collections.Generic.IEnumerable{AgentFramework.Tools.Contracts.ToolDescriptor})
+  commentId: M:AgentFramework.Tools.Registry.ToolRegistryExtensions.PublishRange(AgentFramework.Tools.Registry.IToolRegistry,System.Collections.Generic.IEnumerable{AgentFramework.Tools.Contracts.ToolDescriptor})
+  parent: AgentFramework.Tools.Registry.ToolRegistryExtensions
+  definition: AgentFramework.Tools.Registry.ToolRegistryExtensions.PublishRange(AgentFramework.Tools.Registry.IToolRegistry,System.Collections.Generic.IEnumerable{AgentFramework.Tools.Contracts.ToolDescriptor})
+  href: AgentFramework.Tools.Registry.ToolRegistryExtensions.html#AgentFramework_Tools_Registry_ToolRegistryExtensions_PublishRange_AgentFramework_Tools_Registry_IToolRegistry_System_Collections_Generic_IEnumerable_AgentFramework_Tools_Contracts_ToolDescriptor__
+  name: PublishRange(IToolRegistry, IEnumerable<ToolDescriptor>)
+  nameWithType: ToolRegistryExtensions.PublishRange(IToolRegistry, IEnumerable<ToolDescriptor>)
+  fullName: AgentFramework.Tools.Registry.ToolRegistryExtensions.PublishRange(AgentFramework.Tools.Registry.IToolRegistry, System.Collections.Generic.IEnumerable<AgentFramework.Tools.Contracts.ToolDescriptor>)
+  nameWithType.vb: ToolRegistryExtensions.PublishRange(IToolRegistry, IEnumerable(Of ToolDescriptor))
+  fullName.vb: AgentFramework.Tools.Registry.ToolRegistryExtensions.PublishRange(AgentFramework.Tools.Registry.IToolRegistry, System.Collections.Generic.IEnumerable(Of AgentFramework.Tools.Contracts.ToolDescriptor))
+  name.vb: PublishRange(IToolRegistry, IEnumerable(Of ToolDescriptor))
+  spec.csharp:
+  - uid: AgentFramework.Tools.Registry.ToolRegistryExtensions.PublishRange(AgentFramework.Tools.Registry.IToolRegistry,System.Collections.Generic.IEnumerable{AgentFramework.Tools.Contracts.ToolDescriptor})
+    name: PublishRange
+    href: AgentFramework.Tools.Registry.ToolRegistryExtensions.html#AgentFramework_Tools_Registry_ToolRegistryExtensions_PublishRange_AgentFramework_Tools_Registry_IToolRegistry_System_Collections_Generic_IEnumerable_AgentFramework_Tools_Contracts_ToolDescriptor__
+  - name: (
+  - uid: AgentFramework.Tools.Registry.IToolRegistry
+    name: IToolRegistry
+    href: AgentFramework.Tools.Registry.IToolRegistry.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: AgentFramework.Tools.Contracts.ToolDescriptor
+    name: ToolDescriptor
+    href: AgentFramework.Tools.Contracts.ToolDescriptor.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: AgentFramework.Tools.Registry.ToolRegistryExtensions.PublishRange(AgentFramework.Tools.Registry.IToolRegistry,System.Collections.Generic.IEnumerable{AgentFramework.Tools.Contracts.ToolDescriptor})
+    name: PublishRange
+    href: AgentFramework.Tools.Registry.ToolRegistryExtensions.html#AgentFramework_Tools_Registry_ToolRegistryExtensions_PublishRange_AgentFramework_Tools_Registry_IToolRegistry_System_Collections_Generic_IEnumerable_AgentFramework_Tools_Contracts_ToolDescriptor__
+  - name: (
+  - uid: AgentFramework.Tools.Registry.IToolRegistry
+    name: IToolRegistry
+    href: AgentFramework.Tools.Registry.IToolRegistry.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AgentFramework.Tools.Contracts.ToolDescriptor
+    name: ToolDescriptor
+    href: AgentFramework.Tools.Contracts.ToolDescriptor.html
+  - name: )
+  - name: )
+- uid: AgentFramework.Tools.Registry.IToolRegistry.AgentFramework.Tools.Registry.ToolRegistryExtensions.TryResolve(System.String,System.String,AgentFramework.Tools.Registry.ToolBindingContext,AgentFramework.Tools.Contracts.ToolDescriptor@)
+  commentId: M:AgentFramework.Tools.Registry.ToolRegistryExtensions.TryResolve(AgentFramework.Tools.Registry.IToolRegistry,System.String,System.String,AgentFramework.Tools.Registry.ToolBindingContext,AgentFramework.Tools.Contracts.ToolDescriptor@)
+  parent: AgentFramework.Tools.Registry.ToolRegistryExtensions
+  definition: AgentFramework.Tools.Registry.ToolRegistryExtensions.TryResolve(AgentFramework.Tools.Registry.IToolRegistry,System.String,System.String,AgentFramework.Tools.Registry.ToolBindingContext,AgentFramework.Tools.Contracts.ToolDescriptor@)
+  href: AgentFramework.Tools.Registry.ToolRegistryExtensions.html#AgentFramework_Tools_Registry_ToolRegistryExtensions_TryResolve_AgentFramework_Tools_Registry_IToolRegistry_System_String_System_String_AgentFramework_Tools_Registry_ToolBindingContext_AgentFramework_Tools_Contracts_ToolDescriptor__
+  name: TryResolve(IToolRegistry, string, string, ToolBindingContext, out ToolDescriptor)
+  nameWithType: ToolRegistryExtensions.TryResolve(IToolRegistry, string, string, ToolBindingContext, out ToolDescriptor)
+  fullName: AgentFramework.Tools.Registry.ToolRegistryExtensions.TryResolve(AgentFramework.Tools.Registry.IToolRegistry, string, string, AgentFramework.Tools.Registry.ToolBindingContext, out AgentFramework.Tools.Contracts.ToolDescriptor)
+  nameWithType.vb: ToolRegistryExtensions.TryResolve(IToolRegistry, String, String, ToolBindingContext, ToolDescriptor)
+  fullName.vb: AgentFramework.Tools.Registry.ToolRegistryExtensions.TryResolve(AgentFramework.Tools.Registry.IToolRegistry, String, String, AgentFramework.Tools.Registry.ToolBindingContext, AgentFramework.Tools.Contracts.ToolDescriptor)
+  name.vb: TryResolve(IToolRegistry, String, String, ToolBindingContext, ToolDescriptor)
+  spec.csharp:
+  - uid: AgentFramework.Tools.Registry.ToolRegistryExtensions.TryResolve(AgentFramework.Tools.Registry.IToolRegistry,System.String,System.String,AgentFramework.Tools.Registry.ToolBindingContext,AgentFramework.Tools.Contracts.ToolDescriptor@)
+    name: TryResolve
+    href: AgentFramework.Tools.Registry.ToolRegistryExtensions.html#AgentFramework_Tools_Registry_ToolRegistryExtensions_TryResolve_AgentFramework_Tools_Registry_IToolRegistry_System_String_System_String_AgentFramework_Tools_Registry_ToolBindingContext_AgentFramework_Tools_Contracts_ToolDescriptor__
+  - name: (
+  - uid: AgentFramework.Tools.Registry.IToolRegistry
+    name: IToolRegistry
+    href: AgentFramework.Tools.Registry.IToolRegistry.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: AgentFramework.Tools.Registry.ToolBindingContext
+    name: ToolBindingContext
+    href: AgentFramework.Tools.Registry.ToolBindingContext.html
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: AgentFramework.Tools.Contracts.ToolDescriptor
+    name: ToolDescriptor
+    href: AgentFramework.Tools.Contracts.ToolDescriptor.html
+  - name: )
+  spec.vb:
+  - uid: AgentFramework.Tools.Registry.ToolRegistryExtensions.TryResolve(AgentFramework.Tools.Registry.IToolRegistry,System.String,System.String,AgentFramework.Tools.Registry.ToolBindingContext,AgentFramework.Tools.Contracts.ToolDescriptor@)
+    name: TryResolve
+    href: AgentFramework.Tools.Registry.ToolRegistryExtensions.html#AgentFramework_Tools_Registry_ToolRegistryExtensions_TryResolve_AgentFramework_Tools_Registry_IToolRegistry_System_String_System_String_AgentFramework_Tools_Registry_ToolBindingContext_AgentFramework_Tools_Contracts_ToolDescriptor__
+  - name: (
+  - uid: AgentFramework.Tools.Registry.IToolRegistry
+    name: IToolRegistry
+    href: AgentFramework.Tools.Registry.IToolRegistry.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: AgentFramework.Tools.Registry.ToolBindingContext
+    name: ToolBindingContext
+    href: AgentFramework.Tools.Registry.ToolBindingContext.html
+  - name: ','
+  - name: " "
+  - uid: AgentFramework.Tools.Contracts.ToolDescriptor
+    name: ToolDescriptor
+    href: AgentFramework.Tools.Contracts.ToolDescriptor.html
+  - name: )
+- uid: AgentFramework.Tools.Pipeline.PipelineExtensions.WithDefaultStages(AgentFramework.Tools.Registry.IToolRegistry)
+  commentId: M:AgentFramework.Tools.Pipeline.PipelineExtensions.WithDefaultStages(AgentFramework.Tools.Registry.IToolRegistry)
+  href: AgentFramework.Tools.Pipeline.PipelineExtensions.html#AgentFramework_Tools_Pipeline_PipelineExtensions_WithDefaultStages_AgentFramework_Tools_Registry_IToolRegistry_
+  name: WithDefaultStages(IToolRegistry)
+  nameWithType: PipelineExtensions.WithDefaultStages(IToolRegistry)
+  fullName: AgentFramework.Tools.Pipeline.PipelineExtensions.WithDefaultStages(AgentFramework.Tools.Registry.IToolRegistry)
+  spec.csharp:
+  - uid: AgentFramework.Tools.Pipeline.PipelineExtensions.WithDefaultStages(AgentFramework.Tools.Registry.IToolRegistry)
+    name: WithDefaultStages
+    href: AgentFramework.Tools.Pipeline.PipelineExtensions.html#AgentFramework_Tools_Pipeline_PipelineExtensions_WithDefaultStages_AgentFramework_Tools_Registry_IToolRegistry_
+  - name: (
+  - uid: AgentFramework.Tools.Registry.IToolRegistry
+    name: IToolRegistry
+    href: AgentFramework.Tools.Registry.IToolRegistry.html
+  - name: )
+  spec.vb:
+  - uid: AgentFramework.Tools.Pipeline.PipelineExtensions.WithDefaultStages(AgentFramework.Tools.Registry.IToolRegistry)
+    name: WithDefaultStages
+    href: AgentFramework.Tools.Pipeline.PipelineExtensions.html#AgentFramework_Tools_Pipeline_PipelineExtensions_WithDefaultStages_AgentFramework_Tools_Registry_IToolRegistry_
+  - name: (
+  - uid: AgentFramework.Tools.Registry.IToolRegistry
+    name: IToolRegistry
+    href: AgentFramework.Tools.Registry.IToolRegistry.html
+  - name: )
+- uid: AgentFramework.Tools.Pipeline.PipelineExtensions
+  commentId: T:AgentFramework.Tools.Pipeline.PipelineExtensions
+  parent: AgentFramework.Tools.Pipeline
+  href: AgentFramework.Tools.Pipeline.PipelineExtensions.html
+  name: PipelineExtensions
+  nameWithType: PipelineExtensions
+  fullName: AgentFramework.Tools.Pipeline.PipelineExtensions
+- uid: AgentFramework.Tools.Registry.ToolRegistryExtensions.PublishRange(AgentFramework.Tools.Registry.IToolRegistry,System.Collections.Generic.IEnumerable{AgentFramework.Tools.Contracts.ToolDescriptor})
+  commentId: M:AgentFramework.Tools.Registry.ToolRegistryExtensions.PublishRange(AgentFramework.Tools.Registry.IToolRegistry,System.Collections.Generic.IEnumerable{AgentFramework.Tools.Contracts.ToolDescriptor})
+  isExternal: true
+  href: AgentFramework.Tools.Registry.ToolRegistryExtensions.html#AgentFramework_Tools_Registry_ToolRegistryExtensions_PublishRange_AgentFramework_Tools_Registry_IToolRegistry_System_Collections_Generic_IEnumerable_AgentFramework_Tools_Contracts_ToolDescriptor__
+  name: PublishRange(IToolRegistry, IEnumerable<ToolDescriptor>)
+  nameWithType: ToolRegistryExtensions.PublishRange(IToolRegistry, IEnumerable<ToolDescriptor>)
+  fullName: AgentFramework.Tools.Registry.ToolRegistryExtensions.PublishRange(AgentFramework.Tools.Registry.IToolRegistry, System.Collections.Generic.IEnumerable<AgentFramework.Tools.Contracts.ToolDescriptor>)
+  nameWithType.vb: ToolRegistryExtensions.PublishRange(IToolRegistry, IEnumerable(Of ToolDescriptor))
+  fullName.vb: AgentFramework.Tools.Registry.ToolRegistryExtensions.PublishRange(AgentFramework.Tools.Registry.IToolRegistry, System.Collections.Generic.IEnumerable(Of AgentFramework.Tools.Contracts.ToolDescriptor))
+  name.vb: PublishRange(IToolRegistry, IEnumerable(Of ToolDescriptor))
+  spec.csharp:
+  - uid: AgentFramework.Tools.Registry.ToolRegistryExtensions.PublishRange(AgentFramework.Tools.Registry.IToolRegistry,System.Collections.Generic.IEnumerable{AgentFramework.Tools.Contracts.ToolDescriptor})
+    name: PublishRange
+    href: AgentFramework.Tools.Registry.ToolRegistryExtensions.html#AgentFramework_Tools_Registry_ToolRegistryExtensions_PublishRange_AgentFramework_Tools_Registry_IToolRegistry_System_Collections_Generic_IEnumerable_AgentFramework_Tools_Contracts_ToolDescriptor__
+  - name: (
+  - uid: AgentFramework.Tools.Registry.IToolRegistry
+    name: IToolRegistry
+    href: AgentFramework.Tools.Registry.IToolRegistry.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: AgentFramework.Tools.Contracts.ToolDescriptor
+    name: ToolDescriptor
+    href: AgentFramework.Tools.Contracts.ToolDescriptor.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: AgentFramework.Tools.Registry.ToolRegistryExtensions.PublishRange(AgentFramework.Tools.Registry.IToolRegistry,System.Collections.Generic.IEnumerable{AgentFramework.Tools.Contracts.ToolDescriptor})
+    name: PublishRange
+    href: AgentFramework.Tools.Registry.ToolRegistryExtensions.html#AgentFramework_Tools_Registry_ToolRegistryExtensions_PublishRange_AgentFramework_Tools_Registry_IToolRegistry_System_Collections_Generic_IEnumerable_AgentFramework_Tools_Contracts_ToolDescriptor__
+  - name: (
+  - uid: AgentFramework.Tools.Registry.IToolRegistry
+    name: IToolRegistry
+    href: AgentFramework.Tools.Registry.IToolRegistry.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AgentFramework.Tools.Contracts.ToolDescriptor
+    name: ToolDescriptor
+    href: AgentFramework.Tools.Contracts.ToolDescriptor.html
+  - name: )
+  - name: )
+- uid: AgentFramework.Tools.Registry.ToolRegistryExtensions
+  commentId: T:AgentFramework.Tools.Registry.ToolRegistryExtensions
+  parent: AgentFramework.Tools.Registry
+  href: AgentFramework.Tools.Registry.ToolRegistryExtensions.html
+  name: ToolRegistryExtensions
+  nameWithType: ToolRegistryExtensions
+  fullName: AgentFramework.Tools.Registry.ToolRegistryExtensions
+- uid: AgentFramework.Tools.Registry.ToolRegistryExtensions.TryResolve(AgentFramework.Tools.Registry.IToolRegistry,System.String,System.String,AgentFramework.Tools.Registry.ToolBindingContext,AgentFramework.Tools.Contracts.ToolDescriptor@)
+  commentId: M:AgentFramework.Tools.Registry.ToolRegistryExtensions.TryResolve(AgentFramework.Tools.Registry.IToolRegistry,System.String,System.String,AgentFramework.Tools.Registry.ToolBindingContext,AgentFramework.Tools.Contracts.ToolDescriptor@)
+  isExternal: true
+  href: AgentFramework.Tools.Registry.ToolRegistryExtensions.html#AgentFramework_Tools_Registry_ToolRegistryExtensions_TryResolve_AgentFramework_Tools_Registry_IToolRegistry_System_String_System_String_AgentFramework_Tools_Registry_ToolBindingContext_AgentFramework_Tools_Contracts_ToolDescriptor__
+  name: TryResolve(IToolRegistry, string, string, ToolBindingContext, out ToolDescriptor)
+  nameWithType: ToolRegistryExtensions.TryResolve(IToolRegistry, string, string, ToolBindingContext, out ToolDescriptor)
+  fullName: AgentFramework.Tools.Registry.ToolRegistryExtensions.TryResolve(AgentFramework.Tools.Registry.IToolRegistry, string, string, AgentFramework.Tools.Registry.ToolBindingContext, out AgentFramework.Tools.Contracts.ToolDescriptor)
+  nameWithType.vb: ToolRegistryExtensions.TryResolve(IToolRegistry, String, String, ToolBindingContext, ToolDescriptor)
+  fullName.vb: AgentFramework.Tools.Registry.ToolRegistryExtensions.TryResolve(AgentFramework.Tools.Registry.IToolRegistry, String, String, AgentFramework.Tools.Registry.ToolBindingContext, AgentFramework.Tools.Contracts.ToolDescriptor)
+  name.vb: TryResolve(IToolRegistry, String, String, ToolBindingContext, ToolDescriptor)
+  spec.csharp:
+  - uid: AgentFramework.Tools.Registry.ToolRegistryExtensions.TryResolve(AgentFramework.Tools.Registry.IToolRegistry,System.String,System.String,AgentFramework.Tools.Registry.ToolBindingContext,AgentFramework.Tools.Contracts.ToolDescriptor@)
+    name: TryResolve
+    href: AgentFramework.Tools.Registry.ToolRegistryExtensions.html#AgentFramework_Tools_Registry_ToolRegistryExtensions_TryResolve_AgentFramework_Tools_Registry_IToolRegistry_System_String_System_String_AgentFramework_Tools_Registry_ToolBindingContext_AgentFramework_Tools_Contracts_ToolDescriptor__
+  - name: (
+  - uid: AgentFramework.Tools.Registry.IToolRegistry
+    name: IToolRegistry
+    href: AgentFramework.Tools.Registry.IToolRegistry.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: AgentFramework.Tools.Registry.ToolBindingContext
+    name: ToolBindingContext
+    href: AgentFramework.Tools.Registry.ToolBindingContext.html
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: AgentFramework.Tools.Contracts.ToolDescriptor
+    name: ToolDescriptor
+    href: AgentFramework.Tools.Contracts.ToolDescriptor.html
+  - name: )
+  spec.vb:
+  - uid: AgentFramework.Tools.Registry.ToolRegistryExtensions.TryResolve(AgentFramework.Tools.Registry.IToolRegistry,System.String,System.String,AgentFramework.Tools.Registry.ToolBindingContext,AgentFramework.Tools.Contracts.ToolDescriptor@)
+    name: TryResolve
+    href: AgentFramework.Tools.Registry.ToolRegistryExtensions.html#AgentFramework_Tools_Registry_ToolRegistryExtensions_TryResolve_AgentFramework_Tools_Registry_IToolRegistry_System_String_System_String_AgentFramework_Tools_Registry_ToolBindingContext_AgentFramework_Tools_Contracts_ToolDescriptor__
+  - name: (
+  - uid: AgentFramework.Tools.Registry.IToolRegistry
+    name: IToolRegistry
+    href: AgentFramework.Tools.Registry.IToolRegistry.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: AgentFramework.Tools.Registry.ToolBindingContext
+    name: ToolBindingContext
+    href: AgentFramework.Tools.Registry.ToolBindingContext.html
+  - name: ','
+  - name: " "
+  - uid: AgentFramework.Tools.Contracts.ToolDescriptor
+    name: ToolDescriptor
+    href: AgentFramework.Tools.Contracts.ToolDescriptor.html
+  - name: )
+- uid: AgentFramework.Tools.Pipeline
+  commentId: N:AgentFramework.Tools.Pipeline
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Pipeline
+  nameWithType: AgentFramework.Tools.Pipeline
+  fullName: AgentFramework.Tools.Pipeline
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline
+    name: Pipeline
+    href: AgentFramework.Tools.Pipeline.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline
+    name: Pipeline
+    href: AgentFramework.Tools.Pipeline.html
+- uid: AgentFramework.Tools.Registry.IToolRegistry.Publish*
+  commentId: Overload:AgentFramework.Tools.Registry.IToolRegistry.Publish
+  href: AgentFramework.Tools.Registry.IToolRegistry.html#AgentFramework_Tools_Registry_IToolRegistry_Publish_AgentFramework_Tools_Contracts_ToolDescriptor_
+  name: Publish
+  nameWithType: IToolRegistry.Publish
+  fullName: AgentFramework.Tools.Registry.IToolRegistry.Publish
+- uid: AgentFramework.Tools.Contracts.ToolDescriptor
+  commentId: T:AgentFramework.Tools.Contracts.ToolDescriptor
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolDescriptor.html
+  name: ToolDescriptor
+  nameWithType: ToolDescriptor
+  fullName: AgentFramework.Tools.Contracts.ToolDescriptor
+- uid: AgentFramework.Tools.Contracts
+  commentId: N:AgentFramework.Tools.Contracts
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Contracts
+  nameWithType: AgentFramework.Tools.Contracts
+  fullName: AgentFramework.Tools.Contracts
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+- uid: AgentFramework.Tools.Registry.IToolRegistry.Unpublish*
+  commentId: Overload:AgentFramework.Tools.Registry.IToolRegistry.Unpublish
+  href: AgentFramework.Tools.Registry.IToolRegistry.html#AgentFramework_Tools_Registry_IToolRegistry_Unpublish_System_String_System_String_
+  name: Unpublish
+  nameWithType: IToolRegistry.Unpublish
+  fullName: AgentFramework.Tools.Registry.IToolRegistry.Unpublish
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AgentFramework.Tools.Registry.IToolRegistry.Resolve*
+  commentId: Overload:AgentFramework.Tools.Registry.IToolRegistry.Resolve
+  href: AgentFramework.Tools.Registry.IToolRegistry.html#AgentFramework_Tools_Registry_IToolRegistry_Resolve_System_String_System_String_AgentFramework_Tools_Registry_ToolBindingContext_
+  name: Resolve
+  nameWithType: IToolRegistry.Resolve
+  fullName: AgentFramework.Tools.Registry.IToolRegistry.Resolve
+- uid: AgentFramework.Tools.Registry.ToolBindingContext
+  commentId: T:AgentFramework.Tools.Registry.ToolBindingContext
+  parent: AgentFramework.Tools.Registry
+  href: AgentFramework.Tools.Registry.ToolBindingContext.html
+  name: ToolBindingContext
+  nameWithType: ToolBindingContext
+  fullName: AgentFramework.Tools.Registry.ToolBindingContext
+- uid: AgentFramework.Tools.Registry.IToolRegistry.List*
+  commentId: Overload:AgentFramework.Tools.Registry.IToolRegistry.List
+  href: AgentFramework.Tools.Registry.IToolRegistry.html#AgentFramework_Tools_Registry_IToolRegistry_List_AgentFramework_Tools_Registry_ToolBindingContext_
+  name: List
+  nameWithType: IToolRegistry.List
+  fullName: AgentFramework.Tools.Registry.IToolRegistry.List
+- uid: System.Collections.Generic.IReadOnlyList{AgentFramework.Tools.Contracts.ToolDescriptor}
+  commentId: T:System.Collections.Generic.IReadOnlyList{AgentFramework.Tools.Contracts.ToolDescriptor}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<ToolDescriptor>
+  nameWithType: IReadOnlyList<ToolDescriptor>
+  fullName: System.Collections.Generic.IReadOnlyList<AgentFramework.Tools.Contracts.ToolDescriptor>
+  nameWithType.vb: IReadOnlyList(Of ToolDescriptor)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of AgentFramework.Tools.Contracts.ToolDescriptor)
+  name.vb: IReadOnlyList(Of ToolDescriptor)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: AgentFramework.Tools.Contracts.ToolDescriptor
+    name: ToolDescriptor
+    href: AgentFramework.Tools.Contracts.ToolDescriptor.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AgentFramework.Tools.Contracts.ToolDescriptor
+    name: ToolDescriptor
+    href: AgentFramework.Tools.Contracts.ToolDescriptor.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

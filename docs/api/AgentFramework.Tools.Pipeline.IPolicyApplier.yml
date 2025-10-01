@@ -1,0 +1,192 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Tools.Pipeline.IPolicyApplier
+  commentId: T:AgentFramework.Tools.Pipeline.IPolicyApplier
+  id: IPolicyApplier
+  parent: AgentFramework.Tools.Pipeline
+  children:
+  - AgentFramework.Tools.Pipeline.IPolicyApplier.Apply(AgentFramework.Tools.Contracts.ToolInvocation,AgentFramework.Tools.Contracts.ToolDescriptor,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: IPolicyApplier
+  nameWithType: IPolicyApplier
+  fullName: AgentFramework.Tools.Pipeline.IPolicyApplier
+  type: Interface
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Pipeline/IPolicyApplier.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: IPolicyApplier
+    path: ../src/AF.AgentFramework/Tools/Pipeline/IPolicyApplier.cs
+    startLine: 8
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Pipeline
+  summary: >-
+    Applies reliability and safety policies to a tool invocation.
+
+    Responsible for enforcing deadlines and producing a snapshot of active policies.
+  example: []
+  syntax:
+    content: public interface IPolicyApplier
+    content.vb: Public Interface IPolicyApplier
+- uid: AgentFramework.Tools.Pipeline.IPolicyApplier.Apply(AgentFramework.Tools.Contracts.ToolInvocation,AgentFramework.Tools.Contracts.ToolDescriptor,System.Threading.CancellationToken)
+  commentId: M:AgentFramework.Tools.Pipeline.IPolicyApplier.Apply(AgentFramework.Tools.Contracts.ToolInvocation,AgentFramework.Tools.Contracts.ToolDescriptor,System.Threading.CancellationToken)
+  id: Apply(AgentFramework.Tools.Contracts.ToolInvocation,AgentFramework.Tools.Contracts.ToolDescriptor,System.Threading.CancellationToken)
+  parent: AgentFramework.Tools.Pipeline.IPolicyApplier
+  langs:
+  - csharp
+  - vb
+  name: Apply(ToolInvocation, ToolDescriptor, CancellationToken)
+  nameWithType: IPolicyApplier.Apply(ToolInvocation, ToolDescriptor, CancellationToken)
+  fullName: AgentFramework.Tools.Pipeline.IPolicyApplier.Apply(AgentFramework.Tools.Contracts.ToolInvocation, AgentFramework.Tools.Contracts.ToolDescriptor, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Pipeline/IPolicyApplier.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Apply
+    path: ../src/AF.AgentFramework/Tools/Pipeline/IPolicyApplier.cs
+    startLine: 10
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Pipeline
+  syntax:
+    content: PolicyApplicationResult Apply(ToolInvocation invocation, ToolDescriptor descriptor, CancellationToken ct)
+    parameters:
+    - id: invocation
+      type: AgentFramework.Tools.Contracts.ToolInvocation
+    - id: descriptor
+      type: AgentFramework.Tools.Contracts.ToolDescriptor
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: AgentFramework.Tools.Pipeline.PolicyApplicationResult
+    content.vb: Function Apply(invocation As ToolInvocation, descriptor As ToolDescriptor, ct As CancellationToken) As PolicyApplicationResult
+  overload: AgentFramework.Tools.Pipeline.IPolicyApplier.Apply*
+references:
+- uid: AgentFramework.Tools.Pipeline
+  commentId: N:AgentFramework.Tools.Pipeline
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Pipeline
+  nameWithType: AgentFramework.Tools.Pipeline
+  fullName: AgentFramework.Tools.Pipeline
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline
+    name: Pipeline
+    href: AgentFramework.Tools.Pipeline.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline
+    name: Pipeline
+    href: AgentFramework.Tools.Pipeline.html
+- uid: AgentFramework.Tools.Pipeline.IPolicyApplier.Apply*
+  commentId: Overload:AgentFramework.Tools.Pipeline.IPolicyApplier.Apply
+  href: AgentFramework.Tools.Pipeline.IPolicyApplier.html#AgentFramework_Tools_Pipeline_IPolicyApplier_Apply_AgentFramework_Tools_Contracts_ToolInvocation_AgentFramework_Tools_Contracts_ToolDescriptor_System_Threading_CancellationToken_
+  name: Apply
+  nameWithType: IPolicyApplier.Apply
+  fullName: AgentFramework.Tools.Pipeline.IPolicyApplier.Apply
+- uid: AgentFramework.Tools.Contracts.ToolInvocation
+  commentId: T:AgentFramework.Tools.Contracts.ToolInvocation
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolInvocation.html
+  name: ToolInvocation
+  nameWithType: ToolInvocation
+  fullName: AgentFramework.Tools.Contracts.ToolInvocation
+- uid: AgentFramework.Tools.Contracts.ToolDescriptor
+  commentId: T:AgentFramework.Tools.Contracts.ToolDescriptor
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolDescriptor.html
+  name: ToolDescriptor
+  nameWithType: ToolDescriptor
+  fullName: AgentFramework.Tools.Contracts.ToolDescriptor
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: AgentFramework.Tools.Pipeline.PolicyApplicationResult
+  commentId: T:AgentFramework.Tools.Pipeline.PolicyApplicationResult
+  parent: AgentFramework.Tools.Pipeline
+  href: AgentFramework.Tools.Pipeline.PolicyApplicationResult.html
+  name: PolicyApplicationResult
+  nameWithType: PolicyApplicationResult
+  fullName: AgentFramework.Tools.Pipeline.PolicyApplicationResult
+- uid: AgentFramework.Tools.Contracts
+  commentId: N:AgentFramework.Tools.Contracts
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Contracts
+  nameWithType: AgentFramework.Tools.Contracts
+  fullName: AgentFramework.Tools.Contracts
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading

@@ -1,0 +1,101 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Tools.Pipeline.Defaults
+  commentId: N:AgentFramework.Tools.Pipeline.Defaults
+  id: AgentFramework.Tools.Pipeline.Defaults
+  children:
+  - AgentFramework.Tools.Pipeline.Defaults.AllowAllAuthorizer
+  - AgentFramework.Tools.Pipeline.Defaults.Defaults
+  - AgentFramework.Tools.Pipeline.Defaults.NotImplementedExecutor
+  - AgentFramework.Tools.Pipeline.Defaults.PassThroughInputValidator
+  - AgentFramework.Tools.Pipeline.Defaults.PassThroughPostprocessor
+  - AgentFramework.Tools.Pipeline.Defaults.TimeoutOnlyPolicyApplier
+  langs:
+  - csharp
+  - vb
+  name: AgentFramework.Tools.Pipeline.Defaults
+  nameWithType: AgentFramework.Tools.Pipeline.Defaults
+  fullName: AgentFramework.Tools.Pipeline.Defaults
+  type: Namespace
+  assemblies:
+  - AF.AgentFramework
+references:
+- uid: AgentFramework.Tools.Pipeline.Defaults.AllowAllAuthorizer
+  commentId: T:AgentFramework.Tools.Pipeline.Defaults.AllowAllAuthorizer
+  parent: AgentFramework.Tools.Pipeline.Defaults
+  href: AgentFramework.Tools.Pipeline.Defaults.AllowAllAuthorizer.html
+  name: AllowAllAuthorizer
+  nameWithType: AllowAllAuthorizer
+  fullName: AgentFramework.Tools.Pipeline.Defaults.AllowAllAuthorizer
+- uid: AgentFramework.Tools.Pipeline.Defaults.Defaults
+  commentId: T:AgentFramework.Tools.Pipeline.Defaults.Defaults
+  href: AgentFramework.Tools.Pipeline.Defaults.Defaults.html
+  name: Defaults
+  nameWithType: Defaults
+  fullName: AgentFramework.Tools.Pipeline.Defaults.Defaults
+- uid: AgentFramework.Tools.Pipeline.Defaults.NotImplementedExecutor
+  commentId: T:AgentFramework.Tools.Pipeline.Defaults.NotImplementedExecutor
+  parent: AgentFramework.Tools.Pipeline.Defaults
+  href: AgentFramework.Tools.Pipeline.Defaults.NotImplementedExecutor.html
+  name: NotImplementedExecutor
+  nameWithType: NotImplementedExecutor
+  fullName: AgentFramework.Tools.Pipeline.Defaults.NotImplementedExecutor
+- uid: AgentFramework.Tools.Pipeline.Defaults.PassThroughInputValidator
+  commentId: T:AgentFramework.Tools.Pipeline.Defaults.PassThroughInputValidator
+  parent: AgentFramework.Tools.Pipeline.Defaults
+  href: AgentFramework.Tools.Pipeline.Defaults.PassThroughInputValidator.html
+  name: PassThroughInputValidator
+  nameWithType: PassThroughInputValidator
+  fullName: AgentFramework.Tools.Pipeline.Defaults.PassThroughInputValidator
+- uid: AgentFramework.Tools.Pipeline.Defaults.PassThroughPostprocessor
+  commentId: T:AgentFramework.Tools.Pipeline.Defaults.PassThroughPostprocessor
+  parent: AgentFramework.Tools.Pipeline.Defaults
+  href: AgentFramework.Tools.Pipeline.Defaults.PassThroughPostprocessor.html
+  name: PassThroughPostprocessor
+  nameWithType: PassThroughPostprocessor
+  fullName: AgentFramework.Tools.Pipeline.Defaults.PassThroughPostprocessor
+- uid: AgentFramework.Tools.Pipeline.Defaults.TimeoutOnlyPolicyApplier
+  commentId: T:AgentFramework.Tools.Pipeline.Defaults.TimeoutOnlyPolicyApplier
+  parent: AgentFramework.Tools.Pipeline.Defaults
+  href: AgentFramework.Tools.Pipeline.Defaults.TimeoutOnlyPolicyApplier.html
+  name: TimeoutOnlyPolicyApplier
+  nameWithType: TimeoutOnlyPolicyApplier
+  fullName: AgentFramework.Tools.Pipeline.Defaults.TimeoutOnlyPolicyApplier
+- uid: AgentFramework.Tools.Pipeline.Defaults
+  commentId: N:AgentFramework.Tools.Pipeline.Defaults
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Pipeline.Defaults
+  nameWithType: AgentFramework.Tools.Pipeline.Defaults
+  fullName: AgentFramework.Tools.Pipeline.Defaults
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline
+    name: Pipeline
+    href: AgentFramework.Tools.Pipeline.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline.Defaults
+    name: Defaults
+    href: AgentFramework.Tools.Pipeline.Defaults.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline
+    name: Pipeline
+    href: AgentFramework.Tools.Pipeline.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline.Defaults
+    name: Defaults
+    href: AgentFramework.Tools.Pipeline.Defaults.html

@@ -11,6 +11,7 @@ items:
   - AgentFramework.Hosting.AgentHostBuilder.Attach(System.String,System.String,AgentFramework.Kernel.Policies.PolicySet)
   - AgentFramework.Hosting.AgentHostBuilder.Build
   - AgentFramework.Hosting.AgentHostBuilder.Create
+  - AgentFramework.Hosting.AgentHostBuilder.Services
   - AgentFramework.Hosting.AgentHostBuilder.WithKernelDefaults(AgentFramework.Kernel.Policies.PolicySet)
   langs:
   - csharp
@@ -26,7 +27,7 @@ items:
       repo: git@github.com:runemalm/AF.AgentFramework.git
     id: AgentHostBuilder
     path: ../src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - AF.AgentFramework
   namespace: AgentFramework.Hosting
@@ -46,6 +47,8 @@ items:
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+  extensionMethods:
+  - AgentFramework.Hosting.IAgentHostBuilder.AgentFramework.Tools.Integration.AgentHostBuilderExtensions.AddTools
 - uid: AgentFramework.Hosting.AgentHostBuilder.Create
   commentId: M:AgentFramework.Hosting.AgentHostBuilder.Create
   id: Create
@@ -64,7 +67,7 @@ items:
       repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Create
     path: ../src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
-    startLine: 14
+    startLine: 16
   assemblies:
   - AF.AgentFramework
   namespace: AgentFramework.Hosting
@@ -74,6 +77,38 @@ items:
       type: AgentFramework.Hosting.IAgentHostBuilder
     content.vb: Public Shared Function Create() As IAgentHostBuilder
   overload: AgentFramework.Hosting.AgentHostBuilder.Create*
+- uid: AgentFramework.Hosting.AgentHostBuilder.Services
+  commentId: P:AgentFramework.Hosting.AgentHostBuilder.Services
+  id: Services
+  parent: AgentFramework.Hosting.AgentHostBuilder
+  langs:
+  - csharp
+  - vb
+  name: Services
+  nameWithType: AgentHostBuilder.Services
+  fullName: AgentFramework.Hosting.AgentHostBuilder.Services
+  type: Property
+  source:
+    remote:
+      path: src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Services
+    path: ../src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
+    startLine: 18
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Hosting
+  example: []
+  syntax:
+    content: public IServiceCollection Services { get; }
+    parameters: []
+    return:
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    content.vb: Public ReadOnly Property Services As IServiceCollection
+  overload: AgentFramework.Hosting.AgentHostBuilder.Services*
+  implements:
+  - AgentFramework.Hosting.IAgentHostBuilder.Services
 - uid: AgentFramework.Hosting.AgentHostBuilder.AddEngine(System.String,System.Func{AgentFramework.Engines.IEngine})
   commentId: M:AgentFramework.Hosting.AgentHostBuilder.AddEngine(System.String,System.Func{AgentFramework.Engines.IEngine})
   id: AddEngine(System.String,System.Func{AgentFramework.Engines.IEngine})
@@ -92,7 +127,7 @@ items:
       repo: git@github.com:runemalm/AF.AgentFramework.git
     id: AddEngine
     path: ../src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
-    startLine: 16
+    startLine: 20
   assemblies:
   - AF.AgentFramework
   namespace: AgentFramework.Hosting
@@ -131,7 +166,7 @@ items:
       repo: git@github.com:runemalm/AF.AgentFramework.git
     id: AddRunner
     path: ../src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
-    startLine: 23
+    startLine: 27
   assemblies:
   - AF.AgentFramework
   namespace: AgentFramework.Hosting
@@ -170,7 +205,7 @@ items:
       repo: git@github.com:runemalm/AF.AgentFramework.git
     id: AddAgent
     path: ../src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
-    startLine: 30
+    startLine: 34
   assemblies:
   - AF.AgentFramework
   namespace: AgentFramework.Hosting
@@ -209,7 +244,7 @@ items:
       repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Attach
     path: ../src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
-    startLine: 37
+    startLine: 41
   assemblies:
   - AF.AgentFramework
   namespace: AgentFramework.Hosting
@@ -250,7 +285,7 @@ items:
       repo: git@github.com:runemalm/AF.AgentFramework.git
     id: WithKernelDefaults
     path: ../src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
-    startLine: 45
+    startLine: 49
   assemblies:
   - AF.AgentFramework
   namespace: AgentFramework.Hosting
@@ -284,7 +319,7 @@ items:
       repo: git@github.com:runemalm/AF.AgentFramework.git
     id: Build
     path: ../src/AF.AgentFramework/Hosting/AgentHostBuilder.cs
-    startLine: 51
+    startLine: 55
   assemblies:
   - AF.AgentFramework
   namespace: AgentFramework.Hosting
@@ -533,6 +568,32 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
+- uid: AgentFramework.Hosting.IAgentHostBuilder.AgentFramework.Tools.Integration.AgentHostBuilderExtensions.AddTools
+  commentId: M:AgentFramework.Tools.Integration.AgentHostBuilderExtensions.AddTools(AgentFramework.Hosting.IAgentHostBuilder)
+  parent: AgentFramework.Tools.Integration.AgentHostBuilderExtensions
+  definition: AgentFramework.Tools.Integration.AgentHostBuilderExtensions.AddTools(AgentFramework.Hosting.IAgentHostBuilder)
+  href: AgentFramework.Tools.Integration.AgentHostBuilderExtensions.html#AgentFramework_Tools_Integration_AgentHostBuilderExtensions_AddTools_AgentFramework_Hosting_IAgentHostBuilder_
+  name: AddTools(IAgentHostBuilder)
+  nameWithType: AgentHostBuilderExtensions.AddTools(IAgentHostBuilder)
+  fullName: AgentFramework.Tools.Integration.AgentHostBuilderExtensions.AddTools(AgentFramework.Hosting.IAgentHostBuilder)
+  spec.csharp:
+  - uid: AgentFramework.Tools.Integration.AgentHostBuilderExtensions.AddTools(AgentFramework.Hosting.IAgentHostBuilder)
+    name: AddTools
+    href: AgentFramework.Tools.Integration.AgentHostBuilderExtensions.html#AgentFramework_Tools_Integration_AgentHostBuilderExtensions_AddTools_AgentFramework_Hosting_IAgentHostBuilder_
+  - name: (
+  - uid: AgentFramework.Hosting.IAgentHostBuilder
+    name: IAgentHostBuilder
+    href: AgentFramework.Hosting.IAgentHostBuilder.html
+  - name: )
+  spec.vb:
+  - uid: AgentFramework.Tools.Integration.AgentHostBuilderExtensions.AddTools(AgentFramework.Hosting.IAgentHostBuilder)
+    name: AddTools
+    href: AgentFramework.Tools.Integration.AgentHostBuilderExtensions.html#AgentFramework_Tools_Integration_AgentHostBuilderExtensions_AddTools_AgentFramework_Hosting_IAgentHostBuilder_
+  - name: (
+  - uid: AgentFramework.Hosting.IAgentHostBuilder
+    name: IAgentHostBuilder
+    href: AgentFramework.Hosting.IAgentHostBuilder.html
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -540,12 +601,131 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: AgentFramework.Tools.Integration.AgentHostBuilderExtensions.AddTools(AgentFramework.Hosting.IAgentHostBuilder)
+  commentId: M:AgentFramework.Tools.Integration.AgentHostBuilderExtensions.AddTools(AgentFramework.Hosting.IAgentHostBuilder)
+  href: AgentFramework.Tools.Integration.AgentHostBuilderExtensions.html#AgentFramework_Tools_Integration_AgentHostBuilderExtensions_AddTools_AgentFramework_Hosting_IAgentHostBuilder_
+  name: AddTools(IAgentHostBuilder)
+  nameWithType: AgentHostBuilderExtensions.AddTools(IAgentHostBuilder)
+  fullName: AgentFramework.Tools.Integration.AgentHostBuilderExtensions.AddTools(AgentFramework.Hosting.IAgentHostBuilder)
+  spec.csharp:
+  - uid: AgentFramework.Tools.Integration.AgentHostBuilderExtensions.AddTools(AgentFramework.Hosting.IAgentHostBuilder)
+    name: AddTools
+    href: AgentFramework.Tools.Integration.AgentHostBuilderExtensions.html#AgentFramework_Tools_Integration_AgentHostBuilderExtensions_AddTools_AgentFramework_Hosting_IAgentHostBuilder_
+  - name: (
+  - uid: AgentFramework.Hosting.IAgentHostBuilder
+    name: IAgentHostBuilder
+    href: AgentFramework.Hosting.IAgentHostBuilder.html
+  - name: )
+  spec.vb:
+  - uid: AgentFramework.Tools.Integration.AgentHostBuilderExtensions.AddTools(AgentFramework.Hosting.IAgentHostBuilder)
+    name: AddTools
+    href: AgentFramework.Tools.Integration.AgentHostBuilderExtensions.html#AgentFramework_Tools_Integration_AgentHostBuilderExtensions_AddTools_AgentFramework_Hosting_IAgentHostBuilder_
+  - name: (
+  - uid: AgentFramework.Hosting.IAgentHostBuilder
+    name: IAgentHostBuilder
+    href: AgentFramework.Hosting.IAgentHostBuilder.html
+  - name: )
+- uid: AgentFramework.Tools.Integration.AgentHostBuilderExtensions
+  commentId: T:AgentFramework.Tools.Integration.AgentHostBuilderExtensions
+  parent: AgentFramework.Tools.Integration
+  href: AgentFramework.Tools.Integration.AgentHostBuilderExtensions.html
+  name: AgentHostBuilderExtensions
+  nameWithType: AgentHostBuilderExtensions
+  fullName: AgentFramework.Tools.Integration.AgentHostBuilderExtensions
+- uid: AgentFramework.Tools.Integration
+  commentId: N:AgentFramework.Tools.Integration
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Integration
+  nameWithType: AgentFramework.Tools.Integration
+  fullName: AgentFramework.Tools.Integration
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Integration
+    name: Integration
+    href: AgentFramework.Tools.Integration.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Integration
+    name: Integration
+    href: AgentFramework.Tools.Integration.html
 - uid: AgentFramework.Hosting.AgentHostBuilder.Create*
   commentId: Overload:AgentFramework.Hosting.AgentHostBuilder.Create
   href: AgentFramework.Hosting.AgentHostBuilder.html#AgentFramework_Hosting_AgentHostBuilder_Create
   name: Create
   nameWithType: AgentHostBuilder.Create
   fullName: AgentFramework.Hosting.AgentHostBuilder.Create
+- uid: AgentFramework.Hosting.AgentHostBuilder.Services*
+  commentId: Overload:AgentFramework.Hosting.AgentHostBuilder.Services
+  href: AgentFramework.Hosting.AgentHostBuilder.html#AgentFramework_Hosting_AgentHostBuilder_Services
+  name: Services
+  nameWithType: AgentHostBuilder.Services
+  fullName: AgentFramework.Hosting.AgentHostBuilder.Services
+- uid: AgentFramework.Hosting.IAgentHostBuilder.Services
+  commentId: P:AgentFramework.Hosting.IAgentHostBuilder.Services
+  parent: AgentFramework.Hosting.IAgentHostBuilder
+  href: AgentFramework.Hosting.IAgentHostBuilder.html#AgentFramework_Hosting_IAgentHostBuilder_Services
+  name: Services
+  nameWithType: IAgentHostBuilder.Services
+  fullName: AgentFramework.Hosting.IAgentHostBuilder.Services
+- uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
+  commentId: T:Microsoft.Extensions.DependencyInjection.IServiceCollection
+  parent: Microsoft.Extensions.DependencyInjection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection
+  name: IServiceCollection
+  nameWithType: IServiceCollection
+  fullName: Microsoft.Extensions.DependencyInjection.IServiceCollection
+- uid: Microsoft.Extensions.DependencyInjection
+  commentId: N:Microsoft.Extensions.DependencyInjection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.DependencyInjection
+  nameWithType: Microsoft.Extensions.DependencyInjection
+  fullName: Microsoft.Extensions.DependencyInjection
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection
 - uid: AgentFramework.Hosting.AgentHostBuilder.AddEngine*
   commentId: Overload:AgentFramework.Hosting.AgentHostBuilder.AddEngine
   href: AgentFramework.Hosting.AgentHostBuilder.html#AgentFramework_Hosting_AgentHostBuilder_AddEngine_System_String_System_Func_AgentFramework_Engines_IEngine__

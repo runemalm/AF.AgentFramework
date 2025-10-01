@@ -195,4 +195,188 @@ items:
   - uid: AgentFramework.Runners.Timers.TimerRunner
     name: TimerRunner
     type: Class
+- uid: AgentFramework.Tools.Contracts
+  name: AgentFramework.Tools.Contracts
+  type: Namespace
+  items:
+  - uid: AgentFramework.Tools.Contracts.Correlation
+    name: Correlation
+    type: Class
+  - uid: AgentFramework.Tools.Contracts.EffectLevel
+    name: EffectLevel
+    type: Enum
+  - uid: AgentFramework.Tools.Contracts.PolicyDefaults
+    name: PolicyDefaults
+    type: Class
+  - uid: AgentFramework.Tools.Contracts.PolicySnapshot
+    name: PolicySnapshot
+    type: Class
+  - uid: AgentFramework.Tools.Contracts.RetryDefaults
+    name: RetryDefaults
+    type: Class
+  - uid: AgentFramework.Tools.Contracts.ToolContract
+    name: ToolContract
+    type: Class
+  - uid: AgentFramework.Tools.Contracts.ToolDescriptor
+    name: ToolDescriptor
+    type: Class
+  - uid: AgentFramework.Tools.Contracts.ToolError
+    name: ToolError
+    type: Class
+  - uid: AgentFramework.Tools.Contracts.ToolErrorCode
+    name: ToolErrorCode
+    type: Enum
+  - uid: AgentFramework.Tools.Contracts.ToolErrors
+    name: ToolErrors
+    type: Class
+  - uid: AgentFramework.Tools.Contracts.ToolInvocation
+    name: ToolInvocation
+    type: Class
+  - uid: AgentFramework.Tools.Contracts.ToolResult
+    name: ToolResult
+    type: Class
+  - uid: AgentFramework.Tools.Contracts.ToolResultFactory
+    name: ToolResultFactory
+    type: Class
+  - uid: AgentFramework.Tools.Contracts.ToolResultStatus
+    name: ToolResultStatus
+    type: Enum
+- uid: AgentFramework.Tools.Integration
+  name: AgentFramework.Tools.Integration
+  type: Namespace
+  items:
+  - uid: AgentFramework.Tools.Integration.AgentContextTools
+    name: AgentContextTools
+    type: Class
+  - uid: AgentFramework.Tools.Integration.AgentHostBuilderExtensions
+    name: AgentHostBuilderExtensions
+    type: Class
+  - uid: AgentFramework.Tools.Integration.ToolsBootstrap
+    name: ToolsBootstrap
+    type: Class
+- uid: AgentFramework.Tools.Observability
+  name: AgentFramework.Tools.Observability
+  type: Namespace
+  items:
+  - uid: AgentFramework.Tools.Observability.IToolEventSink
+    name: IToolEventSink
+    type: Interface
+  - uid: AgentFramework.Tools.Observability.IToolTracer
+    name: IToolTracer
+    type: Interface
+  - uid: AgentFramework.Tools.Observability.NullToolEventSink
+    name: NullToolEventSink
+    type: Class
+  - uid: AgentFramework.Tools.Observability.NullToolTracer
+    name: NullToolTracer
+    type: Class
+- uid: AgentFramework.Tools.Pipeline
+  name: AgentFramework.Tools.Pipeline
+  type: Namespace
+  items:
+  - uid: AgentFramework.Tools.Pipeline.AuthorizationOutcome
+    name: AuthorizationOutcome
+    type: Class
+  - uid: AgentFramework.Tools.Pipeline.ExecutionOutcome
+    name: ExecutionOutcome
+    type: Class
+  - uid: AgentFramework.Tools.Pipeline.IAuthorizer
+    name: IAuthorizer
+    type: Interface
+  - uid: AgentFramework.Tools.Pipeline.IExecutor
+    name: IExecutor
+    type: Interface
+  - uid: AgentFramework.Tools.Pipeline.IInputValidator
+    name: IInputValidator
+    type: Interface
+  - uid: AgentFramework.Tools.Pipeline.IPolicyApplier
+    name: IPolicyApplier
+    type: Interface
+  - uid: AgentFramework.Tools.Pipeline.IPostprocessor
+    name: IPostprocessor
+    type: Interface
+  - uid: AgentFramework.Tools.Pipeline.IToolInvoker
+    name: IToolInvoker
+    type: Interface
+  - uid: AgentFramework.Tools.Pipeline.InstrumentedToolInvoker
+    name: InstrumentedToolInvoker
+    type: Class
+  - uid: AgentFramework.Tools.Pipeline.PipelineExtensions
+    name: PipelineExtensions
+    type: Class
+  - uid: AgentFramework.Tools.Pipeline.PolicyApplicationResult
+    name: PolicyApplicationResult
+    type: Class
+  - uid: AgentFramework.Tools.Pipeline.PostprocessOutcome
+    name: PostprocessOutcome
+    type: Class
+  - uid: AgentFramework.Tools.Pipeline.ToolPipeline
+    name: ToolPipeline
+    type: Class
+  - uid: AgentFramework.Tools.Pipeline.ValidationOutcome
+    name: ValidationOutcome
+    type: Class
+- uid: AgentFramework.Tools.Pipeline.Defaults
+  name: AgentFramework.Tools.Pipeline.Defaults
+  type: Namespace
+  items:
+  - uid: AgentFramework.Tools.Pipeline.Defaults.AllowAllAuthorizer
+    name: AllowAllAuthorizer
+    type: Class
+  - uid: AgentFramework.Tools.Pipeline.Defaults.Defaults
+    name: Defaults
+    type: Class
+  - uid: AgentFramework.Tools.Pipeline.Defaults.NotImplementedExecutor
+    name: NotImplementedExecutor
+    type: Class
+  - uid: AgentFramework.Tools.Pipeline.Defaults.PassThroughInputValidator
+    name: PassThroughInputValidator
+    type: Class
+  - uid: AgentFramework.Tools.Pipeline.Defaults.PassThroughPostprocessor
+    name: PassThroughPostprocessor
+    type: Class
+  - uid: AgentFramework.Tools.Pipeline.Defaults.TimeoutOnlyPolicyApplier
+    name: TimeoutOnlyPolicyApplier
+    type: Class
+- uid: AgentFramework.Tools.Pipeline.Policies
+  name: AgentFramework.Tools.Pipeline.Policies
+  type: Namespace
+  items:
+  - uid: AgentFramework.Tools.Pipeline.Policies.BudgetPolicy
+    name: BudgetPolicy
+    type: Class
+  - uid: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy
+    name: CircuitBreakerPolicy
+    type: Class
+  - uid: AgentFramework.Tools.Pipeline.Policies.ConcurrencyPolicy
+    name: ConcurrencyPolicy
+    type: Class
+  - uid: AgentFramework.Tools.Pipeline.Policies.RateLimitPolicy
+    name: RateLimitPolicy
+    type: Class
+  - uid: AgentFramework.Tools.Pipeline.Policies.RetryPolicy
+    name: RetryPolicy
+    type: Class
+- uid: AgentFramework.Tools.Registry
+  name: AgentFramework.Tools.Registry
+  type: Namespace
+  items:
+  - uid: AgentFramework.Tools.Registry.IToolRegistry
+    name: IToolRegistry
+    type: Interface
+  - uid: AgentFramework.Tools.Registry.InMemoryToolRegistry
+    name: InMemoryToolRegistry
+    type: Class
+  - uid: AgentFramework.Tools.Registry.ToolBinding
+    name: ToolBinding
+    type: Class
+  - uid: AgentFramework.Tools.Registry.ToolBindingContext
+    name: ToolBindingContext
+    type: Class
+  - uid: AgentFramework.Tools.Registry.ToolRegistryExtensions
+    name: ToolRegistryExtensions
+    type: Class
+  - uid: AgentFramework.Tools.Registry.VersionSelector
+    name: VersionSelector
+    type: Class
 memberLayout: SamePage

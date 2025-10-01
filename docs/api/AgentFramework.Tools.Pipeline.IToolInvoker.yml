@@ -1,0 +1,283 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Tools.Pipeline.IToolInvoker
+  commentId: T:AgentFramework.Tools.Pipeline.IToolInvoker
+  id: IToolInvoker
+  parent: AgentFramework.Tools.Pipeline
+  children:
+  - AgentFramework.Tools.Pipeline.IToolInvoker.InvokeAsync(AgentFramework.Tools.Contracts.ToolInvocation,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: IToolInvoker
+  nameWithType: IToolInvoker
+  fullName: AgentFramework.Tools.Pipeline.IToolInvoker
+  type: Interface
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Pipeline/IToolInvoker.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: IToolInvoker
+    path: ../src/AF.AgentFramework/Tools/Pipeline/IToolInvoker.cs
+    startLine: 7
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Pipeline
+  summary: Entry point for invoking tools through the standardized pipeline.
+  example: []
+  syntax:
+    content: public interface IToolInvoker
+    content.vb: Public Interface IToolInvoker
+- uid: AgentFramework.Tools.Pipeline.IToolInvoker.InvokeAsync(AgentFramework.Tools.Contracts.ToolInvocation,System.Threading.CancellationToken)
+  commentId: M:AgentFramework.Tools.Pipeline.IToolInvoker.InvokeAsync(AgentFramework.Tools.Contracts.ToolInvocation,System.Threading.CancellationToken)
+  id: InvokeAsync(AgentFramework.Tools.Contracts.ToolInvocation,System.Threading.CancellationToken)
+  parent: AgentFramework.Tools.Pipeline.IToolInvoker
+  langs:
+  - csharp
+  - vb
+  name: InvokeAsync(ToolInvocation, CancellationToken)
+  nameWithType: IToolInvoker.InvokeAsync(ToolInvocation, CancellationToken)
+  fullName: AgentFramework.Tools.Pipeline.IToolInvoker.InvokeAsync(AgentFramework.Tools.Contracts.ToolInvocation, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Pipeline/IToolInvoker.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: InvokeAsync
+    path: ../src/AF.AgentFramework/Tools/Pipeline/IToolInvoker.cs
+    startLine: 13
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Pipeline
+  summary: >-
+    Invokes the specified tool using the configured pipeline stages.
+
+    Implementations must always return a <xref href="AgentFramework.Tools.Contracts.ToolResult" data-throw-if-not-resolved="false"></xref>; exceptions are reserved for catastrophic failures.
+  example: []
+  syntax:
+    content: Task<ToolResult> InvokeAsync(ToolInvocation invocation, CancellationToken cancellationToken = default)
+    parameters:
+    - id: invocation
+      type: AgentFramework.Tools.Contracts.ToolInvocation
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{AgentFramework.Tools.Contracts.ToolResult}
+    content.vb: Function InvokeAsync(invocation As ToolInvocation, cancellationToken As CancellationToken = Nothing) As Task(Of ToolResult)
+  overload: AgentFramework.Tools.Pipeline.IToolInvoker.InvokeAsync*
+references:
+- uid: AgentFramework.Tools.Pipeline
+  commentId: N:AgentFramework.Tools.Pipeline
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Pipeline
+  nameWithType: AgentFramework.Tools.Pipeline
+  fullName: AgentFramework.Tools.Pipeline
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline
+    name: Pipeline
+    href: AgentFramework.Tools.Pipeline.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline
+    name: Pipeline
+    href: AgentFramework.Tools.Pipeline.html
+- uid: AgentFramework.Tools.Contracts.ToolResult
+  commentId: T:AgentFramework.Tools.Contracts.ToolResult
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolResult.html
+  name: ToolResult
+  nameWithType: ToolResult
+  fullName: AgentFramework.Tools.Contracts.ToolResult
+- uid: AgentFramework.Tools.Pipeline.IToolInvoker.InvokeAsync*
+  commentId: Overload:AgentFramework.Tools.Pipeline.IToolInvoker.InvokeAsync
+  href: AgentFramework.Tools.Pipeline.IToolInvoker.html#AgentFramework_Tools_Pipeline_IToolInvoker_InvokeAsync_AgentFramework_Tools_Contracts_ToolInvocation_System_Threading_CancellationToken_
+  name: InvokeAsync
+  nameWithType: IToolInvoker.InvokeAsync
+  fullName: AgentFramework.Tools.Pipeline.IToolInvoker.InvokeAsync
+- uid: AgentFramework.Tools.Contracts.ToolInvocation
+  commentId: T:AgentFramework.Tools.Contracts.ToolInvocation
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolInvocation.html
+  name: ToolInvocation
+  nameWithType: ToolInvocation
+  fullName: AgentFramework.Tools.Contracts.ToolInvocation
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{AgentFramework.Tools.Contracts.ToolResult}
+  commentId: T:System.Threading.Tasks.Task{AgentFramework.Tools.Contracts.ToolResult}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ToolResult>
+  nameWithType: Task<ToolResult>
+  fullName: System.Threading.Tasks.Task<AgentFramework.Tools.Contracts.ToolResult>
+  nameWithType.vb: Task(Of ToolResult)
+  fullName.vb: System.Threading.Tasks.Task(Of AgentFramework.Tools.Contracts.ToolResult)
+  name.vb: Task(Of ToolResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: AgentFramework.Tools.Contracts.ToolResult
+    name: ToolResult
+    href: AgentFramework.Tools.Contracts.ToolResult.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AgentFramework.Tools.Contracts.ToolResult
+    name: ToolResult
+    href: AgentFramework.Tools.Contracts.ToolResult.html
+  - name: )
+- uid: AgentFramework.Tools.Contracts
+  commentId: N:AgentFramework.Tools.Contracts
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Contracts
+  nameWithType: AgentFramework.Tools.Contracts
+  fullName: AgentFramework.Tools.Contracts
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

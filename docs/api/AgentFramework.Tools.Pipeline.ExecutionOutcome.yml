@@ -1,0 +1,477 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Tools.Pipeline.ExecutionOutcome
+  commentId: T:AgentFramework.Tools.Pipeline.ExecutionOutcome
+  id: ExecutionOutcome
+  parent: AgentFramework.Tools.Pipeline
+  children:
+  - AgentFramework.Tools.Pipeline.ExecutionOutcome.Error
+  - AgentFramework.Tools.Pipeline.ExecutionOutcome.Result
+  langs:
+  - csharp
+  - vb
+  name: ExecutionOutcome
+  nameWithType: ExecutionOutcome
+  fullName: AgentFramework.Tools.Pipeline.ExecutionOutcome
+  type: Class
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Pipeline/IExecutor.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: ExecutionOutcome
+    path: ../src/AF.AgentFramework/Tools/Pipeline/IExecutor.cs
+    startLine: 20
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Pipeline
+  summary: >-
+    Result of an execution attempt.
+
+    Exactly one of <xref href="AgentFramework.Tools.Pipeline.ExecutionOutcome.Result" data-throw-if-not-resolved="false"></xref> or <xref href="AgentFramework.Tools.Pipeline.ExecutionOutcome.Error" data-throw-if-not-resolved="false"></xref> will be non-null.
+  example: []
+  syntax:
+    content: 'public sealed record ExecutionOutcome : IEquatable<ExecutionOutcome>'
+    content.vb: Public NotInheritable Class ExecutionOutcome Implements IEquatable(Of ExecutionOutcome)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{AgentFramework.Tools.Pipeline.ExecutionOutcome}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AgentFramework.Tools.Pipeline.ExecutionOutcome.Result
+  commentId: P:AgentFramework.Tools.Pipeline.ExecutionOutcome.Result
+  id: Result
+  parent: AgentFramework.Tools.Pipeline.ExecutionOutcome
+  langs:
+  - csharp
+  - vb
+  name: Result
+  nameWithType: ExecutionOutcome.Result
+  fullName: AgentFramework.Tools.Pipeline.ExecutionOutcome.Result
+  type: Property
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Pipeline/IExecutor.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Result
+    path: ../src/AF.AgentFramework/Tools/Pipeline/IExecutor.cs
+    startLine: 22
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Pipeline
+  syntax:
+    content: public ToolResult? Result { get; init; }
+    parameters: []
+    return:
+      type: AgentFramework.Tools.Contracts.ToolResult
+    content.vb: Public Property Result As ToolResult
+  overload: AgentFramework.Tools.Pipeline.ExecutionOutcome.Result*
+- uid: AgentFramework.Tools.Pipeline.ExecutionOutcome.Error
+  commentId: P:AgentFramework.Tools.Pipeline.ExecutionOutcome.Error
+  id: Error
+  parent: AgentFramework.Tools.Pipeline.ExecutionOutcome
+  langs:
+  - csharp
+  - vb
+  name: Error
+  nameWithType: ExecutionOutcome.Error
+  fullName: AgentFramework.Tools.Pipeline.ExecutionOutcome.Error
+  type: Property
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Pipeline/IExecutor.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Error
+    path: ../src/AF.AgentFramework/Tools/Pipeline/IExecutor.cs
+    startLine: 23
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Pipeline
+  syntax:
+    content: public ToolError? Error { get; init; }
+    parameters: []
+    return:
+      type: AgentFramework.Tools.Contracts.ToolError
+    content.vb: Public Property [Error] As ToolError
+  overload: AgentFramework.Tools.Pipeline.ExecutionOutcome.Error*
+references:
+- uid: AgentFramework.Tools.Pipeline.ExecutionOutcome.Result
+  commentId: P:AgentFramework.Tools.Pipeline.ExecutionOutcome.Result
+  href: AgentFramework.Tools.Pipeline.ExecutionOutcome.html#AgentFramework_Tools_Pipeline_ExecutionOutcome_Result
+  name: Result
+  nameWithType: ExecutionOutcome.Result
+  fullName: AgentFramework.Tools.Pipeline.ExecutionOutcome.Result
+- uid: AgentFramework.Tools.Pipeline.ExecutionOutcome.Error
+  commentId: P:AgentFramework.Tools.Pipeline.ExecutionOutcome.Error
+  href: AgentFramework.Tools.Pipeline.ExecutionOutcome.html#AgentFramework_Tools_Pipeline_ExecutionOutcome_Error
+  name: Error
+  nameWithType: ExecutionOutcome.Error
+  fullName: AgentFramework.Tools.Pipeline.ExecutionOutcome.Error
+- uid: AgentFramework.Tools.Pipeline
+  commentId: N:AgentFramework.Tools.Pipeline
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Pipeline
+  nameWithType: AgentFramework.Tools.Pipeline
+  fullName: AgentFramework.Tools.Pipeline
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline
+    name: Pipeline
+    href: AgentFramework.Tools.Pipeline.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline
+    name: Pipeline
+    href: AgentFramework.Tools.Pipeline.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{AgentFramework.Tools.Pipeline.ExecutionOutcome}
+  commentId: T:System.IEquatable{AgentFramework.Tools.Pipeline.ExecutionOutcome}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<ExecutionOutcome>
+  nameWithType: IEquatable<ExecutionOutcome>
+  fullName: System.IEquatable<AgentFramework.Tools.Pipeline.ExecutionOutcome>
+  nameWithType.vb: IEquatable(Of ExecutionOutcome)
+  fullName.vb: System.IEquatable(Of AgentFramework.Tools.Pipeline.ExecutionOutcome)
+  name.vb: IEquatable(Of ExecutionOutcome)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: AgentFramework.Tools.Pipeline.ExecutionOutcome
+    name: ExecutionOutcome
+    href: AgentFramework.Tools.Pipeline.ExecutionOutcome.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AgentFramework.Tools.Pipeline.ExecutionOutcome
+    name: ExecutionOutcome
+    href: AgentFramework.Tools.Pipeline.ExecutionOutcome.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: AgentFramework.Tools.Pipeline.ExecutionOutcome.Result*
+  commentId: Overload:AgentFramework.Tools.Pipeline.ExecutionOutcome.Result
+  href: AgentFramework.Tools.Pipeline.ExecutionOutcome.html#AgentFramework_Tools_Pipeline_ExecutionOutcome_Result
+  name: Result
+  nameWithType: ExecutionOutcome.Result
+  fullName: AgentFramework.Tools.Pipeline.ExecutionOutcome.Result
+- uid: AgentFramework.Tools.Contracts.ToolResult
+  commentId: T:AgentFramework.Tools.Contracts.ToolResult
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolResult.html
+  name: ToolResult
+  nameWithType: ToolResult
+  fullName: AgentFramework.Tools.Contracts.ToolResult
+- uid: AgentFramework.Tools.Contracts
+  commentId: N:AgentFramework.Tools.Contracts
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Contracts
+  nameWithType: AgentFramework.Tools.Contracts
+  fullName: AgentFramework.Tools.Contracts
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+- uid: AgentFramework.Tools.Pipeline.ExecutionOutcome.Error*
+  commentId: Overload:AgentFramework.Tools.Pipeline.ExecutionOutcome.Error
+  href: AgentFramework.Tools.Pipeline.ExecutionOutcome.html#AgentFramework_Tools_Pipeline_ExecutionOutcome_Error
+  name: Error
+  nameWithType: ExecutionOutcome.Error
+  fullName: AgentFramework.Tools.Pipeline.ExecutionOutcome.Error
+- uid: AgentFramework.Tools.Contracts.ToolError
+  commentId: T:AgentFramework.Tools.Contracts.ToolError
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolError.html
+  name: ToolError
+  nameWithType: ToolError
+  fullName: AgentFramework.Tools.Contracts.ToolError

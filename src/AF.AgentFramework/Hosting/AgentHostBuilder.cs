@@ -2,6 +2,7 @@ using AgentFramework.Kernel;
 using AgentFramework.Kernel.Policies;
 using AgentFramework.Engines;
 using AgentFramework.Runners;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace AgentFramework.Hosting;
 
@@ -11,8 +12,11 @@ namespace AgentFramework.Hosting;
 public sealed class AgentHostBuilder : IAgentHostBuilder
 {
     private readonly AgentHostConfig _config = new();
+    private readonly ServiceCollection _services = new();
 
     public static IAgentHostBuilder Create() => new AgentHostBuilder();
+    
+    public IServiceCollection Services => _services;
 
     public IAgentHostBuilder AddEngine(string engineId, Func<IEngine> engineFactory)
     {
@@ -51,7 +55,7 @@ public sealed class AgentHostBuilder : IAgentHostBuilder
 
     public IAgentHost Build()
     {
-        // TODO: replace NoopAgentHost with real host that composes Kernel + Engines + Runners.
-        return new AgentHost(_config);
+        var serviceProvider = _services.BuildServiceProvider(validateScopes: false);
+        return new AgentHost(_config, serviceProvider);
     }
 }

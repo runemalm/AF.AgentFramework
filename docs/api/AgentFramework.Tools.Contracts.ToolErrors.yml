@@ -1,0 +1,593 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Tools.Contracts.ToolErrors
+  commentId: T:AgentFramework.Tools.Contracts.ToolErrors
+  id: ToolErrors
+  parent: AgentFramework.Tools.Contracts
+  children:
+  - AgentFramework.Tools.Contracts.ToolErrors.NotAuthorized(System.String)
+  - AgentFramework.Tools.Contracts.ToolErrors.NotImplemented(System.String,System.String)
+  - AgentFramework.Tools.Contracts.ToolErrors.Timeout
+  - AgentFramework.Tools.Contracts.ToolErrors.ToolNotFound(System.String)
+  - AgentFramework.Tools.Contracts.ToolErrors.Unhandled(System.String,System.String)
+  - AgentFramework.Tools.Contracts.ToolErrors.ValidationFailed(System.String[])
+  langs:
+  - csharp
+  - vb
+  name: ToolErrors
+  nameWithType: ToolErrors
+  fullName: AgentFramework.Tools.Contracts.ToolErrors
+  type: Class
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolErrors.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: ToolErrors
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolErrors.cs
+    startLine: 5
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: Helper factory for common <xref href="AgentFramework.Tools.Contracts.ToolError" data-throw-if-not-resolved="false"></xref> shapes used across the pipeline.
+  example: []
+  syntax:
+    content: public static class ToolErrors
+    content.vb: Public Module ToolErrors
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AgentFramework.Tools.Contracts.ToolErrors.ToolNotFound(System.String)
+  commentId: M:AgentFramework.Tools.Contracts.ToolErrors.ToolNotFound(System.String)
+  id: ToolNotFound(System.String)
+  parent: AgentFramework.Tools.Contracts.ToolErrors
+  langs:
+  - csharp
+  - vb
+  name: ToolNotFound(string)
+  nameWithType: ToolErrors.ToolNotFound(string)
+  fullName: AgentFramework.Tools.Contracts.ToolErrors.ToolNotFound(string)
+  type: Method
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolErrors.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: ToolNotFound
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolErrors.cs
+    startLine: 7
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  syntax:
+    content: public static ToolError ToolNotFound(string toolName)
+    parameters:
+    - id: toolName
+      type: System.String
+    return:
+      type: AgentFramework.Tools.Contracts.ToolError
+    content.vb: Public Shared Function ToolNotFound(toolName As String) As ToolError
+  overload: AgentFramework.Tools.Contracts.ToolErrors.ToolNotFound*
+  nameWithType.vb: ToolErrors.ToolNotFound(String)
+  fullName.vb: AgentFramework.Tools.Contracts.ToolErrors.ToolNotFound(String)
+  name.vb: ToolNotFound(String)
+- uid: AgentFramework.Tools.Contracts.ToolErrors.ValidationFailed(System.String[])
+  commentId: M:AgentFramework.Tools.Contracts.ToolErrors.ValidationFailed(System.String[])
+  id: ValidationFailed(System.String[])
+  parent: AgentFramework.Tools.Contracts.ToolErrors
+  langs:
+  - csharp
+  - vb
+  name: ValidationFailed(params string[])
+  nameWithType: ToolErrors.ValidationFailed(params string[])
+  fullName: AgentFramework.Tools.Contracts.ToolErrors.ValidationFailed(params string[])
+  type: Method
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolErrors.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: ValidationFailed
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolErrors.cs
+    startLine: 16
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  syntax:
+    content: public static ToolError ValidationFailed(params string[] errors)
+    parameters:
+    - id: errors
+      type: System.String[]
+    return:
+      type: AgentFramework.Tools.Contracts.ToolError
+    content.vb: Public Shared Function ValidationFailed(ParamArray errors As String()) As ToolError
+  overload: AgentFramework.Tools.Contracts.ToolErrors.ValidationFailed*
+  nameWithType.vb: ToolErrors.ValidationFailed(ParamArray String())
+  fullName.vb: AgentFramework.Tools.Contracts.ToolErrors.ValidationFailed(ParamArray String())
+  name.vb: ValidationFailed(ParamArray String())
+- uid: AgentFramework.Tools.Contracts.ToolErrors.NotAuthorized(System.String)
+  commentId: M:AgentFramework.Tools.Contracts.ToolErrors.NotAuthorized(System.String)
+  id: NotAuthorized(System.String)
+  parent: AgentFramework.Tools.Contracts.ToolErrors
+  langs:
+  - csharp
+  - vb
+  name: NotAuthorized(string?)
+  nameWithType: ToolErrors.NotAuthorized(string?)
+  fullName: AgentFramework.Tools.Contracts.ToolErrors.NotAuthorized(string?)
+  type: Method
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolErrors.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: NotAuthorized
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolErrors.cs
+    startLine: 25
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  syntax:
+    content: public static ToolError NotAuthorized(string? reason = null)
+    parameters:
+    - id: reason
+      type: System.String
+    return:
+      type: AgentFramework.Tools.Contracts.ToolError
+    content.vb: Public Shared Function NotAuthorized(reason As String = Nothing) As ToolError
+  overload: AgentFramework.Tools.Contracts.ToolErrors.NotAuthorized*
+  nameWithType.vb: ToolErrors.NotAuthorized(String)
+  fullName.vb: AgentFramework.Tools.Contracts.ToolErrors.NotAuthorized(String)
+  name.vb: NotAuthorized(String)
+- uid: AgentFramework.Tools.Contracts.ToolErrors.Timeout
+  commentId: M:AgentFramework.Tools.Contracts.ToolErrors.Timeout
+  id: Timeout
+  parent: AgentFramework.Tools.Contracts.ToolErrors
+  langs:
+  - csharp
+  - vb
+  name: Timeout()
+  nameWithType: ToolErrors.Timeout()
+  fullName: AgentFramework.Tools.Contracts.ToolErrors.Timeout()
+  type: Method
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolErrors.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Timeout
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolErrors.cs
+    startLine: 33
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  syntax:
+    content: public static ToolError Timeout()
+    return:
+      type: AgentFramework.Tools.Contracts.ToolError
+    content.vb: Public Shared Function Timeout() As ToolError
+  overload: AgentFramework.Tools.Contracts.ToolErrors.Timeout*
+- uid: AgentFramework.Tools.Contracts.ToolErrors.NotImplemented(System.String,System.String)
+  commentId: M:AgentFramework.Tools.Contracts.ToolErrors.NotImplemented(System.String,System.String)
+  id: NotImplemented(System.String,System.String)
+  parent: AgentFramework.Tools.Contracts.ToolErrors
+  langs:
+  - csharp
+  - vb
+  name: NotImplemented(string, string)
+  nameWithType: ToolErrors.NotImplemented(string, string)
+  fullName: AgentFramework.Tools.Contracts.ToolErrors.NotImplemented(string, string)
+  type: Method
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolErrors.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: NotImplemented
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolErrors.cs
+    startLine: 41
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  syntax:
+    content: public static ToolError NotImplemented(string toolName, string origin)
+    parameters:
+    - id: toolName
+      type: System.String
+    - id: origin
+      type: System.String
+    return:
+      type: AgentFramework.Tools.Contracts.ToolError
+    content.vb: Public Shared Function NotImplemented(toolName As String, origin As String) As ToolError
+  overload: AgentFramework.Tools.Contracts.ToolErrors.NotImplemented*
+  nameWithType.vb: ToolErrors.NotImplemented(String, String)
+  fullName.vb: AgentFramework.Tools.Contracts.ToolErrors.NotImplemented(String, String)
+  name.vb: NotImplemented(String, String)
+- uid: AgentFramework.Tools.Contracts.ToolErrors.Unhandled(System.String,System.String)
+  commentId: M:AgentFramework.Tools.Contracts.ToolErrors.Unhandled(System.String,System.String)
+  id: Unhandled(System.String,System.String)
+  parent: AgentFramework.Tools.Contracts.ToolErrors
+  langs:
+  - csharp
+  - vb
+  name: Unhandled(string, string)
+  nameWithType: ToolErrors.Unhandled(string, string)
+  fullName: AgentFramework.Tools.Contracts.ToolErrors.Unhandled(string, string)
+  type: Method
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolErrors.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Unhandled
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolErrors.cs
+    startLine: 50
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  syntax:
+    content: public static ToolError Unhandled(string message, string details)
+    parameters:
+    - id: message
+      type: System.String
+    - id: details
+      type: System.String
+    return:
+      type: AgentFramework.Tools.Contracts.ToolError
+    content.vb: Public Shared Function Unhandled(message As String, details As String) As ToolError
+  overload: AgentFramework.Tools.Contracts.ToolErrors.Unhandled*
+  nameWithType.vb: ToolErrors.Unhandled(String, String)
+  fullName.vb: AgentFramework.Tools.Contracts.ToolErrors.Unhandled(String, String)
+  name.vb: Unhandled(String, String)
+references:
+- uid: AgentFramework.Tools.Contracts.ToolError
+  commentId: T:AgentFramework.Tools.Contracts.ToolError
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolError.html
+  name: ToolError
+  nameWithType: ToolError
+  fullName: AgentFramework.Tools.Contracts.ToolError
+- uid: AgentFramework.Tools.Contracts
+  commentId: N:AgentFramework.Tools.Contracts
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Contracts
+  nameWithType: AgentFramework.Tools.Contracts
+  fullName: AgentFramework.Tools.Contracts
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AgentFramework.Tools.Contracts.ToolErrors.ToolNotFound*
+  commentId: Overload:AgentFramework.Tools.Contracts.ToolErrors.ToolNotFound
+  href: AgentFramework.Tools.Contracts.ToolErrors.html#AgentFramework_Tools_Contracts_ToolErrors_ToolNotFound_System_String_
+  name: ToolNotFound
+  nameWithType: ToolErrors.ToolNotFound
+  fullName: AgentFramework.Tools.Contracts.ToolErrors.ToolNotFound
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AgentFramework.Tools.Contracts.ToolErrors.ValidationFailed*
+  commentId: Overload:AgentFramework.Tools.Contracts.ToolErrors.ValidationFailed
+  href: AgentFramework.Tools.Contracts.ToolErrors.html#AgentFramework_Tools_Contracts_ToolErrors_ValidationFailed_System_String___
+  name: ValidationFailed
+  nameWithType: ToolErrors.ValidationFailed
+  fullName: AgentFramework.Tools.Contracts.ToolErrors.ValidationFailed
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: AgentFramework.Tools.Contracts.ToolErrors.NotAuthorized*
+  commentId: Overload:AgentFramework.Tools.Contracts.ToolErrors.NotAuthorized
+  href: AgentFramework.Tools.Contracts.ToolErrors.html#AgentFramework_Tools_Contracts_ToolErrors_NotAuthorized_System_String_
+  name: NotAuthorized
+  nameWithType: ToolErrors.NotAuthorized
+  fullName: AgentFramework.Tools.Contracts.ToolErrors.NotAuthorized
+- uid: AgentFramework.Tools.Contracts.ToolErrors.Timeout*
+  commentId: Overload:AgentFramework.Tools.Contracts.ToolErrors.Timeout
+  href: AgentFramework.Tools.Contracts.ToolErrors.html#AgentFramework_Tools_Contracts_ToolErrors_Timeout
+  name: Timeout
+  nameWithType: ToolErrors.Timeout
+  fullName: AgentFramework.Tools.Contracts.ToolErrors.Timeout
+- uid: AgentFramework.Tools.Contracts.ToolErrors.NotImplemented*
+  commentId: Overload:AgentFramework.Tools.Contracts.ToolErrors.NotImplemented
+  href: AgentFramework.Tools.Contracts.ToolErrors.html#AgentFramework_Tools_Contracts_ToolErrors_NotImplemented_System_String_System_String_
+  name: NotImplemented
+  nameWithType: ToolErrors.NotImplemented
+  fullName: AgentFramework.Tools.Contracts.ToolErrors.NotImplemented
+- uid: AgentFramework.Tools.Contracts.ToolErrors.Unhandled*
+  commentId: Overload:AgentFramework.Tools.Contracts.ToolErrors.Unhandled
+  href: AgentFramework.Tools.Contracts.ToolErrors.html#AgentFramework_Tools_Contracts_ToolErrors_Unhandled_System_String_System_String_
+  name: Unhandled
+  nameWithType: ToolErrors.Unhandled
+  fullName: AgentFramework.Tools.Contracts.ToolErrors.Unhandled

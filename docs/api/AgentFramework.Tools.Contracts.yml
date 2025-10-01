@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Tools.Contracts
+  commentId: N:AgentFramework.Tools.Contracts
+  id: AgentFramework.Tools.Contracts
+  children:
+  - AgentFramework.Tools.Contracts.Correlation
+  - AgentFramework.Tools.Contracts.EffectLevel
+  - AgentFramework.Tools.Contracts.PolicyDefaults
+  - AgentFramework.Tools.Contracts.PolicySnapshot
+  - AgentFramework.Tools.Contracts.RetryDefaults
+  - AgentFramework.Tools.Contracts.ToolContract
+  - AgentFramework.Tools.Contracts.ToolDescriptor
+  - AgentFramework.Tools.Contracts.ToolError
+  - AgentFramework.Tools.Contracts.ToolErrorCode
+  - AgentFramework.Tools.Contracts.ToolErrors
+  - AgentFramework.Tools.Contracts.ToolInvocation
+  - AgentFramework.Tools.Contracts.ToolResult
+  - AgentFramework.Tools.Contracts.ToolResultFactory
+  - AgentFramework.Tools.Contracts.ToolResultStatus
+  langs:
+  - csharp
+  - vb
+  name: AgentFramework.Tools.Contracts
+  nameWithType: AgentFramework.Tools.Contracts
+  fullName: AgentFramework.Tools.Contracts
+  type: Namespace
+  assemblies:
+  - AF.AgentFramework
+references:
+- uid: AgentFramework.Tools.Contracts.Correlation
+  commentId: T:AgentFramework.Tools.Contracts.Correlation
+  href: AgentFramework.Tools.Contracts.Correlation.html
+  name: Correlation
+  nameWithType: Correlation
+  fullName: AgentFramework.Tools.Contracts.Correlation
+- uid: AgentFramework.Tools.Contracts.EffectLevel
+  commentId: T:AgentFramework.Tools.Contracts.EffectLevel
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.EffectLevel.html
+  name: EffectLevel
+  nameWithType: EffectLevel
+  fullName: AgentFramework.Tools.Contracts.EffectLevel
+- uid: AgentFramework.Tools.Contracts.PolicyDefaults
+  commentId: T:AgentFramework.Tools.Contracts.PolicyDefaults
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.PolicyDefaults.html
+  name: PolicyDefaults
+  nameWithType: PolicyDefaults
+  fullName: AgentFramework.Tools.Contracts.PolicyDefaults
+- uid: AgentFramework.Tools.Contracts.RetryDefaults
+  commentId: T:AgentFramework.Tools.Contracts.RetryDefaults
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.RetryDefaults.html
+  name: RetryDefaults
+  nameWithType: RetryDefaults
+  fullName: AgentFramework.Tools.Contracts.RetryDefaults
+- uid: AgentFramework.Tools.Contracts.PolicySnapshot
+  commentId: T:AgentFramework.Tools.Contracts.PolicySnapshot
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.PolicySnapshot.html
+  name: PolicySnapshot
+  nameWithType: PolicySnapshot
+  fullName: AgentFramework.Tools.Contracts.PolicySnapshot
+- uid: AgentFramework.Tools.Contracts.ToolContract
+  commentId: T:AgentFramework.Tools.Contracts.ToolContract
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolContract.html
+  name: ToolContract
+  nameWithType: ToolContract
+  fullName: AgentFramework.Tools.Contracts.ToolContract
+- uid: AgentFramework.Tools.Contracts.ToolDescriptor
+  commentId: T:AgentFramework.Tools.Contracts.ToolDescriptor
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolDescriptor.html
+  name: ToolDescriptor
+  nameWithType: ToolDescriptor
+  fullName: AgentFramework.Tools.Contracts.ToolDescriptor
+- uid: AgentFramework.Tools.Contracts.ToolError
+  commentId: T:AgentFramework.Tools.Contracts.ToolError
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolError.html
+  name: ToolError
+  nameWithType: ToolError
+  fullName: AgentFramework.Tools.Contracts.ToolError
+- uid: AgentFramework.Tools.Contracts.ToolErrorCode
+  commentId: T:AgentFramework.Tools.Contracts.ToolErrorCode
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolErrorCode.html
+  name: ToolErrorCode
+  nameWithType: ToolErrorCode
+  fullName: AgentFramework.Tools.Contracts.ToolErrorCode
+- uid: AgentFramework.Tools.Contracts.ToolErrors
+  commentId: T:AgentFramework.Tools.Contracts.ToolErrors
+  href: AgentFramework.Tools.Contracts.ToolErrors.html
+  name: ToolErrors
+  nameWithType: ToolErrors
+  fullName: AgentFramework.Tools.Contracts.ToolErrors
+- uid: AgentFramework.Tools.Contracts.ToolInvocation
+  commentId: T:AgentFramework.Tools.Contracts.ToolInvocation
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolInvocation.html
+  name: ToolInvocation
+  nameWithType: ToolInvocation
+  fullName: AgentFramework.Tools.Contracts.ToolInvocation
+- uid: AgentFramework.Tools.Contracts.ToolResult
+  commentId: T:AgentFramework.Tools.Contracts.ToolResult
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolResult.html
+  name: ToolResult
+  nameWithType: ToolResult
+  fullName: AgentFramework.Tools.Contracts.ToolResult
+- uid: AgentFramework.Tools.Contracts.ToolResultFactory
+  commentId: T:AgentFramework.Tools.Contracts.ToolResultFactory
+  href: AgentFramework.Tools.Contracts.ToolResultFactory.html
+  name: ToolResultFactory
+  nameWithType: ToolResultFactory
+  fullName: AgentFramework.Tools.Contracts.ToolResultFactory
+- uid: AgentFramework.Tools.Contracts.ToolResultStatus
+  commentId: T:AgentFramework.Tools.Contracts.ToolResultStatus
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolResultStatus.html
+  name: ToolResultStatus
+  nameWithType: ToolResultStatus
+  fullName: AgentFramework.Tools.Contracts.ToolResultStatus
+- uid: AgentFramework.Tools.Contracts
+  commentId: N:AgentFramework.Tools.Contracts
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Contracts
+  nameWithType: AgentFramework.Tools.Contracts
+  fullName: AgentFramework.Tools.Contracts
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html

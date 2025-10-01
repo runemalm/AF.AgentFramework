@@ -1,0 +1,216 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Tools.Contracts.ToolErrorCode
+  commentId: T:AgentFramework.Tools.Contracts.ToolErrorCode
+  id: ToolErrorCode
+  parent: AgentFramework.Tools.Contracts
+  children:
+  - AgentFramework.Tools.Contracts.ToolErrorCode.AuthError
+  - AgentFramework.Tools.Contracts.ToolErrorCode.ContractError
+  - AgentFramework.Tools.Contracts.ToolErrorCode.ExecutionError
+  - AgentFramework.Tools.Contracts.ToolErrorCode.PolicyError
+  - AgentFramework.Tools.Contracts.ToolErrorCode.SystemError
+  langs:
+  - csharp
+  - vb
+  name: ToolErrorCode
+  nameWithType: ToolErrorCode
+  fullName: AgentFramework.Tools.Contracts.ToolErrorCode
+  type: Enum
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolErrorCode.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: ToolErrorCode
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolErrorCode.cs
+    startLine: 5
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: High-level error categories returned from tool invocations.
+  example: []
+  syntax:
+    content: public enum ToolErrorCode
+    content.vb: Public Enum ToolErrorCode
+- uid: AgentFramework.Tools.Contracts.ToolErrorCode.ContractError
+  commentId: F:AgentFramework.Tools.Contracts.ToolErrorCode.ContractError
+  id: ContractError
+  parent: AgentFramework.Tools.Contracts.ToolErrorCode
+  langs:
+  - csharp
+  - vb
+  name: ContractError
+  nameWithType: ToolErrorCode.ContractError
+  fullName: AgentFramework.Tools.Contracts.ToolErrorCode.ContractError
+  type: Field
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolErrorCode.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: ContractError
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolErrorCode.cs
+    startLine: 10
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: Contract/schema/version issues detected before or after execution.
+  example: []
+  syntax:
+    content: ContractError = 0
+    return:
+      type: AgentFramework.Tools.Contracts.ToolErrorCode
+- uid: AgentFramework.Tools.Contracts.ToolErrorCode.PolicyError
+  commentId: F:AgentFramework.Tools.Contracts.ToolErrorCode.PolicyError
+  id: PolicyError
+  parent: AgentFramework.Tools.Contracts.ToolErrorCode
+  langs:
+  - csharp
+  - vb
+  name: PolicyError
+  nameWithType: ToolErrorCode.PolicyError
+  fullName: AgentFramework.Tools.Contracts.ToolErrorCode.PolicyError
+  type: Field
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolErrorCode.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: PolicyError
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolErrorCode.cs
+    startLine: 16
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: >-
+    A reliability/safety policy prevented successful execution
+
+    (e.g., timeout, circuit open, rate limited, budget exceeded).
+  example: []
+  syntax:
+    content: PolicyError = 1
+    return:
+      type: AgentFramework.Tools.Contracts.ToolErrorCode
+- uid: AgentFramework.Tools.Contracts.ToolErrorCode.AuthError
+  commentId: F:AgentFramework.Tools.Contracts.ToolErrorCode.AuthError
+  id: AuthError
+  parent: AgentFramework.Tools.Contracts.ToolErrorCode
+  langs:
+  - csharp
+  - vb
+  name: AuthError
+  nameWithType: ToolErrorCode.AuthError
+  fullName: AgentFramework.Tools.Contracts.ToolErrorCode.AuthError
+  type: Field
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolErrorCode.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: AuthError
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolErrorCode.cs
+    startLine: 21
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: Authentication or authorization failure.
+  example: []
+  syntax:
+    content: AuthError = 2
+    return:
+      type: AgentFramework.Tools.Contracts.ToolErrorCode
+- uid: AgentFramework.Tools.Contracts.ToolErrorCode.ExecutionError
+  commentId: F:AgentFramework.Tools.Contracts.ToolErrorCode.ExecutionError
+  id: ExecutionError
+  parent: AgentFramework.Tools.Contracts.ToolErrorCode
+  langs:
+  - csharp
+  - vb
+  name: ExecutionError
+  nameWithType: ToolErrorCode.ExecutionError
+  fullName: AgentFramework.Tools.Contracts.ToolErrorCode.ExecutionError
+  type: Field
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolErrorCode.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: ExecutionError
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolErrorCode.cs
+    startLine: 26
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: Failure in the underlying provider or downstream service during execution.
+  example: []
+  syntax:
+    content: ExecutionError = 3
+    return:
+      type: AgentFramework.Tools.Contracts.ToolErrorCode
+- uid: AgentFramework.Tools.Contracts.ToolErrorCode.SystemError
+  commentId: F:AgentFramework.Tools.Contracts.ToolErrorCode.SystemError
+  id: SystemError
+  parent: AgentFramework.Tools.Contracts.ToolErrorCode
+  langs:
+  - csharp
+  - vb
+  name: SystemError
+  nameWithType: ToolErrorCode.SystemError
+  fullName: AgentFramework.Tools.Contracts.ToolErrorCode.SystemError
+  type: Field
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolErrorCode.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: SystemError
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolErrorCode.cs
+    startLine: 31
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: Unexpected runtime failure not covered by other categories.
+  example: []
+  syntax:
+    content: SystemError = 4
+    return:
+      type: AgentFramework.Tools.Contracts.ToolErrorCode
+references:
+- uid: AgentFramework.Tools.Contracts
+  commentId: N:AgentFramework.Tools.Contracts
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Contracts
+  nameWithType: AgentFramework.Tools.Contracts
+  fullName: AgentFramework.Tools.Contracts
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+- uid: AgentFramework.Tools.Contracts.ToolErrorCode
+  commentId: T:AgentFramework.Tools.Contracts.ToolErrorCode
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolErrorCode.html
+  name: ToolErrorCode
+  nameWithType: ToolErrorCode
+  fullName: AgentFramework.Tools.Contracts.ToolErrorCode

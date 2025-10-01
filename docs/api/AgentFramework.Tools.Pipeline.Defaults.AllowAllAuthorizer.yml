@@ -1,0 +1,511 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Tools.Pipeline.Defaults.AllowAllAuthorizer
+  commentId: T:AgentFramework.Tools.Pipeline.Defaults.AllowAllAuthorizer
+  id: AllowAllAuthorizer
+  parent: AgentFramework.Tools.Pipeline.Defaults
+  children:
+  - AgentFramework.Tools.Pipeline.Defaults.AllowAllAuthorizer.Authorize(AgentFramework.Tools.Contracts.ToolInvocation,AgentFramework.Tools.Contracts.ToolDescriptor,AgentFramework.Tools.Registry.ToolBindingContext)
+  langs:
+  - csharp
+  - vb
+  name: AllowAllAuthorizer
+  nameWithType: AllowAllAuthorizer
+  fullName: AgentFramework.Tools.Pipeline.Defaults.AllowAllAuthorizer
+  type: Class
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Pipeline/Defaults/AllowAllAuthorizer.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: AllowAllAuthorizer
+    path: ../src/AF.AgentFramework/Tools/Pipeline/Defaults/AllowAllAuthorizer.cs
+    startLine: 9
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Pipeline.Defaults
+  summary: >-
+    Authorizer that always allows every invocation.
+
+    Replace in host with real policy- or role-based authorization.
+  example: []
+  syntax:
+    content: 'public sealed class AllowAllAuthorizer : IAuthorizer'
+    content.vb: Public NotInheritable Class AllowAllAuthorizer Implements IAuthorizer
+  inheritance:
+  - System.Object
+  implements:
+  - AgentFramework.Tools.Pipeline.IAuthorizer
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AgentFramework.Tools.Pipeline.Defaults.AllowAllAuthorizer.Authorize(AgentFramework.Tools.Contracts.ToolInvocation,AgentFramework.Tools.Contracts.ToolDescriptor,AgentFramework.Tools.Registry.ToolBindingContext)
+  commentId: M:AgentFramework.Tools.Pipeline.Defaults.AllowAllAuthorizer.Authorize(AgentFramework.Tools.Contracts.ToolInvocation,AgentFramework.Tools.Contracts.ToolDescriptor,AgentFramework.Tools.Registry.ToolBindingContext)
+  id: Authorize(AgentFramework.Tools.Contracts.ToolInvocation,AgentFramework.Tools.Contracts.ToolDescriptor,AgentFramework.Tools.Registry.ToolBindingContext)
+  parent: AgentFramework.Tools.Pipeline.Defaults.AllowAllAuthorizer
+  langs:
+  - csharp
+  - vb
+  name: Authorize(ToolInvocation, ToolDescriptor, ToolBindingContext)
+  nameWithType: AllowAllAuthorizer.Authorize(ToolInvocation, ToolDescriptor, ToolBindingContext)
+  fullName: AgentFramework.Tools.Pipeline.Defaults.AllowAllAuthorizer.Authorize(AgentFramework.Tools.Contracts.ToolInvocation, AgentFramework.Tools.Contracts.ToolDescriptor, AgentFramework.Tools.Registry.ToolBindingContext)
+  type: Method
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Pipeline/Defaults/AllowAllAuthorizer.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Authorize
+    path: ../src/AF.AgentFramework/Tools/Pipeline/Defaults/AllowAllAuthorizer.cs
+    startLine: 11
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Pipeline.Defaults
+  example: []
+  syntax:
+    content: public AuthorizationOutcome Authorize(ToolInvocation invocation, ToolDescriptor descriptor, ToolBindingContext bindingContext)
+    parameters:
+    - id: invocation
+      type: AgentFramework.Tools.Contracts.ToolInvocation
+    - id: descriptor
+      type: AgentFramework.Tools.Contracts.ToolDescriptor
+    - id: bindingContext
+      type: AgentFramework.Tools.Registry.ToolBindingContext
+    return:
+      type: AgentFramework.Tools.Pipeline.AuthorizationOutcome
+    content.vb: Public Function Authorize(invocation As ToolInvocation, descriptor As ToolDescriptor, bindingContext As ToolBindingContext) As AuthorizationOutcome
+  overload: AgentFramework.Tools.Pipeline.Defaults.AllowAllAuthorizer.Authorize*
+  implements:
+  - AgentFramework.Tools.Pipeline.IAuthorizer.Authorize(AgentFramework.Tools.Contracts.ToolInvocation,AgentFramework.Tools.Contracts.ToolDescriptor,AgentFramework.Tools.Registry.ToolBindingContext)
+references:
+- uid: AgentFramework.Tools.Pipeline.Defaults
+  commentId: N:AgentFramework.Tools.Pipeline.Defaults
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Pipeline.Defaults
+  nameWithType: AgentFramework.Tools.Pipeline.Defaults
+  fullName: AgentFramework.Tools.Pipeline.Defaults
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline
+    name: Pipeline
+    href: AgentFramework.Tools.Pipeline.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline.Defaults
+    name: Defaults
+    href: AgentFramework.Tools.Pipeline.Defaults.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline
+    name: Pipeline
+    href: AgentFramework.Tools.Pipeline.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline.Defaults
+    name: Defaults
+    href: AgentFramework.Tools.Pipeline.Defaults.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: AgentFramework.Tools.Pipeline.IAuthorizer
+  commentId: T:AgentFramework.Tools.Pipeline.IAuthorizer
+  parent: AgentFramework.Tools.Pipeline
+  href: AgentFramework.Tools.Pipeline.IAuthorizer.html
+  name: IAuthorizer
+  nameWithType: IAuthorizer
+  fullName: AgentFramework.Tools.Pipeline.IAuthorizer
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AgentFramework.Tools.Pipeline
+  commentId: N:AgentFramework.Tools.Pipeline
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Pipeline
+  nameWithType: AgentFramework.Tools.Pipeline
+  fullName: AgentFramework.Tools.Pipeline
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline
+    name: Pipeline
+    href: AgentFramework.Tools.Pipeline.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline
+    name: Pipeline
+    href: AgentFramework.Tools.Pipeline.html
+- uid: AgentFramework.Tools.Pipeline.Defaults.AllowAllAuthorizer.Authorize*
+  commentId: Overload:AgentFramework.Tools.Pipeline.Defaults.AllowAllAuthorizer.Authorize
+  href: AgentFramework.Tools.Pipeline.Defaults.AllowAllAuthorizer.html#AgentFramework_Tools_Pipeline_Defaults_AllowAllAuthorizer_Authorize_AgentFramework_Tools_Contracts_ToolInvocation_AgentFramework_Tools_Contracts_ToolDescriptor_AgentFramework_Tools_Registry_ToolBindingContext_
+  name: Authorize
+  nameWithType: AllowAllAuthorizer.Authorize
+  fullName: AgentFramework.Tools.Pipeline.Defaults.AllowAllAuthorizer.Authorize
+- uid: AgentFramework.Tools.Pipeline.IAuthorizer.Authorize(AgentFramework.Tools.Contracts.ToolInvocation,AgentFramework.Tools.Contracts.ToolDescriptor,AgentFramework.Tools.Registry.ToolBindingContext)
+  commentId: M:AgentFramework.Tools.Pipeline.IAuthorizer.Authorize(AgentFramework.Tools.Contracts.ToolInvocation,AgentFramework.Tools.Contracts.ToolDescriptor,AgentFramework.Tools.Registry.ToolBindingContext)
+  parent: AgentFramework.Tools.Pipeline.IAuthorizer
+  href: AgentFramework.Tools.Pipeline.IAuthorizer.html#AgentFramework_Tools_Pipeline_IAuthorizer_Authorize_AgentFramework_Tools_Contracts_ToolInvocation_AgentFramework_Tools_Contracts_ToolDescriptor_AgentFramework_Tools_Registry_ToolBindingContext_
+  name: Authorize(ToolInvocation, ToolDescriptor, ToolBindingContext)
+  nameWithType: IAuthorizer.Authorize(ToolInvocation, ToolDescriptor, ToolBindingContext)
+  fullName: AgentFramework.Tools.Pipeline.IAuthorizer.Authorize(AgentFramework.Tools.Contracts.ToolInvocation, AgentFramework.Tools.Contracts.ToolDescriptor, AgentFramework.Tools.Registry.ToolBindingContext)
+  spec.csharp:
+  - uid: AgentFramework.Tools.Pipeline.IAuthorizer.Authorize(AgentFramework.Tools.Contracts.ToolInvocation,AgentFramework.Tools.Contracts.ToolDescriptor,AgentFramework.Tools.Registry.ToolBindingContext)
+    name: Authorize
+    href: AgentFramework.Tools.Pipeline.IAuthorizer.html#AgentFramework_Tools_Pipeline_IAuthorizer_Authorize_AgentFramework_Tools_Contracts_ToolInvocation_AgentFramework_Tools_Contracts_ToolDescriptor_AgentFramework_Tools_Registry_ToolBindingContext_
+  - name: (
+  - uid: AgentFramework.Tools.Contracts.ToolInvocation
+    name: ToolInvocation
+    href: AgentFramework.Tools.Contracts.ToolInvocation.html
+  - name: ','
+  - name: " "
+  - uid: AgentFramework.Tools.Contracts.ToolDescriptor
+    name: ToolDescriptor
+    href: AgentFramework.Tools.Contracts.ToolDescriptor.html
+  - name: ','
+  - name: " "
+  - uid: AgentFramework.Tools.Registry.ToolBindingContext
+    name: ToolBindingContext
+    href: AgentFramework.Tools.Registry.ToolBindingContext.html
+  - name: )
+  spec.vb:
+  - uid: AgentFramework.Tools.Pipeline.IAuthorizer.Authorize(AgentFramework.Tools.Contracts.ToolInvocation,AgentFramework.Tools.Contracts.ToolDescriptor,AgentFramework.Tools.Registry.ToolBindingContext)
+    name: Authorize
+    href: AgentFramework.Tools.Pipeline.IAuthorizer.html#AgentFramework_Tools_Pipeline_IAuthorizer_Authorize_AgentFramework_Tools_Contracts_ToolInvocation_AgentFramework_Tools_Contracts_ToolDescriptor_AgentFramework_Tools_Registry_ToolBindingContext_
+  - name: (
+  - uid: AgentFramework.Tools.Contracts.ToolInvocation
+    name: ToolInvocation
+    href: AgentFramework.Tools.Contracts.ToolInvocation.html
+  - name: ','
+  - name: " "
+  - uid: AgentFramework.Tools.Contracts.ToolDescriptor
+    name: ToolDescriptor
+    href: AgentFramework.Tools.Contracts.ToolDescriptor.html
+  - name: ','
+  - name: " "
+  - uid: AgentFramework.Tools.Registry.ToolBindingContext
+    name: ToolBindingContext
+    href: AgentFramework.Tools.Registry.ToolBindingContext.html
+  - name: )
+- uid: AgentFramework.Tools.Contracts.ToolInvocation
+  commentId: T:AgentFramework.Tools.Contracts.ToolInvocation
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolInvocation.html
+  name: ToolInvocation
+  nameWithType: ToolInvocation
+  fullName: AgentFramework.Tools.Contracts.ToolInvocation
+- uid: AgentFramework.Tools.Contracts.ToolDescriptor
+  commentId: T:AgentFramework.Tools.Contracts.ToolDescriptor
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolDescriptor.html
+  name: ToolDescriptor
+  nameWithType: ToolDescriptor
+  fullName: AgentFramework.Tools.Contracts.ToolDescriptor
+- uid: AgentFramework.Tools.Registry.ToolBindingContext
+  commentId: T:AgentFramework.Tools.Registry.ToolBindingContext
+  parent: AgentFramework.Tools.Registry
+  href: AgentFramework.Tools.Registry.ToolBindingContext.html
+  name: ToolBindingContext
+  nameWithType: ToolBindingContext
+  fullName: AgentFramework.Tools.Registry.ToolBindingContext
+- uid: AgentFramework.Tools.Pipeline.AuthorizationOutcome
+  commentId: T:AgentFramework.Tools.Pipeline.AuthorizationOutcome
+  parent: AgentFramework.Tools.Pipeline
+  href: AgentFramework.Tools.Pipeline.AuthorizationOutcome.html
+  name: AuthorizationOutcome
+  nameWithType: AuthorizationOutcome
+  fullName: AgentFramework.Tools.Pipeline.AuthorizationOutcome
+- uid: AgentFramework.Tools.Contracts
+  commentId: N:AgentFramework.Tools.Contracts
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Contracts
+  nameWithType: AgentFramework.Tools.Contracts
+  fullName: AgentFramework.Tools.Contracts
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+- uid: AgentFramework.Tools.Registry
+  commentId: N:AgentFramework.Tools.Registry
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Registry
+  nameWithType: AgentFramework.Tools.Registry
+  fullName: AgentFramework.Tools.Registry
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Registry
+    name: Registry
+    href: AgentFramework.Tools.Registry.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Registry
+    name: Registry
+    href: AgentFramework.Tools.Registry.html

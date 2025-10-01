@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Tools.Pipeline.Policies
+  commentId: N:AgentFramework.Tools.Pipeline.Policies
+  id: AgentFramework.Tools.Pipeline.Policies
+  children:
+  - AgentFramework.Tools.Pipeline.Policies.BudgetPolicy
+  - AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy
+  - AgentFramework.Tools.Pipeline.Policies.ConcurrencyPolicy
+  - AgentFramework.Tools.Pipeline.Policies.RateLimitPolicy
+  - AgentFramework.Tools.Pipeline.Policies.RetryPolicy
+  langs:
+  - csharp
+  - vb
+  name: AgentFramework.Tools.Pipeline.Policies
+  nameWithType: AgentFramework.Tools.Pipeline.Policies
+  fullName: AgentFramework.Tools.Pipeline.Policies
+  type: Namespace
+  assemblies:
+  - AF.AgentFramework
+references:
+- uid: AgentFramework.Tools.Pipeline.Policies.BudgetPolicy
+  commentId: T:AgentFramework.Tools.Pipeline.Policies.BudgetPolicy
+  href: AgentFramework.Tools.Pipeline.Policies.BudgetPolicy.html
+  name: BudgetPolicy
+  nameWithType: BudgetPolicy
+  fullName: AgentFramework.Tools.Pipeline.Policies.BudgetPolicy
+- uid: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy
+  commentId: T:AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy
+  href: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.html
+  name: CircuitBreakerPolicy
+  nameWithType: CircuitBreakerPolicy
+  fullName: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy
+- uid: AgentFramework.Tools.Pipeline.Policies.ConcurrencyPolicy
+  commentId: T:AgentFramework.Tools.Pipeline.Policies.ConcurrencyPolicy
+  href: AgentFramework.Tools.Pipeline.Policies.ConcurrencyPolicy.html
+  name: ConcurrencyPolicy
+  nameWithType: ConcurrencyPolicy
+  fullName: AgentFramework.Tools.Pipeline.Policies.ConcurrencyPolicy
+- uid: AgentFramework.Tools.Pipeline.Policies.RateLimitPolicy
+  commentId: T:AgentFramework.Tools.Pipeline.Policies.RateLimitPolicy
+  href: AgentFramework.Tools.Pipeline.Policies.RateLimitPolicy.html
+  name: RateLimitPolicy
+  nameWithType: RateLimitPolicy
+  fullName: AgentFramework.Tools.Pipeline.Policies.RateLimitPolicy
+- uid: AgentFramework.Tools.Pipeline.Policies.RetryPolicy
+  commentId: T:AgentFramework.Tools.Pipeline.Policies.RetryPolicy
+  href: AgentFramework.Tools.Pipeline.Policies.RetryPolicy.html
+  name: RetryPolicy
+  nameWithType: RetryPolicy
+  fullName: AgentFramework.Tools.Pipeline.Policies.RetryPolicy

@@ -1,0 +1,31 @@
+items:
+- name: Tools
+  href: tools/index.md
+  expanded: True
+  items:
+    - name: Registry & Binding
+      href: tools/registry.md
+    - name: Pipeline
+      href: tools/pipeline.md
+    - name: Policies
+      href: tools/policies.md
+    - name: Observability
+      href: tools/observability.md
+    - name: Security
+      href: tools/security.md
+    - name: Governance
+      href: tools/governance.md
+    - name: Providers
+      items:
+        - name: Local Provider
+          href: tools/providers/local.md
+        - name: MCP Provider
+          href: tools/providers/mcp.md
+    - name: Contracts
+      items:
+        - name: Tool Contract
+          href: tools/contracts/tool-contract.md
+        - name: Invocation & Result
+          href: tools/contracts/invocation-result.md
+        - name: Schemas
+          href: tools/contracts/schemas.md

@@ -1,0 +1,655 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Tools.Contracts.ToolDescriptor
+  commentId: T:AgentFramework.Tools.Contracts.ToolDescriptor
+  id: ToolDescriptor
+  parent: AgentFramework.Tools.Contracts
+  children:
+  - AgentFramework.Tools.Contracts.ToolDescriptor.Contract
+  - AgentFramework.Tools.Contracts.ToolDescriptor.Name
+  - AgentFramework.Tools.Contracts.ToolDescriptor.Origin
+  - AgentFramework.Tools.Contracts.ToolDescriptor.Tags
+  - AgentFramework.Tools.Contracts.ToolDescriptor.Version
+  langs:
+  - csharp
+  - vb
+  name: ToolDescriptor
+  nameWithType: ToolDescriptor
+  fullName: AgentFramework.Tools.Contracts.ToolDescriptor
+  type: Class
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolDescriptor.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: ToolDescriptor
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolDescriptor.cs
+    startLine: 6
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: >-
+    A published tool instance available for resolution and invocation.
+
+    Couples identity (name, version) with its contract and origin.
+  example: []
+  syntax:
+    content: 'public sealed record ToolDescriptor : IEquatable<ToolDescriptor>'
+    content.vb: Public NotInheritable Class ToolDescriptor Implements IEquatable(Of ToolDescriptor)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{AgentFramework.Tools.Contracts.ToolDescriptor}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AgentFramework.Tools.Contracts.ToolDescriptor.Name
+  commentId: P:AgentFramework.Tools.Contracts.ToolDescriptor.Name
+  id: Name
+  parent: AgentFramework.Tools.Contracts.ToolDescriptor
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: ToolDescriptor.Name
+  fullName: AgentFramework.Tools.Contracts.ToolDescriptor.Name
+  type: Property
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolDescriptor.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Name
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolDescriptor.cs
+    startLine: 11
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: Fully qualified tool name (e.g., "local::fs.write", "mcp::github::issues.create").
+  example: []
+  syntax:
+    content: public string Name { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: AgentFramework.Tools.Contracts.ToolDescriptor.Name*
+- uid: AgentFramework.Tools.Contracts.ToolDescriptor.Version
+  commentId: P:AgentFramework.Tools.Contracts.ToolDescriptor.Version
+  id: Version
+  parent: AgentFramework.Tools.Contracts.ToolDescriptor
+  langs:
+  - csharp
+  - vb
+  name: Version
+  nameWithType: ToolDescriptor.Version
+  fullName: AgentFramework.Tools.Contracts.ToolDescriptor.Version
+  type: Property
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolDescriptor.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Version
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolDescriptor.cs
+    startLine: 16
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: Concrete version string of this published tool.
+  example: []
+  syntax:
+    content: public string Version { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Version As String
+  overload: AgentFramework.Tools.Contracts.ToolDescriptor.Version*
+- uid: AgentFramework.Tools.Contracts.ToolDescriptor.Contract
+  commentId: P:AgentFramework.Tools.Contracts.ToolDescriptor.Contract
+  id: Contract
+  parent: AgentFramework.Tools.Contracts.ToolDescriptor
+  langs:
+  - csharp
+  - vb
+  name: Contract
+  nameWithType: ToolDescriptor.Contract
+  fullName: AgentFramework.Tools.Contracts.ToolDescriptor.Contract
+  type: Property
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolDescriptor.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Contract
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolDescriptor.cs
+    startLine: 21
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: Declarative contract describing I/O, effects, and default policies.
+  example: []
+  syntax:
+    content: public ToolContract Contract { get; init; }
+    parameters: []
+    return:
+      type: AgentFramework.Tools.Contracts.ToolContract
+    content.vb: Public Property Contract As ToolContract
+  overload: AgentFramework.Tools.Contracts.ToolDescriptor.Contract*
+- uid: AgentFramework.Tools.Contracts.ToolDescriptor.Origin
+  commentId: P:AgentFramework.Tools.Contracts.ToolDescriptor.Origin
+  id: Origin
+  parent: AgentFramework.Tools.Contracts.ToolDescriptor
+  langs:
+  - csharp
+  - vb
+  name: Origin
+  nameWithType: ToolDescriptor.Origin
+  fullName: AgentFramework.Tools.Contracts.ToolDescriptor.Origin
+  type: Property
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolDescriptor.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Origin
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolDescriptor.cs
+    startLine: 26
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  syntax:
+    content: public string Origin { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Origin As String
+  overload: AgentFramework.Tools.Contracts.ToolDescriptor.Origin*
+- uid: AgentFramework.Tools.Contracts.ToolDescriptor.Tags
+  commentId: P:AgentFramework.Tools.Contracts.ToolDescriptor.Tags
+  id: Tags
+  parent: AgentFramework.Tools.Contracts.ToolDescriptor
+  langs:
+  - csharp
+  - vb
+  name: Tags
+  nameWithType: ToolDescriptor.Tags
+  fullName: AgentFramework.Tools.Contracts.ToolDescriptor.Tags
+  type: Property
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolDescriptor.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Tags
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolDescriptor.cs
+    startLine: 31
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: Optional classification tags (e.g., "filesystem", "http", "idempotent").
+  example: []
+  syntax:
+    content: public IReadOnlyCollection<string> Tags { get; init; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyCollection{System.String}
+    content.vb: Public Property Tags As IReadOnlyCollection(Of String)
+  overload: AgentFramework.Tools.Contracts.ToolDescriptor.Tags*
+references:
+- uid: AgentFramework.Tools.Contracts
+  commentId: N:AgentFramework.Tools.Contracts
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Contracts
+  nameWithType: AgentFramework.Tools.Contracts
+  fullName: AgentFramework.Tools.Contracts
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{AgentFramework.Tools.Contracts.ToolDescriptor}
+  commentId: T:System.IEquatable{AgentFramework.Tools.Contracts.ToolDescriptor}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<ToolDescriptor>
+  nameWithType: IEquatable<ToolDescriptor>
+  fullName: System.IEquatable<AgentFramework.Tools.Contracts.ToolDescriptor>
+  nameWithType.vb: IEquatable(Of ToolDescriptor)
+  fullName.vb: System.IEquatable(Of AgentFramework.Tools.Contracts.ToolDescriptor)
+  name.vb: IEquatable(Of ToolDescriptor)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: AgentFramework.Tools.Contracts.ToolDescriptor
+    name: ToolDescriptor
+    href: AgentFramework.Tools.Contracts.ToolDescriptor.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AgentFramework.Tools.Contracts.ToolDescriptor
+    name: ToolDescriptor
+    href: AgentFramework.Tools.Contracts.ToolDescriptor.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: AgentFramework.Tools.Contracts.ToolDescriptor.Name*
+  commentId: Overload:AgentFramework.Tools.Contracts.ToolDescriptor.Name
+  href: AgentFramework.Tools.Contracts.ToolDescriptor.html#AgentFramework_Tools_Contracts_ToolDescriptor_Name
+  name: Name
+  nameWithType: ToolDescriptor.Name
+  fullName: AgentFramework.Tools.Contracts.ToolDescriptor.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AgentFramework.Tools.Contracts.ToolDescriptor.Version*
+  commentId: Overload:AgentFramework.Tools.Contracts.ToolDescriptor.Version
+  href: AgentFramework.Tools.Contracts.ToolDescriptor.html#AgentFramework_Tools_Contracts_ToolDescriptor_Version
+  name: Version
+  nameWithType: ToolDescriptor.Version
+  fullName: AgentFramework.Tools.Contracts.ToolDescriptor.Version
+- uid: AgentFramework.Tools.Contracts.ToolDescriptor.Contract*
+  commentId: Overload:AgentFramework.Tools.Contracts.ToolDescriptor.Contract
+  href: AgentFramework.Tools.Contracts.ToolDescriptor.html#AgentFramework_Tools_Contracts_ToolDescriptor_Contract
+  name: Contract
+  nameWithType: ToolDescriptor.Contract
+  fullName: AgentFramework.Tools.Contracts.ToolDescriptor.Contract
+- uid: AgentFramework.Tools.Contracts.ToolContract
+  commentId: T:AgentFramework.Tools.Contracts.ToolContract
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolContract.html
+  name: ToolContract
+  nameWithType: ToolContract
+  fullName: AgentFramework.Tools.Contracts.ToolContract
+- uid: AgentFramework.Tools.Contracts.ToolDescriptor.Origin*
+  commentId: Overload:AgentFramework.Tools.Contracts.ToolDescriptor.Origin
+  href: AgentFramework.Tools.Contracts.ToolDescriptor.html#AgentFramework_Tools_Contracts_ToolDescriptor_Origin
+  name: Origin
+  nameWithType: ToolDescriptor.Origin
+  fullName: AgentFramework.Tools.Contracts.ToolDescriptor.Origin
+- uid: AgentFramework.Tools.Contracts.ToolDescriptor.Tags*
+  commentId: Overload:AgentFramework.Tools.Contracts.ToolDescriptor.Tags
+  href: AgentFramework.Tools.Contracts.ToolDescriptor.html#AgentFramework_Tools_Contracts_ToolDescriptor_Tags
+  name: Tags
+  nameWithType: ToolDescriptor.Tags
+  fullName: AgentFramework.Tools.Contracts.ToolDescriptor.Tags
+- uid: System.Collections.Generic.IReadOnlyCollection{System.String}
+  commentId: T:System.Collections.Generic.IReadOnlyCollection{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<string>
+  nameWithType: IReadOnlyCollection<string>
+  fullName: System.Collections.Generic.IReadOnlyCollection<string>
+  nameWithType.vb: IReadOnlyCollection(Of String)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of String)
+  name.vb: IReadOnlyCollection(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyCollection`1
+  commentId: T:System.Collections.Generic.IReadOnlyCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<T>
+  nameWithType: IReadOnlyCollection<T>
+  fullName: System.Collections.Generic.IReadOnlyCollection<T>
+  nameWithType.vb: IReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of T)
+  name.vb: IReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

@@ -1,0 +1,132 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Tools.Pipeline.IInputValidator
+  commentId: T:AgentFramework.Tools.Pipeline.IInputValidator
+  id: IInputValidator
+  parent: AgentFramework.Tools.Pipeline
+  children:
+  - AgentFramework.Tools.Pipeline.IInputValidator.Validate(System.Object,System.Object)
+  langs:
+  - csharp
+  - vb
+  name: IInputValidator
+  nameWithType: IInputValidator
+  fullName: AgentFramework.Tools.Pipeline.IInputValidator
+  type: Interface
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Pipeline/IInputValidator.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: IInputValidator
+    path: ../src/AF.AgentFramework/Tools/Pipeline/IInputValidator.cs
+    startLine: 6
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Pipeline
+  summary: >-
+    Validates invocation input against the tool's declared input schema.
+
+    Default implementation may be a pass-through; hosts can replace with a real validator.
+  example: []
+  syntax:
+    content: public interface IInputValidator
+    content.vb: Public Interface IInputValidator
+- uid: AgentFramework.Tools.Pipeline.IInputValidator.Validate(System.Object,System.Object)
+  commentId: M:AgentFramework.Tools.Pipeline.IInputValidator.Validate(System.Object,System.Object)
+  id: Validate(System.Object,System.Object)
+  parent: AgentFramework.Tools.Pipeline.IInputValidator
+  langs:
+  - csharp
+  - vb
+  name: Validate(object?, object?)
+  nameWithType: IInputValidator.Validate(object?, object?)
+  fullName: AgentFramework.Tools.Pipeline.IInputValidator.Validate(object?, object?)
+  type: Method
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Pipeline/IInputValidator.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Validate
+    path: ../src/AF.AgentFramework/Tools/Pipeline/IInputValidator.cs
+    startLine: 8
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Pipeline
+  syntax:
+    content: ValidationOutcome Validate(object? input, object? inputSchema)
+    parameters:
+    - id: input
+      type: System.Object
+    - id: inputSchema
+      type: System.Object
+    return:
+      type: AgentFramework.Tools.Pipeline.ValidationOutcome
+    content.vb: Function Validate(input As Object, inputSchema As Object) As ValidationOutcome
+  overload: AgentFramework.Tools.Pipeline.IInputValidator.Validate*
+  nameWithType.vb: IInputValidator.Validate(Object, Object)
+  fullName.vb: AgentFramework.Tools.Pipeline.IInputValidator.Validate(Object, Object)
+  name.vb: Validate(Object, Object)
+references:
+- uid: AgentFramework.Tools.Pipeline
+  commentId: N:AgentFramework.Tools.Pipeline
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Pipeline
+  nameWithType: AgentFramework.Tools.Pipeline
+  fullName: AgentFramework.Tools.Pipeline
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline
+    name: Pipeline
+    href: AgentFramework.Tools.Pipeline.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline
+    name: Pipeline
+    href: AgentFramework.Tools.Pipeline.html
+- uid: AgentFramework.Tools.Pipeline.IInputValidator.Validate*
+  commentId: Overload:AgentFramework.Tools.Pipeline.IInputValidator.Validate
+  href: AgentFramework.Tools.Pipeline.IInputValidator.html#AgentFramework_Tools_Pipeline_IInputValidator_Validate_System_Object_System_Object_
+  name: Validate
+  nameWithType: IInputValidator.Validate
+  fullName: AgentFramework.Tools.Pipeline.IInputValidator.Validate
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: AgentFramework.Tools.Pipeline.ValidationOutcome
+  commentId: T:AgentFramework.Tools.Pipeline.ValidationOutcome
+  parent: AgentFramework.Tools.Pipeline
+  href: AgentFramework.Tools.Pipeline.ValidationOutcome.html
+  name: ValidationOutcome
+  nameWithType: ValidationOutcome
+  fullName: AgentFramework.Tools.Pipeline.ValidationOutcome
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

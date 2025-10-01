@@ -1,0 +1,156 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Tools.Pipeline
+  commentId: N:AgentFramework.Tools.Pipeline
+  id: AgentFramework.Tools.Pipeline
+  children:
+  - AgentFramework.Tools.Pipeline.AuthorizationOutcome
+  - AgentFramework.Tools.Pipeline.ExecutionOutcome
+  - AgentFramework.Tools.Pipeline.IAuthorizer
+  - AgentFramework.Tools.Pipeline.IExecutor
+  - AgentFramework.Tools.Pipeline.IInputValidator
+  - AgentFramework.Tools.Pipeline.IPolicyApplier
+  - AgentFramework.Tools.Pipeline.IPostprocessor
+  - AgentFramework.Tools.Pipeline.IToolInvoker
+  - AgentFramework.Tools.Pipeline.InstrumentedToolInvoker
+  - AgentFramework.Tools.Pipeline.PipelineExtensions
+  - AgentFramework.Tools.Pipeline.PolicyApplicationResult
+  - AgentFramework.Tools.Pipeline.PostprocessOutcome
+  - AgentFramework.Tools.Pipeline.ToolPipeline
+  - AgentFramework.Tools.Pipeline.ValidationOutcome
+  langs:
+  - csharp
+  - vb
+  name: AgentFramework.Tools.Pipeline
+  nameWithType: AgentFramework.Tools.Pipeline
+  fullName: AgentFramework.Tools.Pipeline
+  type: Namespace
+  assemblies:
+  - AF.AgentFramework
+references:
+- uid: AgentFramework.Tools.Pipeline.IAuthorizer
+  commentId: T:AgentFramework.Tools.Pipeline.IAuthorizer
+  parent: AgentFramework.Tools.Pipeline
+  href: AgentFramework.Tools.Pipeline.IAuthorizer.html
+  name: IAuthorizer
+  nameWithType: IAuthorizer
+  fullName: AgentFramework.Tools.Pipeline.IAuthorizer
+- uid: AgentFramework.Tools.Pipeline.AuthorizationOutcome
+  commentId: T:AgentFramework.Tools.Pipeline.AuthorizationOutcome
+  parent: AgentFramework.Tools.Pipeline
+  href: AgentFramework.Tools.Pipeline.AuthorizationOutcome.html
+  name: AuthorizationOutcome
+  nameWithType: AuthorizationOutcome
+  fullName: AgentFramework.Tools.Pipeline.AuthorizationOutcome
+- uid: AgentFramework.Tools.Pipeline.IExecutor
+  commentId: T:AgentFramework.Tools.Pipeline.IExecutor
+  parent: AgentFramework.Tools.Pipeline
+  href: AgentFramework.Tools.Pipeline.IExecutor.html
+  name: IExecutor
+  nameWithType: IExecutor
+  fullName: AgentFramework.Tools.Pipeline.IExecutor
+- uid: AgentFramework.Tools.Pipeline.ExecutionOutcome
+  commentId: T:AgentFramework.Tools.Pipeline.ExecutionOutcome
+  href: AgentFramework.Tools.Pipeline.ExecutionOutcome.html
+  name: ExecutionOutcome
+  nameWithType: ExecutionOutcome
+  fullName: AgentFramework.Tools.Pipeline.ExecutionOutcome
+- uid: AgentFramework.Tools.Pipeline.IInputValidator
+  commentId: T:AgentFramework.Tools.Pipeline.IInputValidator
+  parent: AgentFramework.Tools.Pipeline
+  href: AgentFramework.Tools.Pipeline.IInputValidator.html
+  name: IInputValidator
+  nameWithType: IInputValidator
+  fullName: AgentFramework.Tools.Pipeline.IInputValidator
+- uid: AgentFramework.Tools.Pipeline.ValidationOutcome
+  commentId: T:AgentFramework.Tools.Pipeline.ValidationOutcome
+  parent: AgentFramework.Tools.Pipeline
+  href: AgentFramework.Tools.Pipeline.ValidationOutcome.html
+  name: ValidationOutcome
+  nameWithType: ValidationOutcome
+  fullName: AgentFramework.Tools.Pipeline.ValidationOutcome
+- uid: AgentFramework.Tools.Pipeline.InstrumentedToolInvoker
+  commentId: T:AgentFramework.Tools.Pipeline.InstrumentedToolInvoker
+  href: AgentFramework.Tools.Pipeline.InstrumentedToolInvoker.html
+  name: InstrumentedToolInvoker
+  nameWithType: InstrumentedToolInvoker
+  fullName: AgentFramework.Tools.Pipeline.InstrumentedToolInvoker
+- uid: AgentFramework.Tools.Pipeline.IPolicyApplier
+  commentId: T:AgentFramework.Tools.Pipeline.IPolicyApplier
+  parent: AgentFramework.Tools.Pipeline
+  href: AgentFramework.Tools.Pipeline.IPolicyApplier.html
+  name: IPolicyApplier
+  nameWithType: IPolicyApplier
+  fullName: AgentFramework.Tools.Pipeline.IPolicyApplier
+- uid: AgentFramework.Tools.Pipeline.PolicyApplicationResult
+  commentId: T:AgentFramework.Tools.Pipeline.PolicyApplicationResult
+  parent: AgentFramework.Tools.Pipeline
+  href: AgentFramework.Tools.Pipeline.PolicyApplicationResult.html
+  name: PolicyApplicationResult
+  nameWithType: PolicyApplicationResult
+  fullName: AgentFramework.Tools.Pipeline.PolicyApplicationResult
+- uid: AgentFramework.Tools.Pipeline.IPostprocessor
+  commentId: T:AgentFramework.Tools.Pipeline.IPostprocessor
+  parent: AgentFramework.Tools.Pipeline
+  href: AgentFramework.Tools.Pipeline.IPostprocessor.html
+  name: IPostprocessor
+  nameWithType: IPostprocessor
+  fullName: AgentFramework.Tools.Pipeline.IPostprocessor
+- uid: AgentFramework.Tools.Pipeline.PostprocessOutcome
+  commentId: T:AgentFramework.Tools.Pipeline.PostprocessOutcome
+  parent: AgentFramework.Tools.Pipeline
+  href: AgentFramework.Tools.Pipeline.PostprocessOutcome.html
+  name: PostprocessOutcome
+  nameWithType: PostprocessOutcome
+  fullName: AgentFramework.Tools.Pipeline.PostprocessOutcome
+- uid: AgentFramework.Tools.Pipeline.IToolInvoker
+  commentId: T:AgentFramework.Tools.Pipeline.IToolInvoker
+  parent: AgentFramework.Tools.Pipeline
+  href: AgentFramework.Tools.Pipeline.IToolInvoker.html
+  name: IToolInvoker
+  nameWithType: IToolInvoker
+  fullName: AgentFramework.Tools.Pipeline.IToolInvoker
+- uid: AgentFramework.Tools.Pipeline.PipelineExtensions
+  commentId: T:AgentFramework.Tools.Pipeline.PipelineExtensions
+  parent: AgentFramework.Tools.Pipeline
+  href: AgentFramework.Tools.Pipeline.PipelineExtensions.html
+  name: PipelineExtensions
+  nameWithType: PipelineExtensions
+  fullName: AgentFramework.Tools.Pipeline.PipelineExtensions
+- uid: AgentFramework.Tools.Pipeline.ToolPipeline
+  commentId: T:AgentFramework.Tools.Pipeline.ToolPipeline
+  parent: AgentFramework.Tools.Pipeline
+  href: AgentFramework.Tools.Pipeline.ToolPipeline.html
+  name: ToolPipeline
+  nameWithType: ToolPipeline
+  fullName: AgentFramework.Tools.Pipeline.ToolPipeline
+- uid: AgentFramework.Tools.Pipeline
+  commentId: N:AgentFramework.Tools.Pipeline
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Pipeline
+  nameWithType: AgentFramework.Tools.Pipeline
+  fullName: AgentFramework.Tools.Pipeline
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline
+    name: Pipeline
+    href: AgentFramework.Tools.Pipeline.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline
+    name: Pipeline
+    href: AgentFramework.Tools.Pipeline.html

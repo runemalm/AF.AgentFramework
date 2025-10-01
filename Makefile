@@ -153,12 +153,12 @@ hello-kernel: ##@Samples	 Run the HelloKernel sample
 ##########################################################################
 
 .PHONY: docs-site-tools
-docs-site-tools: ##@Docs  Install DocFX as a local dotnet tool
+docs-site-tools: ##@Docs	Install DocFX as a local dotnet tool
 	@test -f $(TOOLS_MANIFEST) || dotnet new tool-manifest
 	dotnet tool install docfx --version 2.78.3 || dotnet tool update docfx
 
 .PHONY: docs-site-init
-docs-site-init: docs-site-tools ##@Docs  Initialize a DocFX project in ./docs (one-time)
+docs-site-init: docs-site-tools ##@Docs	Initialize a DocFX project in ./docs (one-time)
 	@mkdir -p "$(DOCS_DIR)"
 	@if [ ! -f "$(DOCS_DIR)/docfx.json" ]; then \
 	  cd "$(DOCS_DIR)" && dotnet tool run docfx init --yes; \
@@ -168,7 +168,7 @@ docs-site-init: docs-site-tools ##@Docs  Initialize a DocFX project in ./docs (o
 	fi
 
 .PHONY: docs-site
-docs-site: docs-site-tools ##@Docs  Build the DocFX static site into artifacts/docs/site
+docs-site: docs-site-tools ##@Docs	Build the DocFX static site into artifacts/docs/site
 	@mkdir -p "$(DOCS_SITE_DIR)"
 	@if [ ! -f "$(DOCS_DIR)/docfx.json" ]; then \
 	  echo "docfx.json not found. Run 'make docs-site-init' first."; \
@@ -181,7 +181,7 @@ docs-site: docs-site-tools ##@Docs  Build the DocFX static site into artifacts/d
 	# Build the static site
 	cd "$(DOCS_DIR)" && dotnet tool run docfx build -o "$(DOCS_SITE_DIR)"
 	@echo "DocFX site built at: $(DOCS_SITE_DIR)"
-
+	
 .PHONY: docs-serve
 docs-serve: ##@Docs	Serve DocFX site locally (http://localhost:8080)
 	@cd "$(DOCS_SITE_DIR)" && python3 -m http.server 8080

@@ -1,0 +1,262 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Tools.Observability.IToolEventSink
+  commentId: T:AgentFramework.Tools.Observability.IToolEventSink
+  id: IToolEventSink
+  parent: AgentFramework.Tools.Observability
+  children:
+  - AgentFramework.Tools.Observability.IToolEventSink.OnFailed(AgentFramework.Tools.Contracts.ToolResult,System.DateTimeOffset)
+  - AgentFramework.Tools.Observability.IToolEventSink.OnInvoked(System.String,AgentFramework.Tools.Contracts.ToolInvocation,AgentFramework.Tools.Contracts.ToolDescriptor,System.DateTimeOffset)
+  - AgentFramework.Tools.Observability.IToolEventSink.OnSucceeded(AgentFramework.Tools.Contracts.ToolResult,System.DateTimeOffset)
+  langs:
+  - csharp
+  - vb
+  name: IToolEventSink
+  nameWithType: IToolEventSink
+  fullName: AgentFramework.Tools.Observability.IToolEventSink
+  type: Interface
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Observability/IToolEventSink.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: IToolEventSink
+    path: ../src/AF.AgentFramework/Tools/Observability/IToolEventSink.cs
+    startLine: 8
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Observability
+  summary: >-
+    Receives lifecycle events for tool invocations. Implementations may forward to logs,
+
+    metrics, or tracing systems. The default implementation is a no-op.
+  example: []
+  syntax:
+    content: public interface IToolEventSink
+    content.vb: Public Interface IToolEventSink
+- uid: AgentFramework.Tools.Observability.IToolEventSink.OnInvoked(System.String,AgentFramework.Tools.Contracts.ToolInvocation,AgentFramework.Tools.Contracts.ToolDescriptor,System.DateTimeOffset)
+  commentId: M:AgentFramework.Tools.Observability.IToolEventSink.OnInvoked(System.String,AgentFramework.Tools.Contracts.ToolInvocation,AgentFramework.Tools.Contracts.ToolDescriptor,System.DateTimeOffset)
+  id: OnInvoked(System.String,AgentFramework.Tools.Contracts.ToolInvocation,AgentFramework.Tools.Contracts.ToolDescriptor,System.DateTimeOffset)
+  parent: AgentFramework.Tools.Observability.IToolEventSink
+  langs:
+  - csharp
+  - vb
+  name: OnInvoked(string, ToolInvocation, ToolDescriptor?, DateTimeOffset)
+  nameWithType: IToolEventSink.OnInvoked(string, ToolInvocation, ToolDescriptor?, DateTimeOffset)
+  fullName: AgentFramework.Tools.Observability.IToolEventSink.OnInvoked(string, AgentFramework.Tools.Contracts.ToolInvocation, AgentFramework.Tools.Contracts.ToolDescriptor?, System.DateTimeOffset)
+  type: Method
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Observability/IToolEventSink.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: OnInvoked
+    path: ../src/AF.AgentFramework/Tools/Observability/IToolEventSink.cs
+    startLine: 10
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Observability
+  syntax:
+    content: void OnInvoked(string correlationId, ToolInvocation invocation, ToolDescriptor? descriptor, DateTimeOffset timestampUtc)
+    parameters:
+    - id: correlationId
+      type: System.String
+    - id: invocation
+      type: AgentFramework.Tools.Contracts.ToolInvocation
+    - id: descriptor
+      type: AgentFramework.Tools.Contracts.ToolDescriptor
+    - id: timestampUtc
+      type: System.DateTimeOffset
+    content.vb: Sub OnInvoked(correlationId As String, invocation As ToolInvocation, descriptor As ToolDescriptor, timestampUtc As DateTimeOffset)
+  overload: AgentFramework.Tools.Observability.IToolEventSink.OnInvoked*
+  nameWithType.vb: IToolEventSink.OnInvoked(String, ToolInvocation, ToolDescriptor, DateTimeOffset)
+  fullName.vb: AgentFramework.Tools.Observability.IToolEventSink.OnInvoked(String, AgentFramework.Tools.Contracts.ToolInvocation, AgentFramework.Tools.Contracts.ToolDescriptor, System.DateTimeOffset)
+  name.vb: OnInvoked(String, ToolInvocation, ToolDescriptor, DateTimeOffset)
+- uid: AgentFramework.Tools.Observability.IToolEventSink.OnSucceeded(AgentFramework.Tools.Contracts.ToolResult,System.DateTimeOffset)
+  commentId: M:AgentFramework.Tools.Observability.IToolEventSink.OnSucceeded(AgentFramework.Tools.Contracts.ToolResult,System.DateTimeOffset)
+  id: OnSucceeded(AgentFramework.Tools.Contracts.ToolResult,System.DateTimeOffset)
+  parent: AgentFramework.Tools.Observability.IToolEventSink
+  langs:
+  - csharp
+  - vb
+  name: OnSucceeded(ToolResult, DateTimeOffset)
+  nameWithType: IToolEventSink.OnSucceeded(ToolResult, DateTimeOffset)
+  fullName: AgentFramework.Tools.Observability.IToolEventSink.OnSucceeded(AgentFramework.Tools.Contracts.ToolResult, System.DateTimeOffset)
+  type: Method
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Observability/IToolEventSink.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: OnSucceeded
+    path: ../src/AF.AgentFramework/Tools/Observability/IToolEventSink.cs
+    startLine: 11
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Observability
+  syntax:
+    content: void OnSucceeded(ToolResult result, DateTimeOffset timestampUtc)
+    parameters:
+    - id: result
+      type: AgentFramework.Tools.Contracts.ToolResult
+    - id: timestampUtc
+      type: System.DateTimeOffset
+    content.vb: Sub OnSucceeded(result As ToolResult, timestampUtc As DateTimeOffset)
+  overload: AgentFramework.Tools.Observability.IToolEventSink.OnSucceeded*
+- uid: AgentFramework.Tools.Observability.IToolEventSink.OnFailed(AgentFramework.Tools.Contracts.ToolResult,System.DateTimeOffset)
+  commentId: M:AgentFramework.Tools.Observability.IToolEventSink.OnFailed(AgentFramework.Tools.Contracts.ToolResult,System.DateTimeOffset)
+  id: OnFailed(AgentFramework.Tools.Contracts.ToolResult,System.DateTimeOffset)
+  parent: AgentFramework.Tools.Observability.IToolEventSink
+  langs:
+  - csharp
+  - vb
+  name: OnFailed(ToolResult, DateTimeOffset)
+  nameWithType: IToolEventSink.OnFailed(ToolResult, DateTimeOffset)
+  fullName: AgentFramework.Tools.Observability.IToolEventSink.OnFailed(AgentFramework.Tools.Contracts.ToolResult, System.DateTimeOffset)
+  type: Method
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Observability/IToolEventSink.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: OnFailed
+    path: ../src/AF.AgentFramework/Tools/Observability/IToolEventSink.cs
+    startLine: 12
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Observability
+  syntax:
+    content: void OnFailed(ToolResult result, DateTimeOffset timestampUtc)
+    parameters:
+    - id: result
+      type: AgentFramework.Tools.Contracts.ToolResult
+    - id: timestampUtc
+      type: System.DateTimeOffset
+    content.vb: Sub OnFailed(result As ToolResult, timestampUtc As DateTimeOffset)
+  overload: AgentFramework.Tools.Observability.IToolEventSink.OnFailed*
+references:
+- uid: AgentFramework.Tools.Observability
+  commentId: N:AgentFramework.Tools.Observability
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Observability
+  nameWithType: AgentFramework.Tools.Observability
+  fullName: AgentFramework.Tools.Observability
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Observability
+    name: Observability
+    href: AgentFramework.Tools.Observability.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Observability
+    name: Observability
+    href: AgentFramework.Tools.Observability.html
+- uid: AgentFramework.Tools.Observability.IToolEventSink.OnInvoked*
+  commentId: Overload:AgentFramework.Tools.Observability.IToolEventSink.OnInvoked
+  href: AgentFramework.Tools.Observability.IToolEventSink.html#AgentFramework_Tools_Observability_IToolEventSink_OnInvoked_System_String_AgentFramework_Tools_Contracts_ToolInvocation_AgentFramework_Tools_Contracts_ToolDescriptor_System_DateTimeOffset_
+  name: OnInvoked
+  nameWithType: IToolEventSink.OnInvoked
+  fullName: AgentFramework.Tools.Observability.IToolEventSink.OnInvoked
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AgentFramework.Tools.Contracts.ToolInvocation
+  commentId: T:AgentFramework.Tools.Contracts.ToolInvocation
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolInvocation.html
+  name: ToolInvocation
+  nameWithType: ToolInvocation
+  fullName: AgentFramework.Tools.Contracts.ToolInvocation
+- uid: AgentFramework.Tools.Contracts.ToolDescriptor
+  commentId: T:AgentFramework.Tools.Contracts.ToolDescriptor
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolDescriptor.html
+  name: ToolDescriptor
+  nameWithType: ToolDescriptor
+  fullName: AgentFramework.Tools.Contracts.ToolDescriptor
+- uid: System.DateTimeOffset
+  commentId: T:System.DateTimeOffset
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetimeoffset
+  name: DateTimeOffset
+  nameWithType: DateTimeOffset
+  fullName: System.DateTimeOffset
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AgentFramework.Tools.Contracts
+  commentId: N:AgentFramework.Tools.Contracts
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Contracts
+  nameWithType: AgentFramework.Tools.Contracts
+  fullName: AgentFramework.Tools.Contracts
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+- uid: AgentFramework.Tools.Observability.IToolEventSink.OnSucceeded*
+  commentId: Overload:AgentFramework.Tools.Observability.IToolEventSink.OnSucceeded
+  href: AgentFramework.Tools.Observability.IToolEventSink.html#AgentFramework_Tools_Observability_IToolEventSink_OnSucceeded_AgentFramework_Tools_Contracts_ToolResult_System_DateTimeOffset_
+  name: OnSucceeded
+  nameWithType: IToolEventSink.OnSucceeded
+  fullName: AgentFramework.Tools.Observability.IToolEventSink.OnSucceeded
+- uid: AgentFramework.Tools.Contracts.ToolResult
+  commentId: T:AgentFramework.Tools.Contracts.ToolResult
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolResult.html
+  name: ToolResult
+  nameWithType: ToolResult
+  fullName: AgentFramework.Tools.Contracts.ToolResult
+- uid: AgentFramework.Tools.Observability.IToolEventSink.OnFailed*
+  commentId: Overload:AgentFramework.Tools.Observability.IToolEventSink.OnFailed
+  href: AgentFramework.Tools.Observability.IToolEventSink.html#AgentFramework_Tools_Observability_IToolEventSink_OnFailed_AgentFramework_Tools_Contracts_ToolResult_System_DateTimeOffset_
+  name: OnFailed
+  nameWithType: IToolEventSink.OnFailed
+  fullName: AgentFramework.Tools.Observability.IToolEventSink.OnFailed

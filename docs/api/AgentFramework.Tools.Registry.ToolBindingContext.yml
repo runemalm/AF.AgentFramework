@@ -1,0 +1,650 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Tools.Registry.ToolBindingContext
+  commentId: T:AgentFramework.Tools.Registry.ToolBindingContext
+  id: ToolBindingContext
+  parent: AgentFramework.Tools.Registry
+  children:
+  - AgentFramework.Tools.Registry.ToolBindingContext.AgentId
+  - AgentFramework.Tools.Registry.ToolBindingContext.AllowList
+  - AgentFramework.Tools.Registry.ToolBindingContext.DenyList
+  - AgentFramework.Tools.Registry.ToolBindingContext.Environment
+  - AgentFramework.Tools.Registry.ToolBindingContext.Role
+  langs:
+  - csharp
+  - vb
+  name: ToolBindingContext
+  nameWithType: ToolBindingContext
+  fullName: AgentFramework.Tools.Registry.ToolBindingContext
+  type: Class
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Registry/ToolBindingContext.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: ToolBindingContext
+    path: ../src/AF.AgentFramework/Tools/Registry/ToolBindingContext.cs
+    startLine: 6
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Registry
+  summary: >-
+    Context used when resolving/listing tools, allowing per-agent/role/environment scoping
+
+    and simple allow/deny name filters. Providers may extend this in the future.
+  example: []
+  syntax:
+    content: 'public sealed record ToolBindingContext : IEquatable<ToolBindingContext>'
+    content.vb: Public NotInheritable Class ToolBindingContext Implements IEquatable(Of ToolBindingContext)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{AgentFramework.Tools.Registry.ToolBindingContext}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AgentFramework.Tools.Registry.ToolBindingContext.AgentId
+  commentId: P:AgentFramework.Tools.Registry.ToolBindingContext.AgentId
+  id: AgentId
+  parent: AgentFramework.Tools.Registry.ToolBindingContext
+  langs:
+  - csharp
+  - vb
+  name: AgentId
+  nameWithType: ToolBindingContext.AgentId
+  fullName: AgentFramework.Tools.Registry.ToolBindingContext.AgentId
+  type: Property
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Registry/ToolBindingContext.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: AgentId
+    path: ../src/AF.AgentFramework/Tools/Registry/ToolBindingContext.cs
+    startLine: 11
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Registry
+  summary: Identifier of the calling agent (for auditing and per-agent policy overlays).
+  example: []
+  syntax:
+    content: public string AgentId { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AgentId As String
+  overload: AgentFramework.Tools.Registry.ToolBindingContext.AgentId*
+- uid: AgentFramework.Tools.Registry.ToolBindingContext.Role
+  commentId: P:AgentFramework.Tools.Registry.ToolBindingContext.Role
+  id: Role
+  parent: AgentFramework.Tools.Registry.ToolBindingContext
+  langs:
+  - csharp
+  - vb
+  name: Role
+  nameWithType: ToolBindingContext.Role
+  fullName: AgentFramework.Tools.Registry.ToolBindingContext.Role
+  type: Property
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Registry/ToolBindingContext.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Role
+    path: ../src/AF.AgentFramework/Tools/Registry/ToolBindingContext.cs
+    startLine: 16
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Registry
+  summary: Optional role or capability profile of the agent (e.g., "reader", "operator").
+  example: []
+  syntax:
+    content: public string? Role { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Role As String
+  overload: AgentFramework.Tools.Registry.ToolBindingContext.Role*
+- uid: AgentFramework.Tools.Registry.ToolBindingContext.Environment
+  commentId: P:AgentFramework.Tools.Registry.ToolBindingContext.Environment
+  id: Environment
+  parent: AgentFramework.Tools.Registry.ToolBindingContext
+  langs:
+  - csharp
+  - vb
+  name: Environment
+  nameWithType: ToolBindingContext.Environment
+  fullName: AgentFramework.Tools.Registry.ToolBindingContext.Environment
+  type: Property
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Registry/ToolBindingContext.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Environment
+    path: ../src/AF.AgentFramework/Tools/Registry/ToolBindingContext.cs
+    startLine: 21
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Registry
+  summary: Logical environment (e.g., "Dev", "Staging", "Prod") for policy selection.
+  example: []
+  syntax:
+    content: public string? Environment { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Environment As String
+  overload: AgentFramework.Tools.Registry.ToolBindingContext.Environment*
+- uid: AgentFramework.Tools.Registry.ToolBindingContext.AllowList
+  commentId: P:AgentFramework.Tools.Registry.ToolBindingContext.AllowList
+  id: AllowList
+  parent: AgentFramework.Tools.Registry.ToolBindingContext
+  langs:
+  - csharp
+  - vb
+  name: AllowList
+  nameWithType: ToolBindingContext.AllowList
+  fullName: AgentFramework.Tools.Registry.ToolBindingContext.AllowList
+  type: Property
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Registry/ToolBindingContext.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: AllowList
+    path: ../src/AF.AgentFramework/Tools/Registry/ToolBindingContext.cs
+    startLine: 26
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Registry
+  summary: Optional allowlist of fully qualified tool names. If set, only these names are visible.
+  example: []
+  syntax:
+    content: public ISet<string>? AllowList { get; init; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ISet{System.String}
+    content.vb: Public Property AllowList As ISet(Of String)
+  overload: AgentFramework.Tools.Registry.ToolBindingContext.AllowList*
+- uid: AgentFramework.Tools.Registry.ToolBindingContext.DenyList
+  commentId: P:AgentFramework.Tools.Registry.ToolBindingContext.DenyList
+  id: DenyList
+  parent: AgentFramework.Tools.Registry.ToolBindingContext
+  langs:
+  - csharp
+  - vb
+  name: DenyList
+  nameWithType: ToolBindingContext.DenyList
+  fullName: AgentFramework.Tools.Registry.ToolBindingContext.DenyList
+  type: Property
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Registry/ToolBindingContext.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: DenyList
+    path: ../src/AF.AgentFramework/Tools/Registry/ToolBindingContext.cs
+    startLine: 31
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Registry
+  summary: Optional denylist of fully qualified tool names. Deny takes precedence over allow.
+  example: []
+  syntax:
+    content: public ISet<string>? DenyList { get; init; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ISet{System.String}
+    content.vb: Public Property DenyList As ISet(Of String)
+  overload: AgentFramework.Tools.Registry.ToolBindingContext.DenyList*
+references:
+- uid: AgentFramework.Tools.Registry
+  commentId: N:AgentFramework.Tools.Registry
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Registry
+  nameWithType: AgentFramework.Tools.Registry
+  fullName: AgentFramework.Tools.Registry
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Registry
+    name: Registry
+    href: AgentFramework.Tools.Registry.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Registry
+    name: Registry
+    href: AgentFramework.Tools.Registry.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{AgentFramework.Tools.Registry.ToolBindingContext}
+  commentId: T:System.IEquatable{AgentFramework.Tools.Registry.ToolBindingContext}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<ToolBindingContext>
+  nameWithType: IEquatable<ToolBindingContext>
+  fullName: System.IEquatable<AgentFramework.Tools.Registry.ToolBindingContext>
+  nameWithType.vb: IEquatable(Of ToolBindingContext)
+  fullName.vb: System.IEquatable(Of AgentFramework.Tools.Registry.ToolBindingContext)
+  name.vb: IEquatable(Of ToolBindingContext)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: AgentFramework.Tools.Registry.ToolBindingContext
+    name: ToolBindingContext
+    href: AgentFramework.Tools.Registry.ToolBindingContext.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AgentFramework.Tools.Registry.ToolBindingContext
+    name: ToolBindingContext
+    href: AgentFramework.Tools.Registry.ToolBindingContext.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: AgentFramework.Tools.Registry.ToolBindingContext.AgentId*
+  commentId: Overload:AgentFramework.Tools.Registry.ToolBindingContext.AgentId
+  href: AgentFramework.Tools.Registry.ToolBindingContext.html#AgentFramework_Tools_Registry_ToolBindingContext_AgentId
+  name: AgentId
+  nameWithType: ToolBindingContext.AgentId
+  fullName: AgentFramework.Tools.Registry.ToolBindingContext.AgentId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AgentFramework.Tools.Registry.ToolBindingContext.Role*
+  commentId: Overload:AgentFramework.Tools.Registry.ToolBindingContext.Role
+  href: AgentFramework.Tools.Registry.ToolBindingContext.html#AgentFramework_Tools_Registry_ToolBindingContext_Role
+  name: Role
+  nameWithType: ToolBindingContext.Role
+  fullName: AgentFramework.Tools.Registry.ToolBindingContext.Role
+- uid: AgentFramework.Tools.Registry.ToolBindingContext.Environment*
+  commentId: Overload:AgentFramework.Tools.Registry.ToolBindingContext.Environment
+  href: AgentFramework.Tools.Registry.ToolBindingContext.html#AgentFramework_Tools_Registry_ToolBindingContext_Environment
+  name: Environment
+  nameWithType: ToolBindingContext.Environment
+  fullName: AgentFramework.Tools.Registry.ToolBindingContext.Environment
+- uid: AgentFramework.Tools.Registry.ToolBindingContext.AllowList*
+  commentId: Overload:AgentFramework.Tools.Registry.ToolBindingContext.AllowList
+  href: AgentFramework.Tools.Registry.ToolBindingContext.html#AgentFramework_Tools_Registry_ToolBindingContext_AllowList
+  name: AllowList
+  nameWithType: ToolBindingContext.AllowList
+  fullName: AgentFramework.Tools.Registry.ToolBindingContext.AllowList
+- uid: System.Collections.Generic.ISet{System.String}
+  commentId: T:System.Collections.Generic.ISet{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ISet`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iset-1
+  name: ISet<string>
+  nameWithType: ISet<string>
+  fullName: System.Collections.Generic.ISet<string>
+  nameWithType.vb: ISet(Of String)
+  fullName.vb: System.Collections.Generic.ISet(Of String)
+  name.vb: ISet(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.ISet`1
+    name: ISet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iset-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ISet`1
+    name: ISet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.ISet`1
+  commentId: T:System.Collections.Generic.ISet`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iset-1
+  name: ISet<T>
+  nameWithType: ISet<T>
+  fullName: System.Collections.Generic.ISet<T>
+  nameWithType.vb: ISet(Of T)
+  fullName.vb: System.Collections.Generic.ISet(Of T)
+  name.vb: ISet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ISet`1
+    name: ISet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ISet`1
+    name: ISet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: AgentFramework.Tools.Registry.ToolBindingContext.DenyList*
+  commentId: Overload:AgentFramework.Tools.Registry.ToolBindingContext.DenyList
+  href: AgentFramework.Tools.Registry.ToolBindingContext.html#AgentFramework_Tools_Registry_ToolBindingContext_DenyList
+  name: DenyList
+  nameWithType: ToolBindingContext.DenyList
+  fullName: AgentFramework.Tools.Registry.ToolBindingContext.DenyList

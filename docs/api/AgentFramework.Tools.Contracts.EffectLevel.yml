@@ -1,0 +1,199 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Tools.Contracts.EffectLevel
+  commentId: T:AgentFramework.Tools.Contracts.EffectLevel
+  id: EffectLevel
+  parent: AgentFramework.Tools.Contracts
+  children:
+  - AgentFramework.Tools.Contracts.EffectLevel.ExternalSideEffects
+  - AgentFramework.Tools.Contracts.EffectLevel.IdempotentWrite
+  - AgentFramework.Tools.Contracts.EffectLevel.NonIdempotentWrite
+  - AgentFramework.Tools.Contracts.EffectLevel.Pure
+  langs:
+  - csharp
+  - vb
+  name: EffectLevel
+  nameWithType: EffectLevel
+  fullName: AgentFramework.Tools.Contracts.EffectLevel
+  type: Enum
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/EffectLevel.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: EffectLevel
+    path: ../src/AF.AgentFramework/Tools/Contracts/EffectLevel.cs
+    startLine: 6
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: >-
+    Declares the side-effect semantics of a tool. This determines which
+
+    reliability policies (e.g., retries, caching) are allowed by the pipeline.
+  example: []
+  syntax:
+    content: public enum EffectLevel
+    content.vb: Public Enum EffectLevel
+- uid: AgentFramework.Tools.Contracts.EffectLevel.Pure
+  commentId: F:AgentFramework.Tools.Contracts.EffectLevel.Pure
+  id: Pure
+  parent: AgentFramework.Tools.Contracts.EffectLevel
+  langs:
+  - csharp
+  - vb
+  name: Pure
+  nameWithType: EffectLevel.Pure
+  fullName: AgentFramework.Tools.Contracts.EffectLevel.Pure
+  type: Field
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/EffectLevel.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Pure
+    path: ../src/AF.AgentFramework/Tools/Contracts/EffectLevel.cs
+    startLine: 12
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: >-
+    Read-only and side-effect free. Safe to cache; must not be retried for write semantics
+
+    (no writes expected). Failures can be retried by callers as they are idempotent by nature.
+  example: []
+  syntax:
+    content: Pure = 0
+    return:
+      type: AgentFramework.Tools.Contracts.EffectLevel
+- uid: AgentFramework.Tools.Contracts.EffectLevel.IdempotentWrite
+  commentId: F:AgentFramework.Tools.Contracts.EffectLevel.IdempotentWrite
+  id: IdempotentWrite
+  parent: AgentFramework.Tools.Contracts.EffectLevel
+  langs:
+  - csharp
+  - vb
+  name: IdempotentWrite
+  nameWithType: EffectLevel.IdempotentWrite
+  fullName: AgentFramework.Tools.Contracts.EffectLevel.IdempotentWrite
+  type: Field
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/EffectLevel.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: IdempotentWrite
+    path: ../src/AF.AgentFramework/Tools/Contracts/EffectLevel.cs
+    startLine: 18
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: >-
+    Performs a write but is safe to retry when an idempotency key is supplied.
+
+    Pipelines may enable bounded retries with backoff for this effect level.
+  example: []
+  syntax:
+    content: IdempotentWrite = 1
+    return:
+      type: AgentFramework.Tools.Contracts.EffectLevel
+- uid: AgentFramework.Tools.Contracts.EffectLevel.NonIdempotentWrite
+  commentId: F:AgentFramework.Tools.Contracts.EffectLevel.NonIdempotentWrite
+  id: NonIdempotentWrite
+  parent: AgentFramework.Tools.Contracts.EffectLevel
+  langs:
+  - csharp
+  - vb
+  name: NonIdempotentWrite
+  nameWithType: EffectLevel.NonIdempotentWrite
+  fullName: AgentFramework.Tools.Contracts.EffectLevel.NonIdempotentWrite
+  type: Field
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/EffectLevel.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: NonIdempotentWrite
+    path: ../src/AF.AgentFramework/Tools/Contracts/EffectLevel.cs
+    startLine: 24
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: >-
+    Performs a write that is not safe to retry automatically (e.g., creates unique resources
+
+    without idempotency guarantees). Pipelines must not auto-retry these operations.
+  example: []
+  syntax:
+    content: NonIdempotentWrite = 2
+    return:
+      type: AgentFramework.Tools.Contracts.EffectLevel
+- uid: AgentFramework.Tools.Contracts.EffectLevel.ExternalSideEffects
+  commentId: F:AgentFramework.Tools.Contracts.EffectLevel.ExternalSideEffects
+  id: ExternalSideEffects
+  parent: AgentFramework.Tools.Contracts.EffectLevel
+  langs:
+  - csharp
+  - vb
+  name: ExternalSideEffects
+  nameWithType: EffectLevel.ExternalSideEffects
+  fullName: AgentFramework.Tools.Contracts.EffectLevel.ExternalSideEffects
+  type: Field
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/EffectLevel.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: ExternalSideEffects
+    path: ../src/AF.AgentFramework/Tools/Contracts/EffectLevel.cs
+    startLine: 30
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: >-
+    Indicates real-world or irreversible side effects (e.g., sending emails, triggering payments).
+
+    This is a high-signal classification to enforce stricter guardrails, auditing, and consent.
+  example: []
+  syntax:
+    content: ExternalSideEffects = 3
+    return:
+      type: AgentFramework.Tools.Contracts.EffectLevel
+references:
+- uid: AgentFramework.Tools.Contracts
+  commentId: N:AgentFramework.Tools.Contracts
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Contracts
+  nameWithType: AgentFramework.Tools.Contracts
+  fullName: AgentFramework.Tools.Contracts
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+- uid: AgentFramework.Tools.Contracts.EffectLevel
+  commentId: T:AgentFramework.Tools.Contracts.EffectLevel
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.EffectLevel.html
+  name: EffectLevel
+  nameWithType: EffectLevel
+  fullName: AgentFramework.Tools.Contracts.EffectLevel

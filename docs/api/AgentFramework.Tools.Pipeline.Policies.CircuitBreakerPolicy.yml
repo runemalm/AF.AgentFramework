@@ -1,0 +1,490 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy
+  commentId: T:AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy
+  id: CircuitBreakerPolicy
+  parent: AgentFramework.Tools.Pipeline.Policies
+  children:
+  - AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.FailureThreshold
+  - AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.RecordFailure
+  - AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.RecordSuccess
+  - AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.ResetAfterSeconds
+  - AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.State
+  langs:
+  - csharp
+  - vb
+  name: CircuitBreakerPolicy
+  nameWithType: CircuitBreakerPolicy
+  fullName: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy
+  type: Class
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Pipeline/Policies/CircuitBreakerPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: CircuitBreakerPolicy
+    path: ../src/AF.AgentFramework/Tools/Pipeline/Policies/CircuitBreakerPolicy.cs
+    startLine: 6
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Pipeline.Policies
+  summary: >-
+    Placeholder for a circuit breaker policy.
+
+    Not enforced in the initial slice.
+  example: []
+  syntax:
+    content: public sealed class CircuitBreakerPolicy
+    content.vb: Public NotInheritable Class CircuitBreakerPolicy
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.FailureThreshold
+  commentId: P:AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.FailureThreshold
+  id: FailureThreshold
+  parent: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy
+  langs:
+  - csharp
+  - vb
+  name: FailureThreshold
+  nameWithType: CircuitBreakerPolicy.FailureThreshold
+  fullName: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.FailureThreshold
+  type: Property
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Pipeline/Policies/CircuitBreakerPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: FailureThreshold
+    path: ../src/AF.AgentFramework/Tools/Pipeline/Policies/CircuitBreakerPolicy.cs
+    startLine: 8
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Pipeline.Policies
+  syntax:
+    content: public int FailureThreshold { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property FailureThreshold As Integer
+  overload: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.FailureThreshold*
+- uid: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.ResetAfterSeconds
+  commentId: P:AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.ResetAfterSeconds
+  id: ResetAfterSeconds
+  parent: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy
+  langs:
+  - csharp
+  - vb
+  name: ResetAfterSeconds
+  nameWithType: CircuitBreakerPolicy.ResetAfterSeconds
+  fullName: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.ResetAfterSeconds
+  type: Property
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Pipeline/Policies/CircuitBreakerPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: ResetAfterSeconds
+    path: ../src/AF.AgentFramework/Tools/Pipeline/Policies/CircuitBreakerPolicy.cs
+    startLine: 9
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Pipeline.Policies
+  syntax:
+    content: public int ResetAfterSeconds { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ResetAfterSeconds As Integer
+  overload: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.ResetAfterSeconds*
+- uid: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.State
+  commentId: P:AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.State
+  id: State
+  parent: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy
+  langs:
+  - csharp
+  - vb
+  name: State
+  nameWithType: CircuitBreakerPolicy.State
+  fullName: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.State
+  type: Property
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Pipeline/Policies/CircuitBreakerPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: State
+    path: ../src/AF.AgentFramework/Tools/Pipeline/Policies/CircuitBreakerPolicy.cs
+    startLine: 11
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Pipeline.Policies
+  syntax:
+    content: public string State { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property State As String
+  overload: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.State*
+- uid: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.RecordFailure
+  commentId: M:AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.RecordFailure
+  id: RecordFailure
+  parent: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy
+  langs:
+  - csharp
+  - vb
+  name: RecordFailure()
+  nameWithType: CircuitBreakerPolicy.RecordFailure()
+  fullName: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.RecordFailure()
+  type: Method
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Pipeline/Policies/CircuitBreakerPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: RecordFailure
+    path: ../src/AF.AgentFramework/Tools/Pipeline/Policies/CircuitBreakerPolicy.cs
+    startLine: 13
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Pipeline.Policies
+  syntax:
+    content: public void RecordFailure()
+    content.vb: Public Sub RecordFailure()
+  overload: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.RecordFailure*
+- uid: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.RecordSuccess
+  commentId: M:AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.RecordSuccess
+  id: RecordSuccess
+  parent: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy
+  langs:
+  - csharp
+  - vb
+  name: RecordSuccess()
+  nameWithType: CircuitBreakerPolicy.RecordSuccess()
+  fullName: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.RecordSuccess()
+  type: Method
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Pipeline/Policies/CircuitBreakerPolicy.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: RecordSuccess
+    path: ../src/AF.AgentFramework/Tools/Pipeline/Policies/CircuitBreakerPolicy.cs
+    startLine: 18
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Pipeline.Policies
+  syntax:
+    content: public void RecordSuccess()
+    content.vb: Public Sub RecordSuccess()
+  overload: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.RecordSuccess*
+references:
+- uid: AgentFramework.Tools.Pipeline.Policies
+  commentId: N:AgentFramework.Tools.Pipeline.Policies
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Pipeline.Policies
+  nameWithType: AgentFramework.Tools.Pipeline.Policies
+  fullName: AgentFramework.Tools.Pipeline.Policies
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline
+    name: Pipeline
+    href: AgentFramework.Tools.Pipeline.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline.Policies
+    name: Policies
+    href: AgentFramework.Tools.Pipeline.Policies.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline
+    name: Pipeline
+    href: AgentFramework.Tools.Pipeline.html
+  - name: .
+  - uid: AgentFramework.Tools.Pipeline.Policies
+    name: Policies
+    href: AgentFramework.Tools.Pipeline.Policies.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.FailureThreshold*
+  commentId: Overload:AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.FailureThreshold
+  href: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.html#AgentFramework_Tools_Pipeline_Policies_CircuitBreakerPolicy_FailureThreshold
+  name: FailureThreshold
+  nameWithType: CircuitBreakerPolicy.FailureThreshold
+  fullName: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.FailureThreshold
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.ResetAfterSeconds*
+  commentId: Overload:AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.ResetAfterSeconds
+  href: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.html#AgentFramework_Tools_Pipeline_Policies_CircuitBreakerPolicy_ResetAfterSeconds
+  name: ResetAfterSeconds
+  nameWithType: CircuitBreakerPolicy.ResetAfterSeconds
+  fullName: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.ResetAfterSeconds
+- uid: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.State*
+  commentId: Overload:AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.State
+  href: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.html#AgentFramework_Tools_Pipeline_Policies_CircuitBreakerPolicy_State
+  name: State
+  nameWithType: CircuitBreakerPolicy.State
+  fullName: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.State
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.RecordFailure*
+  commentId: Overload:AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.RecordFailure
+  href: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.html#AgentFramework_Tools_Pipeline_Policies_CircuitBreakerPolicy_RecordFailure
+  name: RecordFailure
+  nameWithType: CircuitBreakerPolicy.RecordFailure
+  fullName: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.RecordFailure
+- uid: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.RecordSuccess*
+  commentId: Overload:AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.RecordSuccess
+  href: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.html#AgentFramework_Tools_Pipeline_Policies_CircuitBreakerPolicy_RecordSuccess
+  name: RecordSuccess
+  nameWithType: CircuitBreakerPolicy.RecordSuccess
+  fullName: AgentFramework.Tools.Pipeline.Policies.CircuitBreakerPolicy.RecordSuccess

@@ -1,0 +1,158 @@
+### YamlMime:ManagedReference
+items:
+- uid: AgentFramework.Tools.Contracts.ToolResultStatus
+  commentId: T:AgentFramework.Tools.Contracts.ToolResultStatus
+  id: ToolResultStatus
+  parent: AgentFramework.Tools.Contracts
+  children:
+  - AgentFramework.Tools.Contracts.ToolResultStatus.Error
+  - AgentFramework.Tools.Contracts.ToolResultStatus.Ok
+  - AgentFramework.Tools.Contracts.ToolResultStatus.Retryable
+  langs:
+  - csharp
+  - vb
+  name: ToolResultStatus
+  nameWithType: ToolResultStatus
+  fullName: AgentFramework.Tools.Contracts.ToolResultStatus
+  type: Enum
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolResultStatus.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: ToolResultStatus
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolResultStatus.cs
+    startLine: 5
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: Outcome classification for a tool invocation.
+  example: []
+  syntax:
+    content: public enum ToolResultStatus
+    content.vb: Public Enum ToolResultStatus
+- uid: AgentFramework.Tools.Contracts.ToolResultStatus.Ok
+  commentId: F:AgentFramework.Tools.Contracts.ToolResultStatus.Ok
+  id: Ok
+  parent: AgentFramework.Tools.Contracts.ToolResultStatus
+  langs:
+  - csharp
+  - vb
+  name: Ok
+  nameWithType: ToolResultStatus.Ok
+  fullName: AgentFramework.Tools.Contracts.ToolResultStatus.Ok
+  type: Field
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolResultStatus.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Ok
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolResultStatus.cs
+    startLine: 10
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: Invocation completed successfully and produced an output.
+  example: []
+  syntax:
+    content: Ok = 0
+    return:
+      type: AgentFramework.Tools.Contracts.ToolResultStatus
+- uid: AgentFramework.Tools.Contracts.ToolResultStatus.Error
+  commentId: F:AgentFramework.Tools.Contracts.ToolResultStatus.Error
+  id: Error
+  parent: AgentFramework.Tools.Contracts.ToolResultStatus
+  langs:
+  - csharp
+  - vb
+  name: Error
+  nameWithType: ToolResultStatus.Error
+  fullName: AgentFramework.Tools.Contracts.ToolResultStatus.Error
+  type: Field
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolResultStatus.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Error
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolResultStatus.cs
+    startLine: 15
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: Invocation failed and should not be retried by the pipeline.
+  example: []
+  syntax:
+    content: Error = 1
+    return:
+      type: AgentFramework.Tools.Contracts.ToolResultStatus
+- uid: AgentFramework.Tools.Contracts.ToolResultStatus.Retryable
+  commentId: F:AgentFramework.Tools.Contracts.ToolResultStatus.Retryable
+  id: Retryable
+  parent: AgentFramework.Tools.Contracts.ToolResultStatus
+  langs:
+  - csharp
+  - vb
+  name: Retryable
+  nameWithType: ToolResultStatus.Retryable
+  fullName: AgentFramework.Tools.Contracts.ToolResultStatus.Retryable
+  type: Field
+  source:
+    remote:
+      path: src/AF.AgentFramework/Tools/Contracts/ToolResultStatus.cs
+      branch: master
+      repo: git@github.com:runemalm/AF.AgentFramework.git
+    id: Retryable
+    path: ../src/AF.AgentFramework/Tools/Contracts/ToolResultStatus.cs
+    startLine: 21
+  assemblies:
+  - AF.AgentFramework
+  namespace: AgentFramework.Tools.Contracts
+  summary: >-
+    Invocation failed with a condition that may succeed on retry
+
+    (subject to policy and effect semantics).
+  example: []
+  syntax:
+    content: Retryable = 2
+    return:
+      type: AgentFramework.Tools.Contracts.ToolResultStatus
+references:
+- uid: AgentFramework.Tools.Contracts
+  commentId: N:AgentFramework.Tools.Contracts
+  href: AgentFramework.html
+  name: AgentFramework.Tools.Contracts
+  nameWithType: AgentFramework.Tools.Contracts
+  fullName: AgentFramework.Tools.Contracts
+  spec.csharp:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+  spec.vb:
+  - uid: AgentFramework
+    name: AgentFramework
+    href: AgentFramework.html
+  - name: .
+  - uid: AgentFramework.Tools
+    name: Tools
+    href: AgentFramework.Tools.html
+  - name: .
+  - uid: AgentFramework.Tools.Contracts
+    name: Contracts
+    href: AgentFramework.Tools.Contracts.html
+- uid: AgentFramework.Tools.Contracts.ToolResultStatus
+  commentId: T:AgentFramework.Tools.Contracts.ToolResultStatus
+  parent: AgentFramework.Tools.Contracts
+  href: AgentFramework.Tools.Contracts.ToolResultStatus.html
+  name: ToolResultStatus
+  nameWithType: ToolResultStatus
+  fullName: AgentFramework.Tools.Contracts.ToolResultStatus
