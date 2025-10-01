@@ -1,3 +1,9 @@
+## [0.6.0](https://github.com/runemalm/AF.AgentFramework/compare/v0.5.1...v0.6.0) (2025-10-01)
+
+### Features
+
+* **tools:** add tools capability scaffolding ([3e2c2d5](https://github.com/runemalm/AF.AgentFramework/commit/3e2c2d5909e68621a9b9b096469258ecdd8ab80e))
+
 ## [0.5.1](https://github.com/runemalm/AF.AgentFramework/compare/v0.5.0...v0.5.1) (2025-09-21)
 
 ## [0.5.0](https://github.com/runemalm/AgentFramework.Kernel/compare/v0.4.1...v0.5.0) (2025-09-13)
