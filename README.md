@@ -1,145 +1,76 @@
 # AF.AgentFramework
 
-\> A minimal, extensible **agent runtime** for .NET — built around a small set of primitives:  
-\> **Kernel**, **Engines**, **Runners**, **Hosting**, **Agents**, and **Policies**.
-
-[![NuGet version](https://img.shields.io/nuget/v/AF.AgentFramework.svg)](https://www.nuget.org/packages/AF.AgentFramework/)
-[![Build status](https://github.com/runemalm/AF.AgentFramework/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/runemalm/AF.AgentFramework/actions/workflows/release.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![NuGet version](https://img.shields.io/nuget/v/AF.AgentFramework.svg)](https://www.nuget.org/packages/AF.AgentFramework/)    
+[![Build status](https://github.com/runemalm/AF.AgentFramework/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/runemalm/AF.AgentFramework/actions/workflows/release.yml)    
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)    
 ![Target](https://img.shields.io/badge/.NET-9.0-512BD4)
+    
+---
 
-## Goals
+**AF.AgentFramework** is an experimental .NET framework for building **agents** and, eventually, **multi-agent systems (MAS)**.      
+It’s a personal learning project — but also intended to grow into a reusable toolkit for others who want to explore agent-based architectures in C#/.NET.
 
-- **Small core, strong contracts** — easy to reason about and test.  
-- **Deterministic execution** — SingleActive per agent, policy-driven behavior.  
-- **Pluggable engines/runners** — timers, webhooks, queues, cron, etc.  
-- **Composability via Hosting** — wire agents↔engines with overrides.  
+The framework is rooted in **agent theory and MAS research**. My goal is to create clean, theory-aligned abstractions for:
+- **Kernel** – the minimal agent core
+- **Engines** – execution models (loop, reactive, etc.)
+- **Runners** – input/output adapters that connect agents to their environment
+- **Tools** – agent-usable capabilities, e.g. external actions
+- **Hosting** – integration with .NET GenericHost and application lifecycles
+- **MAS** – (planned) support for multi-agent collaboration
 
-## Packages / Namespaces
+---
 
-Single project for now (to be split later):
+## Why?
 
-- `AgentFramework.Kernel` — contracts, dispatcher, policies  
-- `AgentFramework.Engines` — engine contracts + built-ins (Loop, Reactive)  
-- `AgentFramework.Runners` — runner contracts + built-ins (Timer)  
-- `AgentFramework.Hosting` — host + builder for composition  
-- `AgentFramework.Kernel.Policies.*` — policy contracts \& defaults  
+Agents and MAS have been studied for decades in AI research, but they’re rarely accessible to everyday .NET developers.      
+I want to **bridge theory and practice** — building a framework that is simple enough to learn from, yet solid enough to use for real projects.
 
-## Architecture
+This repository is where I’m exploring:
+- How agentic abstractions map to practical .NET patterns
+- How concepts like **roles, policies, perception, and action** can be modeled in code
+- How multi-agent collaboration can be layered on top of a clean agent kernel
 
-- **Kernel** — per-agent mailbox, **SingleActive**, ordering, admission, timeout, retry, cooperative preemption, backpressure.  
-- **Engine** — receives events/ticks, turns them into `WorkItem`s, enqueues to Kernel.  
-- **Runner** — I/O or timing source owned by an engine.  
-- **Host** — composes everything, manages lifecycle.  
-- **Policies** — swappable behaviors (Admission, Ordering, Preemption, Retry, Timeout, Backpressure).  
+---
 
-## Quick start
+## Current Status
 
-Install the package:
+🚧 **Work in Progress** 🚧 Right now the focus is on:
+- Laying down scaffolding and core abstractions
+- Building minimal examples (e.g. `HelloKernel`)
+- Experimenting with agent engines and failure policies
 
-```bash
-dotnet add package AF.AgentFramework
-```
+APIs are **not stable yet**. Expect things to change as I refine the abstractions.
+    
+---
 
-Create an agent and wire it up with a loop engine and a timer runner:
+## Roadmap
 
-```csharp
-using System;
-using System.Threading;
-using System.Threading.Tasks;
-using AgentFramework.Hosting;
-using AgentFramework.Engines;
-using AgentFramework.Runners.Timers;
-using AgentFramework.Kernel;
-using AgentFramework.Kernel.Policies.Defaults;
+- [x] Basic agent kernel scaffold
+- [x] Loop and reactive engines scaffold
+- [x] Tools (agent-usable capabilities, e.g. external actions) scaffold
+- [ ] MAPE-K execution semantics through loop engine profile scaffold
+- [ ] MAS primitives (blackboard, directories, collaboration) scaffold
+- [ ] Runner ecosystem (e.g. Slack, timers, HTTP ingress) scaffold
+- [ ] Documentation site (DocFX) scaffold
+- [ ] Fully implement all of above scaffolding
+- [ ] First public v1.0.0 NuGet release
 
-sealed class DummyAgent : IAgent
-{
-    public string Id => "dummy";
-    public async Task HandleAsync(WorkItem item, IAgentContext ctx)
-    {
-        Console.WriteLine($"[Agent] {Id} handling {item.Kind} ({item.Id})");
-        await Task.Delay(100, ctx.Cancellation);
-    }
-}
-
-var defaults = PolicySetDefaults.Create(
-    retry: RetryOptions.Default with { MaxAttempts = 2 }
-);
-
-var host = AgentHostBuilder.Create()
-    .WithKernelDefaults(defaults)
-    .AddEngine("loop", () => new LoopEngine("loop"))
-    .AddRunner("loop", () => new TimerRunner(TimeSpan.FromSeconds(1), "Loop Tick"))
-    .AddAgent("dummy", () => new DummyAgent())
-    .Attach("dummy", "loop")
-    .Build();
-
-await host.StartAsync();
-await Task.Delay(TimeSpan.FromSeconds(5));
-await host.StopAsync();
-```
-
-Run the included sample instead:
-
-```bash
-make hello-kernel
-```
-
-## Policies (defaults)
-
-- **Admission**: accept unless queue is too long; defer/reject late items.  
-- **Ordering**: priority → deadline → stable tiebreak.  
-- **Preemption**: off by default (cooperative supported).  
-- **Retry**: exponential backoff, no retry on cancellation.  
-- **Timeout**: opt-in; cancels agent handler when exceeded.  
-- **Backpressure**: Normal / Throttle / Shed (shed drops enqueues).  
-
-Override a single policy via an **attachment** or set global defaults:
-
-```csharp
-var defaults = PolicySetDefaults.Create(
-    timeout: new TimeoutOptions(TimeSpan.FromMilliseconds(250))
-);
-```
-
-## 🧪 Samples & Tests
-
-- **[samples/HelloKernel](samples/HelloKernel)** – minimal hello world sample app.
-- **[tests/AgentFramework.Kernel.Tests](tests/AgentFramework.Kernel.Tests)** – xUnit tests, currently only InProcKernel tests
-
-Run tests:
-
-```bash
-make test
-```
-
-Run the sample:
-
-```bash
-make hello-kernel
-```
-
-## Versioning & Releases
-
-- Versions are managed by [semantic-release](https://semantic-release.gitbook.io/) and git tags (`vX.Y.Z`).
-- Pre-1.0: **breaking changes bump minor**, not major (`preMajor:true`).
-- Package versions are injected at build time via [MinVer](https://github.com/adamralph/minver).
-- See [CHANGELOG.md](CHANGELOG.md) for release history.
-
-Dry-run a release locally:
-
-```bash
-make release-dry-run
-```
+---
 
 ## Contributing
 
-1. Fork & clone  
-2. Run `make build` / `make test`  
-3. Add features with Conventional Commit messages (`feat: ...`, `fix: ...`)  
-4. Open a PR
+Since this is still exploratory, I’m not actively accepting large PRs yet.      
+But if you find it interesting:
+- ⭐ **Star this repo** to follow along
+- 👀 Watch the releases for updates
+- 💬 Open discussions or issues if you have ideas or feedback
 
-## 📄 License
+---
 
-MIT © [David Runemalm](https://github.com/runemalm)
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+    
+---
+
+*I’m building AF.AgentFramework to learn, but also hoping it can become a useful resource for others who want to explore agent-based architectures in .NET. If that sounds interesting, please give it a star and follow along!*
