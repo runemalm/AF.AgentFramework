@@ -1,14 +1,9 @@
 # AF.AgentFramework
 
-A minimal, extensible **agent runtime** for .NET:  
-**Kernel**, **Engines**, **Runners**, **Hosting**, and **Policies**.
+An experimental agent framework for .NET:  
+**Kernel**, **Engines**, **Runners**, **Hosting**, **Tools** and **MAS**.
 
-- **Deterministic:** SingleActive per agent with ordered queues.  
-- **Policy-driven:** Admission, Ordering, Timeout, Retry, Preemption, Backpressure.  
-- **Composable:** Attach agents to engines with per-attachment overrides.  
-- **Extensible:** Plug your own engines/runners.  
-
-\> Target framework: **.NET 9.0**
+> Target framework: **.NET 9.0**
 
 ## Install
 
@@ -51,18 +46,9 @@ await Task.Delay(TimeSpan.FromSeconds(5));
 await host.StopAsync();
 ```
 
-## Policies (defaults)
-
-- Admission: accept unless queue is too long; reject late items.  
-- Ordering: priority first, then FIFO/deadline.  
-- Timeout: disabled by default (set via `TimeoutOptions`).  
-- Retry: exponential backoff; no retry on cancellations.  
-- Preemption: cooperative (opt-in).  
-- Backpressure: throttle/shed at high load.  
-
 ## Links
 
-- Source \& issues: https://github.com/runemalm/AF.AgentFramework  
+- Source & issues: https://github.com/runemalm/AF.AgentFramework  
 - API docs (DocFX): see the repository’s `docs/` site
 
 ## License
