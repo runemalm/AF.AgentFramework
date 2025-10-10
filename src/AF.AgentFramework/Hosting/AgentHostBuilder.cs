@@ -52,6 +52,13 @@ public sealed class AgentHostBuilder : IAgentHostBuilder
         _config.KernelDefaults = defaults ?? throw new ArgumentNullException(nameof(defaults));
         return this;
     }
+    
+    public IAgentHostBuilder WithKernel(Func<IKernelFactory> factory)
+    {
+        if (factory is null) throw new ArgumentNullException(nameof(factory));
+        _services.AddSingleton(typeof(IKernelFactory), _ => factory());
+        return this;
+    }
 
     public IAgentHost Build()
     {

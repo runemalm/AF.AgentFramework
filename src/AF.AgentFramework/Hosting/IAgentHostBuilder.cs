@@ -15,5 +15,6 @@ public interface IAgentHostBuilder
     IAgentHostBuilder AddAgent(string agentId, Func<IAgent> agentFactory);
     IAgentHostBuilder Attach(string agentId, string engineId, PolicySet? overrides = null);
     IAgentHostBuilder WithKernelDefaults(PolicySet defaults);
+    IAgentHostBuilder WithKernel(Func<IKernelFactory> factory);
     IAgentHost Build();
 }

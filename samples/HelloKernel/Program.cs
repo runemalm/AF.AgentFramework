@@ -4,21 +4,6 @@ using AgentFramework.Kernel;
 using AgentFramework.Kernel.Policies.Defaults;
 using AgentFramework.Runners.Timers;
 
-sealed class HelloAgent : IAgent
-{
-    public string Id { get; } = "hello";
-
-    public async Task HandleAsync(WorkItem item, IAgentContext ctx)
-    {
-        // Simulate a small bit of work
-        Console.WriteLine($"[Agent] {Id} handling {item.Kind} ({item.Id}) - \"Hello World!\"");
-        await Task.Delay(100, ctx.Cancellation);
-
-        // Uncomment to test retry behavior: throw once every 3rd tick
-        if (DateTimeOffset.UtcNow.Second % 3 == 0)
-            throw new InvalidOperationException("Simulated failure");
-    }
-}
 
 internal class Program
 {
@@ -33,10 +18,13 @@ internal class Program
 
         var host = AgentHostBuilder.Create()
             .WithKernelDefaults(policyDefaults)
+            .WithKernel(() => new InProcKernelFactory())
             .AddEngine("loop", () => new LoopEngine("loop"))
             .AddRunner("loop", () => new TimerRunner(TimeSpan.FromSeconds(1), "Loop Tick"))
-            .AddAgent("hello", () => new HelloAgent())
-            .Attach("hello", "loop")
+            .AddAgent("hello-loop", () => new HelloLoopAgent())
+            .AddAgent("hello-mape", () => new HelloMapeAgent())
+            .Attach("hello-loop", "loop")
+            .Attach("hello-mape", "loop")
             .Build();
 
         await host.StartAsync();
