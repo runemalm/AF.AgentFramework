@@ -5,7 +5,8 @@ using AgentFramework.Runners.Timers;
 namespace AgentFramework.Engines.Loop;
 
 /// <summary>
-/// Skeleton LoopEngine: binds to Kernel, manages runners, and enqueues Tick work items for attached agents.
+/// Simple loop engine: binds to Kernel, manages runners,
+/// and enqueues Tick work items for attached agents.
 /// </summary>
 public sealed class LoopEngine : IEngine
 {
@@ -20,19 +21,21 @@ public sealed class LoopEngine : IEngine
         Id = id;
     }
 
-    public void BindKernel(IKernel kernel) => _kernel = kernel ?? throw new ArgumentNullException(nameof(kernel));
+    public void BindKernel(IKernel kernel) =>
+        _kernel = kernel ?? throw new ArgumentNullException(nameof(kernel));
 
     public void AddRunner(IRunner runner)
     {
         if (runner is null) throw new ArgumentNullException(nameof(runner));
         _runners.Add(runner);
 
-        // If it's our TimerRunner, hook its tick to enqueue work
-        if (runner is TimerRunner t)
+        // TimerRunner triggers ticks periodically
+        if (runner is TimerRunner timer)
         {
-            t.OnTickAsync = async ct =>
+            timer.OnTickAsync = async ct =>
             {
                 if (_kernel is null) return;
+
                 foreach (var agentId in _agentIds)
                 {
                     var item = new WorkItem
@@ -41,9 +44,9 @@ public sealed class LoopEngine : IEngine
                         EngineId = Id,
                         AgentId = agentId,
                         Kind = WorkItemKind.Tick,
-                        Priority = 0,
                         Payload = null
                     };
+
                     Console.WriteLine($"[Engine] {Id} enqueue Tick for agent '{agentId}' ({item.Id}).");
                     await _kernel.EnqueueAsync(item, ct).ConfigureAwait(false);
                 }
@@ -61,8 +64,8 @@ public sealed class LoopEngine : IEngine
     public async Task StartAsync(CancellationToken ct = default)
     {
         Console.WriteLine($"[Engine] LoopEngine '{Id}' starting with {_runners.Count} runner(s).");
-        foreach (var r in _runners)
-            await r.StartAsync(ct).ConfigureAwait(false);
+        foreach (var runner in _runners)
+            await runner.StartAsync(ct).ConfigureAwait(false);
         Console.WriteLine($"[Engine] LoopEngine '{Id}' started.");
     }
 
