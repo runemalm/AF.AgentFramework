@@ -1,3 +1,10 @@
+## [0.7.0](https://github.com/runemalm/AF.AgentFramework/compare/v0.6.0...v0.7.0) (2025-10-10)
+
+### Features
+
+* add AgentBase and MapekAgentBase ([a6fe247](https://github.com/runemalm/AF.AgentFramework/commit/a6fe2470f29c8a209cde6258364c6a32a7222a4b))
+* add IKnowledge and InMemoryKnowledge ([e6c9151](https://github.com/runemalm/AF.AgentFramework/commit/e6c9151084e52a9d3b784805ced40dbf2456c228))
+
 ## [0.6.0](https://github.com/runemalm/AF.AgentFramework/compare/v0.5.1...v0.6.0) (2025-10-01)
 
 ### Features
