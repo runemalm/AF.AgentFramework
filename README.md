@@ -31,7 +31,7 @@ This repository is where I’m exploring:
 🚧 **Work in Progress** 🚧 Right now the focus is on:
 - Laying down scaffolding and core abstractions (the theory "spine")
 - Adding all the base modules (Kernel, Engines, Runners, Hosting, Tools, MultiAgent)
-- Building minimal examples (e.g. `HelloKernel` and upcoming `HelloAgent` and `HelloSocietyAgent`)
+- Building minimal examples (e.g. `HelloAgent`, `HelloMapeAgent` and upcoming `HelloReactiveAgent`, `HelloSocietyAgent`)
 
 APIs are **not stable yet**. Expect things to change as I refine the abstractions.
 
@@ -40,7 +40,7 @@ APIs are **not stable yet**. Expect things to change as I refine the abstraction
 - [x] Basic agent kernel scaffolding
 - [x] Loop and reactive engines scaffolding
 - [x] Tools (agent-usable capabilities, e.g. external actions) scaffolding
-- [ ] MAPE-K execution semantics scaffolding (thorough loop engine "profiles")
+- [x] MAPE-K execution semantics via `MapekAgentBase`
 - [ ] MAS primitives scaffolding (blackboard, directories, collaboration, ...)
 - [ ] Runner ecosystem scaffolding (e.g. Slack Webhooks, timers, HTTP ingress, etc..)
 - [ ] Documentation resources scaffolding (DocFX, API reference and articles)
