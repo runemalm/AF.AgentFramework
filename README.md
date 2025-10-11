@@ -1,11 +1,11 @@
 # AF.AgentFramework
 
-[![NuGet version](https://img.shields.io/nuget/v/AF.AgentFramework.svg)](https://www.nuget.org/packages/AF.AgentFramework/)    
-[![Build status](https://github.com/runemalm/AF.AgentFramework/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/runemalm/AF.AgentFramework/actions/workflows/release.yml)    
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)    
+[![NuGet version](https://img.shields.io/nuget/v/AF.AgentFramework.svg)](https://www.nuget.org/packages/AF.AgentFramework/)
+[![Build status](https://github.com/runemalm/AF.AgentFramework/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/runemalm/AF.AgentFramework/actions/workflows/release.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Target](https://img.shields.io/badge/.NET-9.0-512BD4)
 
-**AF.AgentFramework** is an experimental .NET framework for building **agents** and **multi-agent systems (MAS)**.      
+**AF.AgentFramework** is an experimental .NET framework for building **agents** and **multi-agent systems (MAS)**.
 It’s a personal learning project — but I expect it to also grow into a fully-fledged framework for others who want to both explore/learn agent-based architectures in C#/.NET and to build agentic systems for production.
 
 The framework is rooted in **agent theory and MAS research**. My goal is to create clean, theory-aligned abstractions for:
@@ -37,19 +37,43 @@ APIs are **not stable yet**. Expect things to change as I refine the abstraction
 
 ## Roadmap
 
-- [x] Basic agent kernel scaffolding
-- [x] Loop and reactive engines scaffolding (TimerRunner, ReactiveRunner, Http ingress)
-- [x] Tools (agent-usable capabilities, e.g. external actions) scaffolding
-- [x] MAPE-K execution semantics via `MapekAgentBase`
-- [ ] MAS primitives scaffolding (blackboard, directories, collaboration, ...)
-- [ ] Runner ecosystem scaffolding (e.g. Slack Webhooks, timers, HTTP ingress, etc..)
-- [ ] Documentation resources scaffolding (DocFX, API reference and articles)
-- [ ] After scaffolding of above, finish/polish it for v1.0.0
-- [ ] First public v1.0.0 NuGet release!
+This is a growing list and subject to change as we go and learn.
+
+### 🧱 Foundation
+Core architectural scaffolding — defining the minimal abstractions for agents, engines, and runners.
+
+- [x] Implement core **agent kernel** (InProcKernel, policies, scheduling)
+- [x] Implement **execution engines**: LoopEngine & ReactiveEngine
+- [x] Implement **runner primitives**: TimerRunner, ReactiveRunner
+
+### 🧩 Capabilities
+Expanding what agents can *do* — tools, feedback loops, collaboration, and environmental interaction.
+
+- [ ] Add **Tools system** (external actions, pipelines, tool engine, policies, observability, ...)
+- [x] Add **MAPE-K agent base** (`MapekAgentBase`) and sample
+- [ ] Add **MAS primitives** (blackboard, directory, collaboration)
+- [ ] Extend **runner ecosystem** (queues, routing, distributed transports, HTTP ingress, Slack Webhooks, ...)
+
+### 🤖 Samples & Agents
+Demonstrating theory in practice — progressively complex agents showcasing different patterns.
+
+- [x] **HelloLoopAgent** – basic periodic agent using LoopEngine + TimerRunner
+- [x] **HelloReactiveAgent** – event-driven agent using ReactiveEngine + HttpMockRunner
+- [x] **HelloMapeAgent** – agent demonstrating the full MAPE-K control loop
+- [ ] **HelloSocietyAgent** – sample MAS scenario (collaborating agents via blackboard)
+- [ ] **HelloToolAgent** – agent using the ToolsEngine to invoke external actions
+- [ ] **HelloBlackboardAgent** – demonstrates shared memory and coordination
+- [ ] **HelloSlackAgent** – integrates with Slack ingress runner
+
+### 📚 Ecosystem & Release
+Documentation, polish, and packaging toward a stable v1.0 developer experience.
+
+- [ ] Add **documentation site** (DocFX, API reference, guides)
+- [ ] Finalize **v1.0.0 release** (stabilize APIs, add samples & polish)
 
 ## Contributing
 
-I would love to collaborate with like-minded on this. If you are interested, please reach out.      
+I would love to collaborate with like-minded on this. If you are interested, please reach out.
 Or, if you just find this interesting:
 - ⭐ **Star this repo** to follow along
 - 👀 Watch the releases for updates

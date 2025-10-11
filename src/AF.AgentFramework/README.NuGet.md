@@ -23,9 +23,9 @@ using AgentFramework.Runners.Timers;
 using AgentFramework.Kernel;
 using AgentFramework.Kernel.Policies.Defaults;
 
-sealed class HelloLoopAgent : IAgent
+sealed class HelloAgent : IAgent
 {
-    public string Id => "hello-loop";
+    public string Id => "hello";
     
     public async Task HandleAsync(WorkItem item, IAgentContext ctx)
     {
@@ -39,8 +39,8 @@ var host = AgentHostBuilder.Create()
     .WithKernel(() => new InProcKernelFactory())
     .AddEngine("loop", () => new LoopEngine("loop"))
     .AddRunner("loop", () => new TimerRunner(TimeSpan.FromSeconds(1)))
-    .AddAgent("hello-loop", () => new HelloLoopAgent())
-    .Attach("hello-loop", "loop")
+    .AddAgent("hello", () => new HelloAgent())
+    .Attach("hello", "loop")
     .Build();
 
 await host.StartAsync();
