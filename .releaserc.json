@@ -19,7 +19,12 @@
             "@semantic-release/release-notes-generator",
             {
                 "preset": "conventionalcommits",
-                "presetConfig": { "preMajor": true }
+                "presetConfig": {
+                    "preMajor": true
+                },
+                "writerOpts": {
+                    "transform": null
+                }
             }
         ],
         ["@semantic-release/changelog", { "changelogFile": "CHANGELOG.md" }],
