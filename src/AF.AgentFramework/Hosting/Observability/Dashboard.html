@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>AF.AgentFramework Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family:sans-serif; margin:2em; background:#fafafa; }
+        table { border-collapse:collapse; width:100%; margin-top:1em; }
+        th,td { border:1px solid #ccc; padding:6px 8px; }
+        canvas { max-height:200px; margin-top:1em; }
+    </style>
+</head>
+<body>
+<h2>AF.AgentFramework Kernel Dashboard</h2>
+<div id="summary"></div>
+<canvas id="queueChart"></canvas>
+<table id="agents"><tr><th>Agent</th><th>Queue</th><th>Status</th></tr></table>
+
+<script>
+    const chart = new Chart(document.getElementById('queueChart').getContext('2d'), {
+        type:'line',
+        data:{ labels:[], datasets:[{ label:'Queued Items', data:[], borderColor:'#512BD4'}] },
+        options:{ animation:false, scales:{y:{beginAtZero:true}}}
+    });
+    async function refresh(){
+        const r=await fetch('/af/snapshot'); const j=await r.json();
+        document.getElementById('summary').textContent=
+            `Agents: ${j.totalAgents} | Running: ${j.runningAgents} | Queued: ${j.queuedItems}`;
+        const tbody=j.agents.map(a=>`<tr><td>${a.id}</td><td>${a.queueLength}</td><td>${a.isRunning?'🟢':'⚪️'}</td></tr>`).join('');
+        document.getElementById('agents').innerHTML='<tr><th>Agent</th><th>Queue</th><th>Status</th></tr>'+tbody;
+        chart.data.labels.push(new Date().toLocaleTimeString());
+        chart.data.datasets[0].data.push(j.queuedItems);
+        if(chart.data.labels.length>20){chart.data.labels.shift();chart.data.datasets[0].data.shift();}
+        chart.update();
+    }
+    setInterval(refresh,2000);
+    refresh();
+</script>
+</body>
+</html>
