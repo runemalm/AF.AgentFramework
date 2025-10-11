@@ -1,3 +1,9 @@
+## [0.8.0](https://github.com/runemalm/AF.AgentFramework/compare/v0.7.0...v0.8.0) (2025-10-11)
+
+### Features
+
+* finish minimal version of reactive engine ([998b773](https://github.com/runemalm/AF.AgentFramework/commit/998b773c884f55ad89b6a6955a09a4cc1718b17d))
+
 ## [0.7.0](https://github.com/runemalm/AF.AgentFramework/compare/v0.6.0...v0.7.0) (2025-10-10)
 
 ### Features
