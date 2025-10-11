@@ -50,6 +50,11 @@
     <PackageReference Include="MinVer" Version="5.0.0" PrivateAssets="all" />
   </ItemGroup>
 
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <EmbeddedResource Include="Hosting/Observability/Dashboard.html" />
+  </ItemGroup>
+
   <PropertyGroup>
     <!-- Tell MinVer to read tags like v1.2.3 that semantic-release creates -->
     <MinVerTagPrefix>v</MinVerTagPrefix>

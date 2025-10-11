@@ -5,36 +5,84 @@
     <title>AF.AgentFramework Dashboard</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        body { font-family:sans-serif; margin:2em; background:#fafafa; }
-        table { border-collapse:collapse; width:100%; margin-top:1em; }
-        th,td { border:1px solid #ccc; padding:6px 8px; }
+        body { font-family:sans-serif; margin:2em; background:#fafafa; color:#333; }
+        h2 { color:#512BD4; margin-bottom:0.2em; }
+        #summary { margin-bottom:1em; font-size:1.1em; }
+        table { border-collapse:collapse; width:100%; background:white; border-radius:6px;
+            box-shadow:0 2px 4px rgba(0,0,0,0.05); overflow:hidden; }
+        th,td { border:1px solid #ddd; padding:6px 8px; text-align:center; }
+        th { background:#f3f2f8; }
+        tr.running { background:#f3fdf4; }
+        tr.idle { background:#ffffff; }
         canvas { max-height:200px; margin-top:1em; }
+        small { color:#666; }
     </style>
 </head>
 <body>
 <h2>AF.AgentFramework Kernel Dashboard</h2>
 <div id="summary"></div>
 <canvas id="queueChart"></canvas>
-<table id="agents"><tr><th>Agent</th><th>Queue</th><th>Status</th></tr></table>
+<table id="agents">
+    <tr><th>Agent</th><th>Queue</th><th>Status</th></tr>
+</table>
+<small id="uptime"></small>
 
 <script>
-    const chart = new Chart(document.getElementById('queueChart').getContext('2d'), {
+    let start = Date.now();
+
+    const ctx = document.getElementById('queueChart').getContext('2d');
+    const chart = new Chart(ctx, {
         type:'line',
-        data:{ labels:[], datasets:[{ label:'Queued Items', data:[], borderColor:'#512BD4'}] },
-        options:{ animation:false, scales:{y:{beginAtZero:true}}}
+        data:{
+            labels:[],
+            datasets:[{
+                label:'Queued Items',
+                data:[],
+                borderColor:'#512BD4',
+                backgroundColor:'rgba(81,43,212,0.08)',
+                tension:0.3,
+                fill:true
+            }]
+        },
+        options:{ animation:false, scales:{ y:{ beginAtZero:true } } }
     });
+
     async function refresh(){
-        const r=await fetch('/af/snapshot'); const j=await r.json();
-        document.getElementById('summary').textContent=
-            `Agents: ${j.totalAgents} | Running: ${j.runningAgents} | Queued: ${j.queuedItems}`;
-        const tbody=j.agents.map(a=>`<tr><td>${a.id}</td><td>${a.queueLength}</td><td>${a.isRunning?'🟢':'⚪️'}</td></tr>`).join('');
-        document.getElementById('agents').innerHTML='<tr><th>Agent</th><th>Queue</th><th>Status</th></tr>'+tbody;
-        chart.data.labels.push(new Date().toLocaleTimeString());
-        chart.data.datasets[0].data.push(j.queuedItems);
-        if(chart.data.labels.length>20){chart.data.labels.shift();chart.data.datasets[0].data.shift();}
-        chart.update();
+        try {
+            const r = await fetch('/af/snapshot');
+            const j = await r.json();
+
+            document.getElementById('summary').innerHTML =
+                `👥 Agents: <b>${j.totalAgents}</b> &nbsp;•&nbsp; 🟢 Running: <b>${j.runningAgents}</b> &nbsp;•&nbsp; ⏳ Queued: <b>${j.queuedItems}</b>`;
+
+            const rows = j.agents.map(a => `
+          <tr class="${a.isRunning?'running':'idle'}">
+            <td>${a.id}</td>
+            <td>${a.queueLength}</td>
+            <td>${a.isRunning?'🟢 Running':'⚪️ Idle'}</td>
+          </tr>`).join('');
+            document.getElementById('agents').innerHTML =
+                '<tr><th>Agent</th><th>Queue</th><th>Status</th></tr>' + rows;
+
+            chart.data.labels.push(new Date().toLocaleTimeString());
+            chart.data.datasets[0].data.push(j.queuedItems);
+            if(chart.data.labels.length>20){
+                chart.data.labels.shift();
+                chart.data.datasets[0].data.shift();
+            }
+            chart.update();
+        } catch(e) {
+            console.error("Dashboard refresh failed:", e);
+        }
     }
+
+    function tickUptime(){
+        const secs = Math.floor((Date.now()-start)/1000);
+        document.getElementById('uptime').textContent = `Uptime: ${secs}s`;
+    }
+
     setInterval(refresh,2000);
+    setInterval(tickUptime,1000);
     refresh();
 </script>
 </body>
