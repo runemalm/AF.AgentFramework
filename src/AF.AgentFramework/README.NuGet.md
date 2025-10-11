@@ -1,9 +1,10 @@
 # AF.AgentFramework
 
-An experimental agent framework for .NET:  
-**Kernel**, **Engines**, **Runners**, **Hosting**, **Tools** and **MAS**.
+A lightweight, theory-aligned **agent framework for .NET** —
+build autonomous agents and multi-agent systems (MAS) with clean, composable primitives:
+**Kernel · Engines · Runners · Hosting · Tools**.
 
-> Target framework: **.NET 9.0**
+> Requires .NET 9.0 or later
 
 ## Install
 
@@ -13,43 +14,44 @@ dotnet add package AF.AgentFramework
 
 ## Quick start
 
+Minimal example:
+
 ```csharp
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using AgentFramework.Hosting;
-using AgentFramework.Engines;
+using AgentFramework.Engines.Loop;
 using AgentFramework.Runners.Timers;
 using AgentFramework.Kernel;
 using AgentFramework.Kernel.Policies.Defaults;
 
-sealed class DummyAgent : IAgent
+sealed class HelloLoopAgent : IAgent
 {
-    public string Id => "dummy";
+    public string Id => "hello-loop";
+    
     public async Task HandleAsync(WorkItem item, IAgentContext ctx)
     {
-        Console.WriteLine($"[Agent] {Id} handling {item.Kind} ({item.Id})");
+        Console.WriteLine($"[Agent] {Id} handling {item.Kind}");
         await Task.Delay(100, ctx.Cancellation);
     }
 }
 
 var host = AgentHostBuilder.Create()
     .WithKernelDefaults(PolicySetDefaults.Create())
+    .WithKernel(() => new InProcKernelFactory())
     .AddEngine("loop", () => new LoopEngine("loop"))
-    .AddRunner("loop", () => new TimerRunner(TimeSpan.FromSeconds(1), "Loop Tick"))
-    .AddAgent("dummy", () => new DummyAgent())
-    .Attach("dummy", "loop")
+    .AddRunner("loop", () => new TimerRunner(TimeSpan.FromSeconds(1)))
+    .AddAgent("hello-loop", () => new HelloLoopAgent())
+    .Attach("hello-loop", "loop")
     .Build();
 
 await host.StartAsync();
-await Task.Delay(TimeSpan.FromSeconds(5));
+await Task.Delay(5000);
 await host.StopAsync();
 ```
 
 ## Links
 
-- Source & issues: https://github.com/runemalm/AF.AgentFramework  
-- API docs (DocFX): see the repository’s `docs/` site
+- [Source & issues](https://github.com/runemalm/AF.AgentFramework)
+- API docs (DocFX): see `docs/` in the repository
 
 ## License
 
