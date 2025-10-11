@@ -1,4 +1,5 @@
 using System.Collections.Concurrent;
+using AgentFramework.Kernel.Diagnostics;
 using AgentFramework.Kernel.Policies;
 using AgentFramework.Kernel.Policies.Defaults;
 
@@ -8,7 +9,7 @@ namespace AgentFramework.Kernel;
 /// In-process kernel with per-agent mailboxes and a single coordinator loop (v1).
 /// Guarantees SingleActive per agent. Honors basic Admission/Ordering/Timeout/Retry/Preemption/Backpressure.
 /// </summary>
-public sealed class InProcKernel : IKernel, IDisposable
+public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
 {
     private readonly IAgentCatalog _catalog;
     private readonly PolicySet _defaults;
@@ -198,6 +199,33 @@ public sealed class InProcKernel : IKernel, IDisposable
             _agents.Add(agentId, entry);
             return entry;
         }
+    }
+    
+    public KernelSnapshot GetSnapshot()
+    {
+        // Local copies to avoid locking for long periods
+        List<AgentSnapshot> agents;
+        lock (_agents)
+        {
+            agents = _agents.Values
+                .Select(a => new AgentSnapshot(
+                    Id: a.AgentId,
+                    QueueLength: a.QueueCount,
+                    IsRunning: a.IsRunning))
+                .ToList();
+        }
+
+        var totalAgents = agents.Count;
+        var running = agents.Count(a => a.IsRunning);
+        var queued = agents.Sum(a => a.QueueLength);
+
+        return new KernelSnapshot(
+            TotalAgents: totalAgents,
+            RunningAgents: running,
+            QueuedItems: queued,
+            Agents: agents,
+            Timestamp: DateTimeOffset.UtcNow
+        );
     }
 
     private static string Describe(WorkItem i) => $"[{i.Kind}] a={i.AgentId} e={i.EngineId} id={i.Id}";
