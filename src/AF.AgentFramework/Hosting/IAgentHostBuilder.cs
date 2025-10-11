@@ -1,6 +1,7 @@
 using AgentFramework.Kernel;
 using AgentFramework.Kernel.Policies;
 using AgentFramework.Engines;
+using AgentFramework.Hosting.Services;
 using AgentFramework.Runners;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -16,5 +17,7 @@ public interface IAgentHostBuilder
     IAgentHostBuilder Attach(string agentId, string engineId, PolicySet? overrides = null);
     IAgentHostBuilder WithKernelDefaults(PolicySet defaults);
     IAgentHostBuilder WithKernel(Func<IKernelFactory> factory);
+    IAgentHostBuilder AddHostService(Func<IAgentHostService> factory);
+    IAgentHostBuilder EnableDashboard(int port = 6060);
     IAgentHost Build();
 }

@@ -1,6 +1,7 @@
-using AgentFramework.Engines;
-using AgentFramework.Kernel;
 using Microsoft.Extensions.DependencyInjection;
+using AgentFramework.Engines;
+using AgentFramework.Hosting.Services;
+using AgentFramework.Kernel;
 
 namespace AgentFramework.Hosting;
 
@@ -16,6 +17,7 @@ public sealed class AgentHost : IAgentHost
     private IKernel? _kernel;
     private readonly Dictionary<string, IEngine> _engines = new(StringComparer.Ordinal);
     private AgentCatalog? _catalog;
+    private readonly List<IAgentHostService> _hostServices = new();
 
     public AgentHost(AgentHostConfig config, IServiceProvider services)
     {
@@ -108,10 +110,28 @@ public sealed class AgentHost : IAgentHost
         {
             await e.StartAsync(ct).ConfigureAwait(false);
         }
+        
+        // 7) Start host services (e.g. dashboard)
+        var ctx = new AgentHostContext(_kernel, _engines, _services);
+        foreach (var factory in _config.HostServices.Factories)
+        {
+            var svc = factory();
+            _hostServices.Add(svc);
+            Console.WriteLine($"[Host] Starting host service {svc.GetType().Name}…");
+            await svc.StartAsync(ctx, ct);
+        }
     }
 
     public async Task StopAsync(CancellationToken ct = default)
     {
+        // Stop host services first
+        foreach (var svc in _hostServices.AsEnumerable().Reverse())
+        {
+            Console.WriteLine($"[Host] Stopping host service {svc.GetType().Name}…");
+            await svc.StopAsync(ct);
+        }
+
+        // Stop engines, then kernel
         foreach (var e in _engines.Values.Reverse())
             await e.StopAsync(ct).ConfigureAwait(false);
         if (_kernel is not null)

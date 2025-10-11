@@ -2,6 +2,7 @@ using AgentFramework.Kernel;
 using AgentFramework.Kernel.Policies;
 using AgentFramework.Engines;
 using AgentFramework.Runners;
+using AgentFramework.Hosting.Services;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace AgentFramework.Hosting;
@@ -58,6 +59,17 @@ public sealed class AgentHostBuilder : IAgentHostBuilder
         if (factory is null) throw new ArgumentNullException(nameof(factory));
         _services.AddSingleton(typeof(IKernelFactory), _ => factory());
         return this;
+    }
+    
+    public IAgentHostBuilder AddHostService(Func<IAgentHostService> factory)
+    {
+        _config.HostServices.Factories.Add(factory);
+        return this;
+    }
+
+    public IAgentHostBuilder EnableDashboard(int port = 6060)
+    {
+        return AddHostService(() => new ObservabilityDashboardService(port));
     }
 
     public IAgentHost Build()

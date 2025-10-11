@@ -1,3 +1,4 @@
+using AgentFramework.Hosting.Services;
 using AgentFramework.Kernel.Policies;
 
 namespace AgentFramework.Hosting;
@@ -11,5 +12,6 @@ public sealed class AgentHostConfig
     public List<RunnerRegistration> Runners { get; } = new();
     public List<AgentRegistration> Agents { get; } = new();
     public List<Attachment> Attachments { get; } = new();
+    public AgentHostServiceCollection HostServices { get; } = new();
     public PolicySet? KernelDefaults { get; set; }
 }
