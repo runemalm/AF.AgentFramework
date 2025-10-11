@@ -1,3 +1,16 @@
+## [0.10.0](https://github.com/runemalm/AF.AgentFramework/compare/v0.9.0...v0.10.0) (2025-10-11)
+
+### chore
+
+* **agents:** Make HelloMapeAgent id configurable via constructor arg ([c95c6e7](https://github.com/runemalm/AF.AgentFramework/commit/c95c6e71430dda540d6f32016722f2b351fa208f))
+* **ci:** Fix links in release notes ([85d4c18](https://github.com/runemalm/AF.AgentFramework/commit/85d4c18c781481c0a15e297a8e4a75fbe517e467))
+* **readme:** Add dashboard screenshot to readme ([7e3d6ed](https://github.com/runemalm/AF.AgentFramework/commit/7e3d6ed1bc9946767040054fd346b7f3bb8f53f3))
+* **readme:** Update nuget readme ([51670e9](https://github.com/runemalm/AF.AgentFramework/commit/51670e9d485f67196c6a17d5163b09e408754b3b))
+
+### feat
+
+* **observability:** Enhance dashboard with more metrics ([93617c0](https://github.com/runemalm/AF.AgentFramework/commit/93617c0676666f445c8822ebbc73eeb9591d4fd6))
+
 ## [0.9.0](https://github.com/runemalm/AF.AgentFramework/compare/v0.8.0...v0.9.0) (2025-10-11)
 
 ### chore
