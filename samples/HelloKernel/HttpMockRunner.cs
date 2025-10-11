@@ -1,5 +1,7 @@
 using AgentFramework.Runners;
 
+namespace HelloKernel;
+
 sealed class HttpMockRunner : IReactiveRunner
 {
     public string Name { get; } = "HttpMockRunner";

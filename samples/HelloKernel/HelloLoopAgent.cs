@@ -1,6 +1,8 @@
 using AgentFramework.Agents;
 using AgentFramework.Kernel;
 
+namespace HelloKernel;
+
 sealed class HelloLoopAgent : AgentBase
 {
     public override string Id => "hello-loop";
