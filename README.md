@@ -65,6 +65,14 @@ Demonstrating theory in practice — progressively complex agents showcasing dif
 - [ ] **HelloBlackboardAgent** – demonstrates shared memory and coordination
 - [ ] **HelloSlackAgent** – integrates with Slack ingress runner
 
+### 🔍 Observability & Dashboard
+Making the invisible visible — introspection and live visualization of agent activity and kernel state.
+
+- [x] Add **kernel introspection API** (`IKernelInspector`, agent and queue snapshots)
+- [x] Add **minimal HTTP dashboard** (`AgentFramework.Hosting.Observability`)
+- [ ] Add **lightweight charts** (Chart.js sparklines for queue depth, tick rate, throughput)
+- [ ] Add **agent-level metrics** (execution time, retries, policy outcomes)
+
 ### 📚 Ecosystem & Release
 Documentation, polish, and packaging toward a stable v1.0 developer experience.
 
