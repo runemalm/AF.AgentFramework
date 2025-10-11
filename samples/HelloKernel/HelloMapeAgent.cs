@@ -5,8 +5,13 @@ namespace HelloKernel;
 
 sealed class HelloMapeAgent : MapekAgentBase
 {
-    public override string Id => "hello-mape";
+    public override string Id { get; }
     private int _loopCount;
+
+    public HelloMapeAgent(string? id = null)
+    {
+        Id = string.IsNullOrWhiteSpace(id) ? $"hello-mape" : id!;
+    }
 
     protected override async Task MonitorAsync(IAgentContext ctx)
     {
