@@ -48,6 +48,60 @@ to observe agent activity and kernel state in real time.
 The dashboard is powered by the framework’s own **ObservabilityServer**, exposing live metrics from the kernel
 through a lightweight HTTP interface. It visualizes throughput, queue depth, utilization, and per-agent status updates.
 
+## HelloKernel Sample
+
+The `HelloKernel` project demonstrates how multiple agents and engines run together
+in a single host — including **loop**, **reactive**, and **MAPE-K** agents.
+
+```csharp
+using AgentFramework.Engines.Loop;
+using AgentFramework.Engines.Reactive;
+using AgentFramework.Hosting;
+using AgentFramework.Kernel;
+using AgentFramework.Kernel.Policies.Defaults;
+using AgentFramework.Runners.Timers;
+
+namespace HelloKernel;
+
+internal class Program
+{
+    private static async Task Main()
+    {
+        Console.WriteLine("HelloKernel sample starting…");
+
+        var policyDefaults = PolicySetDefaults.Create(
+            retry: RetryOptions.Default with { MaxAttempts = 2 },
+            timeout: new TimeoutOptions(null)
+        );
+
+        // Build and run a minimal multi-agent host
+        var host = AgentHostBuilder.Create()
+            .WithKernelDefaults(policyDefaults)
+            .WithKernel(() => new InProcKernelFactory())
+            // loop family
+            .AddEngine("loop", () => new LoopEngine("loop"))
+            .AddRunner("loop", () => new TimerRunner(TimeSpan.FromSeconds(0.7), "Loop Tick"))
+            .AddAgent("hello-loop", () => new HelloLoopAgent())
+            .AddAgent("hello-mape", () => new HelloMapeAgent())
+            .Attach("hello-loop", "loop")
+            .Attach("hello-mape", "loop")
+            // reactive family
+            .AddEngine("reactive", () => new ReactiveEngine("reactive"))
+            .AddRunner("reactive", () => new HttpMockRunner())
+            .AddAgent("hello-reactive", () => new HelloReactiveAgent())
+            .Attach("hello-reactive", "reactive")
+            .EnableDashboard(6060)
+            .Build();
+
+        await host.RunConsoleAsync();
+
+        Console.WriteLine("HelloKernel sample finished.");
+    }
+}
+```
+
+🧩 Try running it — then open the [dashboard](http://localhost:6060/af) to see all agents executing live.
+
 ## Roadmap
 
 This is a growing list and subject to change as we go and learn.
@@ -83,8 +137,8 @@ Making the invisible visible — introspection and live visualization of agent a
 
 - [x] Add **kernel introspection API** (`IKernelInspector`, agent and queue snapshots)
 - [x] Add **minimal HTTP dashboard** (`AgentFramework.Hosting.Observability`)
-- [ ] Add **lightweight charts** (Chart.js sparklines for queue depth, tick rate, throughput)
-- [ ] Add **agent-level metrics** (execution time, retries, policy outcomes)
+- [x] Add **lightweight charts** (Chart.js sparklines for queue depth, tick rate, throughput)
+- [x] Add **agent-level metrics** (execution time, retries, policy outcomes)
 
 ### 📚 Ecosystem & Release
 Documentation, polish, and packaging toward a stable v1.0 developer experience.
