@@ -1,3 +1,22 @@
+## [0.9.0](https://github.com/runemalm/AF.AgentFramework/compare/v0.8.0...v0.9.0) (2025-10-11)
+
+### chore
+
+* **ci:** show all scopes in release notes ([](https://github.com/runemalm/AF.AgentFramework/commit/a463128a58ace35a534a71a347df5da0fcc12546))
+* **hosting:** add AgentHostConsoleExtensions with RunConsoleAsync for graceful shutdown ([](https://github.com/runemalm/AF.AgentFramework/commit/1683eff54fb469d26e9e8cc841697f3a920ffb8b))
+* **hosting:** extend AgentHostBuilder with AddHostService() and EnableDashboard() ([](https://github.com/runemalm/AF.AgentFramework/commit/0ddaabd1472441e24b6147abfa8bfec72f218fa8))
+* **kernel:** implement IKernelInspector in InProcKernel ([](https://github.com/runemalm/AF.AgentFramework/commit/431da7996f1093efc23536e0c4ecfa75155b1a4c))
+* **misc:** minor changes ([](https://github.com/runemalm/AF.AgentFramework/commit/fb578e60148abf7cf2397412e6dda7c1661b7723))
+* **readme:** add minimal dashboard to roadmap ([](https://github.com/runemalm/AF.AgentFramework/commit/4e4bea8c019860c5e9153018662b3536415ab4a8))
+* **samples:** update samples ([](https://github.com/runemalm/AF.AgentFramework/commit/ad9d687cd35cf3fafbba4311e89664c0de2e5cd6))
+* update readme ([](https://github.com/runemalm/AF.AgentFramework/commit/061348b49ec7c3ea56a2dba452f19dd16d8ac868))
+
+### feat
+
+* **hosting:** add host service support (AgentHostService, ObservabilityDashboardService) ([](https://github.com/runemalm/AF.AgentFramework/commit/d795cf69e8d3629dadba3a9e9ee18d3e643e102d))
+* **hosting:** add HTTP observability dashboard (ObservabilityServer) ([](https://github.com/runemalm/AF.AgentFramework/commit/03b1f5c1b0271db88c67fe02f61226b0494fd84b))
+* **kernel:** add introspection API (IKernelInspector, KernelSnapshot) ([](https://github.com/runemalm/AF.AgentFramework/commit/44c67f18bef88c5ae873ceaf469ddacc42b82e49))
+
 ## [0.8.0](https://github.com/runemalm/AF.AgentFramework/compare/v0.7.0...v0.8.0) (2025-10-11)
 
 ### Features
