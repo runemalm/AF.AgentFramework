@@ -15,7 +15,9 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
     private readonly PolicySet _defaults;
     private readonly Dictionary<(string AgentId, string EngineId), PolicySet> _bindingPolicies;
     private readonly Dictionary<string, AgentEntry> _agents = new(StringComparer.Ordinal);
-
+    private double _throughput;
+    private int _lastHandledCount;
+    private DateTimeOffset _lastThroughputSample = DateTimeOffset.UtcNow;
     private readonly CancellationTokenSource _cts = new();
     private Task? _coordinator;
 
@@ -83,14 +85,22 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
         var state = new AgentRuntimeState(entry.IsRunning, entry.QueueCount);
         var admit = (pol.Admission ?? _defaults.Admission ?? new DefaultAdmissionPolicy()).Admit(item, state);
 
-        if (admit == AdmissionDecision.Reject)
+        switch (admit)
         {
-            Console.WriteLine($"[Kernel] Rejected: {Describe(item)}");
-            return ValueTask.CompletedTask;
-        }
+            case AdmissionDecision.Reject:
+                entry.IncrementRejected();
+                Console.WriteLine($"[Kernel] Rejected: {Describe(item)}");
+                return ValueTask.CompletedTask;
 
-        // Defer => treat as accept in v1 (TODO: small delay/retry)
-        entry.Enqueue(new QueuedItem(item, pol, notBefore: now));
+            case AdmissionDecision.Defer:
+                // Defer => in v1, treat as delayed enqueue (could add jitter later)
+                entry.Enqueue(new QueuedItem(item, pol, notBefore: now + TimeSpan.FromMilliseconds(50)));
+                return ValueTask.CompletedTask;
+
+            default: // Accept
+                entry.Enqueue(new QueuedItem(item, pol, notBefore: now));
+                break;
+        }
 
         // Preemption (cooperative)
         if (entry.IsRunning && entry.Running is { } running)
@@ -203,17 +213,29 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
     
     public KernelSnapshot GetSnapshot()
     {
-        // Local copies to avoid locking for long periods
         List<AgentSnapshot> agents;
+        int totalRejected, totalHandled;
+        double throughput;
+
         lock (_agents)
         {
             agents = _agents.Values
-                .Select(a => new AgentSnapshot(
-                    Id: a.AgentId,
-                    QueueLength: a.QueueCount,
-                    IsRunning: a.IsRunning))
+                .Select(a => a.ToSnapshot(a.QueueCount))
                 .ToList();
+
+            totalRejected = agents.Sum(a => a.Rejected);
+            totalHandled  = agents.Sum(a => a.TotalHandled);
         }
+
+        // throughput calculation (rolling avg)
+        var now = DateTimeOffset.UtcNow;
+        var dt = (now - _lastThroughputSample).TotalSeconds;
+        var diff = totalHandled - _lastHandledCount;
+        var current = dt > 0 ? diff / dt : 0;
+
+        _throughput = _throughput * 0.8 + current * 0.2;
+        _lastHandledCount = totalHandled;
+        _lastThroughputSample = now;
 
         var totalAgents = agents.Count;
         var running = agents.Count(a => a.IsRunning);
@@ -223,8 +245,11 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
             TotalAgents: totalAgents,
             RunningAgents: running,
             QueuedItems: queued,
+            RejectedItems: totalRejected,
+            TotalHandledItems: totalHandled,
+            ThroughputPerSecond: Math.Round(_throughput, 2),
             Agents: agents,
-            Timestamp: DateTimeOffset.UtcNow
+            Timestamp: now
         );
     }
 
@@ -254,15 +279,22 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
         private readonly List<QueuedItem> _queue = new();
         private readonly object _sync = new();
         private readonly IOrderingPolicy _ordering;
+        private readonly AgentStats _stats = new();
 
         public string AgentId { get; }
         public bool IsRunning { get; private set; }
         public RunningInvocation? Running { get; private set; }
 
+        private CancellationTokenSource? _runningCts;
+        private DateTimeOffset _runStart;
+        private int _lastQueueCount;
+
         public AgentEntry(string agentId, IOrderingPolicy ordering)
         {
             AgentId = agentId;
             _ordering = ordering;
+            _stats.Created = DateTimeOffset.UtcNow;
+            _stats.LastSample = _stats.Created;
         }
 
         public int QueueCount { get { lock (_sync) return _queue.Count; } }
@@ -297,7 +329,6 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
                 var candidates = _queue.Where(q => q.NotBefore <= now).ToList();
                 if (candidates.Count == 0) return false;
 
-                // Prefer Boosted items
                 var boosted = candidates.FirstOrDefault(q => q.Boosted);
                 if (boosted is not null)
                 {
@@ -306,7 +337,6 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
                     return true;
                 }
 
-                // Order by policy (fallback to priority/deadline via default policy)
                 candidates.Sort((x, y) => _ordering.Compare(x.WorkItem, y.WorkItem));
                 var chosen = candidates.First();
                 _queue.Remove(chosen);
@@ -322,6 +352,7 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
                 IsRunning = true;
                 Running = new RunningInvocation(qi.WorkItem, DateTimeOffset.UtcNow);
                 _runningCts = linkedCts;
+                _runStart = DateTimeOffset.UtcNow;
             }
         }
 
@@ -329,13 +360,21 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
         {
             lock (_sync)
             {
+                if (IsRunning)
+                {
+                    var elapsed = DateTimeOffset.UtcNow - _runStart;
+                    _stats.ActiveTime += elapsed;
+                    _stats.TotalHandled++;
+                    _stats.AvgExecutionMs = _stats.AvgExecutionMs * 0.8 + elapsed.TotalMilliseconds * 0.2;
+                }
+
                 IsRunning = false;
                 Running = null;
                 _runningCts?.Dispose();
                 _runningCts = null;
             }
         }
-        
+
         public void CancelRunning()
         {
             lock (_sync)
@@ -344,6 +383,48 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
             }
         }
 
-        private CancellationTokenSource? _runningCts;
+        public AgentSnapshot ToSnapshot(int currentQueue)
+        {
+            var now = DateTimeOffset.UtcNow;
+            var dt = (now - _stats.LastSample).TotalSeconds;
+            var dq = currentQueue - _lastQueueCount;
+            var growth = dt > 0 ? dq / dt : 0;
+
+            _stats.QueueGrowthRate = _stats.QueueGrowthRate * 0.8 + growth * 0.2;
+            _stats.LastSample = now;
+            _lastQueueCount = currentQueue;
+
+            var uptime = (now - _stats.Created).TotalSeconds;
+            var util = uptime > 0 ? (_stats.ActiveTime.TotalSeconds / uptime) * 100 : 0;
+
+            return new AgentSnapshot(
+                Id: AgentId,
+                QueueLength: currentQueue,
+                IsRunning: IsRunning,
+                TotalHandled: _stats.TotalHandled,
+                Rejected: _stats.Rejected,
+                AvgExecutionMs: Math.Round(_stats.AvgExecutionMs, 1),
+                QueueGrowthRate: Math.Round(_stats.QueueGrowthRate, 1),
+                UtilizationPercent: Math.Round(util, 1)
+            );
+        }
+
+        public void IncrementRejected()
+        {
+            lock (_sync) { _stats.Rejected++; }
+        }
+
+        // --- Internal lightweight stats struct ---
+        private sealed class AgentStats
+        {
+            public DateTimeOffset Created { get; set; }
+            public DateTimeOffset LastSample { get; set; }
+            public TimeSpan ActiveTime { get; set; }
+            public double AvgExecutionMs { get; set; }
+            public double QueueGrowthRate { get; set; }
+            public int TotalHandled { get; set; }
+            public int Rejected { get; set; }
+        }
     }
+
 }

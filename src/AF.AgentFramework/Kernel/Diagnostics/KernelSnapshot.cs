@@ -7,8 +7,12 @@ public sealed record KernelSnapshot(
     int TotalAgents,
     int RunningAgents,
     int QueuedItems,
+    int RejectedItems,              // total across all agents
+    int TotalHandledItems,
+    double ThroughputPerSecond,     // moving average of completed WorkItems/sec
     IReadOnlyList<AgentSnapshot> Agents,
-    DateTimeOffset Timestamp);
+    DateTimeOffset Timestamp
+);
 
 /// <summary>
 /// Lightweight runtime info about one agent’s mailbox and status.
@@ -16,4 +20,10 @@ public sealed record KernelSnapshot(
 public sealed record AgentSnapshot(
     string Id,
     int QueueLength,
-    bool IsRunning);
+    bool IsRunning,
+    int TotalHandled,               // completed items since kernel start
+    int Rejected,                   // admission rejections for this agent
+    double AvgExecutionMs,          // moving average execution duration
+    double QueueGrowthRate,         // items per second delta
+    double UtilizationPercent       // (activeTime / totalRuntime) * 100
+);

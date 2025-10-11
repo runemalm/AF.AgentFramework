@@ -5,84 +5,118 @@
     <title>AF.AgentFramework Dashboard</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        body { font-family:sans-serif; margin:2em; background:#fafafa; color:#333; }
-        h2 { color:#512BD4; margin-bottom:0.2em; }
-        #summary { margin-bottom:1em; font-size:1.1em; }
-        table { border-collapse:collapse; width:100%; background:white; border-radius:6px;
-            box-shadow:0 2px 4px rgba(0,0,0,0.05); overflow:hidden; }
-        th,td { border:1px solid #ddd; padding:6px 8px; text-align:center; }
-        th { background:#f3f2f8; }
-        tr.running { background:#f3fdf4; }
-        tr.idle { background:#ffffff; }
-        canvas { max-height:200px; margin-top:1em; }
-        small { color:#666; }
+        body { font-family:sans-serif; margin:2em; background:#fafafa; }
+        h2 { color:#333; }
+        #summary { margin-bottom:1em; }
+        table { border-collapse:collapse; width:100%; margin-top:1em; background:white; }
+        th,td { border:1px solid #ddd; padding:6px 8px; text-align:left; }
+        th { background:#f0f0f0; }
+        .warn { background:#fff6e0; }
+        .alert { background:#ffe6e6; }
+        canvas { max-height:180px; margin-top:1.5em; }
+        .sparkline { width:120px; height:40px; }
+        .observation { margin-top:1em; font-size:0.9em; background:#fdfdfd; border:1px solid #ccc; padding:8px; border-radius:4px; }
     </style>
 </head>
 <body>
-<h2>AF.AgentFramework Kernel Dashboard</h2>
-<div id="summary"></div>
-<canvas id="queueChart"></canvas>
+<h2>AF.AgentFramework Dashboard</h2>
+<div id="summary">Loading…</div>
+
+<canvas id="throughputChart"></canvas>
+
 <table id="agents">
-    <tr><th>Agent</th><th>Queue</th><th>Status</th></tr>
+    <tr>
+        <th>Agent</th>
+        <th>Queue</th>
+        <th>Δ/s</th>
+        <th>Avg ms</th>
+        <th>Util%</th>
+        <th>Rej</th>
+        <th>Handled</th>
+        <th>Status</th>
+    </tr>
 </table>
-<small id="uptime"></small>
+
+<div id="observations" class="observation"></div>
 
 <script>
-    let start = Date.now();
-
-    const ctx = document.getElementById('queueChart').getContext('2d');
-    const chart = new Chart(ctx, {
-        type:'line',
-        data:{
-            labels:[],
-            datasets:[{
-                label:'Queued Items',
-                data:[],
-                borderColor:'#512BD4',
-                backgroundColor:'rgba(81,43,212,0.08)',
-                tension:0.3,
-                fill:true
-            }]
+    const throughputCtx = document.getElementById('throughputChart').getContext('2d');
+    const throughputChart = new Chart(throughputCtx, {
+        type: 'line',
+        data: {
+            labels: [],
+            datasets: [{ label: 'Throughput (items/s)', data: [], borderColor:'#512BD4', tension:0.2 }]
         },
-        options:{ animation:false, scales:{ y:{ beginAtZero:true } } }
+        options: { animation:false, scales:{ y:{ beginAtZero:true } } }
     });
 
-    async function refresh(){
+    const history = {}; // { agentId: {queue:[], util:[]} }
+
+    async function refresh() {
         try {
             const r = await fetch('/af/snapshot');
             const j = await r.json();
 
-            document.getElementById('summary').innerHTML =
-                `👥 Agents: <b>${j.totalAgents}</b> &nbsp;•&nbsp; 🟢 Running: <b>${j.runningAgents}</b> &nbsp;•&nbsp; ⏳ Queued: <b>${j.queuedItems}</b>`;
+            // --- summary ---
+            document.getElementById('summary').textContent =
+                `Agents: ${j.totalAgents} | Running: ${j.runningAgents} | Queued: ${j.queuedItems} | Handled: ${j.totalHandledItems} | Rejected: ${j.rejectedItems} | Throughput: ${j.throughputPerSecond.toFixed(2)}/s`;
 
-            const rows = j.agents.map(a => `
-          <tr class="${a.isRunning?'running':'idle'}">
-            <td>${a.id}</td>
-            <td>${a.queueLength}</td>
-            <td>${a.isRunning?'🟢 Running':'⚪️ Idle'}</td>
-          </tr>`).join('');
-            document.getElementById('agents').innerHTML =
-                '<tr><th>Agent</th><th>Queue</th><th>Status</th></tr>' + rows;
-
-            chart.data.labels.push(new Date().toLocaleTimeString());
-            chart.data.datasets[0].data.push(j.queuedItems);
-            if(chart.data.labels.length>20){
-                chart.data.labels.shift();
-                chart.data.datasets[0].data.shift();
+            // --- throughput trend ---
+            const ts = new Date(j.timestamp).toLocaleTimeString();
+            throughputChart.data.labels.push(ts);
+            throughputChart.data.datasets[0].data.push(j.throughputPerSecond);
+            if (throughputChart.data.labels.length > 25) {
+                throughputChart.data.labels.shift();
+                throughputChart.data.datasets[0].data.shift();
             }
-            chart.update();
-        } catch(e) {
-            console.error("Dashboard refresh failed:", e);
+            throughputChart.update();
+
+            // --- agents table ---
+            const rows = j.agents.map(a => {
+                const h = history[a.id] ??= { queue: [], util: [] };
+                h.queue.push(a.queueLength);
+                h.util.push(a.utilizationPercent);
+                if (h.queue.length > 25) { h.queue.shift(); h.util.shift(); }
+
+                let cls = '';
+                if (a.queueLength >= 256) cls = 'alert';
+                else if (a.queueLength >= 128) cls = 'warn';
+
+                // subtle dimming for idle agents
+                const opacity = a.totalHandled === 0 ? 0.5 : 1.0;
+                const state = a.isRunning ? '🟢' : '⚪️';
+
+                return `<tr class="${cls}" style="opacity:${opacity}">
+                    <td>${a.id}</td>
+                    <td>${a.queueLength}</td>
+                    <td>${a.queueGrowthRate.toFixed(1)}</td>
+                    <td>${a.avgExecutionMs.toFixed(1)}</td>
+                    <td>${a.utilizationPercent.toFixed(0)}</td>
+                    <td>${a.rejected}</td>
+                    <td>${a.totalHandled}</td>
+                    <td>${state}</td>
+                </tr>`;
+            }).join('');
+            document.getElementById('agents').innerHTML =
+                `<tr><th>Agent</th><th>Queue</th><th>Δ/s</th><th>Avg ms</th><th>Util%</th><th>Rej</th><th>Handled</th><th>Status</th></tr>${rows}`;
+
+            // --- observations ---
+            const obs = [];
+            j.agents.forEach(a => {
+                if (a.queueLength > 200) obs.push(`⚠️ ${a.id} overloaded (${a.queueLength} queued)`);
+                if (a.rejected > 0) obs.push(`❌ ${a.id} dropping work (${a.rejected} rejected)`);
+                if (a.utilizationPercent < 10 && a.queueLength === 0) obs.push(`ℹ️ ${a.id} mostly idle`);
+            });
+            document.getElementById('observations').innerHTML =
+                obs.length ? obs.join('<br>') : '✅ All agents stable';
+
+        } catch (err) {
+            console.error(err);
+            document.getElementById('summary').textContent = 'Error fetching snapshot';
         }
     }
 
-    function tickUptime(){
-        const secs = Math.floor((Date.now()-start)/1000);
-        document.getElementById('uptime').textContent = `Uptime: ${secs}s`;
-    }
-
-    setInterval(refresh,2000);
-    setInterval(tickUptime,1000);
+    setInterval(refresh, 2000);
     refresh();
 </script>
 </body>
