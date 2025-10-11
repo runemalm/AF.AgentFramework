@@ -41,11 +41,10 @@ var host = AgentHostBuilder.Create()
     .AddRunner("loop", () => new TimerRunner(TimeSpan.FromSeconds(1)))
     .AddAgent("hello", () => new HelloAgent())
     .Attach("hello", "loop")
+    .EnableDashboard(6060)
     .Build();
 
-await host.StartAsync();
-await Task.Delay(5000);
-await host.StopAsync();
+await host.RunConsoleAsync();
 ```
 
 ## Links
