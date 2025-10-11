@@ -35,6 +35,19 @@ This repository is where I’m exploring:
 
 APIs are **not stable yet**. Expect things to change as I refine the abstractions.
 
+## Live Dashboard
+
+When running the included **HelloKernel** sample (with `HelloLoopAgent`, `HelloReactiveAgent`, and `HelloMapeAgent`),
+you can open the minimal built-in dashboard at [http://localhost:6060/af](http://localhost:6060/af)
+to observe agent activity and kernel state in real time.
+
+<p align="center">
+  <img src="docs/images/dashboard-sample.png" alt="AF.AgentFramework Dashboard showing live agent metrics" width="800">
+</p>
+
+The dashboard is powered by the framework’s own **ObservabilityServer**, exposing live metrics from the kernel
+through a lightweight HTTP interface. It visualizes throughput, queue depth, utilization, and per-agent status updates.
+
 ## Roadmap
 
 This is a growing list and subject to change as we go and learn.
