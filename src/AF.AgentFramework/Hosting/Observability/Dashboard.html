@@ -7,6 +7,7 @@
     <style>
         body { font-family:sans-serif; margin:2em; background:#fafafa; }
         h2 { color:#333; }
+        #controls { margin-bottom:0.5em; font-size:0.9em; color:#555; }
         #summary { margin-bottom:1em; }
         table { border-collapse:collapse; width:100%; margin-top:1em; background:white; }
         th,td { border:1px solid #ddd; padding:6px 8px; text-align:left; }
@@ -16,10 +17,17 @@
         canvas { max-height:180px; margin-top:1.5em; }
         .sparkline { width:120px; height:40px; }
         .observation { margin-top:1em; font-size:0.9em; background:#fdfdfd; border:1px solid #ccc; padding:8px; border-radius:4px; }
+        input[type=number] { width:80px; font-size:0.9em; padding:2px 4px; margin-left:4px; }
     </style>
 </head>
 <body>
 <h2>AF.AgentFramework Dashboard</h2>
+
+<div id="controls">
+    Refresh every
+    <input id="refreshMs" type="number" value="2000" min="100" step="100"> ms
+</div>
+
 <div id="summary">Loading…</div>
 
 <canvas id="throughputChart"></canvas>
@@ -116,7 +124,23 @@
         }
     }
 
-    setInterval(refresh, 2000);
+    // --- refresh control ---
+    const input = document.getElementById('refreshMs');
+    const saved = localStorage.getItem('af_refresh_ms');
+    if (saved) input.value = saved;
+
+    let refreshMs = Math.max(100, parseInt(input.value, 10) || 2000);
+    let timer = setInterval(refresh, refreshMs);
+
+    input.addEventListener('change', e => {
+        const val = Math.max(100, parseInt(e.target.value, 10) || 2000);
+        e.target.value = val;
+        localStorage.setItem('af_refresh_ms', val);
+        clearInterval(timer);
+        refreshMs = val;
+        timer = setInterval(refresh, refreshMs);
+    });
+
     refresh();
 </script>
 </body>
