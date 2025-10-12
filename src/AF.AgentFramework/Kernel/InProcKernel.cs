@@ -250,7 +250,7 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
             randomSeed: qitem.WorkItem.Id.GetHashCode()
         );
 
-        entry.MarkRunning(qitem, linkedCts);
+        entry.AttachRunContext(linkedCts);
 
         try
         {
@@ -430,19 +430,22 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
                 candidates.Sort((x, y) => _ordering.Compare(x.WorkItem, y.WorkItem));
                 var chosen = candidates.First();
                 _queue.Remove(chosen);
+
+                // 🔒 Atomically mark running
+                IsRunning = true;
+                Running = new RunningInvocation(chosen.WorkItem, DateTimeOffset.UtcNow);
+                _runStart = DateTimeOffset.UtcNow;
+
                 item = chosen;
                 return true;
             }
         }
 
-        public void MarkRunning(QueuedItem qi, CancellationTokenSource linkedCts)
+        public void AttachRunContext(CancellationTokenSource linkedCts)
         {
             lock (_sync)
             {
-                IsRunning = true;
-                Running = new RunningInvocation(qi.WorkItem, DateTimeOffset.UtcNow);
                 _runningCts = linkedCts;
-                _runStart = DateTimeOffset.UtcNow;
             }
         }
 
