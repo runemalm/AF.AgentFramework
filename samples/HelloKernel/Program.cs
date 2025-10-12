@@ -15,7 +15,8 @@ internal class Program
 
         var policyDefaults = PolicySetDefaults.Create(
             retry: RetryOptions.Default with { MaxAttempts = 2 },
-            timeout: new TimeoutOptions(null)
+            timeout: new TimeoutOptions(null),
+            scheduling: new TimeSliceAwareSchedulingPolicy()
         );
 
         var host = AgentHostBuilder.Create()

@@ -15,7 +15,8 @@ public static class PolicySetDefaults
         BackpressureOptions? backpressure = null,
         TimeoutOptions? timeout = null,
         IOrderingPolicy? ordering = null,
-        IPreemptionPolicy? preemption = null)
+        IPreemptionPolicy? preemption = null,
+        ISchedulingPolicy? scheduling = null)
     {
         return new PolicySet
         {
@@ -24,7 +25,8 @@ public static class PolicySetDefaults
             Backpressure = new DefaultBackpressurePolicy(backpressure),
             Timeout = new DefaultTimeoutPolicy(timeout),
             Ordering = ordering ?? new DefaultOrderingPolicy(),
-            Preemption = preemption ?? new DefaultPreemptionPolicy()
+            Preemption = preemption ?? new DefaultPreemptionPolicy(),
+            Scheduling = scheduling ?? new DefaultSchedulingPolicy()
         };
     }
 }

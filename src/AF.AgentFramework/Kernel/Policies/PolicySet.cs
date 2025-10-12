@@ -8,4 +8,5 @@ public sealed class PolicySet
     public ITimeoutPolicy? Timeout { get; init; }
     public IOrderingPolicy? Ordering { get; init; }
     public IBackpressurePolicy? Backpressure { get; init; }
+    public ISchedulingPolicy? Scheduling { get; init; }
 }

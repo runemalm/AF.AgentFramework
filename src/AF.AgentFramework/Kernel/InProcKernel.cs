@@ -127,61 +127,19 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
         while (!token.IsCancellationRequested)
         {
             bool didWork = false;
-            foreach (var entry in SnapshotAgents())
-            {
-                if (token.IsCancellationRequested) break;
 
-                if (entry.TryDequeueNext(out var qitem))
+            var entries = SnapshotAgents().ToList();
+            var context = new SchedulingContext(_running, entries.Sum(a => a.QueueCount), DateTimeOffset.UtcNow);
+            var policy = _defaults.Scheduling ?? new DefaultSchedulingPolicy();
+            var selection = policy.SelectNext(entries.Select(e => e.AsView()), context);
+
+            if (selection is not null)
+            {
+                var entry = entries.FirstOrDefault(e => e.AgentId == selection.Value.AgentId);
+                if (entry is not null && entry.TryDequeueNext(out var qitem))
                 {
                     didWork = true;
-                    Interlocked.Increment(ref _running);
-
-                    var timeout = (qitem.Policies.Timeout ?? _defaults.Timeout)?.GetTimeout(qitem.WorkItem);
-                    using var linkedCts = timeout is { } ts && ts > TimeSpan.Zero
-                        ? CancellationTokenSource.CreateLinkedTokenSource(token)
-                        : CancellationTokenSource.CreateLinkedTokenSource(token);
-
-                    if (timeout is { } t && t > TimeSpan.Zero)
-                        linkedCts.CancelAfter(t);
-
-                    var attempt = _attempts.AddOrUpdate(qitem.WorkItem.Id, 1, (_, prev) => prev + 1);
-                    var ctx = new AgentContext(qitem.WorkItem.AgentId, qitem.WorkItem.EngineId, qitem.WorkItem.Id,
-                                               qitem.WorkItem.CorrelationId, linkedCts.Token, randomSeed: qitem.WorkItem.Id.GetHashCode());
-
-                    entry.MarkRunning(qitem, linkedCts);
-
-                    try
-                    {
-                        var agent = _catalog.Get(qitem.WorkItem.AgentId);
-                        Console.WriteLine($"[Kernel] Dispatch → Agent={agent.Id} Item={qitem.WorkItem.Id} Kind={qitem.WorkItem.Kind} (Attempt {attempt})");
-                        await agent.HandleAsync(qitem.WorkItem, ctx).ConfigureAwait(false);
-                        Console.WriteLine($"[Kernel] Complete ← Agent={agent.Id} Item={qitem.WorkItem.Id}");
-                    }
-                    catch (OperationCanceledException)
-                    {
-                        Console.WriteLine($"[Kernel] Canceled ← Agent={qitem.WorkItem.AgentId} Item={qitem.WorkItem.Id}");
-                        // no retry on cancellations
-                    }
-                    catch (Exception ex)
-                    {
-                        var retry = (qitem.Policies.Retry ?? _defaults.Retry ?? new DefaultRetryPolicy())
-                            .OnFailure(qitem.WorkItem, ex, attempt);
-                        if (retry.ShouldRetry)
-                        {
-                            var notBefore = DateTimeOffset.UtcNow + (retry.Delay ?? TimeSpan.Zero);
-                            Console.WriteLine($"[Kernel] Failed → retry in {retry.Delay?.TotalMilliseconds ?? 0} ms: {Describe(qitem.WorkItem)}");
-                            entry.Enqueue(new QueuedItem(qitem.WorkItem, qitem.Policies, notBefore));
-                        }
-                        else
-                        {
-                            Console.WriteLine($"[Kernel] Failed → no retry: {Describe(qitem.WorkItem)} ({retry.Reason})");
-                        }
-                    }
-                    finally
-                    {
-                        entry.MarkIdle();
-                        Interlocked.Decrement(ref _running);
-                    }
+                    await ExecuteAgentAsync(entry, qitem, token);
                 }
             }
 
@@ -189,6 +147,66 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
                 await Task.Delay(idleDelay, token).ConfigureAwait(false);
         }
     }
+    
+    private async Task ExecuteAgentAsync(AgentEntry entry, QueuedItem qitem, CancellationToken kernelToken)
+    {
+        Interlocked.Increment(ref _running);
+
+        var timeout = (qitem.Policies.Timeout ?? _defaults.Timeout)?.GetTimeout(qitem.WorkItem);
+        using var linkedCts = CancellationTokenSource.CreateLinkedTokenSource(kernelToken);
+
+        if (timeout is { } ts && ts > TimeSpan.Zero)
+            linkedCts.CancelAfter(ts);
+
+        var attempt = _attempts.AddOrUpdate(qitem.WorkItem.Id, 1, (_, prev) => prev + 1);
+        var ctx = new AgentContext(
+            qitem.WorkItem.AgentId,
+            qitem.WorkItem.EngineId,
+            qitem.WorkItem.Id,
+            qitem.WorkItem.CorrelationId,
+            linkedCts.Token,
+            randomSeed: qitem.WorkItem.Id.GetHashCode()
+        );
+
+        entry.MarkRunning(qitem, linkedCts);
+
+        try
+        {
+            var agent = _catalog.Get(qitem.WorkItem.AgentId);
+            Console.WriteLine($"[Kernel] Dispatch → Agent={agent.Id} Item={qitem.WorkItem.Id} Kind={qitem.WorkItem.Kind} (Attempt {attempt})");
+
+            await agent.HandleAsync(qitem.WorkItem, ctx).ConfigureAwait(false);
+
+            Console.WriteLine($"[Kernel] Complete ← Agent={agent.Id} Item={qitem.WorkItem.Id}");
+        }
+        catch (OperationCanceledException)
+        {
+            Console.WriteLine($"[Kernel] Canceled ← Agent={qitem.WorkItem.AgentId} Item={qitem.WorkItem.Id}");
+            // no retry on cancellations
+        }
+        catch (Exception ex)
+        {
+            var retry = (qitem.Policies.Retry ?? _defaults.Retry ?? new DefaultRetryPolicy())
+                .OnFailure(qitem.WorkItem, ex, attempt);
+
+            if (retry.ShouldRetry)
+            {
+                var notBefore = DateTimeOffset.UtcNow + (retry.Delay ?? TimeSpan.Zero);
+                Console.WriteLine($"[Kernel] Failed → retry in {retry.Delay?.TotalMilliseconds ?? 0} ms: {Describe(qitem.WorkItem)}");
+                entry.Enqueue(new QueuedItem(qitem.WorkItem, qitem.Policies, notBefore));
+            }
+            else
+            {
+                Console.WriteLine($"[Kernel] Failed → no retry: {Describe(qitem.WorkItem)} ({retry.Reason})");
+            }
+        }
+        finally
+        {
+            entry.MarkIdle();
+            Interlocked.Decrement(ref _running);
+        }
+    }
+
 
     private IEnumerable<AgentEntry> SnapshotAgents()
     {
@@ -383,6 +401,8 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
             }
         }
 
+        public IAgentView AsView() => new View(this);
+
         public AgentSnapshot ToSnapshot(int currentQueue)
         {
             var now = DateTimeOffset.UtcNow;
@@ -425,6 +445,16 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
             public int TotalHandled { get; set; }
             public int Rejected { get; set; }
         }
-    }
 
+        private sealed class View : IExtendedAgentView
+        {
+            private readonly AgentEntry _inner;
+            public View(AgentEntry inner) => _inner = inner;
+            public string Id => _inner.AgentId;
+            public int QueueLength => _inner.QueueCount;
+            public bool IsRunning => _inner.IsRunning;
+            public double UtilizationPercent => _inner.ToSnapshot(_inner.QueueCount).UtilizationPercent;
+            public double AvgExecutionMs => _inner.ToSnapshot(_inner.QueueCount).AvgExecutionMs;
+        }
+    }
 }
