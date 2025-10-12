@@ -1,3 +1,16 @@
+## [0.11.0](https://github.com/runemalm/AF.AgentFramework/compare/v0.10.0...v0.11.0) (2025-10-12)
+
+### feat
+
+* **kernel:** Add scheduling policies for fair and balanced agent execution ([2edc6d1](https://github.com/runemalm/AF.AgentFramework/commit/2edc6d1c86b2db2b4e861214ab080494d4b8f207))
+
+### chore
+
+* **dashboard:** Add input field for custom refresh control ms ([3f6b6d7](https://github.com/runemalm/AF.AgentFramework/commit/3f6b6d7507ab3139e1554340286c8aecc5c6da32))
+* **readme:** Add example code section ([d8756c7](https://github.com/runemalm/AF.AgentFramework/commit/d8756c7ca00b0881024386b210ca578b8f809add))
+
+* Merge branch 'master' of github.com:runemalm/AF.AgentFramework ([cca8751](https://github.com/runemalm/AF.AgentFramework/commit/cca8751dce25a3394e1f72a3ee176bac21cf938b))
+
 ## [0.10.0](https://github.com/runemalm/AF.AgentFramework/compare/v0.9.0...v0.10.0) (2025-10-11)
 
 ### chore
