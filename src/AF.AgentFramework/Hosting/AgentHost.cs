@@ -60,7 +60,8 @@ public sealed class AgentHost : IAgentHost
         {
             Agents = _catalog,
             Defaults = defaults,
-            Bindings = bindings
+            Bindings = bindings,
+            WorkerCount = _config.WorkerCount
         });
 
         // 3) Instantiate engines

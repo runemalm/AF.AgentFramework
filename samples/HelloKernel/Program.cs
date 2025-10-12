@@ -21,6 +21,7 @@ internal class Program
 
         var host = AgentHostBuilder.Create()
             .WithKernelDefaults(policyDefaults)
+            .WithKernelConcurrency(2)
             .WithKernel(() => new InProcKernelFactory())
             // loop family
             .AddEngine("loop", () => new LoopEngine("loop"))

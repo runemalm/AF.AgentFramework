@@ -14,18 +14,16 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
     private readonly IAgentCatalog _catalog;
     private readonly PolicySet _defaults;
     private readonly Dictionary<(string AgentId, string EngineId), PolicySet> _bindingPolicies;
+    private readonly int _workerCount;
     private readonly Dictionary<string, AgentEntry> _agents = new(StringComparer.Ordinal);
     private double _throughput;
     private int _lastHandledCount;
     private DateTimeOffset _lastThroughputSample = DateTimeOffset.UtcNow;
     private readonly CancellationTokenSource _cts = new();
-    private Task? _coordinator;
-
-    // attempt tracking per WorkItem.Id
-    private readonly ConcurrentDictionary<string, int> _attempts = new();
-
-    // simple global counts
     private int _running;
+    private readonly List<Task> _workers = new();
+    private readonly object _scheduleLock = new();
+    private readonly ConcurrentDictionary<string, int> _attempts = new();
     
     private sealed class AttachmentKeyComparer : IEqualityComparer<(string AgentId, string EngineId)>
     {
@@ -43,24 +41,37 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
         _defaults = options.Defaults ?? PolicySetDefaults.Create();
         _bindingPolicies = (options.Bindings ?? Array.Empty<AttachmentBinding>())
             .ToDictionary(b => (b.AgentId, b.EngineId), b => b.Policies, new AttachmentKeyComparer());
+        _workerCount = options.WorkerCount;
     }
-
+    
     public Task StartAsync(CancellationToken ct = default)
     {
-        Console.WriteLine("[Kernel] Starting…");
-        _coordinator = Task.Run(CoordinatorLoop, _cts.Token);
+        Console.WriteLine($"[Kernel] Starting with {_workerCount} workers on {Environment.ProcessorCount} logical processors…");
+
+        for (int i = 0; i < _workerCount; i++)
+        {
+            int id = i; // capture loop variable
+            _workers.Add(Task.Run(() => WorkerLoop(id, _cts.Token)));
+        }
+
         Console.WriteLine("[Kernel] Started.");
         return Task.CompletedTask;
     }
-
+    
     public async Task StopAsync(CancellationToken ct = default)
     {
         Console.WriteLine("[Kernel] Stopping…");
         _cts.Cancel();
-        if (_coordinator is not null)
+
+        try
         {
-            try { await _coordinator.ConfigureAwait(false); } catch (OperationCanceledException) { }
+            await Task.WhenAll(_workers).ConfigureAwait(false);
         }
+        catch (OperationCanceledException)
+        {
+            // expected
+        }
+
         Console.WriteLine("[Kernel] Stopped.");
     }
 
@@ -118,34 +129,61 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
 
         return ValueTask.CompletedTask;
     }
-
-    private async Task CoordinatorLoop()
+    
+    private async Task WorkerLoop(int workerId, CancellationToken ct)
     {
-        var token = _cts.Token;
         var idleDelay = TimeSpan.FromMilliseconds(25);
 
-        while (!token.IsCancellationRequested)
+        while (!ct.IsCancellationRequested)
         {
             bool didWork = false;
+            AgentEntry? entry = null;
 
-            var entries = SnapshotAgents().ToList();
-            var context = new SchedulingContext(_running, entries.Sum(a => a.QueueCount), DateTimeOffset.UtcNow);
-            var policy = _defaults.Scheduling ?? new DefaultSchedulingPolicy();
-            var selection = policy.SelectNext(entries.Select(e => e.AsView()), context);
-
-            if (selection is not null)
+            // --- 1. Select next agent (short critical section) ---
+            lock (_scheduleLock)
             {
-                var entry = entries.FirstOrDefault(e => e.AgentId == selection.Value.AgentId);
-                if (entry is not null && entry.TryDequeueNext(out var qitem))
+                if (_agents.Count > 0)
                 {
-                    didWork = true;
-                    await ExecuteAgentAsync(entry, qitem, token);
+                    // Build a lightweight agent view list for the scheduler
+                    var views = _agents.Values.Select(a => a.AsView()).ToList();
+
+                    // Compute scheduling context (cluster-level info)
+                    var context = new SchedulingContext(
+                        TotalRunning: _running,
+                        TotalQueued: _agents.Sum(a => a.Value.QueueCount),
+                        Now: DateTimeOffset.UtcNow
+                    );
+
+                    // Pick scheduling policy (default if none bound)
+                    var policy = _defaults.Scheduling ?? new DefaultSchedulingPolicy();
+                    var selection = policy.SelectNext(views, context);
+
+                    if (selection is not null)
+                        _agents.TryGetValue(selection.Value.AgentId, out entry);
                 }
             }
 
+            // --- 2. Execute outside lock ---
+            if (entry?.TryDequeueNext(out var qitem) == true)
+            {
+                didWork = true;
+
+                try
+                {
+                    await ExecuteAgentAsync(entry, qitem, ct).ConfigureAwait(false);
+                }
+                catch (OperationCanceledException)
+                {
+                    // expected when shutting down
+                }
+            }
+
+            // --- 3. Idle backoff ---
             if (!didWork)
-                await Task.Delay(idleDelay, token).ConfigureAwait(false);
+                await Task.Delay(idleDelay, ct).ConfigureAwait(false);
         }
+
+        Console.WriteLine($"[Worker {workerId}] exiting.");
     }
     
     private async Task ExecuteAgentAsync(AgentEntry entry, QueuedItem qitem, CancellationToken kernelToken)
@@ -205,13 +243,6 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
             entry.MarkIdle();
             Interlocked.Decrement(ref _running);
         }
-    }
-
-
-    private IEnumerable<AgentEntry> SnapshotAgents()
-    {
-        // Copy to avoid dictionary enumeration exceptions while enqueueing
-        lock (_agents) return _agents.Values.ToList();
     }
 
     private PolicySet ResolvePolicies(string agentId, string engineId)

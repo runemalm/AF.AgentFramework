@@ -36,6 +36,7 @@ sealed class HelloAgent : IAgent
 
 var host = AgentHostBuilder.Create()
     .WithKernelDefaults(PolicySetDefaults.Create())
+    .WithKernelConcurrency(2)
     .WithKernel(() => new InProcKernelFactory())
     .AddEngine("loop", () => new LoopEngine("loop"))
     .AddRunner("loop", () => new TimerRunner(TimeSpan.FromSeconds(1)))

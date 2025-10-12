@@ -10,6 +10,12 @@ public sealed class KernelOptions
 
     /// <summary>Effective per-attachment policies (AgentId+EngineId). Optional.</summary>
     public IReadOnlyList<AttachmentBinding> Bindings { get; init; } = new List<AttachmentBinding>();
+    
+    /// <summary>
+    /// Number of concurrent worker tasks executing agents.
+    /// Defaults to half the processor count (minimum 1).
+    /// </summary>
+    public int WorkerCount { get; init; } = Math.Max(1, Environment.ProcessorCount / 2);
 }
 
 /// <summary>Resolved policies for a specific AgentId+EngineId attachment.</summary>

@@ -14,4 +14,5 @@ public sealed class AgentHostConfig
     public List<Attachment> Attachments { get; } = new();
     public AgentHostServiceCollection HostServices { get; } = new();
     public PolicySet? KernelDefaults { get; set; }
+    public int WorkerCount { get; set; } = Math.Max(1, Environment.ProcessorCount / 2);
 }

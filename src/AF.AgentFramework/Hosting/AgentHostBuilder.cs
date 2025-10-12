@@ -54,6 +54,15 @@ public sealed class AgentHostBuilder : IAgentHostBuilder
         return this;
     }
     
+    public AgentHostBuilder WithKernelConcurrency(int workerCount)
+    {
+        if (workerCount < 1)
+            throw new ArgumentOutOfRangeException(nameof(workerCount), "Worker count must be at least 1.");
+
+        _config.WorkerCount = workerCount;
+        return this;
+    }
+    
     public IAgentHostBuilder WithKernel(Func<IKernelFactory> factory)
     {
         if (factory is null) throw new ArgumentNullException(nameof(factory));

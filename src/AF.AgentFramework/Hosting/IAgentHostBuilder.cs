@@ -16,6 +16,7 @@ public interface IAgentHostBuilder
     IAgentHostBuilder AddAgent(string agentId, Func<IAgent> agentFactory);
     IAgentHostBuilder Attach(string agentId, string engineId, PolicySet? overrides = null);
     IAgentHostBuilder WithKernelDefaults(PolicySet defaults);
+    AgentHostBuilder WithKernelConcurrency(int workerCount);
     IAgentHostBuilder WithKernel(Func<IKernelFactory> factory);
     IAgentHostBuilder AddHostService(Func<IAgentHostService> factory);
     IAgentHostBuilder EnableDashboard(int port = 6060);
