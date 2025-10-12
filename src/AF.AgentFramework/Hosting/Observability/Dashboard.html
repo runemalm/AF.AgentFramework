@@ -67,7 +67,7 @@
 
             // --- summary ---
             document.getElementById('summary').textContent =
-                `Agents: ${j.totalAgents} | Running: ${j.runningAgents} | Queued: ${j.queuedItems} | Handled: ${j.totalHandledItems} | Rejected: ${j.rejectedItems} | Throughput: ${j.throughputPerSecond.toFixed(2)}/s`;
+                `Agents: ${j.totalAgents} | Running: ${j.runningAgents} | Queued: ${j.queuedItems} | Handled: ${j.totalHandledItems} | Rejected: ${j.rejectedItems} | Throughput: ${j.throughputPerSecond.toFixed(2)}/s | Workers: ${j.workerCount}` + (j.workerCount > 1 ? " ⚙️" : "");
 
             // --- throughput trend ---
             const ts = new Date(j.timestamp).toLocaleTimeString();
