@@ -1,3 +1,14 @@
+## [0.12.0](https://github.com/runemalm/AF.AgentFramework/compare/v0.11.0...v0.12.0) (2025-10-12)
+
+### feat
+
+* **dashboard:** Show worker count ([66147f9](https://github.com/runemalm/AF.AgentFramework/commit/66147f9df800bf177891e4c01cbbd37957de8c9e))
+* **kernel:** Add concurrent agent execution support ([f9c5c5f](https://github.com/runemalm/AF.AgentFramework/commit/f9c5c5f42fe7b501b22b66460cd42dc365e9a16d))
+
+### chore
+
+* **kernel:** Add worker count to snapshot ([bc8ff73](https://github.com/runemalm/AF.AgentFramework/commit/bc8ff73533672be7b302f3d9588d6a2d61febd9e))
+
 ## [0.11.0](https://github.com/runemalm/AF.AgentFramework/compare/v0.10.0...v0.11.0) (2025-10-12)
 
 ### feat
