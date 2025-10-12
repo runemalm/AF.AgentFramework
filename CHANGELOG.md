@@ -1,3 +1,15 @@
+## [0.12.1](https://github.com/runemalm/AF.AgentFramework/compare/v0.12.0...v0.12.1) (2025-10-12)
+
+### fix
+
+* **kernel:** Fixed race condition allowing concurrent execution on the same agent ([77a4469](https://github.com/runemalm/AF.AgentFramework/commit/77a44693eb299e6c755f589ef77e442d48115281))
+
+### chore
+
+* **readme:** Update readme code sample ([bc1dbd3](https://github.com/runemalm/AF.AgentFramework/commit/bc1dbd3c95ea97d54c8873c92ca8abf4ac236516))
+
+* Fix(kernel) add throughput sampler to kernel to decouple metrics from dashboard polling rate ([92fecf6](https://github.com/runemalm/AF.AgentFramework/commit/92fecf647b99a0d3f9eac5e04d86fdc40e0dc27a))
+
 ## [0.12.0](https://github.com/runemalm/AF.AgentFramework/compare/v0.11.0...v0.12.0) (2025-10-12)
 
 ### feat
