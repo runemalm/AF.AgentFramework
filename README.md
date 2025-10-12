@@ -78,6 +78,7 @@ internal class Program
         // Build and run a minimal multi-agent host
         var host = AgentHostBuilder.Create()
             .WithKernelDefaults(policyDefaults)
+            .WithKernelConcurrency(2)
             .WithKernel(() => new InProcKernelFactory())
             // loop family
             .AddEngine("loop", () => new LoopEngine("loop"))
