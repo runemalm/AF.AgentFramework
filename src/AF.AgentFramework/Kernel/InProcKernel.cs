@@ -298,7 +298,8 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
             TotalHandledItems: totalHandled,
             ThroughputPerSecond: Math.Round(_throughput, 2),
             Agents: agents,
-            Timestamp: now
+            Timestamp: now,
+            WorkerCount: _workerCount
         );
     }
 

@@ -11,7 +11,8 @@ public sealed record KernelSnapshot(
     int TotalHandledItems,
     double ThroughputPerSecond,     // moving average of completed WorkItems/sec
     IReadOnlyList<AgentSnapshot> Agents,
-    DateTimeOffset Timestamp
+    DateTimeOffset Timestamp,
+    int WorkerCount
 );
 
 /// <summary>
