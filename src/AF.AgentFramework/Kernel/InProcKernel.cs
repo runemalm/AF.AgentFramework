@@ -21,6 +21,8 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
     private DateTimeOffset _lastThroughputSample = DateTimeOffset.UtcNow;
     private readonly CancellationTokenSource _cts = new();
     private int _running;
+    private Task? _throughputSampler;
+    private readonly TimeSpan _throughputSamplePeriod = TimeSpan.FromMilliseconds(500);
     private readonly List<Task> _workers = new();
     private readonly object _scheduleLock = new();
     private readonly ConcurrentDictionary<string, int> _attempts = new();
@@ -53,6 +55,9 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
             int id = i; // capture loop variable
             _workers.Add(Task.Run(() => WorkerLoop(id, _cts.Token)));
         }
+        
+        // Start periodic throughput sampler
+        _throughputSampler = Task.Run(() => ThroughputSamplerLoop(_cts.Token));
 
         Console.WriteLine("[Kernel] Started.");
         return Task.CompletedTask;
@@ -63,9 +68,13 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
         Console.WriteLine("[Kernel] Stopping…");
         _cts.Cancel();
 
+        var allTasks = new List<Task>(_workers);
+        if (_throughputSampler is not null)
+            allTasks.Add(_throughputSampler);
+
         try
         {
-            await Task.WhenAll(_workers).ConfigureAwait(false);
+            await Task.WhenAll(allTasks).ConfigureAwait(false);
         }
         catch (OperationCanceledException)
         {
@@ -186,6 +195,41 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
         Console.WriteLine($"[Worker {workerId}] exiting.");
     }
     
+    private async Task ThroughputSamplerLoop(CancellationToken ct)
+    {
+        await Task.Delay(_throughputSamplePeriod, ct); // warm-up
+        while (!ct.IsCancellationRequested)
+        {
+            try
+            {
+                UpdateThroughput();
+                await Task.Delay(_throughputSamplePeriod, ct).ConfigureAwait(false);
+            }
+            catch (OperationCanceledException)
+            {
+                break;
+            }
+        }
+    }
+
+    private void UpdateThroughput()
+    {
+        lock (_agents)
+        {
+            int totalHandled = _agents.Values.Sum(a => a.TotalHandled);
+            var now = DateTimeOffset.UtcNow;
+            var dt = (now - _lastThroughputSample).TotalSeconds;
+            var diff = totalHandled - _lastHandledCount;
+            var current = dt > 0 ? diff / dt : 0;
+
+            // Same exponential smoothing, but now decoupled from dashboard call rate
+            _throughput = _throughput * 0.8 + current * 0.2;
+
+            _lastHandledCount = totalHandled;
+            _lastThroughputSample = now;
+        }
+    }
+    
     private async Task ExecuteAgentAsync(AgentEntry entry, QueuedItem qitem, CancellationToken kernelToken)
     {
         Interlocked.Increment(ref _running);
@@ -276,16 +320,7 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
             totalHandled  = agents.Sum(a => a.TotalHandled);
         }
 
-        // throughput calculation (rolling avg)
         var now = DateTimeOffset.UtcNow;
-        var dt = (now - _lastThroughputSample).TotalSeconds;
-        var diff = totalHandled - _lastHandledCount;
-        var current = dt > 0 ? diff / dt : 0;
-
-        _throughput = _throughput * 0.8 + current * 0.2;
-        _lastHandledCount = totalHandled;
-        _lastThroughputSample = now;
-
         var totalAgents = agents.Count;
         var running = agents.Count(a => a.IsRunning);
         var queued = agents.Sum(a => a.QueueLength);
@@ -345,6 +380,11 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
             _ordering = ordering;
             _stats.Created = DateTimeOffset.UtcNow;
             _stats.LastSample = _stats.Created;
+        }
+        
+        public int TotalHandled
+        {
+            get { lock (_sync) return _stats.TotalHandled; }
         }
 
         public int QueueCount { get { lock (_sync) return _queue.Count; } }
