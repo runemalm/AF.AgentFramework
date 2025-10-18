@@ -1,4 +1,5 @@
 using AgentFramework.Kernel.Knowledge;
+using AgentFramework.Tools.Integration;
 
 namespace AgentFramework.Kernel;
 
@@ -12,24 +13,8 @@ internal sealed class AgentContext : IAgentContext
     public DateTimeOffset Now => DateTimeOffset.UtcNow;
     public Random Random { get; }
     public IDictionary<string, object?> Items { get; } = new Dictionary<string, object?>();
-
-    /// <summary>
-    /// Agent Knowledge store (the K in MAPE-K). Defaults to <see cref="InMemoryKnowledge"/> if not provided.
-    /// </summary>
     public IKnowledge Knowledge { get; }
-
-    /// <summary>
-    /// Original constructor preserved for compatibility. Uses an in-memory Knowledge store.
-    /// </summary>
-    public AgentContext(
-        string agentId,
-        string engineId,
-        string workItemId,
-        string? correlationId,
-        CancellationToken cancellation,
-        int randomSeed)
-        : this(agentId, engineId, workItemId, correlationId, cancellation, randomSeed, knowledge: null)
-    { }
+    public AgentContextTools? Tools { get; }
 
     /// <summary>
     /// Overload that allows passing a custom Knowledge store.
@@ -41,7 +26,8 @@ internal sealed class AgentContext : IAgentContext
         string? correlationId,
         CancellationToken cancellation,
         int randomSeed,
-        IKnowledge? knowledge)
+        IKnowledge? knowledge,
+        AgentContextTools? tools)
     {
         AgentId = agentId;
         EngineId = engineId;
@@ -50,6 +36,7 @@ internal sealed class AgentContext : IAgentContext
         Cancellation = cancellation;
         Random = new Random(randomSeed);
         Knowledge = knowledge ?? new InMemoryKnowledge();
+        Tools = tools;
     }
 
     public void Trace(string message, IReadOnlyDictionary<string, object?>? data = null)

@@ -13,7 +13,7 @@ public static class ToolsBootstrap
 {
     /// <summary>
     /// Creates a default in-memory registry and a basic pipeline with pass-through validation,
-    /// allow-all authorization, timeout-only policy, not-implemented executor, and pass-through postprocessor.
+    /// allow-all authorization, timeout-only policy, local executor, and pass-through postprocessor.
     /// Observability is wired to no-op sinks by default.
     /// </summary>
     public static (IToolRegistry Registry, IToolInvoker Invoker) CreateDefaults()

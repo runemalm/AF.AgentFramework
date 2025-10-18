@@ -30,4 +30,10 @@ public sealed record class ToolDescriptor
     /// Optional classification tags (e.g., "filesystem", "http", "idempotent").
     /// </summary>
     public IReadOnlyCollection<string> Tags { get; init; } = new List<string>();
+    
+    /// <summary>
+    /// Optional in-process implementation delegate.
+    /// If set, the local executor will call this directly.
+    /// </summary>
+    public Func<object?, CancellationToken, Task<object?>>? Handler { get; init; }
 }

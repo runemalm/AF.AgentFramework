@@ -2,6 +2,7 @@ using Microsoft.Extensions.DependencyInjection;
 using AgentFramework.Engines;
 using AgentFramework.Hosting.Services;
 using AgentFramework.Kernel;
+using AgentFramework.Tools.Integration;
 
 namespace AgentFramework.Hosting;
 
@@ -55,13 +56,16 @@ public sealed class AgentHost : IAgentHost
             EngineId = att.EngineId,
             Policies = att.Overrides ?? defaults
         }).ToList();
+        
+        var toolFactory = _services.GetService<ToolSubsystemFactory>();
 
         _kernel = _kernelFactory.Create(new KernelOptions
         {
             Agents = _catalog,
             Defaults = defaults,
             Bindings = bindings,
-            WorkerCount = _config.WorkerCount
+            WorkerCount = _config.WorkerCount,
+            ToolFactory = toolFactory
         });
 
         // 3) Instantiate engines

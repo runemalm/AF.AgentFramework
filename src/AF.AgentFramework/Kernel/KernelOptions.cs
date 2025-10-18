@@ -1,4 +1,5 @@
 using AgentFramework.Kernel.Policies;
+using AgentFramework.Tools.Integration;
 
 namespace AgentFramework.Kernel;
 
@@ -16,6 +17,11 @@ public sealed class KernelOptions
     /// Defaults to half the processor count (minimum 1).
     /// </summary>
     public int WorkerCount { get; init; } = Math.Max(1, Environment.ProcessorCount / 2);
+    
+    /// <summary>
+    /// Optional factory delegate for creating per-agent tool facades.
+    /// </summary>
+    public ToolSubsystemFactory? ToolFactory { get; init; }
 }
 
 /// <summary>Resolved policies for a specific AgentId+EngineId attachment.</summary>

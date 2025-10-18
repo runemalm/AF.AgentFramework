@@ -22,4 +22,10 @@ public sealed record class ExecutionOutcome
 {
     public ToolResult? Result { get; init; }
     public ToolError? Error { get; init; }
+
+    public static ExecutionOutcome FromResult(ToolResult result)
+        => new() { Result = result };
+
+    public static ExecutionOutcome FromError(ToolError error)
+        => new() { Error = error };
 }

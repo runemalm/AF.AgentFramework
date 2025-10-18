@@ -1,5 +1,7 @@
 namespace AgentFramework.Tools.Registry;
 
+// reserved for future: tool visibility filtering
+
 /// <summary>
 /// Simple allow/deny binding rule for tool discovery and invocation.
 /// This is a placeholder for future, richer binding semantics.

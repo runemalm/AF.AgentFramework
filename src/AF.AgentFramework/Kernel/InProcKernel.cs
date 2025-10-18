@@ -2,6 +2,7 @@ using System.Collections.Concurrent;
 using AgentFramework.Kernel.Diagnostics;
 using AgentFramework.Kernel.Policies;
 using AgentFramework.Kernel.Policies.Defaults;
+using AgentFramework.Tools.Integration;
 
 namespace AgentFramework.Kernel;
 
@@ -15,6 +16,7 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
     private readonly PolicySet _defaults;
     private readonly Dictionary<(string AgentId, string EngineId), PolicySet> _bindingPolicies;
     private readonly int _workerCount;
+    private readonly ToolSubsystemFactory? _toolFactory;
     private readonly Dictionary<string, AgentEntry> _agents = new(StringComparer.Ordinal);
     private double _throughput;
     private int _lastHandledCount;
@@ -44,6 +46,7 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
         _bindingPolicies = (options.Bindings ?? Array.Empty<AttachmentBinding>())
             .ToDictionary(b => (b.AgentId, b.EngineId), b => b.Policies, new AttachmentKeyComparer());
         _workerCount = options.WorkerCount;
+        _toolFactory = options.ToolFactory;
     }
     
     public Task StartAsync(CancellationToken ct = default)
@@ -241,13 +244,18 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
             linkedCts.CancelAfter(ts);
 
         var attempt = _attempts.AddOrUpdate(qitem.WorkItem.Id, 1, (_, prev) => prev + 1);
+
+        var tools = _toolFactory?.Invoke(qitem.WorkItem.AgentId);
+
         var ctx = new AgentContext(
             qitem.WorkItem.AgentId,
             qitem.WorkItem.EngineId,
             qitem.WorkItem.Id,
             qitem.WorkItem.CorrelationId,
             linkedCts.Token,
-            randomSeed: qitem.WorkItem.Id.GetHashCode()
+            randomSeed: qitem.WorkItem.Id.GetHashCode(),
+            knowledge: null,
+            tools: tools
         );
 
         entry.AttachRunContext(linkedCts);
@@ -308,7 +316,6 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
     {
         List<AgentSnapshot> agents;
         int totalRejected, totalHandled;
-        double throughput;
 
         lock (_agents)
         {
