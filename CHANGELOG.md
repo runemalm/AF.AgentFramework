@@ -1,3 +1,17 @@
+## [0.13.0](https://github.com/runemalm/AF.AgentFramework/compare/v0.12.1...v0.13.0) (2025-10-18)
+
+### refactor
+
+* **samples:** Move HelloKernel agent classes into Agents folder ([8be5704](https://github.com/runemalm/AF.AgentFramework/commit/8be57048d835cc51515b16421414f63fada37783))
+
+### docs
+
+* **readme:** Update with new Tools subsystem and HelloToolsAgent sample ([2f8fafe](https://github.com/runemalm/AF.AgentFramework/commit/2f8fafe3b5a526b10080b7ec6043f16af6e2c5ec))
+
+### feat
+
+* **tools:** Add LocalExecutor and HelloToolsAgent enabling end-to-end local tool execution ([c2e4795](https://github.com/runemalm/AF.AgentFramework/commit/c2e479526bed9031433aabde9dcad7e9ef195cd2))
+
 ## [0.12.1](https://github.com/runemalm/AF.AgentFramework/compare/v0.12.0...v0.12.1) (2025-10-12)
 
 ### fix
