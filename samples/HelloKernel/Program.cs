@@ -5,6 +5,7 @@ using AgentFramework.Kernel;
 using AgentFramework.Kernel.Policies.Defaults;
 using AgentFramework.Runners.Timers;
 using AgentFramework.Tools.Integration;
+using HelloKernel.Agents;
 using HelloKernel.Tools;
 
 namespace HelloKernel;
