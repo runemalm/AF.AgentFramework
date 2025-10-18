@@ -35,6 +35,8 @@ This repository is where I’m exploring:
 
 APIs are **not stable yet**. Expect things to change as I refine the abstractions.
 
+The new **Tools subsystem** is now integrated end-to-end — agents can discover and invoke local tools through the framework’s tool pipeline.
+
 ## Live Dashboard
 
 When running the included **HelloKernel** sample (with `HelloLoopAgent`, `HelloReactiveAgent`, and `HelloMapeAgent`),
@@ -92,6 +94,12 @@ internal class Program
             .AddRunner("reactive", () => new HttpMockRunner())
             .AddAgent("hello-reactive", () => new HelloReactiveAgent())
             .Attach("hello-reactive", "reactive")
+            // tools subsystem demo
+            .AddAgent("hello-tools", () => new HelloToolsAgent())
+            .Attach("hello-tools", "loop")
+            .AddTools()
+            .AddLocalTool<LocalEchoTool>()
+            // add the live dashboard
             .EnableDashboard(6060)
             .Build();
 
@@ -103,6 +111,18 @@ internal class Program
 ```
 
 🧩 Try running it — then open the [dashboard](http://localhost:6060/af) to see all agents executing live.
+
+## HelloToolsAgent Sample
+
+The new `HelloToolsAgent` demonstrates how agents can invoke external **tools** via the framework’s `Tools` subsystem.
+In this sample, the agent calls a simple `LocalEchoTool` to produce an output through the full pipeline (validation → authorization → policy → execution → postprocessing).
+
+```text
+[Context:hello-tools] [Agent] Loop #1 — invoking tool...
+[Context:hello-tools] [Agent] Tool OK → "echo: hello world"
+```
+
+The tool registry is automatically initialized at startup and visible to all agents that include `AddTools()` and `AddLocalTool<...>()` in the host builder.
 
 ## Roadmap
 
@@ -118,7 +138,7 @@ Core architectural scaffolding — defining the minimal abstractions for agents,
 ### 🧩 Capabilities
 Expanding what agents can *do* — tools, feedback loops, collaboration, and environmental interaction.
 
-- [ ] Add **Tools system** (external actions, pipelines, tool engine, policies, observability, ...)
+- [x] Add **Tools system** (external actions, pipelines, tool engine, policies, observability, ...)
 - [x] Add **MAPE-K agent base** (`MapekAgentBase`) and sample
 - [ ] Add **MAS primitives** (blackboard, directory, collaboration)
 - [ ] Extend **runner ecosystem** (queues, routing, distributed transports, HTTP ingress, Slack Webhooks, ...)
@@ -129,8 +149,8 @@ Demonstrating theory in practice — progressively complex agents showcasing dif
 - [x] **HelloLoopAgent** – basic periodic agent using LoopEngine + TimerRunner
 - [x] **HelloReactiveAgent** – event-driven agent using ReactiveEngine + HttpMockRunner
 - [x] **HelloMapeAgent** – agent demonstrating the full MAPE-K control loop
+- [x] **HelloToolsAgent** – agent invoking local tools via the Tools subsystem
 - [ ] **HelloSocietyAgent** – sample MAS scenario (collaborating agents via blackboard)
-- [ ] **HelloToolAgent** – agent using the ToolsEngine to invoke external actions
 - [ ] **HelloBlackboardAgent** – demonstrates shared memory and coordination
 - [ ] **HelloSlackAgent** – integrates with Slack ingress runner
 

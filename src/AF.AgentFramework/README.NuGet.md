@@ -42,6 +42,7 @@ var host = AgentHostBuilder.Create()
     .AddRunner("loop", () => new TimerRunner(TimeSpan.FromSeconds(1)))
     .AddAgent("hello", () => new HelloAgent())
     .Attach("hello", "loop")
+    .AddTools()
     .EnableDashboard(6060)
     .Build();
 
