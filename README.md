@@ -37,6 +37,9 @@ APIs are **not stable yet**. Expect things to change as I refine the abstraction
 
 The new **Tools subsystem** is now integrated end-to-end — agents can discover and invoke local tools through the framework’s tool pipeline.
 
+The framework now includes a pluggable metrics provider system, enabling consistent real-time observability of agents and tools.
+It’s designed to be extensible — future integrations may bridge these metrics into the .NET diagnostics ecosystem (e.g., System.Diagnostics.Metrics, OpenTelemetry, or other observability backends).
+
 ## Live Dashboard
 
 When running the included **HelloKernel** sample (with `HelloLoopAgent`, `HelloReactiveAgent`, and `HelloMapeAgent`),
@@ -48,7 +51,7 @@ to observe agent activity and kernel state in real time.
 </p>
 
 The dashboard is powered by the framework’s own **ObservabilityServer**, exposing live metrics from the kernel
-through a lightweight HTTP interface. It visualizes throughput, queue depth, utilization, and per-agent status updates.
+through a lightweight HTTP interface. It visualizes throughput, queue depth, utilization, and per-agent status — now including live tool metrics (invocations, errors, and last tool used).
 
 ## HelloKernel Sample
 
@@ -62,6 +65,9 @@ using AgentFramework.Hosting;
 using AgentFramework.Kernel;
 using AgentFramework.Kernel.Policies.Defaults;
 using AgentFramework.Runners.Timers;
+using AgentFramework.Tools.Integration;
+using HelloKernel.Agents;
+using HelloKernel.Tools;
 
 namespace HelloKernel;
 
@@ -157,10 +163,8 @@ Demonstrating theory in practice — progressively complex agents showcasing dif
 ### 🔍 Observability & Dashboard
 Making the invisible visible — introspection and live visualization of agent activity and kernel state.
 
-- [x] Add **kernel introspection API** (`IKernelInspector`, agent and queue snapshots)
-- [x] Add **minimal HTTP dashboard** (`AgentFramework.Hosting.Observability`)
-- [x] Add **lightweight charts** (Chart.js sparklines for queue depth, tick rate, throughput)
-- [x] Add **agent-level metrics** (execution time, retries, policy outcomes)
+- [x] Add **pluggable metrics provider system** for agent and tool observability
+- [x] Extend **dashboard** with per-agent tool metrics columns
 
 ### 📚 Ecosystem & Release
 Documentation, polish, and packaging toward a stable v1.0 developer experience.
