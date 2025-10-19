@@ -1,3 +1,15 @@
+## [0.14.0](https://github.com/runemalm/AF.AgentFramework/compare/v0.13.0...v0.14.0) (2025-10-19)
+
+### docs
+
+* **readme:** Mention new metrics provider system ([e97a034](https://github.com/runemalm/AF.AgentFramework/commit/e97a03400a733bd0ed78247c6abd30ff45d7da31))
+* **readme:** Refresh dashboard section with updated observability example ([2c43468](https://github.com/runemalm/AF.AgentFramework/commit/2c434682832797da1a6977eb72c33f93c6b7d415))
+
+### feat
+
+* **dashboard:** Display per-agent tool metrics in live snapshot view ([9e3a33d](https://github.com/runemalm/AF.AgentFramework/commit/9e3a33d878b5478332fc20e7a684d955c1be6e42))
+* **kernel:** Add extensible metrics provider architecture for agent observability ([5e984b0](https://github.com/runemalm/AF.AgentFramework/commit/5e984b00f2eb69f8815bc86b5cc99d37c3c32a2b))
+
 ## [0.13.0](https://github.com/runemalm/AF.AgentFramework/compare/v0.12.1...v0.13.0) (2025-10-18)
 
 ### refactor
