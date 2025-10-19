@@ -41,8 +41,12 @@
         <th>Util%</th>
         <th>Rej</th>
         <th>Handled</th>
+        <th>Tools</th>
+        <th>Errors</th>
+        <th>Last Tool</th>
         <th>Status</th>
     </tr>
+
 </table>
 
 <div id="observations" class="observation"></div>
@@ -94,6 +98,12 @@
                 const opacity = a.totalHandled === 0 ? 0.5 : 1.0;
                 const state = a.isRunning ? '🟢' : '⚪️';
 
+                // --- extract tool metrics safely ---
+                const m = a.metrics || {};
+                const totalTools = m["Tools.TotalInvoked"] ?? 0;
+                const toolErrors = m["Tools.Errors"] ?? 0;
+                const lastTool = m["Tools.LastTool"] ?? "–";
+
                 return `<tr class="${cls}" style="opacity:${opacity}">
                     <td>${a.id}</td>
                     <td>${a.queueLength}</td>
@@ -102,18 +112,37 @@
                     <td>${a.utilizationPercent.toFixed(0)}</td>
                     <td>${a.rejected}</td>
                     <td>${a.totalHandled}</td>
+                    <td>${totalTools}</td>
+                    <td style="background:${toolErrors > 0 ? '#ffe6e6' : 'white'}">${toolErrors}</td>
+                    <td style="color:#777;font-style:italic;">${lastTool}</td>
                     <td>${state}</td>
                 </tr>`;
             }).join('');
+
             document.getElementById('agents').innerHTML =
-                `<tr><th>Agent</th><th>Queue</th><th>Δ/s</th><th>Avg ms</th><th>Util%</th><th>Rej</th><th>Handled</th><th>Status</th></tr>${rows}`;
+                `<tr>
+                    <th>Agent</th>
+                    <th>Queue</th>
+                    <th>Δ/s</th>
+                    <th>Avg ms</th>
+                    <th>Util%</th>
+                    <th>Rej</th>
+                    <th>Handled</th>
+                    <th>Tools</th>
+                    <th>Errors</th>
+                    <th>Last Tool</th>
+                    <th>Status</th>
+                </tr>${rows}`;
 
             // --- observations ---
             const obs = [];
             j.agents.forEach(a => {
+                const m = a.metrics || {};
+                const toolErrors = m["Tools.Errors"] ?? 0;
                 if (a.queueLength > 200) obs.push(`⚠️ ${a.id} overloaded (${a.queueLength} queued)`);
                 if (a.rejected > 0) obs.push(`❌ ${a.id} dropping work (${a.rejected} rejected)`);
                 if (a.utilizationPercent < 10 && a.queueLength === 0) obs.push(`ℹ️ ${a.id} mostly idle`);
+                if (toolErrors > 0) obs.push(`❌ ${a.id} tool errors (${toolErrors})`);
             });
             document.getElementById('observations').innerHTML =
                 obs.length ? obs.join('<br>') : '✅ All agents stable';
