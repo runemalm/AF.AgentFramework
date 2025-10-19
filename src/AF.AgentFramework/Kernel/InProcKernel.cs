@@ -17,6 +17,7 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
     private readonly Dictionary<(string AgentId, string EngineId), PolicySet> _bindingPolicies;
     private readonly int _workerCount;
     private readonly ToolSubsystemFactory? _toolFactory;
+    private readonly List<IAgentMetricsProvider> _metricsProviders = new();
     private readonly Dictionary<string, AgentEntry> _agents = new(StringComparer.Ordinal);
     private double _throughput;
     private int _lastHandledCount;
@@ -47,6 +48,9 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
             .ToDictionary(b => (b.AgentId, b.EngineId), b => b.Policies, new AttachmentKeyComparer());
         _workerCount = options.WorkerCount;
         _toolFactory = options.ToolFactory;
+        
+        if (options.MetricsProviders is not null)
+            _metricsProviders.AddRange(options.MetricsProviders);
     }
     
     public Task StartAsync(CancellationToken ct = default)
@@ -320,7 +324,37 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
         lock (_agents)
         {
             agents = _agents.Values
-                .Select(a => a.ToSnapshot(a.QueueCount))
+                .Select(entry =>
+                {
+                    var snapshot = entry.ToSnapshot(entry.QueueCount);
+
+                    // Merge metrics from all registered providers
+                    if (_metricsProviders.Count > 0)
+                    {
+                        var merged = new Dictionary<string, object>(StringComparer.Ordinal);
+                        foreach (var provider in _metricsProviders)
+                        {
+                            try
+                            {
+                                var metrics = provider.TryGetAgentMetrics(entry.AgentId);
+                                if (metrics is null) continue;
+
+                                foreach (var kv in metrics.Metrics)
+                                    merged[kv.Key] = kv.Value;
+                            }
+                            catch (Exception ex)
+                            {
+                                // Defensive: provider errors should never break snapshot creation
+                                Console.WriteLine($"[Kernel] Metrics provider {provider.GetType().Name} failed: {ex.Message}");
+                            }
+                        }
+
+                        if (merged.Count > 0)
+                            snapshot = snapshot.WithMetrics(merged);
+                    }
+
+                    return snapshot;
+                })
                 .ToList();
 
             totalRejected = agents.Sum(a => a.Rejected);

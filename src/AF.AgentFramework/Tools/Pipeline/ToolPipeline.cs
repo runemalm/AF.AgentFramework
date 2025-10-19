@@ -48,6 +48,7 @@ public sealed class ToolPipeline : IToolInvoker
             {
                 return new ToolResult
                 {
+                    AgentId = invocation.AgentId,
                     Status = ToolResultStatus.Error,
                     Error = new ToolError
                     {
@@ -57,6 +58,7 @@ public sealed class ToolPipeline : IToolInvoker
                         IsRetryable = false
                     },
                     CorrelationId = correlationId,
+                    ToolName = invocation.ToolName,
                     DurationMs = (int)sw.ElapsedMilliseconds,
                     Origin = "unknown"
                 };
@@ -68,6 +70,7 @@ public sealed class ToolPipeline : IToolInvoker
             {
                 return new ToolResult
                 {
+                    AgentId = invocation.AgentId,
                     Status = ToolResultStatus.Error,
                     Error = new ToolError
                     {
@@ -78,6 +81,7 @@ public sealed class ToolPipeline : IToolInvoker
                         IsRetryable = false
                     },
                     CorrelationId = correlationId,
+                    ToolName = invocation.ToolName,
                     DurationMs = (int)sw.ElapsedMilliseconds,
                     Origin = descriptor.Origin
                 };
@@ -89,6 +93,7 @@ public sealed class ToolPipeline : IToolInvoker
             {
                 return new ToolResult
                 {
+                    AgentId = invocation.AgentId,
                     Status = ToolResultStatus.Error,
                     Error = new ToolError
                     {
@@ -98,6 +103,7 @@ public sealed class ToolPipeline : IToolInvoker
                         IsRetryable = false
                     },
                     CorrelationId = correlationId,
+                    ToolName = invocation.ToolName,
                     DurationMs = (int)sw.ElapsedMilliseconds,
                     Origin = descriptor.Origin
                 };
@@ -114,7 +120,9 @@ public sealed class ToolPipeline : IToolInvoker
             {
                 result = outcome.Result with
                 {
+                    AgentId = invocation.AgentId,
                     CorrelationId = correlationId,
+                    ToolName = invocation.ToolName,
                     DurationMs = (int)sw.ElapsedMilliseconds,
                     ResolvedVersion = descriptor.Version,
                     PolicySnapshot = policyResult.Snapshot,
@@ -125,9 +133,11 @@ public sealed class ToolPipeline : IToolInvoker
             {
                 result = new ToolResult
                 {
+                    AgentId = invocation.AgentId,
                     Status = ToolResultStatus.Error,
                     Error = outcome.Error,
                     CorrelationId = correlationId,
+                    ToolName = invocation.ToolName,
                     DurationMs = (int)sw.ElapsedMilliseconds,
                     ResolvedVersion = descriptor.Version,
                     PolicySnapshot = policyResult.Snapshot,
@@ -143,6 +153,7 @@ public sealed class ToolPipeline : IToolInvoker
         {
             return new ToolResult
             {
+                AgentId = invocation.AgentId,
                 Status = ToolResultStatus.Error,
                 Error = new ToolError
                 {
@@ -152,6 +163,7 @@ public sealed class ToolPipeline : IToolInvoker
                     IsRetryable = true
                 },
                 CorrelationId = correlationId,
+                ToolName = invocation.ToolName,
                 DurationMs = (int)sw.ElapsedMilliseconds,
                 Origin = "unknown"
             };
@@ -160,6 +172,7 @@ public sealed class ToolPipeline : IToolInvoker
         {
             return new ToolResult
             {
+                AgentId = invocation.AgentId,
                 Status = ToolResultStatus.Error,
                 Error = new ToolError
                 {
@@ -170,6 +183,7 @@ public sealed class ToolPipeline : IToolInvoker
                     IsRetryable = false
                 },
                 CorrelationId = correlationId,
+                ToolName = invocation.ToolName,
                 DurationMs = (int)sw.ElapsedMilliseconds,
                 Origin = "unknown"
             };

@@ -1,3 +1,4 @@
+using AgentFramework.Kernel.Diagnostics;
 using AgentFramework.Kernel.Policies;
 using AgentFramework.Tools.Integration;
 
@@ -22,6 +23,12 @@ public sealed class KernelOptions
     /// Optional factory delegate for creating per-agent tool facades.
     /// </summary>
     public ToolSubsystemFactory? ToolFactory { get; init; }
+    
+    /// <summary>
+    /// Optional metrics providers that can contribute agent-level metrics
+    /// to kernel snapshots.
+    /// </summary>
+    public IEnumerable<IAgentMetricsProvider>? MetricsProviders { get; init; }
 }
 
 /// <summary>Resolved policies for a specific AgentId+EngineId attachment.</summary>

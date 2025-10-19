@@ -49,4 +49,10 @@ public sealed record class ToolInvocation
     /// Caller-supplied metadata for audit/diagnostics. May be redacted by policy.
     /// </summary>
     public IDictionary<string, string>? Metadata { get; init; }
+    
+    /// <summary>
+    /// Identifier of the agent that initiated this invocation.
+    /// Optional, used for observability and metrics.
+    /// </summary>
+    public string? AgentId { get; init; }
 }

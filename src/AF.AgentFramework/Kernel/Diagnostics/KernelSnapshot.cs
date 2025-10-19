@@ -22,9 +22,17 @@ public sealed record AgentSnapshot(
     string Id,
     int QueueLength,
     bool IsRunning,
-    int TotalHandled,               // completed items since kernel start
-    int Rejected,                   // admission rejections for this agent
-    double AvgExecutionMs,          // moving average execution duration
-    double QueueGrowthRate,         // items per second delta
-    double UtilizationPercent       // (activeTime / totalRuntime) * 100
-);
+    int TotalHandled, // completed items since kernel start
+    int Rejected, // admission rejections for this agent
+    double AvgExecutionMs, // moving average execution duration
+    double QueueGrowthRate, // items per second delta
+    double UtilizationPercent, // (activeTime / totalRuntime) * 100
+    IReadOnlyDictionary<string, object>? Metrics = null // optional extension data
+)
+{
+    /// <summary>
+    /// Creates a copy of this snapshot with merged metrics.
+    /// </summary>
+    public AgentSnapshot WithMetrics(IReadOnlyDictionary<string, object> metrics)
+        => this with { Metrics = metrics };
+}

@@ -29,29 +29,46 @@ public sealed class InstrumentedToolInvoker : IToolInvoker
 
     public async Task<ToolResult> InvokeAsync(ToolInvocation invocation, CancellationToken cancellationToken = default)
     {
-        // Best-effort resolve for richer events (do not fail if not found)
-        ToolDescriptor? descriptor = _registry.Resolve(invocation.ToolName, invocation.VersionRange,
-            new ToolBindingContext { AgentId = "unknown" });
+        // Resolve descriptor for richer event metadata
+        ToolDescriptor? descriptor = _registry.Resolve(
+            invocation.ToolName,
+            invocation.VersionRange,
+            new ToolBindingContext { AgentId = invocation.AgentId ?? "unknown" });
 
         var correlationId = string.IsNullOrWhiteSpace(invocation.CorrelationId)
             ? Guid.NewGuid().ToString("N")
             : invocation.CorrelationId!;
 
-        _events.OnInvoked(correlationId, invocation, descriptor, DateTimeOffset.UtcNow);
+        // Enrich invocation with correlation + agent metadata
+        var enrichedInvocation = invocation with
+        {
+            CorrelationId = correlationId,
+            AgentId = invocation.AgentId,
+        };
 
-        using var scope = _tracer.StartScope(correlationId, invocation, descriptor);
+        // Emit "invoked" event
+        _events.OnInvoked(correlationId, enrichedInvocation, descriptor, DateTimeOffset.UtcNow);
 
-        var result = await _inner.InvokeAsync(
-            invocation with { CorrelationId = correlationId },
-            cancellationToken).ConfigureAwait(false);
+        using var scope = _tracer.StartScope(correlationId, enrichedInvocation, descriptor);
 
-        _tracer.AnnotateResult(result);
+        // Execute inner pipeline
+        var result = await _inner.InvokeAsync(enrichedInvocation, cancellationToken).ConfigureAwait(false);
 
-        if (result.Status == ToolResultStatus.Ok)
-            _events.OnSucceeded(result, DateTimeOffset.UtcNow);
+        // Ensure AgentId and ToolName propagate forward
+        var enrichedResult = result with
+        {
+            AgentId = invocation.AgentId,
+            ToolName = invocation.ToolName
+        };
+
+        _tracer.AnnotateResult(enrichedResult);
+
+        // Emit success/failure events
+        if (enrichedResult.Status == ToolResultStatus.Ok)
+            _events.OnSucceeded(enrichedResult, DateTimeOffset.UtcNow);
         else
-            _events.OnFailed(result, DateTimeOffset.UtcNow);
+            _events.OnFailed(enrichedResult, DateTimeOffset.UtcNow);
 
-        return result;
+        return enrichedResult;
     }
 }

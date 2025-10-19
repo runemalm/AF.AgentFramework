@@ -13,7 +13,10 @@ public sealed class AgentContextTools
     private readonly IToolInvoker _invoker;
     private readonly ToolBindingContext _bindingContext;
 
-    public AgentContextTools(IToolRegistry registry, IToolInvoker invoker, ToolBindingContext bindingContext)
+    public AgentContextTools(
+        IToolRegistry registry,
+        IToolInvoker invoker,
+        ToolBindingContext bindingContext)
     {
         _registry = registry;
         _invoker = invoker;
@@ -29,5 +32,8 @@ public sealed class AgentContextTools
     /// Invoke a tool through the pipeline.
     /// </summary>
     public Task<ToolResult> InvokeAsync(ToolInvocation invocation, CancellationToken cancellationToken = default)
-        => _invoker.InvokeAsync(invocation, cancellationToken);
+    {
+        var enriched = invocation with { AgentId = _bindingContext.AgentId };
+        return _invoker.InvokeAsync(enriched, cancellationToken);
+    }
 }

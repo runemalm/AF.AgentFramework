@@ -44,6 +44,11 @@ public sealed record class ToolResult
     /// Correlation identifier echoing the invocation for tracing.
     /// </summary>
     public string CorrelationId { get; init; } = string.Empty;
+    
+    /// <summary>
+    /// Name of the tool that produced this result.
+    /// </summary>
+    public string? ToolName { get; init; }
 
     /// <summary>
     /// Origin of the executed tool (e.g., "local", "mcp::<server>", or "unknown").
@@ -54,4 +59,9 @@ public sealed record class ToolResult
     /// Optional timestamp when the invocation completed (UTC).
     /// </summary>
     public DateTimeOffset? CompletedUtc { get; init; }
+    
+    /// <summary>
+    /// Identifier of the agent that triggered this tool invocation.
+    /// </summary>
+    public string? AgentId { get; init; }
 }
