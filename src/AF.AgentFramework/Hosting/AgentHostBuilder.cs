@@ -3,6 +3,7 @@ using AgentFramework.Kernel.Policies;
 using AgentFramework.Engines;
 using AgentFramework.Runners;
 using AgentFramework.Hosting.Services;
+using AgentFramework.Kernel.Features;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace AgentFramework.Hosting;
@@ -10,7 +11,7 @@ namespace AgentFramework.Hosting;
 /// <summary>
 /// Minimal, compiling builder. Stores registrations; Build() returns a Noop host for now.
 /// </summary>
-public sealed class AgentHostBuilder : IAgentHostBuilder
+public sealed class AgentHostBuilder : IAgentHostBuilder, IAgentCapabilityRegistrar
 {
     private readonly AgentHostConfig _config = new();
     private readonly ServiceCollection _services = new();
@@ -18,6 +19,22 @@ public sealed class AgentHostBuilder : IAgentHostBuilder
     public static IAgentHostBuilder Create() => new AgentHostBuilder();
     
     public IServiceCollection Services => _services;
+    
+    // Agent capability registration
+    void IAgentCapabilityRegistrar.RegisterCapability(Type interfaceType, Type implementationType)
+    {
+        if (!typeof(IAgentFeature).IsAssignableFrom(interfaceType))
+            throw new ArgumentException($"'{interfaceType.Name}' must implement IAgentFeature.", nameof(interfaceType));
+
+        if (!typeof(IAgentFeature).IsAssignableFrom(implementationType))
+            throw new ArgumentException($"'{implementationType.Name}' must implement IAgentFeature.", nameof(implementationType));
+
+        _config.FeatureRegistrations.Add(new FeatureRegistration
+        {
+            InterfaceType = interfaceType,
+            ImplementationType = implementationType
+        });
+    }
 
     public IAgentHostBuilder AddEngine(string engineId, Func<IEngine> engineFactory)
     {

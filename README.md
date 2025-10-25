@@ -37,8 +37,11 @@ APIs are **not stable yet**. Expect things to change as I refine the abstraction
 
 The new **Tools subsystem** is now integrated end-to-end — agents can discover and invoke local tools through the framework’s tool pipeline.
 
-The framework now includes a pluggable metrics provider system, enabling consistent real-time observability of agents and tools.
+The framework now includes a **pluggable metrics provider system**, enabling consistent real-time observability of agents and tools.
 It’s designed to be extensible — future integrations may bridge these metrics into the .NET diagnostics ecosystem (e.g., System.Diagnostics.Metrics, OpenTelemetry, or other observability backends).
+
+The framework has also gained a **feature-based extensibility system** — a foundational mechanism that allows new capabilities (like MAS, Observability, and MCP protocol support) to attach cleanly to the agent context without changing the core runtime.
+This ensures the architecture can evolve while staying small, composable, and theory-aligned.
 
 ## Live Dashboard
 
@@ -146,6 +149,7 @@ Expanding what agents can *do* — tools, feedback loops, collaboration, and env
 
 - [x] Add **Tools system** (external actions, pipelines, tool engine, policies, observability, ...)
 - [x] Add **MAPE-K agent base** (`MapekAgentBase`) and sample
+- [x] Add **Feature-based extensibility** (foundation for MAS, Observability, MCP)
 - [ ] Add **MAS primitives** (blackboard, directory, collaboration)
 - [ ] Extend **runner ecosystem** (queues, routing, distributed transports, HTTP ingress, Slack Webhooks, ...)
 

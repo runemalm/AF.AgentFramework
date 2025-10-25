@@ -29,6 +29,12 @@ public interface IAgentContext
     /// May be null if the host did not register the tools subsystem.
     /// </summary>
     AgentContextTools? Tools { get; }
+    
+    /// <summary>
+    /// Optional collection of features that extend this agent context.
+    /// May be empty in minimal setups.
+    /// </summary>
+    Features.IAgentFeatureCollection Features { get; }
 
     /// <summary>Lightweight, correlated trace.</summary>
     void Trace(string message, IReadOnlyDictionary<string, object?>? data = null);

@@ -15,6 +15,7 @@ internal sealed class AgentContext : IAgentContext
     public IDictionary<string, object?> Items { get; } = new Dictionary<string, object?>();
     public IKnowledge Knowledge { get; }
     public AgentContextTools? Tools { get; }
+    public Features.IAgentFeatureCollection Features { get; }
 
     /// <summary>
     /// Overload that allows passing a custom Knowledge store.
@@ -37,8 +38,13 @@ internal sealed class AgentContext : IAgentContext
         Random = new Random(randomSeed);
         Knowledge = knowledge ?? new InMemoryKnowledge();
         Tools = tools;
+        Features = new Features.AgentFeatureCollection();
     }
 
+    /// <summary>
+    /// Temporary lightweight trace facility for internal diagnostics.
+    /// This will later be replaced by the Observability feature subsystem.
+    /// </summary>
     public void Trace(string message, IReadOnlyDictionary<string, object?>? data = null)
     {
         Console.WriteLine($"[Context:{AgentId}] {message}");

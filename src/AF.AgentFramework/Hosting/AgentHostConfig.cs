@@ -1,4 +1,5 @@
 using AgentFramework.Hosting.Services;
+using AgentFramework.Kernel.Features;
 using AgentFramework.Kernel.Policies;
 
 namespace AgentFramework.Hosting;
@@ -15,4 +16,6 @@ public sealed class AgentHostConfig
     public AgentHostServiceCollection HostServices { get; } = new();
     public PolicySet? KernelDefaults { get; set; }
     public int WorkerCount { get; set; } = Math.Max(1, Environment.ProcessorCount / 2);
+    public List<FeatureRegistration> FeatureRegistrations = new();
+    // public List<Type> FeatureTypes { get; } = new();
 }

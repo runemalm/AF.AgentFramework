@@ -29,6 +29,11 @@ public sealed class KernelOptions
     /// to kernel snapshots.
     /// </summary>
     public IEnumerable<IAgentMetricsProvider>? MetricsProviders { get; init; }
+    
+    /// <summary>
+    /// Factory used by the kernel to construct agent contexts.
+    /// </summary>
+    public required IAgentContextFactory ContextFactory { get; init; }
 }
 
 /// <summary>Resolved policies for a specific AgentId+EngineId attachment.</summary>

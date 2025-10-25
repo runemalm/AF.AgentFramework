@@ -1,4 +1,5 @@
 using AgentFramework.Kernel;
+using AgentFramework.Kernel.Knowledge;
 using AgentFramework.Kernel.Policies;
 using AgentFramework.Kernel.Policies.Defaults;
 using Xunit;
@@ -9,11 +10,14 @@ public class InProcKernelTests
 {
     private static InProcKernel CreateKernel(IAgent agent, PolicySet? defaults = null)
     {
+        var contextFactory = new TestAgentContextFactory();
+
         var opts = new KernelOptions
         {
             Agents = new TestAgentCatalog(agent),
             Defaults = defaults ?? PolicySetDefaults.Create(),
-            Bindings = Array.Empty<AttachmentBinding>()
+            Bindings = Array.Empty<AttachmentBinding>(),
+            ContextFactory = contextFactory
         };
         return new InProcKernel(opts);
     }
@@ -154,5 +158,23 @@ public class InProcKernelTests
         // Shed means the item never ran
         Assert.Empty(agent.HandledOrder);
         Assert.Empty(agent.Starts);
+    }
+    
+    // --- Helper factory ---
+    private sealed class TestAgentContextFactory : IAgentContextFactory
+    {
+        public IAgentContext CreateContext(WorkItem item, CancellationToken cancellation)
+        {
+            return new AgentContext(
+                item.AgentId,
+                item.EngineId,
+                item.Id,
+                item.CorrelationId,
+                cancellation,
+                randomSeed: item.Id.GetHashCode(),
+                knowledge: new InMemoryKnowledge(),
+                tools: null
+            );
+        }
     }
 }

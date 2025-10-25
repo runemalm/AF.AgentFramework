@@ -1,5 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using AgentFramework.Engines;
+using AgentFramework.Hosting.Contexts;
 using AgentFramework.Hosting.Services;
 using AgentFramework.Kernel;
 using AgentFramework.Kernel.Diagnostics;
@@ -60,7 +61,13 @@ public sealed class AgentHost : IAgentHost
         
         var toolFactory = _services.GetService<ToolSubsystemFactory>();
         var metricsProviders = _services.GetServices<IAgentMetricsProvider>();
-
+        
+        var contextFactory = new DefaultAgentContextFactory(
+            _services,
+            _config.FeatureRegistrations,
+            toolFactory
+        );
+        
         _kernel = _kernelFactory.Create(new KernelOptions
         {
             Agents = _catalog,
@@ -68,7 +75,8 @@ public sealed class AgentHost : IAgentHost
             Bindings = bindings,
             WorkerCount = _config.WorkerCount,
             ToolFactory = toolFactory,
-            MetricsProviders = metricsProviders
+            MetricsProviders = metricsProviders,
+            ContextFactory = contextFactory
         });
 
         // 3) Instantiate engines

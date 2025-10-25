@@ -17,6 +17,7 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
     private readonly Dictionary<(string AgentId, string EngineId), PolicySet> _bindingPolicies;
     private readonly int _workerCount;
     private readonly ToolSubsystemFactory? _toolFactory;
+    private readonly IAgentContextFactory _contextFactory;
     private readonly List<IAgentMetricsProvider> _metricsProviders = new();
     private readonly Dictionary<string, AgentEntry> _agents = new(StringComparer.Ordinal);
     private double _throughput;
@@ -48,6 +49,7 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
             .ToDictionary(b => (b.AgentId, b.EngineId), b => b.Policies, new AttachmentKeyComparer());
         _workerCount = options.WorkerCount;
         _toolFactory = options.ToolFactory;
+        _contextFactory = options.ContextFactory ?? throw new ArgumentNullException(nameof(options.ContextFactory));
         
         if (options.MetricsProviders is not null)
             _metricsProviders.AddRange(options.MetricsProviders);
@@ -249,18 +251,7 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
 
         var attempt = _attempts.AddOrUpdate(qitem.WorkItem.Id, 1, (_, prev) => prev + 1);
 
-        var tools = _toolFactory?.Invoke(qitem.WorkItem.AgentId);
-
-        var ctx = new AgentContext(
-            qitem.WorkItem.AgentId,
-            qitem.WorkItem.EngineId,
-            qitem.WorkItem.Id,
-            qitem.WorkItem.CorrelationId,
-            linkedCts.Token,
-            randomSeed: qitem.WorkItem.Id.GetHashCode(),
-            knowledge: null,
-            tools: tools
-        );
+        var ctx = _contextFactory.CreateContext(qitem.WorkItem, linkedCts.Token);
 
         entry.AttachRunContext(linkedCts);
 
