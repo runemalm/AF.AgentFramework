@@ -12,7 +12,7 @@ namespace HelloKernel;
 
 internal class Program
 {
-    private static async Task Main()
+    private static async Task Main(string[] args)
     {
         Console.WriteLine("HelloKernel sample starting…");
 
@@ -22,7 +22,7 @@ internal class Program
             scheduling: new TimeSliceAwareSchedulingPolicy()
         );
 
-        var host = AgentHostBuilder.Create()
+        var host = AgentHostBuilder.Create(args)
             .WithKernelDefaults(policyDefaults)
             .WithKernelConcurrency(2)
             .WithKernel(() => new InProcKernelFactory())
@@ -43,11 +43,11 @@ internal class Program
             .Attach("hello-tools", "loop")
             .AddTools()
             .AddLocalTool<LocalEchoTool>()
-            // add the live dashboard
+            // live dashboard
             .EnableDashboard(6060)
             .Build();
         
-        await host.RunConsoleAsync();
+        await host.RunAsync();
 
         Console.WriteLine("HelloKernel sample finished.");
     }

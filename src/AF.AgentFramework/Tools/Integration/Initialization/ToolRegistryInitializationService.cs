@@ -1,26 +1,38 @@
-using AgentFramework.Hosting.Services;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using AgentFramework.Tools.Registry;
 using AgentFramework.Tools.Runtime;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace AgentFramework.Tools.Integration.Initialization;
 
 /// <summary>
-/// Host service that publishes all registered local tools into the registry at startup.
+/// Hosted service that publishes all registered local tools into the registry at startup.
+/// Runs once and completes immediately.
 /// </summary>
-internal sealed class ToolRegistryInitializationService : IAgentHostService
+internal sealed class ToolRegistryInitializationService : BackgroundService
 {
-    public async Task StartAsync(IAgentHostContext context, CancellationToken ct)
+    private readonly IToolRegistry _registry;
+    private readonly IToolRegistryInitializer _initializer;
+    private readonly IEnumerable<ILocalTool> _tools;
+    private readonly ILogger<ToolRegistryInitializationService> _logger;
+
+    public ToolRegistryInitializationService(
+        IToolRegistry registry,
+        IToolRegistryInitializer initializer,
+        IEnumerable<ILocalTool> tools,
+        ILogger<ToolRegistryInitializationService> logger)
     {
-        var registry = context.Services.GetRequiredService<IToolRegistry>();
-        var tools = context.Services.GetServices<ILocalTool>();
-        var initializer = context.Services.GetRequiredService<IToolRegistryInitializer>();
-
-        initializer.Initialize(registry, tools);
-        Console.WriteLine($"[Tools] Published {tools.Count()} local tools into registry.");
-
-        await Task.CompletedTask;
+        _registry = registry ?? throw new ArgumentNullException(nameof(registry));
+        _initializer = initializer ?? throw new ArgumentNullException(nameof(initializer));
+        _tools = tools ?? throw new ArgumentNullException(nameof(tools));
+        _logger = logger ?? throw new ArgumentNullException(nameof(logger));
     }
 
-    public Task StopAsync(CancellationToken ct) => Task.CompletedTask;
+    protected override Task ExecuteAsync(CancellationToken stoppingToken)
+    {
+        _initializer.Initialize(_registry, _tools);
+        var count = _tools.Count();
+        _logger.LogInformation("[Tools] Published {count} local tools into registry.", count);
+        return Task.CompletedTask;
+    }
 }

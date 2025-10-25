@@ -5,6 +5,7 @@ namespace HelloKernel;
 sealed class HttpMockRunner : IReactiveRunner
 {
     public string Name { get; } = "HttpMockRunner";
+    public string EngineId { get; set; }
 
     public Func<object?, string?, CancellationToken, Task>? OnEventAsync { get; set; }
 

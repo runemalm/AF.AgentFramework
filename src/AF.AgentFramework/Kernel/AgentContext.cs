@@ -1,5 +1,7 @@
 using AgentFramework.Kernel.Knowledge;
 using AgentFramework.Tools.Integration;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Abstractions;
 
 namespace AgentFramework.Kernel;
 
@@ -15,6 +17,7 @@ internal sealed class AgentContext : IAgentContext
     public IDictionary<string, object?> Items { get; } = new Dictionary<string, object?>();
     public IKnowledge Knowledge { get; }
     public AgentContextTools? Tools { get; }
+    private readonly ILogger<AgentContext> _logger;
 
     /// <summary>
     /// Overload that allows passing a custom Knowledge store.
@@ -27,7 +30,8 @@ internal sealed class AgentContext : IAgentContext
         CancellationToken cancellation,
         int randomSeed,
         IKnowledge? knowledge,
-        AgentContextTools? tools)
+        AgentContextTools? tools,
+        ILogger<AgentContext>? logger = null)
     {
         AgentId = agentId;
         EngineId = engineId;
@@ -37,11 +41,12 @@ internal sealed class AgentContext : IAgentContext
         Random = new Random(randomSeed);
         Knowledge = knowledge ?? new InMemoryKnowledge();
         Tools = tools;
+        _logger = logger ?? NullLogger<AgentContext>.Instance;
     }
 
     public void Trace(string message, IReadOnlyDictionary<string, object?>? data = null)
     {
-        Console.WriteLine($"[Context:{AgentId}] {message}");
+        _logger.LogInformation("[Context:{AgentId}] {Message} {@Data}", AgentId, message, data);
         if (data is not null)
         {
             foreach (var kv in data)

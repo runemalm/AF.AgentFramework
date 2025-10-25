@@ -10,6 +10,7 @@ public sealed class TimerRunner : IRunner, IAsyncDisposable
     private Task? _loopTask;
 
     public string Name { get; }
+    public string EngineId { get; set; }
 
     /// <summary>Engine sets this to receive ticks.</summary>
     public Func<CancellationToken, Task>? OnTickAsync { get; set; }

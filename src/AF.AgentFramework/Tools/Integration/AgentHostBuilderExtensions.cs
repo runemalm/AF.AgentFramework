@@ -36,7 +36,7 @@ public static class AgentHostBuilderExtensions
         // --- Registry ---
         builder.Services.AddSingleton<IToolRegistry, InMemoryToolRegistry>();
         builder.Services.AddSingleton<IToolRegistryInitializer, ToolRegistryInitializer>();
-        builder.AddHostService(() => new ToolRegistryInitializationService());
+        builder.Services.AddHostedService<ToolRegistryInitializationService>();
 
         // --- Invoker with instrumentation ---
         builder.Services.AddSingleton<IToolInvoker>(sp =>

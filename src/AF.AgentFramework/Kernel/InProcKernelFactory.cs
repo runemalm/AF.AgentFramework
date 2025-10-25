@@ -1,3 +1,5 @@
+using Microsoft.Extensions.Logging;
+
 namespace AgentFramework.Kernel;
 
 /// <summary>
@@ -5,9 +7,13 @@ namespace AgentFramework.Kernel;
 /// </summary>
 public sealed class InProcKernelFactory : IKernelFactory
 {
-    public IKernel Create(KernelOptions options)
+    private readonly ILogger<InProcKernel>? _logger;
+
+    public InProcKernelFactory(ILogger<InProcKernel>? logger = null)
     {
-        if (options is null) throw new ArgumentNullException(nameof(options));
-        return new InProcKernel(options);
+        _logger = logger;
     }
+
+    public IKernel Create(KernelOptions options)
+        => new InProcKernel(options, _logger);
 }

@@ -1,8 +1,10 @@
 using System.Collections.Concurrent;
+using Microsoft.Extensions.Logging;
 using AgentFramework.Kernel.Diagnostics;
 using AgentFramework.Kernel.Policies;
 using AgentFramework.Kernel.Policies.Defaults;
 using AgentFramework.Tools.Integration;
+using Microsoft.Extensions.Logging.Abstractions;
 
 namespace AgentFramework.Kernel;
 
@@ -12,6 +14,7 @@ namespace AgentFramework.Kernel;
 /// </summary>
 public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
 {
+    private readonly ILogger<InProcKernel> _logger;
     private readonly IAgentCatalog _catalog;
     private readonly PolicySet _defaults;
     private readonly Dictionary<(string AgentId, string EngineId), PolicySet> _bindingPolicies;
@@ -40,9 +43,10 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
             HashCode.Combine(obj.AgentId, obj.EngineId);
     }
 
-    public InProcKernel(KernelOptions options)
+    public InProcKernel(KernelOptions options, ILogger<InProcKernel>? logger = null)
     {
         _catalog = options.Agents ?? throw new ArgumentNullException(nameof(options.Agents));
+        _logger = logger ?? NullLogger<InProcKernel>.Instance;
         _defaults = options.Defaults ?? PolicySetDefaults.Create();
         _bindingPolicies = (options.Bindings ?? Array.Empty<AttachmentBinding>())
             .ToDictionary(b => (b.AgentId, b.EngineId), b => b.Policies, new AttachmentKeyComparer());
