@@ -1,3 +1,23 @@
+## [0.15.0](https://github.com/runemalm/AF.AgentFramework/compare/v0.14.0...v0.15.0) (2025-10-26)
+
+### docs
+
+* **readme:** Mention new capability extension support and mas support ([c270fdc](https://github.com/runemalm/AF.AgentFramework/commit/c270fdc1bc18ba835cfe750fb3dba794fbee0c33))
+
+### chore
+
+* **samples:** Add hello-aware sample agent ([ea09f50](https://github.com/runemalm/AF.AgentFramework/commit/ea09f5086f81c5323ec9f2329d2a84014aa6bdbb))
+
+### feat
+
+* **kernel,hosting:** Introduce capability extensibility support ([15f23f1](https://github.com/runemalm/AF.AgentFramework/commit/15f23f1b2fd075e83a853a2e5c87a1afd20672e5))
+* **mas:** Add minimal MAS capability extension ([6ae6eb0](https://github.com/runemalm/AF.AgentFramework/commit/6ae6eb0e0135038f4a264f6577b5b5096b147d0d))
+
+### fix
+
+* **kernel:** Log error instead of silently ignoring on agent execution failure ([21ee48e](https://github.com/runemalm/AF.AgentFramework/commit/21ee48e86cb82ba21a190448b1ac9d69976bfe74))
+* **samples:** Wrong namespace in some of the sample agents ([7275f3a](https://github.com/runemalm/AF.AgentFramework/commit/7275f3af40c09660a0991a5d70a447b64e453c9b))
+
 ## [0.14.0](https://github.com/runemalm/AF.AgentFramework/compare/v0.13.0...v0.14.0) (2025-10-19)
 
 ### docs
