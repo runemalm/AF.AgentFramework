@@ -15,6 +15,7 @@ The framework is rooted in **agent theory and MAS research**. My goal is to crea
 - **Tools** – agent-usable capabilities, e.g. external actions
 - **Hosting** – integration with .NET GenericHost and application lifecycles
 - **MAS** – support for multi-agent collaboration using blackboards and agent directories
+- **Capabilities** – modular extensions that attach to the agent context (MAS, Observability, MCP, etc.)
 
 ## Why?
 
@@ -40,8 +41,17 @@ The new **Tools subsystem** is now integrated end-to-end — agents can discover
 The framework now includes a **pluggable metrics provider system**, enabling consistent real-time observability of agents and tools.
 It’s designed to be extensible — future integrations may bridge these metrics into the .NET diagnostics ecosystem (e.g., System.Diagnostics.Metrics, OpenTelemetry, or other observability backends).
 
-The framework has also gained a **feature-based extensibility system** — a foundational mechanism that allows new capabilities (like MAS, Observability, and MCP protocol support) to attach cleanly to the agent context without changing the core runtime.
-This ensures the architecture can evolve while staying small, composable, and theory-aligned.
+The framework now has a **capability-based extensibility system** — a foundation that lets modules like MAS, Observability, and MCP attach cleanly to the agent context without modifying the kernel.  
+Capabilities are registered through the host builder and automatically injected into each agent context at runtime.
+
+### Multi-Agent System (MAS) subsystem
+
+The new **MAS capabilities** provide shared collaboration primitives across agents:
+- A **Directory** for registering and discovering agents (the “yellow pages” of the system)
+- A **Blackboard** for posting and reading shared facts (the shared environment)
+
+These are attached as capabilities via `AddMas()` and are globally shared within a host.
+The included `HelloAwareAgent` sample demonstrates early *social* and *environmental awareness* using these MAS primitives.
 
 ## Live Dashboard
 
@@ -67,6 +77,7 @@ using AgentFramework.Engines.Reactive;
 using AgentFramework.Hosting;
 using AgentFramework.Kernel;
 using AgentFramework.Kernel.Policies.Defaults;
+using AgentFramework.Mas.Integration;
 using AgentFramework.Runners.Timers;
 using AgentFramework.Tools.Integration;
 using HelloKernel.Agents;
@@ -103,11 +114,15 @@ internal class Program
             .AddRunner("reactive", () => new HttpMockRunner())
             .AddAgent("hello-reactive", () => new HelloReactiveAgent())
             .Attach("hello-reactive", "reactive")
-            // tools subsystem demo
+            // agents can use tools
             .AddAgent("hello-tools", () => new HelloToolsAgent())
             .Attach("hello-tools", "loop")
             .AddTools()
             .AddLocalTool<LocalEchoTool>()
+            // agents are becoming aware of others
+            .AddAgent("hello-aware", () => new HelloAwareAgent())
+            .Attach("hello-aware", "loop")
+            .AddMas()
             // add the live dashboard
             .EnableDashboard(6060)
             .Build();
@@ -144,13 +159,13 @@ Core architectural scaffolding — defining the minimal abstractions for agents,
 - [x] Implement **execution engines**: LoopEngine & ReactiveEngine
 - [x] Implement **runner primitives**: TimerRunner, ReactiveRunner
 
-### 🧩 Capabilities
+### 🧩 Capabilities & Collaboration
 Expanding what agents can *do* — tools, feedback loops, collaboration, and environmental interaction.
 
 - [x] Add **Tools system** (external actions, pipelines, tool engine, policies, observability, ...)
 - [x] Add **MAPE-K agent base** (`MapekAgentBase`) and sample
-- [x] Add **Feature-based extensibility** (foundation for MAS, Observability, MCP)
-- [ ] Add **MAS primitives** (blackboard, directory, collaboration)
+- [x] Add **Capability system** (foundation for MAS, Observability, MCP)
+- [x] Add **minimal MAS subsystem** (directory + blackboard primitives)
 - [ ] Extend **runner ecosystem** (queues, routing, distributed transports, HTTP ingress, Slack Webhooks, ...)
 
 ### 🤖 Samples & Agents
@@ -160,9 +175,9 @@ Demonstrating theory in practice — progressively complex agents showcasing dif
 - [x] **HelloReactiveAgent** – event-driven agent using ReactiveEngine + HttpMockRunner
 - [x] **HelloMapeAgent** – agent demonstrating the full MAPE-K control loop
 - [x] **HelloToolsAgent** – agent invoking local tools via the Tools subsystem
-- [ ] **HelloSocietyAgent** – sample MAS scenario (collaborating agents via blackboard)
-- [ ] **HelloBlackboardAgent** – demonstrates shared memory and coordination
+- [x] **HelloAwareAgent** – demonstrates basic multi-agent awareness using Directory + Blackboard
 - [ ] **HelloSlackAgent** – integrates with Slack ingress runner
+- [ ] **HelloSocietyAgent** – sample MAS scenario (collaborating agents via blackboard)
 
 ### 🔍 Observability & Dashboard
 Making the invisible visible — introspection and live visualization of agent activity and kernel state.

@@ -2,7 +2,7 @@
 
 A lightweight, theory-aligned **agent framework for .NET** —
 build autonomous agents and multi-agent systems (MAS) with clean, composable primitives:
-**Kernel · Engines · Runners · Hosting · Tools**.
+**Kernel · Engines · Runners · Hosting · Tools · MAS**.
 
 > Requires .NET 9.0 or later
 
@@ -22,6 +22,7 @@ using AgentFramework.Engines.Loop;
 using AgentFramework.Runners.Timers;
 using AgentFramework.Kernel;
 using AgentFramework.Kernel.Policies.Defaults;
+using AgentFramework.Mas.Integration;
 
 sealed class HelloAgent : IAgent
 {
@@ -43,6 +44,7 @@ var host = AgentHostBuilder.Create()
     .AddAgent("hello", () => new HelloAgent())
     .Attach("hello", "loop")
     .AddTools()
+    .AddMas()
     .EnableDashboard(6060)
     .Build();
 
