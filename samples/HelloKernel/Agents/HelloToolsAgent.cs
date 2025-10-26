@@ -1,7 +1,7 @@
 using AgentFramework.Kernel;
 using AgentFramework.Tools.Contracts;
 
-namespace HelloKernel;
+namespace HelloKernel.Agents;
 
 /// <summary>
 /// Demonstrates invoking a tool through the Tools subsystem.

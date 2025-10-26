@@ -1,7 +1,7 @@
 using AgentFramework.Agents;
 using AgentFramework.Kernel;
 
-namespace HelloKernel;
+namespace HelloKernel.Agents;
 
 sealed class HelloReactiveAgent : AgentBase
 {
