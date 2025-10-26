@@ -194,6 +194,10 @@ public sealed class InProcKernel : IKernel, IKernelInspector, IDisposable
                 {
                     // expected when shutting down
                 }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"[Kernel] Worker {workerId} crashed while executing agent '{entry?.AgentId ?? "unknown"}': {ex}");
+                }
             }
 
             // --- 3. Idle backoff ---
