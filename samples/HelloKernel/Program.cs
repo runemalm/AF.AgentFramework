@@ -3,6 +3,7 @@ using AgentFramework.Engines.Reactive;
 using AgentFramework.Hosting;
 using AgentFramework.Kernel;
 using AgentFramework.Kernel.Policies.Defaults;
+using AgentFramework.Mas.Integration;
 using AgentFramework.Runners.Timers;
 using AgentFramework.Tools.Integration;
 using HelloKernel.Agents;
@@ -38,11 +39,15 @@ internal class Program
             .AddRunner("reactive", () => new HttpMockRunner())
             .AddAgent("hello-reactive", () => new HelloReactiveAgent())
             .Attach("hello-reactive", "reactive")
-            // tools subsystem demo
+            // agents can use tools
             .AddAgent("hello-tools", () => new HelloToolsAgent())
             .Attach("hello-tools", "loop")
             .AddTools()
             .AddLocalTool<LocalEchoTool>()
+            // agents are becoming aware of others
+            .AddAgent("hello-aware", () => new HelloAwareAgent())
+            .Attach("hello-aware", "loop")
+            .AddMas()
             // add the live dashboard
             .EnableDashboard(6060)
             .Build();
