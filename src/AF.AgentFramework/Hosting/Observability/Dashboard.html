@@ -14,6 +14,11 @@
         th { background:#f0f0f0; }
         .warn { background:#fff6e0; }
         .alert { background:#ffe6e6; }
+        .tool-error {
+            /*background:#fff2f2;*/
+            /*outline:1px solid #ff7070;*/
+            /*outline-offset:-1px;*/
+        }
         canvas { max-height:180px; margin-top:1.5em; }
         .sparkline { width:120px; height:40px; }
         .observation { margin-top:1em; font-size:0.9em; background:#fdfdfd; border:1px solid #ccc; padding:8px; border-radius:4px; }
@@ -113,7 +118,7 @@
                     <td>${a.rejected}</td>
                     <td>${a.totalHandled}</td>
                     <td>${totalTools}</td>
-                    <td style="background:${toolErrors > 0 ? '#ffe6e6' : 'white'}">${toolErrors}</td>
+                        <td class="${toolErrors > 0 ? 'tool-error' : ''}">${toolErrors}</td>
                     <td style="color:#777;font-style:italic;">${lastTool}</td>
                     <td>${state}</td>
                 </tr>`;
