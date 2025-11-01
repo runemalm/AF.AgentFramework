@@ -138,7 +138,7 @@ internal class Program
 
 ## HelloToolsAgent Sample
 
-The new `HelloToolsAgent` demonstrates how agents can invoke external **tools** via the framework’s `Tools` subsystem.
+The `HelloToolsAgent` demonstrates how agents can invoke external **tools** via the framework’s `Tools` subsystem.
 In this sample, the agent calls a simple `LocalEchoTool` to produce an output through the full pipeline (validation → authorization → policy → execution → postprocessing).
 
 ```text
@@ -147,6 +147,18 @@ In this sample, the agent calls a simple `LocalEchoTool` to produce an output th
 ```
 
 The tool registry is automatically initialized at startup and visible to all agents that include `AddTools()` and `AddLocalTool<...>()` in the host builder.
+
+## HelloAwareAgent Sample
+
+The new `HelloAwareAgent` demonstrates how agents can use shared **MAS capabilities** — the `Directory` and `Blackboard` — to gain awareness of other agents and their shared environment.
+
+```text
+[Context:hello-aware] Tick → observing environment...
+[Context:hello-aware] Directory sees 5 registered agents: hello-tools, hello-loop, hello-aware, hello-reactive, hello-mape
+[Context:hello-aware] Blackboard currently has 1 facts.
+```
+
+These capabilities are enabled by adding `.AddMas()` to the host builder, which attaches the shared Directory and Blackboard to all agents in the system.
 
 ## Roadmap
 
