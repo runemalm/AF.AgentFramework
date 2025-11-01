@@ -17,7 +17,8 @@ public class InProcKernelTests
             Agents = new TestAgentCatalog(agent),
             Defaults = defaults ?? PolicySetDefaults.Create(),
             Bindings = Array.Empty<AttachmentBinding>(),
-            ContextFactory = contextFactory
+            ContextFactory = contextFactory,
+            WorkerCount = 1
         };
         return new InProcKernel(opts);
     }
