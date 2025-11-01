@@ -4,19 +4,24 @@ using AgentFramework.Engines;
 using AgentFramework.Runners;
 using AgentFramework.Hosting.Services;
 using AgentFramework.Kernel.Features;
+using AgentFramework.Kernel.Routing;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace AgentFramework.Hosting;
 
-/// <summary>
-/// Minimal, compiling builder. Stores registrations; Build() returns a Noop host for now.
-/// </summary>
 public sealed class AgentHostBuilder : IAgentHostBuilder, IAgentCapabilityRegistrar
 {
     private readonly AgentHostConfig _config = new();
     private readonly ServiceCollection _services = new();
 
-    public static IAgentHostBuilder Create() => new AgentHostBuilder();
+    public static IAgentHostBuilder Create()
+    {
+        var builder = new AgentHostBuilder();
+        builder.Services.AddSingleton<IStimulusRouter, BroadcastStimulusRouter>();
+        builder.Services.AddSingleton<FilteredStimulusRouter>();
+        builder.Services.AddSingleton<IPerceptFilterRegistry, InMemoryPerceptFilterRegistry>();
+        return builder;
+    }
     
     public IServiceCollection Services => _services;
     
@@ -35,11 +40,30 @@ public sealed class AgentHostBuilder : IAgentHostBuilder, IAgentCapabilityRegist
             ImplementationType = implementationType
         });
     }
-
+    
     public IAgentHostBuilder AddEngine(string engineId, Func<IEngine> engineFactory)
     {
-        if (string.IsNullOrWhiteSpace(engineId)) throw new ArgumentException("engineId is required", nameof(engineId));
-        _config.Engines.Add(new EngineRegistration { EngineId = engineId, Factory = engineFactory ?? throw new ArgumentNullException(nameof(engineFactory)) });
+        if (engineId is null) throw new ArgumentNullException(nameof(engineId));
+        if (engineFactory is null) throw new ArgumentNullException(nameof(engineFactory));
+
+        _config.Engines.Add(new EngineRegistration
+        {
+            EngineId = engineId,
+            Factory = _ => engineFactory()
+        });
+        return this;
+    }
+
+    public IAgentHostBuilder AddEngine(string engineId, Func<IServiceProvider, IEngine> engineFactory)
+    {
+        if (engineId is null) throw new ArgumentNullException(nameof(engineId));
+        if (engineFactory is null) throw new ArgumentNullException(nameof(engineFactory));
+
+        _config.Engines.Add(new EngineRegistration
+        {
+            EngineId = engineId,
+            Factory = engineFactory
+        });
         return this;
     }
 

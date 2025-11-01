@@ -1,23 +1,30 @@
 using AgentFramework.Kernel;
+using AgentFramework.Kernel.Routing;
 using AgentFramework.Runners;
 
 namespace AgentFramework.Engines.Reactive;
 
 /// <summary>
-/// Reactive engine: receives external events from its runners and
-/// converts them into percept work items for all attached agents.
+/// Reactive engine: receives external stimuli from its runners and
+/// converts them into percept work items for attached agents using a router.
 /// </summary>
 public sealed class ReactiveEngine : IEngine
 {
     private readonly List<IRunner> _runners = new();
     private readonly List<string> _agentIds = new();
     private IKernel? _kernel;
+    private readonly IStimulusRouter _router;
 
     public string Id { get; }
 
-    public ReactiveEngine(string id = "reactive")
+    /// <summary>
+    /// Creates a new reactive engine with a specific ID and stimulus router.
+    /// The router decides how incoming percepts are distributed to agents.
+    /// </summary>
+    public ReactiveEngine(string id, IStimulusRouter router)
     {
-        Id = id;
+        Id = id ?? throw new ArgumentNullException(nameof(id));
+        _router = router ?? throw new ArgumentNullException(nameof(router));
     }
 
     public void BindKernel(IKernel kernel) =>
@@ -42,30 +49,27 @@ public sealed class ReactiveEngine : IEngine
 
     /// <summary>
     /// Called by runners when an external event occurs.
-    /// Converts the event into percept work items for attached agents.
+    /// Converts the event into a percept WorkItem and routes it to interested agents.
     /// </summary>
-    public async Task OnPerceptAsync(object? payload, string? source, CancellationToken ct = default)
+    public async Task OnPerceptAsync(object? payload, string? topic, CancellationToken ct = default)
     {
         if (_kernel is null) return;
 
-        foreach (var agentId in _agentIds)
+        var percept = new WorkItem
         {
-            var item = new WorkItem
+            Id = Guid.NewGuid().ToString("n"),
+            EngineId = Id,
+            AgentId = string.Empty, // router decides recipients
+            Kind = WorkItemKind.Percept,
+            Payload = payload,
+            Metadata = new Dictionary<string, string>
             {
-                Id = Guid.NewGuid().ToString("n"),
-                EngineId = Id,
-                AgentId = agentId,
-                Kind = WorkItemKind.Percept,
-                Payload = payload,
-                Metadata = new Dictionary<string, string>
-                {
-                    ["source"] = source ?? "unknown"
-                }
-            };
+                ["topic"] = topic ?? "unknown"
+            }
+        };
 
-            Console.WriteLine($"[Engine] {Id} enqueue Percept for '{agentId}' (src={source ?? "?"}).");
-            await _kernel.EnqueueAsync(item, ct).ConfigureAwait(false);
-        }
+        Console.WriteLine($"[Engine] {Id} received percept (topic={topic ?? "?"}).");
+        await _router.RouteAsync(percept, _kernel, _agentIds, ct).ConfigureAwait(false);
     }
 
     public async Task StartAsync(CancellationToken ct = default)

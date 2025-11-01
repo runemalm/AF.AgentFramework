@@ -4,6 +4,7 @@ using AgentFramework.Hosting.Contexts;
 using AgentFramework.Hosting.Services;
 using AgentFramework.Kernel;
 using AgentFramework.Kernel.Diagnostics;
+using AgentFramework.Kernel.Routing;
 using AgentFramework.Tools.Integration;
 
 namespace AgentFramework.Hosting;
@@ -48,7 +49,28 @@ public sealed class AgentHost : IAgentHost
         }
         _catalog = new AgentCatalog(agents);
 
-        // 2) Create Kernel
+        // 2. Auto-register PerceptFilter attributes
+        var filterRegistry = _services.GetService<IPerceptFilterRegistry>();
+        if (filterRegistry is not null)
+        {
+            foreach (var agent in agents.Values)
+            {
+                var attrs = agent.GetType()
+                    .GetCustomAttributes(typeof(PerceptFilterAttribute), inherit: true)
+                    .OfType<PerceptFilterAttribute>();
+
+                foreach (var attr in attrs)
+                {
+                    if (!string.IsNullOrWhiteSpace(attr.Pattern))
+                    {
+                        filterRegistry.Register(agent.Id, attr.Pattern);
+                        Console.WriteLine($"[Host] Registered percept filter '{attr.Pattern}' for agent '{agent.Id}'.");
+                    }
+                }
+            }
+        }
+
+        // 3) Create Kernel
         var defaults = _config.KernelDefaults
                        ?? throw new InvalidOperationException("Kernel defaults not provided. Call WithKernelDefaults().");
 
@@ -79,22 +101,22 @@ public sealed class AgentHost : IAgentHost
             ContextFactory = contextFactory
         });
 
-        // 3) Instantiate engines
+        // 4) Instantiate engines
         foreach (var engReg in _config.Engines)
         {
             if (string.IsNullOrWhiteSpace(engReg.EngineId))
                 throw new InvalidOperationException("Engine registration has empty EngineId.");
             if (_engines.ContainsKey(engReg.EngineId))
                 throw new InvalidOperationException($"Duplicate EngineId '{engReg.EngineId}'.");
-            var engine = engReg.Factory()
-                ?? throw new InvalidOperationException($"Engine factory for '{engReg.EngineId}' returned null.");
+            var engine = engReg.Factory(_services)
+                         ?? throw new InvalidOperationException($"Engine factory for '{engReg.EngineId}' returned null.");
             if (!string.Equals(engine.Id, engReg.EngineId, StringComparison.Ordinal))
                 throw new InvalidOperationException(
                     $"Engine instance Id '{engine.Id}' does not match registration '{engReg.EngineId}'.");
             _engines.Add(engReg.EngineId, engine);
         }
 
-        // 4) Bind kernel & attach runners
+        // 5) Bind kernel & attach runners
         foreach (var e in _engines.Values)
         {
             e.BindKernel(_kernel);
@@ -106,7 +128,7 @@ public sealed class AgentHost : IAgentHost
             }
         }
 
-        // 5) Validate attachments (agent/engine exist) and pass to engines
+        // 6) Validate attachments (agent/engine exist) and pass to engines
         foreach (var att in _config.Attachments)
         {
             if (!_engines.ContainsKey(att.EngineId))
@@ -120,14 +142,14 @@ public sealed class AgentHost : IAgentHost
             _engines[group.Key].SetAttachments(list);
         }
 
-        // 6) Start kernel then engines
+        // 7) Start kernel then engines
         await _kernel.StartAsync(ct).ConfigureAwait(false);
         foreach (var e in _engines.Values)
         {
             await e.StartAsync(ct).ConfigureAwait(false);
         }
         
-        // 7) Start host services (e.g. dashboard)
+        // 8) Start host services (e.g. dashboard)
         var ctx = new AgentHostContext(_kernel, _engines, _services);
         foreach (var factory in _config.HostServices.Factories)
         {
