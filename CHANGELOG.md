@@ -1,3 +1,18 @@
+## [0.16.0](https://github.com/runemalm/AF.AgentFramework/compare/v0.15.1...v0.16.0) (2025-11-01)
+
+### docs
+
+* **readme:** Document new stimulus router and HelloSlackAgent sample ([e7c9154](https://github.com/runemalm/AF.AgentFramework/commit/e7c91545187c55e608ffc8a73d2fea8f4aac2251))
+* **samples:** Add HelloSlackAgent sample demonstrating filtered stimulus routing ([7818b0c](https://github.com/runemalm/AF.AgentFramework/commit/7818b0c6e80e52a97cf692f317352385b16fb5bb))
+
+### test
+
+* **kernel:** Stabilize priority ordering test and add routing unit tests ([b6ebdcd](https://github.com/runemalm/AF.AgentFramework/commit/b6ebdcd51d092a934076011a970c7f370cbae178))
+
+### feat
+
+* **kernel,routing:** Introduce stimulus router primitive (broadcast + filtered routing) ([8fdd289](https://github.com/runemalm/AF.AgentFramework/commit/8fdd2898240a28accb60a506c08f3d59050f0746))
+
 ## [0.15.1](https://github.com/runemalm/AF.AgentFramework/compare/v0.15.0...v0.15.1) (2025-11-01)
 
 ### docs
