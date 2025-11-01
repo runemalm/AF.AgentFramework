@@ -44,9 +44,12 @@ It’s designed to be extensible — future integrations may bridge these metric
 The framework now has a **capability-based extensibility system** — a foundation that lets modules like MAS, Observability, and MCP attach cleanly to the agent context without modifying the kernel.  
 Capabilities are registered through the host builder and automatically injected into each agent context at runtime.
 
+The framework now introduces a **Stimulus Router** primitive — a flexible routing layer between reactive engines and agents.
+Routers decide which agents should receive each percept or external event. The default `BroadcastStimulusRouter` sends all percepts to all attached agents, while the `FilteredStimulusRouter` uses topic-based filters declared via `[PerceptFilter("topic")]` attributes on agents.
+
 ### Multi-Agent System (MAS) subsystem
 
-The new **MAS capabilities** provide shared collaboration primitives across agents:
+The **MAS capabilities** provide shared collaboration primitives across agents:
 - A **Directory** for registering and discovering agents (the “yellow pages” of the system)
 - A **Blackboard** for posting and reading shared facts (the shared environment)
 
@@ -119,10 +122,15 @@ internal class Program
             .Attach("hello-tools", "loop")
             .AddTools()
             .AddLocalTool<LocalEchoTool>()
-            // agents are becoming aware of others
+            // agents are becoming aware
             .AddAgent("hello-aware", () => new HelloAwareAgent())
             .Attach("hello-aware", "loop")
             .AddMas()
+            // agents can receive filtered percepts via stimulus routers
+            .AddEngine("slack-reactive", sp => new ReactiveEngine("slack-reactive", sp.GetRequiredService<FilteredStimulusRouter>()))
+            .AddRunner("slack-reactive", () => new SlackMockRunner())
+            .AddAgent("hello-slack", () => new HelloSlackAgent())
+            .Attach("hello-slack", "slack-reactive")
             // add the live dashboard
             .EnableDashboard(6060)
             .Build();
@@ -160,6 +168,20 @@ The new `HelloAwareAgent` demonstrates how agents can use shared **MAS capabilit
 
 These capabilities are enabled by adding `.AddMas()` to the host builder, which attaches the shared Directory and Blackboard to all agents in the system.
 
+## HelloSlackAgent Sample
+
+The `HelloSlackAgent` demonstrates how the new **FilteredStimulusRouter** can be used to selectively route percepts based on their topics.
+
+Each agent can declare its interest in specific percepts using the `[PerceptFilter]` attribute:
+
+```csharp
+[PerceptFilter("slack/message")]
+[PerceptFilter("slack/reaction")]
+sealed class HelloSlackAgent : AgentBase { … }
+```
+
+When running the sample, only the `HelloSlackAgent` receives simulated Slack events like `"slack/message"` and `"slack/reaction"`, routed through the filtered router of the `slack-reactive` engine.
+
 ## Roadmap
 
 This is a growing list and subject to change as we go and learn.
@@ -178,7 +200,10 @@ Expanding what agents can *do* — tools, feedback loops, collaboration, and env
 - [x] Add **MAPE-K agent base** (`MapekAgentBase`) and sample
 - [x] Add **Capability system** (foundation for MAS, Observability, MCP)
 - [x] Add **minimal MAS subsystem** (directory + blackboard primitives)
-- [ ] Extend **runner ecosystem** (queues, routing, distributed transports, HTTP ingress, Slack Webhooks, ...)
+- [x] Add **Stimulus Router** primitive (Broadcast + Filtered routing)
+- [ ] Add **webhook percept** full support
+- [ ] Add **slack percept** full support
+- [ ] Add **MCP** support
 
 ### 🤖 Samples & Agents
 Demonstrating theory in practice — progressively complex agents showcasing different patterns.
@@ -188,7 +213,7 @@ Demonstrating theory in practice — progressively complex agents showcasing dif
 - [x] **HelloMapeAgent** – agent demonstrating the full MAPE-K control loop
 - [x] **HelloToolsAgent** – agent invoking local tools via the Tools subsystem
 - [x] **HelloAwareAgent** – demonstrates basic multi-agent awareness using Directory + Blackboard
-- [ ] **HelloSlackAgent** – integrates with Slack ingress runner
+- [x] **HelloSlackAgent** – showcases topic-based routing with FilteredStimulusRouter
 - [ ] **HelloSocietyAgent** – sample MAS scenario (collaborating agents via blackboard)
 
 ### 🔍 Observability & Dashboard
