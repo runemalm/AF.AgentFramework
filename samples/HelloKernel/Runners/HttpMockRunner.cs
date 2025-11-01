@@ -1,6 +1,6 @@
 using AgentFramework.Runners;
 
-namespace HelloKernel;
+namespace HelloKernel.Runners;
 
 sealed class HttpMockRunner : IReactiveRunner
 {
