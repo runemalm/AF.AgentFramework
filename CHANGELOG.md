@@ -1,3 +1,13 @@
+## [0.15.1](https://github.com/runemalm/AF.AgentFramework/compare/v0.15.0...v0.15.1) (2025-11-01)
+
+### docs
+
+* **readme:** Add small subsection on hello-aware agent ([d32a766](https://github.com/runemalm/AF.AgentFramework/commit/d32a76602410cf839a4183f736c89d315c6a3654))
+
+### fix
+
+* **dashboard:** Coloring bug related to tool columns ([8979928](https://github.com/runemalm/AF.AgentFramework/commit/8979928a94013ba8fecc0a9a3728b8155ffe6edb))
+
 ## [0.15.0](https://github.com/runemalm/AF.AgentFramework/compare/v0.14.0...v0.15.0) (2025-10-26)
 
 ### docs
